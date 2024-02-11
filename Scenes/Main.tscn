@@ -65,3 +65,5 @@ script = ExtResource("2_lsq1x")
 layout_mode = 2
 theme = SubResource("Theme_bu18y")
 text = "Credits"
+
+[connection signal="button_up" from="Panel/VBoxContainer/PlayButton" to="Panel/VBoxContainer/PlayButton" method="_on_button_up"]
