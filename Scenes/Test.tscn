@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwv5negqaxbcp"]
+[gd_scene load_steps=7 format=3 uid="uid://dwv5negqaxbcp"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_pgt53"]
+[ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="2_eif5d"]
+[ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="3_k6gdk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p7vjo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -32,3 +34,29 @@ size = Vector3(24.0468, 1, 23.7547)
 
 [node name="Player" parent="." instance=ExtResource("1_pgt53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22317, 5.29021, 0)
+
+[node name="Switch" parent="." instance=ExtResource("2_eif5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.8113, -11)
+Switchlocation = "1"
+
+[node name="SpotLight3D" parent="." instance=ExtResource("3_k6gdk")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.41935, 2.20432, -10.4069)
+SwitchToConnectTo = "1"
+
+[node name="SpotLight3D2" parent="." instance=ExtResource("3_k6gdk")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.29186, 1.96153, -5.98055)
+SwitchToConnectTo = "1"
+
+[node name="Switch2" parent="." instance=ExtResource("2_eif5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.08709, 1.77029, -1.93047)
+Switchlocation = "2"
+
+[node name="Lights2" type="Node3D" parent="."]
+
+[node name="SpotLight3D3" parent="Lights2" instance=ExtResource("3_k6gdk")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.41935, 2.20432, -1.24201)
+SwitchToConnectTo = "2"
+
+[node name="SpotLight3D4" parent="Lights2" instance=ExtResource("3_k6gdk")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.29186, 1.96153, 3.18432)
+SwitchToConnectTo = "2"

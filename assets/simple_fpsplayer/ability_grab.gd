@@ -9,6 +9,13 @@ var can_use = true
 # This entire script is dedicated to the ability_grab node and it's child node GradPosition3D. It's allows players to pick up and throw Rigid Bodies in a similar fashion to Source games.
 # This section asks the raycast to check for a Rigid Body, see if it qualifies to be carried, and grab it player isn't currently carrying a Rigid Body.
 func _process(delta):
+	
+	var ColliderObject = get_collider()
+	#print_debug(ColliderObject)
+	if Input.is_action_just_pressed("InterAct") and ColliderObject != null:
+		if ColliderObject.Name == "Switch":
+			ColliderObject.SwitchFliped()
+	
 	if Input.is_key_pressed(KEY_E):
 		if can_use:
 			can_use = false
