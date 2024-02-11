@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://74dj631tki6u"]
+
+[ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_reb7a"]
+[ext_resource type="Script" path="res://Scripts/Menus/BackButton.gd" id="2_boxjm"]
+
+[sub_resource type="Theme" id="Theme_udhoj"]
+default_font = ExtResource("1_reb7a")
+default_font_size = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pepnj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spdv8"]
+bg_color = Color(0.027451, 0, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="Theme" id="Theme_67rjk"]
+default_font = ExtResource("1_reb7a")
+default_font_size = 80
+Button/styles/hover = SubResource("StyleBoxFlat_pepnj")
+Button/styles/normal = SubResource("StyleBoxFlat_spdv8")
+
+[sub_resource type="Theme" id="Theme_ml7vv"]
+default_font = ExtResource("1_reb7a")
+default_font_size = 35
+
+[node name="Credits" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1071.0
+offset_top = 36.0
+offset_right = 1808.0
+offset_bottom = 247.0
+theme = SubResource("Theme_udhoj")
+text = "Escape The Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(200, 800)
+layout_mode = 0
+offset_left = 59.0
+offset_top = 193.0
+offset_right = 460.0
+offset_bottom = 993.0
+theme_override_constants/separation = 20
+alignment = 2
+metadata/_edit_group_ = true
+
+[node name="BackButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_67rjk")
+text = "Back
+"
+script = ExtResource("2_boxjm")
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 343.0
+offset_right = 1008.0
+offset_bottom = 655.0
+theme = SubResource("Theme_ml7vv")
+text = "SaltOfLife - 3D Artist / Game Designer
+
+Ichit -  Game Designer / Game Programmer
+
+Banado - Game Programmer / Game Designer"
+
+[connection signal="button_up" from="Panel/VBoxContainer/BackButton" to="Panel/VBoxContainer/BackButton" method="_on_button_up"]

@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_pgt53"]
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="2_eif5d"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="3_k6gdk"]
+[gd_scene load_steps=6 format=3 uid="uid://dwv5negqaxbcp"]
+
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_pgt53"]
+[ext_resource type="PackedScene" uid="uid://b4ek6k08equiw" path="res://Scenes/PauseMenu.tscn" id="2_14ihx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p7vjo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -60,3 +64,4 @@ SwitchToConnectTo = "2"
 [node name="SpotLight3D4" parent="Lights2" instance=ExtResource("3_k6gdk")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.29186, 1.96153, 3.18432)
 SwitchToConnectTo = "2"
+[node name="PauseMenu" parent="." instance=ExtResource("2_14ihx")]

@@ -1,20 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://0107nqw4t5ts"]
+[gd_scene load_steps=8 format=3 uid="uid://0107nqw4t5ts"]
 
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_jrfbq"]
 [ext_resource type="Script" path="res://Scripts/Menus/PlayButton.gd" id="2_lsq1x"]
+[ext_resource type="Script" path="res://Scripts/Menus/CreditsButton.gd" id="3_0wqss"]
 
 [sub_resource type="Theme" id="Theme_oxkcl"]
 default_font = ExtResource("1_jrfbq")
 default_font_size = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53ura"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fw75"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4prpr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yek4v"]
 bg_color = Color(0.027451, 0, 0.0784314, 1)
 border_width_left = 1
 border_width_top = 1
@@ -24,8 +25,8 @@ border_width_bottom = 1
 [sub_resource type="Theme" id="Theme_bu18y"]
 default_font = ExtResource("1_jrfbq")
 default_font_size = 80
-Button/styles/hover = SubResource("StyleBoxFlat_53ura")
-Button/styles/normal = SubResource("StyleBoxFlat_4prpr")
+Button/styles/hover = SubResource("StyleBoxFlat_4fw75")
+Button/styles/normal = SubResource("StyleBoxFlat_yek4v")
 
 [node name="Main" type="Node2D"]
 
@@ -65,5 +66,7 @@ script = ExtResource("2_lsq1x")
 layout_mode = 2
 theme = SubResource("Theme_bu18y")
 text = "Credits"
+script = ExtResource("3_0wqss")
 
 [connection signal="button_up" from="Panel/VBoxContainer/PlayButton" to="Panel/VBoxContainer/PlayButton" method="_on_button_up"]
+[connection signal="button_up" from="Panel/VBoxContainer/Credits" to="Panel/VBoxContainer/Credits" method="_on_button_up"]
