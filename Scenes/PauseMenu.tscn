@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4ek6k08equiw"]
+[gd_scene load_steps=10 format=3 uid="uid://b4ek6k08equiw"]
 
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_e4cjr"]
+[ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_h57b1"]
 [ext_resource type="Script" path="res://Scripts/Menus/BackButton.gd" id="2_jvspv"]
 [ext_resource type="Script" path="res://Scripts/Menus/ResumeButton.gd" id="2_oagun"]
 [ext_resource type="Script" path="res://Scripts/Menus/RestartButton.gd" id="3_ylnba"]
@@ -29,9 +30,12 @@ Button/styles/normal = SubResource("StyleBoxFlat_4prpr")
 default_font = ExtResource("1_e4cjr")
 default_font_size = 35
 
-[node name="GameOver" type="Control"]
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_h57b1")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -90,6 +94,7 @@ text = "PAUSED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="button_up" from="Panel/VBoxContainer/ResumeButton" to="Panel/VBoxContainer/ResumeButton" method="_on_button_up"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="button_up" from="Panel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_button_up"]
 [connection signal="button_up" from="Panel/VBoxContainer/Restart" to="Panel/VBoxContainer/Restart" method="_on_button_up"]
 [connection signal="button_up" from="Panel/VBoxContainer/BackToMainMenu" to="Panel/VBoxContainer/BackToMainMenu" method="_on_button_up"]
