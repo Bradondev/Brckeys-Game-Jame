@@ -1,0 +1,60 @@
+[gd_scene load_steps=15 format=3 uid="uid://d33pauu53r8qa"]
+
+[ext_resource type="PackedScene" uid="uid://55ineqm4o8tv" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="1_icibq"]
+[ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="2_qlyy3"]
+[ext_resource type="PackedScene" uid="uid://dlv7smuv0f44e" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="3_06rsb"]
+[ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="4_drg80"]
+[ext_resource type="PackedScene" uid="uid://bfitwpu5j2gb7" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="5_kyaic"]
+[ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="6_cvdwp"]
+[ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="7_htf8h"]
+[ext_resource type="Material" uid="uid://dl3cas0pqhkty" path="res://3d/materials/carpet.tres" id="8_bw3vv"]
+[ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="9_dx2yn"]
+[ext_resource type="PackedScene" uid="uid://bpta4pggsmi5b" path="res://3d/prefabs/SM_bathroom_sink_green.tscn" id="10_tx0mg"]
+[ext_resource type="PackedScene" uid="uid://uvo2cn81cd22" path="res://3d/prefabs/SM_toilet.tscn" id="11_3ses1"]
+[ext_resource type="PackedScene" uid="uid://bhwjpx5125jea" path="res://3d/prefabs/SM_flame_thrower.tscn" id="12_86ffj"]
+[ext_resource type="PackedScene" uid="uid://bhpil5cd6b3ee" path="res://3d/prefabs/SM_spikes.tscn" id="13_jxswk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ilf4c"]
+material = ExtResource("8_bw3vv")
+size = Vector2(10, 3)
+
+[node name="debugWorld" type="Node3D"]
+
+[node name="ceilingTile" parent="." instance=ExtResource("1_icibq")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0.158432, 3.93297, -0.0108635)
+
+[node name="deskWoodGreen" parent="." instance=ExtResource("2_qlyy3")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00518328, 0, 0.121486)
+
+[node name="doorStandard" parent="." instance=ExtResource("3_06rsb")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.64124, 0, 0.0336294)
+
+[node name="BasePaintedWall" parent="." instance=ExtResource("4_drg80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58703, 0.0739508, -1.43394)
+
+[node name="bathroomMirror" parent="." instance=ExtResource("5_kyaic")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.749869, 2.57617, -1.20006)
+
+[node name="trashCan" parent="." instance=ExtResource("6_cvdwp")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 3.47152, 0, 0.148873)
+
+[node name="lamp" parent="." instance=ExtResource("7_htf8h")]
+transform = Transform3D(-0.695424, 0, 0.7186, 0, 1, 0, -0.7186, 0, -0.695424, 1.69955, 1.52352, -0.572418)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ilf4c")
+
+[node name="bathroomLights" parent="." instance=ExtResource("9_dx2yn")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.441352, 3.59671, -1.20961)
+
+[node name="bathroomSinkGreen" parent="." instance=ExtResource("10_tx0mg")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -5.95625, 0, 0.381305)
+
+[node name="toilet" parent="." instance=ExtResource("11_3ses1")]
+transform = Transform3D(-0.232179, 0, 0.660373, 0, 0.7, 0, -0.660373, 0, -0.232179, -7.79731, 2.38419e-07, 0.975054)
+
+[node name="flameThrower" parent="." instance=ExtResource("12_86ffj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.12591, 2.07611, -0.996094)
+
+[node name="spikes" parent="." instance=ExtResource("13_jxswk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80904, 0, 0.33063)

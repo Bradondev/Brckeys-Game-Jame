@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://lik474u4akqy"]
+
+[ext_resource type="PackedScene" uid="uid://ccd7cep55mfwp" path="res://3d/imports/bathroomLights.glb" id="1_mg53t"]
+
+[node name="bathroomLights" instance=ExtResource("1_mg53t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.486756, 0.8593, 0)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51449, 0.8593, 0)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.494454, 0.8593, 0)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52499, 0.8593, 0)

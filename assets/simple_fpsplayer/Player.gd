@@ -1,4 +1,4 @@
-extends CharacterBody3D 
+extends CharacterBody3D
 
 signal PickUpItemSignal(Item)
 signal JustDied
@@ -35,7 +35,13 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("Player")
+	PlayFade(false)
 
+func PlayFade(bForwards):
+	if bForwards:
+		$AnimationPlayer.play("Fade")
+	else:
+		$AnimationPlayer.play_backwards("Fade")
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -106,6 +112,9 @@ func TakeDamage(Amount):
 		print_debug("Dead")
 		emit_signal("JustDied")
 	
+
+
+
 func PickUpItem(Item):
 	emit_signal("PickUpItemSignal",Item)
 func AddBattery():

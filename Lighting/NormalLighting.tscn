@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dvbgue5ks3uno"]
+
+[node name="NormalLighting" type="DirectionalLight3D"]
+transform = Transform3D(0.987795, 0.0295527, 0.152933, -0.155762, 0.187414, 0.969853, 0, -0.981836, 0.18973, 0, 0, 0)
+light_color = Color(0.968627, 0.984314, 0, 1)
+light_energy = 1.063

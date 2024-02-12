@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cdnlfib47h356"
-path="res://.godot/imported/deskWoodGreen.glb-4065477b5a345e08a2c5d2d776bf630e.scn"
+uid="uid://8hf2a8xlfq36"
+path="res://.godot/imported/ceilingTile.glb-0a4806cd0d37ef4352cf86a5448ab639.scn"
 
 [deps]
 
-source_file="res://3d/imports/deskWoodGreen.glb"
-dest_files=["res://.godot/imported/deskWoodGreen.glb-4065477b5a345e08a2c5d2d776bf630e.scn"]
+source_file="res://3d/imports/ceilingTile/ceilingTile.glb"
+dest_files=["res://.godot/imported/ceilingTile.glb-0a4806cd0d37ef4352cf86a5448ab639.scn"]
 
 [params]
 

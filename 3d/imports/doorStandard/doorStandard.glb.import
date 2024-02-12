@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://8hf2a8xlfq36"
-path="res://.godot/imported/ceilingTile.glb-8864f76210efa2f008b20064ab4b253d.scn"
+uid="uid://bs1xsb7hilf5"
+path="res://.godot/imported/doorStandard.glb-9f939a0060235ff57e0dbae6167b35de.scn"
 
 [deps]
 
-source_file="res://ceilingTile.glb"
-dest_files=["res://.godot/imported/ceilingTile.glb-8864f76210efa2f008b20064ab4b253d.scn"]
+source_file="res://3d/imports/doorStandard/doorStandard.glb"
+dest_files=["res://.godot/imported/doorStandard.glb-9f939a0060235ff57e0dbae6167b35de.scn"]
 
 [params]
 
