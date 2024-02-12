@@ -84,11 +84,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.7544
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, -2.81448)
 
 [node name="SmDoor" parent="." instance=ExtResource("4_huuy4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.91941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.68946)
 RoomToGoTo = "4.tscn"
 
 [node name="PlayerStartOrientation2" parent="." instance=ExtResource("5_e61yw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56897, 1, 8.16654)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56897, 1, 7.93659)
 SpawnPoint = "4"
 
 [node name="SmDoor2" parent="." instance=ExtResource("4_huuy4")]
