@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnrbo1qjohn1c"
-path.s3tc="res://.godot/imported/ceilingTile_ceilingTileNormal.png-4ef67d1b140912880d203d285a836937.s3tc.ctex"
+uid="uid://ckkvxh7ihu5io"
+path.s3tc="res://.godot/imported/CarpetNormalMap.png-c7528924799275a65e9ce7f794c74f51.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://ceilingTile_ceilingTileNormal.png"
-dest_files=["res://.godot/imported/ceilingTile_ceilingTileNormal.png-4ef67d1b140912880d203d285a836937.s3tc.ctex"]
+source_file="res://3d/imports/carpet/CarpetNormalMap.png"
+dest_files=["res://.godot/imported/CarpetNormalMap.png-c7528924799275a65e9ce7f794c74f51.s3tc.ctex"]
 
 [params]
 
@@ -26,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://ceilingTile_ceilingTileNormal.png"
+roughness/src_normal="res://3d/imports/carpet/CarpetNormalMap.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

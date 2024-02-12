@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c632p5c7pbinm"]
+
+[ext_resource type="PackedScene" uid="uid://cdnlfib47h356" path="res://3d/imports/deskWoodGreen/deskWoodGreen.glb" id="1_f756g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0dw4g"]
+size = Vector3(3.03021, 1, 1.65472)
+
+[node name="deskWoodGreen" instance=ExtResource("1_f756g")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00234985, 0.516602, -0.0813904)
+shape = SubResource("BoxShape3D_0dw4g")

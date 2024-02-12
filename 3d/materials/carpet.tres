@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dl3cas0pqhkty"]
+
+[ext_resource type="Texture2D" uid="uid://cgif7ousfgyyf" path="res://3d/imports/carpet/CarpetDiffuse.png" id="1_04jm0"]
+[ext_resource type="Texture2D" uid="uid://ckkvxh7ihu5io" path="res://3d/imports/carpet/CarpetNormalMap.png" id="2_wm25h"]
+
+[resource]
+albedo_texture = ExtResource("1_04jm0")
+normal_enabled = true
+normal_texture = ExtResource("2_wm25h")
+uv1_scale = Vector3(2, 2, 2)

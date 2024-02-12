@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqpn0qclvo5gl"]
+
+[ext_resource type="PackedScene" uid="uid://rov62hmxa7o1" path="res://3d/imports/lamp.glb" id="1_n1s6u"]
+
+[node name="lamp" instance=ExtResource("1_n1s6u")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 0.488164, 0.872752, 0, -0.872752, 0.488164, 0, 0.51819, -0.135413)
+spot_range = 1.20156
+spot_angle = 33.5203
