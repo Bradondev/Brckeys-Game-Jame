@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1dx3dl4j3bau"
-path.s3tc="res://.godot/imported/ceilingTile_ceilingTile.png-17bf91e19624c3f146646e87ff5ef028.s3tc.ctex"
+uid="uid://cxyqsranpjar8"
+path.s3tc="res://.godot/imported/trashCan_trashCanAlbedo.png-a1bd7e37e2bb9b17dd99f88fe35df897.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://ceilingTile_ceilingTile.png"
-dest_files=["res://.godot/imported/ceilingTile_ceilingTile.png-17bf91e19624c3f146646e87ff5ef028.s3tc.ctex"]
+source_file="res://3d/imports/trashCan/trashCan_trashCanAlbedo.png"
+dest_files=["res://.godot/imported/trashCan_trashCanAlbedo.png-a1bd7e37e2bb9b17dd99f88fe35df897.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlv7smuv0f44e"]
+
+[ext_resource type="PackedScene" uid="uid://bs1xsb7hilf5" path="res://3d/imports/doorStandard/doorStandard.glb" id="1_w12pu"]
+
+[node name="doorStandard" instance=ExtResource("1_w12pu")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
