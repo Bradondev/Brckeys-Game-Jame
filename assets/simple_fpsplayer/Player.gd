@@ -1,5 +1,6 @@
-extends CharacterBody3D
+extends CharacterBody3D 
 
+signal PickUpItem(Item)
 const ACCEL = 10
 const DEACCEL = 30
 
@@ -86,3 +87,8 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	
+	
+func _PickUpItem(Item):
+	emit_signal("PickUpItem",Item)
