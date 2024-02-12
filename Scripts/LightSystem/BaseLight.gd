@@ -4,10 +4,15 @@ class_name BaseLight
 @export var MinPowerLight = 1
 @export var MaxPowerOfLight = 2
 @export var On = true
+@export var FlickeringLoop :float
 var SwitchConnect 
+var NoStopingFlicking = true
+@onready var FlickerTimer=$Timer
 @export_enum("1","2","3","4","5","6","7","8","9","10","11","12","13","14") var SwitchToConnectTo: String
+var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	FlickerTimer.wait_time = FlickeringLoop
 	ConnectToSwitch()
 	if On:
 		TurnOnLight()
@@ -34,3 +39,20 @@ func ConnectToSwitch():
 	for Switchs in SwitchConnect:
 		Switchs.connect("Fliped", UpdateLight)
 
+func StartFlickingLights():
+	$Timer.Start()
+	
+	
+	
+
+func _on_timer_timeout():
+	var my_random_number
+	if NoStopingFlicking:
+		my_random_number =0
+	else:
+		my_random_number = rng.randf_range(-10.0, 10.0)
+	if my_random_number >=0:
+		UpdateLight()
+		
+func  StopFlickingLights():
+	$Timer.Stop()

@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://vgvgt32il5cr"]
+
+[ext_resource type="Script" path="res://Scripts/PopUp.gd" id="1_cshsg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdlap"]
+size = Vector3(1.16553, 1, 1.37488)
+
+[node name="PopUp" type="Node3D"]
+script = ExtResource("1_cshsg")
+DescriptionTextValue = "Turn on lights"
+InputTextLabelValue = "Press E"
+
+[node name="Description" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.769073, 0)
+billboard = 1
+no_depth_test = true
+text = "Turn on lights"
+
+[node name="InputLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570003, 0)
+billboard = 1
+text = "Press E"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="HitBox" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583359, 0)
+shape = SubResource("BoxShape3D_tdlap")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="area_exited" from="HitBox" to="." method="_on_hit_box_area_exited"]
