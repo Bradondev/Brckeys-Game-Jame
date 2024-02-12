@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhpil5cd6b3ee"]
+
+[ext_resource type="PackedScene" path="res://3d/imports/spikes/spikes.glb" id="1_bnjs1"]
+
+[node name="spikes" type="Node3D"]
+
+[node name="spikes" parent="." instance=ExtResource("1_bnjs1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0413892, 0, 0.0394518)
