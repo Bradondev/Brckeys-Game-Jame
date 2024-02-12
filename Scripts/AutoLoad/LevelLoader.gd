@@ -11,6 +11,7 @@ func MovePlayerToPosition():
 	for start in playerStarts:
 		if start.SpawnPoint == PlayerMoveToPosition:
 			start.UpdatePlayerPosition()
+			break
 
 func GetPlayer():
 	var player = get_tree().get_nodes_in_group("Player")
