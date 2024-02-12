@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckf1gv3eife6x"]
+
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8qvpq"]
+[ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="2_nxvfb"]
+[ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="3_g2ci5"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Ground" type="CSGMesh3D" parent="."]
+transform = Transform3D(13.4514, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+use_collision = true
+mesh = SubResource("PlaneMesh_pep2u")
+
+[node name="Ground2" type="CSGMesh3D" parent="."]
+transform = Transform3D(13.4514, 0, 0, 0, 10, 0, 0, 0, 10, 0, 4.06433, 0)
+use_collision = true
+mesh = SubResource("PlaneMesh_pep2u")
+
+[node name="Player" parent="." instance=ExtResource("1_8qvpq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.42522, 2.06986, 3.24567)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.987795, 0.0295527, 0.152933, -0.155762, 0.187414, 0.969853, 0, -0.981836, 0.18973, 0, 0, 0)
+
+[node name="BasePaintedWall" parent="." instance=ExtResource("2_nxvfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
+
+[node name="BasePaintedWall2" parent="." instance=ExtResource("2_nxvfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 1.18552)
+
+[node name="BasePaintedWall3" parent="." instance=ExtResource("2_nxvfb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, 5.18552)
+
+[node name="BasePaintedWall4" parent="." instance=ExtResource("2_nxvfb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, 5.18552)
+
+[node name="SmDoor" parent="." instance=ExtResource("3_g2ci5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.91941)
