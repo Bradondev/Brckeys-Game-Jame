@@ -1,4 +1,4 @@
-extends CharacterBody3D 
+extends CharacterBody3D
 
 signal PickUpItemSignal(Item)
 const ACCEL = 10
@@ -25,7 +25,13 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("Player")
+	PlayFade(false)
 
+func PlayFade(bForwards):
+	if bForwards:
+		$AnimationPlayer.play("Fade")
+	else:
+		$AnimationPlayer.play_backwards("Fade")
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -88,8 +94,8 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-	
-	
-	
+
+
+
 func PickUpItem(Item):
 	emit_signal("PickUpItemSignal",Item)

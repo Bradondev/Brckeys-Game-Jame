@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://p4gl8rcioafm"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_rqllj"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_i1jut"]
+[ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_gcs1t"]
+[ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_s4s2u"]
+[ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_701hd"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
+
+[node name="4" type="Node3D"]
+script = ExtResource("1_rqllj")
+
+[node name="Ground" type="CSGMesh3D" parent="."]
+transform = Transform3D(40, 0, 0, 0, 29.738, 0, 0, 0, 29.738, 0, 0, 0)
+use_collision = true
+mesh = SubResource("PlaneMesh_pep2u")
+
+[node name="Ground2" type="CSGMesh3D" parent="."]
+transform = Transform3D(40, 0, 0, 0, 29.738, 0, 0, 0, 29.738, 0, 4.06433, 0)
+use_collision = true
+mesh = SubResource("PlaneMesh_pep2u")
+
+[node name="Player" parent="." instance=ExtResource("2_i1jut")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.987795, 0.0295527, 0.152933, -0.155762, 0.187414, 0.969853, 0, -0.981836, 0.18973, 0, 0, 0)
+light_color = Color(0.968627, 0.984314, 0, 1)
+light_energy = 1.063
+
+[node name="BasePaintedWall" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
+
+[node name="BasePaintedWall2" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, -22.8145)
+
+[node name="BasePaintedWall3" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, 5.18552)
+
+[node name="BasePaintedWall6" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, -2.81448)
+
+[node name="BasePaintedWall7" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, -10.8145)
+
+[node name="BasePaintedWall8" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, -18.8145)
+
+[node name="BasePaintedWall4" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, 5.18552)
+
+[node name="BasePaintedWall5" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, -2.81448)
+
+[node name="BasePaintedWall9" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, -10.8145)
+
+[node name="BasePaintedWall10" parent="." instance=ExtResource("3_gcs1t")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, -18.8145)
+
+[node name="SmDoor" parent="." instance=ExtResource("4_s4s2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.91941)
+
+[node name="PlayerStartOrientation2" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38959, 1, 8.16654)
+SpawnPoint = "1"
+
+[node name="SmDoor2" parent="." instance=ExtResource("4_s4s2u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.388, 0.0312469, -13.6452)
+RoomToGoTo = "5.tscn"
+
+[node name="PlayerStartOrientation3" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.6351, 1, -14.169)
+SpawnPoint = "5"
+
+[node name="SmDoor3" parent="." instance=ExtResource("4_s4s2u")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 3.17255, 0.0312469, -2.83268)
+RoomToGoTo = "8.tscn"
+
+[node name="PlayerStartOrientation4" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 3.92542, 1, -2.30884)
+SpawnPoint = "8"
