@@ -12,7 +12,7 @@ class_name BaseLight
 
 @onready var FlickerTimer=$Timer
 
-var SwitchConnect 
+var SwitchConnect
 var NoStopingFlicking = true
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
@@ -21,7 +21,7 @@ func _ready():
 	ConnectToSwitch()
 	if On:
 		TurnOnLight()
-	else: 
+	else:
 		TurnOffLight()
 
 
@@ -33,7 +33,7 @@ func  TurnOffLight():
 	light_energy = 0
 	On = false
 
-	
+
 func  UpdateLight():
 	if On:
 		TurnOffLight()
@@ -47,8 +47,8 @@ func ConnectToSwitch():
 func StartFlickingLights():
 	$Timer.Start()
 	Flickering = true
-	
-	
+
+
 
 func _on_timer_timeout():
 	if Flickering:
@@ -59,7 +59,7 @@ func _on_timer_timeout():
 			my_random_number = rng.randf_range(-10.0, 10.0)
 		if my_random_number >=0:
 			UpdateLight()
-		
+
 func  StopFlickingLights():
 	$Timer.Stop()
 	Flickering = false
