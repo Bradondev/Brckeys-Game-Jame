@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d33pauu53r8qa"]
+[gd_scene load_steps=15 format=3 uid="uid://d33pauu53r8qa"]
 
 [ext_resource type="PackedScene" uid="uid://55ineqm4o8tv" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="1_icibq"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="2_qlyy3"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="9_dx2yn"]
 [ext_resource type="PackedScene" uid="uid://bpta4pggsmi5b" path="res://3d/prefabs/SM_bathroom_sink_green.tscn" id="10_tx0mg"]
 [ext_resource type="PackedScene" uid="uid://uvo2cn81cd22" path="res://3d/prefabs/SM_toilet.tscn" id="11_3ses1"]
+[ext_resource type="PackedScene" uid="uid://bhwjpx5125jea" path="res://3d/prefabs/SM_flame_thrower.tscn" id="12_86ffj"]
+[ext_resource type="PackedScene" uid="uid://bhpil5cd6b3ee" path="res://3d/prefabs/SM_spikes.tscn" id="13_jxswk"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ilf4c"]
 material = ExtResource("8_bw3vv")
@@ -50,3 +52,9 @@ transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -5.95625, 0, 0.38130
 
 [node name="toilet" parent="." instance=ExtResource("11_3ses1")]
 transform = Transform3D(-0.232179, 0, 0.660373, 0, 0.7, 0, -0.660373, 0, -0.232179, -7.79731, 2.38419e-07, 0.975054)
+
+[node name="flameThrower" parent="." instance=ExtResource("12_86ffj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.12591, 2.07611, -0.996094)
+
+[node name="spikes" parent="." instance=ExtResource("13_jxswk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80904, 0, 0.33063)
