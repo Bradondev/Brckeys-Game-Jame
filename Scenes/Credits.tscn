@@ -78,6 +78,8 @@ text = "SaltOfLife - 3D Artist / Game Designer
 
 Ichit -  Game Designer / Game Programmer
 
-Banado - Game Programmer / Game Designer"
+Banado - Game Programmer / Game Designer
+
+CleaverMusic - Music"
 
 [connection signal="button_up" from="Panel/VBoxContainer/BackButton" to="Panel/VBoxContainer/BackButton" method="_on_button_up"]
