@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://uvo2cn81cd22"]
+
+[ext_resource type="PackedScene" uid="uid://sauflygbkuv7" path="res://3d/imports/toilet.glb" id="1_150ne"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f4elr"]
+size = Vector3(2.30725, 1.53619, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oi1b1"]
+size = Vector3(0.837601, 1.05243, 1.36823)
+
+[node name="toilet" instance=ExtResource("1_150ne")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0491333, 0.777924, 0)
+shape = SubResource("BoxShape3D_f4elr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00129, 1.94559, -0.00820923)
+shape = SubResource("BoxShape3D_oi1b1")

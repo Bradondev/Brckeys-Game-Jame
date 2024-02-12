@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b00757yegu1xq"]
+
+[ext_resource type="PackedScene" uid="uid://do0rwnnjfxa36" path="res://3d/imports/trashCan/trashCan.glb" id="1_f4fw8"]
+
+[node name="trashCan" instance=ExtResource("1_f4fw8")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)

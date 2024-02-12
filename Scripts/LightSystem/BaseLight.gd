@@ -8,8 +8,6 @@ class_name BaseLight
 @export var On = true
 @export var FlickeringLoop :float
 @export var Flickering = false
-
-
 @onready var FlickerTimer=$Timer
 
 var SwitchConnect
