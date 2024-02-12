@@ -48,8 +48,8 @@ transform = Transform3D(1, -2.79397e-09, 1.39698e-09, -2.79397e-09, 1, 2.78851e-
 
 [node name="SpotLight3D" parent="." instance=ExtResource("4_fli53")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.2822, 1.87197, -2.29078)
-FlickeringLoop = 0.2
 SwitchToConnectTo = "1"
+FlickeringLoop = 0.2
 
 [editable path="Switch"]
 [editable path="Switch/PopUp"]
