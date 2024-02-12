@@ -8,4 +8,5 @@ func _ready():
 
 
 func InterAct():
-	Player.PickUpItem(self)
+	LevelLoader.GetPlayer().PickUpItem(self)
+	queue_free()

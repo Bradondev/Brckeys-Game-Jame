@@ -13,7 +13,6 @@ func _process(delta):
 	#print_debug(ColliderObject)
 	if ColliderObject != null and ColliderObject.is_in_group("InterActiveObject"):
 		if Input.is_action_just_pressed("Inter_Act"):
-			print_debug("play")
 			ColliderObject.Player = Player
 			ColliderObject.InterAct()
 			

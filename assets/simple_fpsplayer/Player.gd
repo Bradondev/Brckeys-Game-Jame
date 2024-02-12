@@ -1,6 +1,6 @@
 extends CharacterBody3D 
 
-signal PickUpItem(Item)
+signal PickUpItemSignal(Item)
 const ACCEL = 10
 const DEACCEL = 30
 
@@ -91,5 +91,5 @@ func _physics_process(delta):
 	
 	
 	
-func _PickUpItem(Item):
-	emit_signal("PickUpItem",Item)
+func PickUpItem(Item):
+	emit_signal("PickUpItemSignal",Item)

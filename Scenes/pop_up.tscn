@@ -11,13 +11,13 @@ DescriptionTextValue = "Turn on lights"
 InputTextLabelValue = "Press E"
 
 [node name="Description" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.769073, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06078, 0)
 billboard = 1
 no_depth_test = true
 text = "Turn on lights"
 
 [node name="InputLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570003, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.845202, 0)
 billboard = 1
 text = "Press E"
 
@@ -28,7 +28,6 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583359, 0)
 shape = SubResource("BoxShape3D_tdlap")
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

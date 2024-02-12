@@ -51,4 +51,4 @@ shape = SubResource("BoxShape3D_pn1pn")
 [node name="ItemHolder" type="Node3D" parent="."]
 script = ExtResource("3_2odj5")
 
-[connection signal="PickUpItem" from="." to="ItemHolder" method="AddItem"]
+[connection signal="PickUpItemSignal" from="." to="ItemHolder" method="AddItem"]
