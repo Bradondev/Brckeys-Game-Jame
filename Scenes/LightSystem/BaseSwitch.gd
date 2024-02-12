@@ -1,4 +1,4 @@
-extends Node3D
+extends InterActiveObject 
 class_name  Switch
 signal Fliped
 
@@ -7,6 +7,9 @@ signal Fliped
 var Name ="Switch"
 func _ready():
 	add_to_group(Switchlocation)
-func  SwitchFliped():
+	super._ready()
+	
+func InterAct():
 	print_debug("Fliped")
 	emit_signal("Fliped")
+

@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjjdifoh2hu0f"]
+[gd_scene load_steps=4 format=3 uid="uid://cjjdifoh2hu0f"]
 
 [ext_resource type="Script" path="res://Scenes/LightSystem/BaseSwitch.gd" id="1_n6emt"]
+[ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="2_j5kcs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46clf"]
 albedo_color = Color(0.996078, 0, 0.196078, 1)
 
-[node name="Switch" type="CSGBox3D"]
+[node name="Switch" type="CSGBox3D" node_paths=PackedStringArray("PopUp")]
 use_collision = true
 material = SubResource("StandardMaterial3D_46clf")
 script = ExtResource("1_n6emt")
+PopUp = NodePath("PopUp")
+
+[node name="PopUp" parent="." instance=ExtResource("2_j5kcs")]
+
+[node name="CollisionShape3D" parent="PopUp/HitBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00122628, 0.29842, 0.0587051)
+
+[editable path="PopUp"]
