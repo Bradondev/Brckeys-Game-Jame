@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d11wl3x6w6w3n"]
+
+[ext_resource type="Material" uid="uid://dl3cas0pqhkty" path="res://3d/materials/carpet.tres" id="1_d4vie"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
+
+[node name="SM_Ground" type="CSGMesh3D"]
+transform = Transform3D(40, 0, 0, 0, 29.738, 0, 0, 0, 29.738, 0, 0, 0)
+material_override = ExtResource("1_d4vie")
+use_collision = true
+mesh = SubResource("PlaneMesh_pep2u")
