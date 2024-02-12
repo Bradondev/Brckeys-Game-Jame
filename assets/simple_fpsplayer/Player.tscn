@@ -1,13 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=5 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
-[ext_resource type="Script" path="res://Scripts/Menus/ItemHolder.gd" id="3_2odj5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pn1pn"]
-size = Vector3(0.001, 0.001, 1.49646)
+size = Vector3(0.107635, 0.147949, 1.49646)
 
 [node name="Player" type="CharacterBody3D"]
 disable_mode = 2
@@ -21,6 +20,7 @@ shape = SubResource("CapsuleShape3D_euj4i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="rotation_helper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860379, 0)
 
 [node name="flashlight_player" type="SpotLight3D" parent="rotation_helper/Camera3D"]
 visible = false
@@ -45,10 +45,5 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="rotation_helper/Camera3D/PopRayCast"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0771083, 0.157113, 0.0204729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0237908, 0.230587, 0.0204729)
 shape = SubResource("BoxShape3D_pn1pn")
-
-[node name="ItemHolder" type="Node3D" parent="."]
-script = ExtResource("3_2odj5")
-
-[connection signal="PickUpItemSignal" from="." to="ItemHolder" method="AddItem"]
