@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhwjpx5125jea"]
+
+[ext_resource type="PackedScene" uid="uid://c4cj52lb21sah" path="res://3d/imports/flameThrower/flameThrower.glb" id="1_ygyqi"]
+
+[node name="flameThrower" instance=ExtResource("1_ygyqi")]
+
+[node name="Skeleton3D" parent="Armature" index="13"]
+bones/4/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
+bones/5/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
+bones/6/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
+bones/7/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
