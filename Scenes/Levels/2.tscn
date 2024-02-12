@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://tv1mgg8twwv5"]
+[gd_scene load_steps=6 format=3 uid="uid://tv1mgg8twwv5"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_y8pl0"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="2_6kr1i"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="3_r42ed"]
+[ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="4_j65cm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
 
@@ -46,3 +47,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.7544
 
 [node name="SmDoor" parent="." instance=ExtResource("3_r42ed")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.91941)
+
+[node name="PlayerStartOrientation" parent="." instance=ExtResource("4_j65cm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.33483, 1.8536, 8.77891)

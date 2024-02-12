@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt1qcm2hx4o83"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/PlayerStartOrientation.gd" id="1_mskpm"]
+
+[node name="PlayerStartOrientation" type="Node3D"]
+script = ExtResource("1_mskpm")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -2)
+collision_mask = 0
+debug_shape_custom_color = Color(1, 0, 0, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.3104, 0, 0, 0, 1, 0, 0.0789688, 0)
+size = Vector3(1, 0.931641, 1)

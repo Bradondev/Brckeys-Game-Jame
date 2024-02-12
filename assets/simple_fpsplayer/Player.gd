@@ -20,9 +20,10 @@ func _ready():
 	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Camera3D/flashlight_player
-	
+
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	add_to_group("Player")
 
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
@@ -33,14 +34,14 @@ func _input(event):
 		var camera_rot = rotation_helper.rotation
 		camera_rot.x = clampf(camera_rot.x, -1.4, 1.4)
 		rotation_helper.rotation = camera_rot
-	
+
 	# Release/Grab Mouse for debugging. You can change or replace this.
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
+
 	# Flashlight toggle. Defaults to F on Keyboard.
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_F:
@@ -58,7 +59,7 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	
+
 	# This just controls acceleration. Don't touch it.
 	var accel
 	if dir.dot(velocity) > 0:
