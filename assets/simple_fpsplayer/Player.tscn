@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=7 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
 [ext_resource type="Script" path="res://Scripts/Menus/ItemHolder.gd" id="3_2odj5"]
+[ext_resource type="PackedScene" uid="uid://bhbbhfa0e2ny3" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 
@@ -51,4 +52,8 @@ shape = SubResource("BoxShape3D_pn1pn")
 [node name="ItemHolder" type="Node3D" parent="."]
 script = ExtResource("3_2odj5")
 
+[node name="PlayerUi" parent="." instance=ExtResource("4_rnsln")]
+
+[connection signal="AddBatteryUi" from="." to="PlayerUi" method="AddBatteryToUi"]
+[connection signal="DelBatteryUi" from="." to="PlayerUi" method="DelBatteryUi"]
 [connection signal="PickUpItemSignal" from="." to="ItemHolder" method="AddItem"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsfne8fop4cpq"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/BatteryInject.gd" id="1_ifppj"]
+[ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="2_mhj8t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n3m0r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rsgt8"]
+albedo_color = Color(0.25098, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mrt5k"]
+
+[node name="BatteryInject" type="StaticBody3D" node_paths=PackedStringArray("PopUp")]
+script = ExtResource("1_ifppj")
+DeniedColor = Color(0.976471, 0, 0, 1)
+OpenColor = Color(0, 0.572549, 0, 1)
+PopUp = NodePath("PopUp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_n3m0r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_rsgt8")
+mesh = SubResource("BoxMesh_mrt5k")
+
+[node name="PopUp" parent="." node_paths=PackedStringArray("PopHitBox") instance=ExtResource("2_mhj8t")]
+DescriptionTextValue = "Incert Battery to Open Door"
+PopHitBox = NodePath("../CollisionShape3D")
+
+[node name="Description" parent="PopUp" index="0"]
+text = "Incert Battery to Open Door"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="PopUp"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjjdifoh2hu0f"]
 
-[ext_resource type="Script" path="res://Scenes/LightSystem/BaseSwitch.gd" id="1_n6emt"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/BaseSwitch.gd" id="1_4shq4"]
 [ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="2_j5kcs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46clf"]
@@ -11,7 +11,9 @@ albedo_color = Color(0.996078, 0, 0.196078, 1)
 [node name="Switch" type="CSGBox3D" node_paths=PackedStringArray("PopUp")]
 use_collision = true
 material = SubResource("StandardMaterial3D_46clf")
-script = ExtResource("1_n6emt")
+script = ExtResource("1_4shq4")
+DeniedColor = Color(0.807843, 0, 0, 1)
+OpenColor = Color(0, 0.678431, 0, 1)
 PopUp = NodePath("PopUp")
 
 [node name="PopUp" parent="." node_paths=PackedStringArray("PopHitBox") instance=ExtResource("2_j5kcs")]
@@ -25,5 +27,10 @@ visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_ueqw8")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="PopUp"]

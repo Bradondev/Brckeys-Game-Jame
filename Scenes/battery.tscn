@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://covj57sb1rhdv"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/battery.gd" id="1_p3nt8"]
+[ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="2_iuu8y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mvoc7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_roi8i"]
+albedo_color = Color(0.584314, 0.698039, 0.215686, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b1bx3"]
+
+[node name="Battery" type="StaticBody3D" node_paths=PackedStringArray("PopUp")]
+script = ExtResource("1_p3nt8")
+PopUp = NodePath("PopUp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_mvoc7")
+
+[node name="PopUp" parent="." node_paths=PackedStringArray("PopHitBox") instance=ExtResource("2_iuu8y")]
+DescriptionTextValue = "Pick Up battery"
+PopHitBox = NodePath("../CollisionShape3D")
+OutLinecolor = Color(0, 0.686275, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_roi8i")
+mesh = SubResource("BoxMesh_b1bx3")

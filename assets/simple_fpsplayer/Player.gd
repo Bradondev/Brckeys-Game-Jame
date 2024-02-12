@@ -1,8 +1,12 @@
 extends CharacterBody3D 
 
 signal PickUpItemSignal(Item)
+signal JustDied
+signal AddBatteryUi
+signal DelBatteryUi
 const ACCEL = 10
 const DEACCEL = 30
+
 
 const SPEED = 5.0
 const SPRINT_MULT = 2
@@ -11,11 +15,17 @@ const MOUSE_SENSITIVITY = 0.06
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-
 var camera
 var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
+
+var Health = 3
+var HasScanner =false
+var HasBattery = false
+var ScannerCharge = 0
+var Batteries =[]
+
 
 func _ready():
 	camera = $rotation_helper/Camera3D
@@ -89,7 +99,18 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	
+
+func TakeDamage(Amount):
+	Health -= Amount
+	if Health <= 0:
+		print_debug("Dead")
+		emit_signal("JustDied")
 	
 func PickUpItem(Item):
 	emit_signal("PickUpItemSignal",Item)
+func AddBattery():
+	Batteries.append("Battery")
+	emit_signal("AddBatteryUi")
+func DelBattery():
+	Batteries.pop_back()
+	emit_signal("DelBatteryUi")
