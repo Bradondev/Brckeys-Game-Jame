@@ -1,15 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bku23v47st816"]
+[gd_scene load_steps=7 format=3 uid="uid://baduotbprcqa6"]
 
-[ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_m3pqj"]
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_rfg5v"]
-[ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_cn816"]
-[ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_tlew4"]
-[ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_l7jft"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_pqify"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_h2ys6"]
+[ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_r356c"]
+[ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_62r28"]
+[ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_ifyox"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
 
-[node name="5" type="Node3D"]
-script = ExtResource("1_m3pqj")
+[node name="6" type="Node3D"]
+script = ExtResource("1_pqify")
 
 [node name="Ground" type="CSGMesh3D" parent="."]
 transform = Transform3D(20, 0, 0, 0, 14.869, 0, 0, 0, 14.869, 0, 0, 0)
@@ -21,7 +21,7 @@ transform = Transform3D(20, 0, 0, 0, 14.869, 0, 0, 0, 14.869, 0, 4.06433, 0)
 use_collision = true
 mesh = SubResource("PlaneMesh_pep2u")
 
-[node name="Player" parent="." instance=ExtResource("2_rfg5v")]
+[node name="Player" parent="." instance=ExtResource("2_h2ys6")]
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -29,54 +29,54 @@ transform = Transform3D(0.987795, 0.0295527, 0.152933, -0.155762, 0.187414, 0.96
 light_color = Color(0.968627, 0.984314, 0, 1)
 light_energy = 1.063
 
-[node name="BasePaintedWall" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
 
-[node name="BasePaintedWall10" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall10" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(0.0791267, 0, 0, 0, 1.02758, 0, 0, 0, 1.42144, 13.9442, -1.49012e-07, -2.38348)
 
-[node name="BasePaintedWall11" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall11" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(0.0791267, 0, 0, 0, 1.02758, 0, 0, 0, 1.42144, 5.94419, -1.49012e-07, -2.38348)
 
-[node name="BasePaintedWall12" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall12" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(0.0791267, 0, 0, 0, 1.02758, 0, 0, 0, 1.42144, 13.9442, -1.49012e-07, 3.61652)
 
-[node name="BasePaintedWall13" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall13" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(0.0791267, 0, 0, 0, 1.02758, 0, 0, 0, 1.42144, 5.94419, -1.49012e-07, 3.61652)
 
-[node name="BasePaintedWall2" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall2" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, -6.81448)
 
-[node name="BasePaintedWall7" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall7" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7544, -1.49012e-07, 9.18552)
 
-[node name="BasePaintedWall8" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall8" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(1.03339, 0, 0, 0, 1, 0, 0, 0, 1, 14.8127, 3.27825e-07, -6.7366)
 
-[node name="BasePaintedWall3" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall3" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.7544, -1.49012e-07, 5.18552)
 
-[node name="BasePaintedWall6" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall6" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.7544, -1.49012e-07, -2.81448)
 
-[node name="BasePaintedWall4" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall4" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, 5.18552)
 
-[node name="BasePaintedWall5" parent="." instance=ExtResource("3_cn816")]
+[node name="BasePaintedWall5" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, -2.81448)
 
-[node name="SmDoor" parent="." instance=ExtResource("4_tlew4")]
+[node name="SmDoor" parent="." instance=ExtResource("4_62r28")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.91941)
-RoomToGoTo = "4.tscn"
+RoomToGoTo = "7.tscn"
 
-[node name="PlayerStartOrientation2" parent="." instance=ExtResource("5_l7jft")]
+[node name="PlayerStartOrientation2" parent="." instance=ExtResource("5_ifyox")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56897, 1, 8.16654)
-SpawnPoint = "4"
+SpawnPoint = "7"
 
-[node name="SmDoor2" parent="." instance=ExtResource("4_tlew4")]
+[node name="SmDoor2" parent="." instance=ExtResource("4_62r28")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.4237, 0.0312469, 1.08803)
-RoomToGoTo = "6.tscn"
+RoomToGoTo = "5.tscn"
 
-[node name="PlayerStartOrientation3" parent="." instance=ExtResource("5_l7jft")]
+[node name="PlayerStartOrientation3" parent="." instance=ExtResource("5_ifyox")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.6708, 1, 0.384815)
-SpawnPoint = "6"
+SpawnPoint = "5"
