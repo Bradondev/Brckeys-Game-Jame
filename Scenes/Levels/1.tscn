@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="3_g2ci5"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="4_bjv7o"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="4_uv33d"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_trash_can.tscn" id="7_v0avw"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="10_k17vp"]
+[ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="7_v0avw"]
+[ext_resource type="PackedScene" uid="uid://bfitwpu5j2gb7" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="10_k17vp"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="11_0ikxu"]
 
 [node name="1" type="Node3D"]
@@ -20,11 +20,6 @@ script = ExtResource("1_ga15u")
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
 
 [node name="NormalLighting" parent="." instance=ExtResource("4_bjv7o")]
-light_color = Color(0.654902, 0.690196, 0, 1)
-light_energy = 3.174
-light_indirect_energy = 3.533
-light_volumetric_fog_energy = 3.533
-directional_shadow_max_distance = 17.0
 
 [node name="BasePaintedWall" parent="." instance=ExtResource("2_nxvfb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 17.1855)
