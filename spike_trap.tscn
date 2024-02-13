@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ceeli8xrcrgjx"]
+[gd_scene load_steps=12 format=3 uid="uid://ceeli8xrcrgjx"]
 
 [ext_resource type="Script" path="res://spike_trap.gd" id="1_3j7m0"]
 [ext_resource type="PackedScene" uid="uid://bhpil5cd6b3ee" path="res://3d/prefabs/SM_spikes.tscn" id="2_efvfm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8pily"]
+size = Vector3(1.9, 2, 1.80889)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q5d1w"]
 size = Vector3(1.65622, 0.173828, 1.70462)
@@ -87,6 +90,12 @@ script = ExtResource("1_3j7m0")
 
 [node name="spikes" parent="." instance=ExtResource("2_efvfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="Area3D" type="Area3D" parent="spikes"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="spikes/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0170366)
+shape = SubResource("BoxShape3D_8pily")
 
 [node name="InterHitBox" type="Area3D" parent="."]
 
