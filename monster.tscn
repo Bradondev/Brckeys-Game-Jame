@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://b884uknjsec3j"]
+
+[ext_resource type="Script" path="res://Scripts/Ai/Monster.gd" id="1_d7srs"]
+[ext_resource type="Script" path="res://Scripts/Ai/StateMachine.gd" id="2_smmno"]
+[ext_resource type="Script" path="res://Scripts/Ai/MonsterIdle.gd" id="3_5vln3"]
+[ext_resource type="Script" path="res://Scripts/Ai/MonsterChase.gd" id="4_1g41x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b2vdr"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_plwrc"]
+
+[node name="Monster" type="CharacterBody3D"]
+script = ExtResource("1_d7srs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_b2vdr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_plwrc")
+
+[node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_smmno")
+initial_state = NodePath("Chase")
+
+[node name="Idle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("3_5vln3")
+enemy = NodePath("../..")
+move_speed = 1
+
+[node name="Chase" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_1g41x")
+enemy = NodePath("../..")
