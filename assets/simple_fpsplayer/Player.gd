@@ -35,6 +35,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("Player")
 	PlayFade(false)
+	flashlight.show()
 
 func PlayFade(bForwards):
 	if bForwards:
@@ -103,14 +104,14 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-	
+
 
 func TakeDamage(Amount):
 	Health -= Amount
 	if Health <= 0:
 		print_debug("Dead")
 		emit_signal("JustDied")
-	
+
 
 
 

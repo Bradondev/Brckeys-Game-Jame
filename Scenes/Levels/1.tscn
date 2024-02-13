@@ -20,11 +20,6 @@ script = ExtResource("1_ga15u")
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
 
 [node name="NormalLighting" parent="." instance=ExtResource("4_bjv7o")]
-light_color = Color(0.654902, 0.690196, 0, 1)
-light_energy = 3.174
-light_indirect_energy = 3.533
-light_volumetric_fog_energy = 3.533
-directional_shadow_max_distance = 17.0
 
 [node name="BasePaintedWall" parent="." instance=ExtResource("2_nxvfb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 17.1855)
@@ -168,3 +163,5 @@ transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 9.9883
 
 [node name="ceilingTile32" parent="." instance=ExtResource("11_0ikxu")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 9.9883, 4.04172, 10.2425)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
