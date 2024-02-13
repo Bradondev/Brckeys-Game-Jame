@@ -6,14 +6,14 @@
 [ext_resource type="Script" path="res://Scripts/Menus/ResumeButton.gd" id="2_oagun"]
 [ext_resource type="Script" path="res://Scripts/Menus/RestartButton.gd" id="3_ylnba"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53ura"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keuc2"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4prpr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hqm6"]
 bg_color = Color(0.027451, 0, 0.0784314, 1)
 border_width_left = 1
 border_width_top = 1
@@ -23,8 +23,8 @@ border_width_bottom = 1
 [sub_resource type="Theme" id="Theme_bupt1"]
 default_font = ExtResource("1_e4cjr")
 default_font_size = 80
-Button/styles/hover = SubResource("StyleBoxFlat_53ura")
-Button/styles/normal = SubResource("StyleBoxFlat_4prpr")
+Button/styles/hover = SubResource("StyleBoxFlat_keuc2")
+Button/styles/normal = SubResource("StyleBoxFlat_3hqm6")
 
 [sub_resource type="Theme" id="Theme_v87t4"]
 default_font = ExtResource("1_e4cjr")

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://csf444oel8uy2"]
+
+[ext_resource type="Script" path="res://Scripts/Notes/NoteBase.gd" id="1_cml44"]
+
+[resource]
+script = ExtResource("1_cml44")
+Messeage = "Help me "
