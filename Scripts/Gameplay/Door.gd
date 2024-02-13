@@ -1,4 +1,4 @@
-extends Node3D
+extends InterActiveObject
 
 @export var RoomToGoTo = "1.tscn"
 
@@ -10,6 +10,10 @@ extends Node3D
 
 var bHasEnteredDoor = false
 
+func _ready():
+	super._ready()
+	$PopUp.bIsLocked = bCanEnterDoor == false
+
 func _enter_tree():
 	if DoorType == 1:
 		$doorStandard/door.mesh = load("res://3d/meshes/Mesh_BlueDoor.tres")
@@ -19,18 +23,18 @@ func _enter_tree():
 
 func UnlockDoor():
 	bCanEnterDoor = true
+	$PopUp.bIsLocked = false
 
-func _on_area_3d_body_entered(body):
+func InterAct():
 	if bCanEnterDoor == false:
 		return
 
 	if bHasEnteredDoor:
 		return
 
-	if body.is_in_group("Player"):
-		bHasEnteredDoor = true
-		$AnimationPlayer.play("DoorOpen")
-		LevelLoader.GetPlayer().PlayFade(true)
+	bHasEnteredDoor = true
+	$AnimationPlayer.play("DoorOpen")
+	LevelLoader.GetPlayer().PlayFade(true)
 
 
 

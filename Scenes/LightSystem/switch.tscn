@@ -8,17 +8,16 @@ albedo_color = Color(0.996078, 0, 0.196078, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ueqw8"]
 
-[node name="Switch" type="CSGBox3D" node_paths=PackedStringArray("PopUp")]
+[node name="Switch" type="CSGBox3D"]
 use_collision = true
 size = Vector3(0.5, 0.5, 0.5)
 material = SubResource("StandardMaterial3D_46clf")
 script = ExtResource("1_4shq4")
 DeniedColor = Color(0.807843, 0, 0, 1)
 OpenColor = Color(0, 0.678431, 0, 1)
-PopUp = NodePath("PopUp")
 
 [node name="PopUp" parent="." instance=ExtResource("2_j5kcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.30289)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.226945, 0.30289)
 
 [node name="Area3D" type="Area3D" parent="."]
 visible = false
