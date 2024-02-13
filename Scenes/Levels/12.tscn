@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_n8c48"]
 [ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_y48we"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_ovaim"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="8_eauvt"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_lamp.tscn" id="9_ctegl"]
+[ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="8_eauvt"]
+[ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="9_ctegl"]
 [ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="10_f3acm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]

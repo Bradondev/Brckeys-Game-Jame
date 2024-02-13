@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_ikytb"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_67dlt"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="8_dx8he"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_trash_can.tscn" id="11_agfnm"]
+[ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="11_agfnm"]
 
 [node name="10" type="Node3D"]
 script = ExtResource("1_ln24g")
