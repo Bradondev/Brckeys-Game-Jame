@@ -10,10 +10,19 @@ signal Fliped
 @export_color_no_alpha var OpenColor: Color
 
 var Name ="Switch"
+
+var bHasFlipped = false
+
 func _ready():
 	add_to_group(Switchlocation)
 	super._ready()
 
+	var data = LevelLoader.Load(self)
+	if data != null:
+		if data["bHasFlipped"]:
+			await get_tree().process_frame
+			emit_signal("Fliped")
+		bHasFlipped = data["bHasFlipped"]
 
 
 func InterAct():
@@ -30,6 +39,8 @@ func InterAct():
 	elif !NeedBattery:
 		print_debug("hit")
 		emit_signal("Fliped")
+		bHasFlipped = !bHasFlipped
+		LevelLoader.Save(self, {"bHasFlipped" : bHasFlipped})
 
 
 

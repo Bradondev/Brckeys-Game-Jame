@@ -4,11 +4,18 @@ extends Node3D
 
 
 
-
+@export var  bCanEnterDoor = true
 
 
 var bHasEnteredDoor = false
+
+func UnlockDoor():
+	bCanEnterDoor = true
+
 func _on_area_3d_body_entered(body):
+	if bCanEnterDoor == false:
+		return
+
 	if bHasEnteredDoor:
 		return
 

@@ -37,6 +37,14 @@ func _ready():
 	PlayFade(false)
 	flashlight.show()
 
+	var data = LevelLoader.LoadPlayer()
+	if data != null:
+		if len(data["Batteries"]) != 0:
+			Batteries = data["Batteries"]
+			emit_signal("AddBatteryUi")
+
+
+
 func PlayFade(bForwards):
 	if bForwards:
 		$AnimationPlayer.play("Fade")
@@ -117,9 +125,13 @@ func TakeDamage():
 
 func PickUpItem(Item):
 	emit_signal("PickUpItemSignal",Item)
+
 func AddBattery():
 	Batteries.append("Battery")
 	emit_signal("AddBatteryUi")
+	LevelLoader.SavePlayer({"Batteries" : Batteries})
+
 func DelBattery():
 	Batteries.pop_back()
 	emit_signal("DelBatteryUi")
+	LevelLoader.SavePlayer({"Batteries" : Batteries})
