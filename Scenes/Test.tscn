@@ -1,5 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwv5negqaxbcp"]
-[gd_scene load_steps=8 format=3 uid="uid://dwv5negqaxbcp"]
+[gd_scene load_steps=10 format=3 uid="uid://dwv5negqaxbcp"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_pgt53"]
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="3_0f543"]
@@ -7,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cohjvtye714vv" path="res://Scenes/scanner.tscn" id="5_0fg8a"]
 [ext_resource type="PackedScene" uid="uid://dsfne8fop4cpq" path="res://Scenes/battery_inject.tscn" id="6_x38oh"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="7_2kvav"]
-[ext_resource type="PackedScene" path="res://Scenes/scanner.tscn" id="5_0fg8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p7vjo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

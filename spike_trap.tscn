@@ -1,0 +1,120 @@
+[gd_scene load_steps=11 format=3 uid="uid://ceeli8xrcrgjx"]
+
+[ext_resource type="Script" path="res://spike_trap.gd" id="1_3j7m0"]
+[ext_resource type="PackedScene" uid="uid://bhpil5cd6b3ee" path="res://3d/prefabs/SM_spikes.tscn" id="2_efvfm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q5d1w"]
+size = Vector3(1.65622, 0.173828, 1.70462)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uivtx"]
+size = Vector3(4, 0.2, 4)
+
+[sub_resource type="Animation" id="Animation_jwjwm"]
+resource_name = "Kill"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("spikes:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lvcgq"]
+resource_name = "Warning"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("spikes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1, 0), Vector3(0, -0.5, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cuqpd"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_526nd"]
+resource_name = "Reset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("spikes:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1jh1o"]
+resource_name = "Reset2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("spikes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.5, 0), Vector3(0, -1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j78qp"]
+_data = {
+"Kill": SubResource("Animation_jwjwm"),
+"RESET": SubResource("Animation_cuqpd"),
+"Reset": SubResource("Animation_526nd"),
+"Reset2": SubResource("Animation_1jh1o"),
+"Warning": SubResource("Animation_lvcgq")
+}
+
+[node name="SpikeTrap" type="Node3D"]
+script = ExtResource("1_3j7m0")
+
+[node name="spikes" parent="." instance=ExtResource("2_efvfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="InterHitBox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InterHitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00886536, 0.116526, 0.0267181)
+shape = SubResource("BoxShape3D_q5d1w")
+
+[node name="OuterHitBox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OuterHitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00886536, 0.116526, 0.0267181)
+shape = SubResource("BoxShape3D_uivtx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j78qp")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="reset2" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="InterHitBox" to="." method="_on_inter_hit_box_body_entered"]
+[connection signal="body_exited" from="InterHitBox" to="." method="_on_inter_hit_box_body_exited"]
+[connection signal="body_entered" from="OuterHitBox" to="." method="_on_outer_hit_box_body_entered"]
+[connection signal="body_exited" from="OuterHitBox" to="." method="_on_outer_hit_box_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="reset2" to="." method="_on_reset_2_timeout"]
