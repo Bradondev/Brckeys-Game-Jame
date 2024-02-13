@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_l50h0"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_bfcbt"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_vx4qk"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_t6mpw"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_t6mpw"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_f6lvh"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="8_pn4ve"]
 [ext_resource type="PackedScene" uid="uid://dgcmqwhdlibhu" path="res://Scenes/RoomLightingBase.tscn" id="8_xab3c"]
