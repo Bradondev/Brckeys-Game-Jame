@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://d33pauu53r8qa"]
+[gd_scene load_steps=20 format=3 uid="uid://d33pauu53r8qa"]
 
-[ext_resource type="PackedScene" uid="uid://55ineqm4o8tv" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="1_icibq"]
+[ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="1_icibq"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="2_qlyy3"]
-[ext_resource type="PackedScene" uid="uid://dlv7smuv0f44e" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="3_06rsb"]
+[ext_resource type="PackedScene" uid="uid://cuf7mugub7ny0" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="3_06rsb"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="4_drg80"]
 [ext_resource type="PackedScene" uid="uid://bfitwpu5j2gb7" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="5_kyaic"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="6_cvdwp"]
@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://uvo2cn81cd22" path="res://3d/prefabs/SM_toilet.tscn" id="11_3ses1"]
 [ext_resource type="PackedScene" uid="uid://bhwjpx5125jea" path="res://3d/prefabs/SM_flame_thrower.tscn" id="12_86ffj"]
 [ext_resource type="PackedScene" uid="uid://bhpil5cd6b3ee" path="res://3d/prefabs/SM_spikes.tscn" id="13_jxswk"]
+[ext_resource type="PackedScene" uid="uid://dx736rc536uq3" path="res://3d/prefabs/SM_base_textured_wall.tscn" id="14_t8kmh"]
+[ext_resource type="PackedScene" uid="uid://c0ql66sivy4a6" path="res://3d/prefabs/SM_base_textured_wall_with_doorframe.tscn" id="15_2d80t"]
+[ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="16_n8xgu"]
+[ext_resource type="PackedScene" uid="uid://bipwf0fxdoaou" path="res://3d/prefabs/SM_door_blue.tscn" id="17_ogm3t"]
+[ext_resource type="PackedScene" uid="uid://cwl14jl47b053" path="res://3d/prefabs/SM_door_yellow.tscn" id="18_8oj4h"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ilf4c"]
 material = ExtResource("8_bw3vv")
@@ -58,3 +63,23 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.125
 
 [node name="spikes" parent="." instance=ExtResource("13_jxswk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80904, 0, 0.33063)
+
+[node name="BaseTexturedWall" parent="." instance=ExtResource("14_t8kmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.47292, 0, -2.15023)
+
+[node name="BaseTexturedWallWithDoorframe" parent="." instance=ExtResource("15_2d80t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99932, 0, -1.45123)
+
+[node name="SM_scanner" parent="." instance=ExtResource("16_n8xgu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.157348, 1.5249, 0.726888)
+
+[node name="doorBlue" parent="." instance=ExtResource("17_ogm3t")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.5462, 0, -0.123779)
+
+[node name="doorYellow" parent="." instance=ExtResource("18_8oj4h")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.07822, 0, -1.2773)
+
+[node name="door" parent="doorYellow" index="0"]
+transform = Transform3D(0.78226, 0, -0.622952, 0, 1, 0, 0.622952, 0, 0.78226, 0.900001, 0, -0.1)
+
+[editable path="doorYellow"]

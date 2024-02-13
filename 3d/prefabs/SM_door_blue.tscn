@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bipwf0fxdoaou"]
+
+[ext_resource type="PackedScene" uid="uid://bi1pw6iwt3sjo" path="res://3d/imports/doorsColor/doorBlue.glb" id="1_oyyre"]
+
+[node name="doorBlue" instance=ExtResource("1_oyyre")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
