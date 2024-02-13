@@ -203,6 +203,10 @@ Flickering = true
 [node name="Battery" parent="." instance=ExtResource("14_120y1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62804, -2.21565e-07, 12.1381)
 
+[node name="Battery2" parent="." node_paths=PackedStringArray("PopUp") instance=ExtResource("14_120y1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62804, -2.21565e-07, 10.1381)
+PopUp = NodePath("../Battery/PopUp")
+
 [node name="BatteryInject" parent="." instance=ExtResource("15_p2u16")]
 transform = Transform3D(-0.999999, 0.00139626, 8.9407e-08, 0.00139626, 0.999999, 0, -5.96046e-08, 8.73115e-11, -1, 4.58645, 1.92241, 1.21051)
 DoorToUnlock = NodePath("../SmDoor2")
