@@ -4,9 +4,17 @@
 
 [node name="Light" type="SpotLight3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_color = Color(1, 1, 0.215686, 1)
+spot_range = 7.0
+spot_attenuation = 1.86607
+spot_angle = 86.81
 script = ExtResource("1_32yh0")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.227129, 0, 0, 0)
+size = Vector3(2, 2, 1)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

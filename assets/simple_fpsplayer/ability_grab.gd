@@ -15,8 +15,8 @@ func _process(delta):
 		if Input.is_action_just_pressed("Inter_Act"):
 			ColliderObject.Player = Player
 			ColliderObject.InterAct()
-			
-	
+
+
 	if Input.is_key_pressed(KEY_E):
 		if can_use:
 			can_use = false

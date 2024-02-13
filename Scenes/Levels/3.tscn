@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bcgqkcpuqwfpr"]
+[gd_scene load_steps=12 format=3 uid="uid://bcgqkcpuqwfpr"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_lycxo"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_7rpxx"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_lsj12"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="8_gn3r4"]
 [ext_resource type="PackedScene" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="9_84aqp"]
+[ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="10_7mpmk"]
+[ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="11_my1i0"]
 
 [node name="3" type="Node3D"]
 script = ExtResource("1_lycxo")
@@ -258,3 +260,25 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.49944, 2.21565e-07, 0
 
 [node name="deskWoodGreen4" parent="." instance=ExtResource("9_84aqp")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 8.49944, 2.21565e-07, 0.40078)
+
+[node name="Switch" parent="." instance=ExtResource("10_7mpmk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.52481, 1.90681, -0.371943)
+Switchlocation = "1"
+
+[node name="Light" parent="." instance=ExtResource("11_my1i0")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.48503, 4, 6.19018)
+SwitchToConnectTo = "1"
+
+[node name="Light2" parent="." instance=ExtResource("11_my1i0")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.48503, 4, -3.80982)
+SwitchToConnectTo = "1"
+
+[node name="Light3" parent="." instance=ExtResource("11_my1i0")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.51497, 4, -3.80982)
+SwitchToConnectTo = "1"
+
+[node name="Light4" parent="." instance=ExtResource("11_my1i0")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.51497, 4, 6.19018)
+SwitchToConnectTo = "1"
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
