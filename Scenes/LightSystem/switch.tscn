@@ -17,9 +17,8 @@ DeniedColor = Color(0.807843, 0, 0, 1)
 OpenColor = Color(0, 0.678431, 0, 1)
 PopUp = NodePath("PopUp")
 
-[node name="PopUp" parent="." node_paths=PackedStringArray("PopHitBox") instance=ExtResource("2_j5kcs")]
+[node name="PopUp" parent="." instance=ExtResource("2_j5kcs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.30289)
-PopHitBox = NodePath("../Area3D/CollisionShape3D")
 
 [node name="Area3D" type="Area3D" parent="."]
 visible = false

@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://b6tm7igauwg5q"]
+
+[ext_resource type="Script" path="res://NotePad.gd" id="1_wwuip"]
+[ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="2_e2r4t"]
+[ext_resource type="Texture2D" uid="uid://c2lnyf1bj3ycf" path="res://Art/8915934.png" id="4_yohkh"]
+[ext_resource type="FontFile" uid="uid://b024yg8oy0mbp" path="res://Font/Jennifers Hand Writing.ttf" id="5_ckeml"]
+[ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="5_vgb4l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bm5bl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_34wct"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53ura"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4prpr"]
+bg_color = Color(0.027451, 0, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="Theme" id="Theme_wmttl"]
+default_font = ExtResource("2_e2r4t")
+default_font_size = 80
+Button/styles/hover = SubResource("StyleBoxFlat_53ura")
+Button/styles/normal = SubResource("StyleBoxFlat_4prpr")
+
+[node name="Note" type="StaticBody3D" node_paths=PackedStringArray("PopUp")]
+script = ExtResource("1_wwuip")
+PopUp = NodePath("PopUp")
+
+[node name="PopUp" parent="." instance=ExtResource("5_vgb4l")]
+DescriptionTextValue = "Pick Up Note"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bm5bl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_34wct")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 1924.0
+offset_bottom = 1082.0
+color = Color(0.152941, 0.152941, 0.152941, 1)
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1632.0
+offset_top = 956.0
+offset_right = 1894.0
+offset_bottom = 1055.0
+theme = SubResource("Theme_wmttl")
+action_mode = 0
+text = "Resume"
+
+[node name="StickyNote" type="TextureRect" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(1000, 800)
+layout_mode = 2
+offset_left = 394.0
+offset_top = -33.0
+offset_right = 2394.0
+offset_bottom = 1967.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_yohkh")
+metadata/_edit_group_ = true
+
+[node name="NoteMessage" type="RichTextLabel" parent="CanvasLayer/Control/StickyNote"]
+custom_minimum_size = Vector2(900, 800)
+layout_mode = 2
+offset_left = 257.0
+offset_top = 167.0
+offset_right = 1157.0
+offset_bottom = 1092.72
+scale = Vector2(1.6, 1.6)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_ckeml")
+theme_override_font_sizes/normal_font_size = 60
+text = "I need to get out off "
+
+[connection signal="visibility_changed" from="CanvasLayer" to="." method="_on_canvas_layer_visibility_changed"]
+[connection signal="pressed" from="CanvasLayer/Control/ResumeButton" to="." method="_on_resume_button_pressed"]
