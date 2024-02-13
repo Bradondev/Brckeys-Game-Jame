@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dgcmqwhdlibhu"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 6.22844, 5.36401, -0.894767)
+light_color = Color(0.286275, 0.223529, 0.105882, 1)
+light_energy = 0.1

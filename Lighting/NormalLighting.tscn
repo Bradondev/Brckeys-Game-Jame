@@ -1,6 +1,10 @@
-[gd_scene format=3 uid="uid://dvbgue5ks3uno"]
+[gd_scene load_steps=2 format=3 uid="uid://dvbgue5ks3uno"]
 
-[node name="NormalLighting" type="DirectionalLight3D"]
-transform = Transform3D(0.987795, 0.0295527, 0.152933, -0.155762, 0.187414, 0.969853, 0, -0.981836, 0.18973, 0, 0, 0)
-light_color = Color(0.968627, 0.984314, 0, 1)
-light_energy = 1.063
+[sub_resource type="Environment" id="Environment_fb6lk"]
+background_mode = 1
+background_energy_multiplier = 0.1
+ambient_light_color = Color(0.870588, 0.827451, 0.12549, 1)
+ambient_light_energy = 0.0
+
+[node name="NormalLighting" type="WorldEnvironment"]
+environment = SubResource("Environment_fb6lk")

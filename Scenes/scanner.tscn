@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://cohjvtye714vv"]
 
-[ext_resource type="Script" path="res://Scripts/PickUpAbleObeject.gd" id="1_wdr20"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/PickUpAbleObeject.gd" id="1_gd3l3"]
 [ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="2_y3y4u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xnquk"]
 
 [node name="Scanner" type="StaticBody3D"]
-script = ExtResource("1_wdr20")
+script = ExtResource("1_gd3l3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_xnquk")
