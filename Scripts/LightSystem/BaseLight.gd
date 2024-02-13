@@ -61,3 +61,4 @@ func _on_timer_timeout():
 func  StopFlickingLights():
 	$Timer.Stop()
 	Flickering = false
+	
