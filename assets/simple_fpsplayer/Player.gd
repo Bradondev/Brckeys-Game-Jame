@@ -105,12 +105,11 @@ func _physics_process(delta):
 	move_and_slide()
 	
 
-func TakeDamage(Amount):
-	Health -= Amount
-	if Health <= 0:
+func TakeDamage():
 		print_debug("Dead")
 		emit_signal("JustDied")
-	
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
 
 
