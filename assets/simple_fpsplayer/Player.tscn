@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=13 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
@@ -126,6 +126,9 @@ _data = {
 "RESET": SubResource("Animation_tw47o")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd4hr"]
+albedo_color = Color(0, 1, 1, 1)
+
 [node name="Player" type="CharacterBody3D"]
 disable_mode = 2
 floor_max_angle = 0.802851
@@ -198,6 +201,18 @@ libraries = {
 "": SubResource("AnimationLibrary_5wof4")
 }
 speed_scale = 4.0
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+material = SubResource("StandardMaterial3D_bd4hr")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25748, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCylinder3D"]
+transform = Transform3D(-0.847293, -6.97979e-09, -0.246167, -1.65012, 0.0706562, 0.114896, 0.52215, 0.223291, -0.0363566, -0.644292, 0, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCylinder3D"]
+transform = Transform3D(0.66072, -0.064551, 0.246137, -1.64999, 0.0706188, 0.114964, -0.744592, -0.213769, -0.0363463, 0.586279, 0, -0.332608)
 
 [connection signal="AddBatteryUi" from="." to="PlayerUi" method="AddBatteryToUi"]
 [connection signal="DelBatteryUi" from="." to="PlayerUi" method="DelBatteryUi"]
