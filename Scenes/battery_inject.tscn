@@ -10,11 +10,10 @@ albedo_color = Color(0.25098, 0, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mrt5k"]
 
-[node name="BatteryInject" type="StaticBody3D" node_paths=PackedStringArray("PopUp")]
+[node name="BatteryInject" type="StaticBody3D"]
 script = ExtResource("1_ifppj")
 DeniedColor = Color(0.976471, 0, 0, 1)
 OpenColor = Color(0, 0.572549, 0, 1)
-PopUp = NodePath("PopUp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_n3m0r")
@@ -23,9 +22,9 @@ shape = SubResource("BoxShape3D_n3m0r")
 material_override = SubResource("StandardMaterial3D_rsgt8")
 mesh = SubResource("BoxMesh_mrt5k")
 
-[node name="PopUp" parent="." node_paths=PackedStringArray("PopHitBox") instance=ExtResource("2_mhj8t")]
-DescriptionTextValue = "Incert Battery to Open Door"
-PopHitBox = NodePath("../CollisionShape3D")
+[node name="PopUp" parent="." instance=ExtResource("2_mhj8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.567048, 0.243723)
+DescriptionTextValue = "Insert Battery to Open Door"
 
 [node name="Description" parent="PopUp" index="0"]
 text = "Insert Battery to Open Door"
