@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgc5d443gohya"]
+[gd_scene load_steps=14 format=3 uid="uid://dgc5d443gohya"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ohm7d"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_0q73a"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" path="res://3d/prefabs/SM_lamp.tscn" id="10_rnyxv"]
 [ext_resource type="PackedScene" path="res://3d/prefabs/SM_trash_can.tscn" id="11_e1543"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="12_8qthe"]
+[ext_resource type="PackedScene" path="res://Scenes/battery.tscn" id="13_fqud3"]
 
 [node name="7" type="Node3D"]
 script = ExtResource("1_ohm7d")
@@ -286,3 +287,6 @@ On = false
 [node name="Light2" parent="." instance=ExtResource("12_8qthe")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.50465, 4, 4.16514)
 On = false
+
+[node name="Battery" parent="." instance=ExtResource("13_fqud3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4426, 1.93508, -1.90233)

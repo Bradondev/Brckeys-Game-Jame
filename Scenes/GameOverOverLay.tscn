@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6e8q0vqoxbht"]
+[gd_scene load_steps=10 format=3 uid="uid://bna4fh2o4cw7y"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_kf7gr"]
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="2_23aob"]
@@ -32,7 +32,6 @@ default_font_size = 35
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_kf7gr")
