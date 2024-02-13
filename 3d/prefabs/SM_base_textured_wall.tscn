@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx736rc536uq3"]
+
+[ext_resource type="PackedScene" uid="uid://c4l6emhnwf2qr" path="res://3d/imports/paperWalls/BaseTexturedWall.glb" id="1_740mg"]
+
+[node name="BaseTexturedWall" instance=ExtResource("1_740mg")]

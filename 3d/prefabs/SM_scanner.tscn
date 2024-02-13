@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd70c2freuchv"]
+
+[ext_resource type="PackedScene" path="res://3d/scanner/Scanner.glb" id="1_w2ivq"]
+
+[node name="SM_scanner" type="Node3D"]
+
+[node name="Scanner" parent="." instance=ExtResource("1_w2ivq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00662088, 0, 0.165886)
