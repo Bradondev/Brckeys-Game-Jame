@@ -5,6 +5,7 @@ var CompleteSoundTimer : Timer
 
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	MusicPlayer = AudioStreamPlayer2D.new()
 	add_child(MusicPlayer)
 	MusicPlayer.stream = load("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3")
