@@ -259,8 +259,6 @@ transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, 3.
 transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -0.0852735, 0, 2.28491)
 
 [node name="SmDoor" parent="." instance=ExtResource("9_nicoy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35457, 0.479722, -6.89769)
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 4.07215, 0.205161, -6.25934)
 RoomToGoTo = "GameWin.tscn"
 SceneDirectory = "res://Scenes/"
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
