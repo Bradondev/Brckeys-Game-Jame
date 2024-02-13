@@ -50,6 +50,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.7544
 [node name="SmDoor" parent="." instance=ExtResource("4_22xm2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.69431)
 RoomToGoTo = "6.tscn"
+DoorType = 2
 
 [node name="PlayerStartOrientation2" parent="." instance=ExtResource("5_vkmbd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56897, 1, 7.94144)

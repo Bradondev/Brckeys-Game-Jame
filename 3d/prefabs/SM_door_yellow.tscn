@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwl14jl47b053"]
+[gd_scene load_steps=3 format=3 uid="uid://cwl14jl47b053"]
 
 [ext_resource type="PackedScene" uid="uid://c6vp8ip7xngt1" path="res://3d/imports/doorsColor/doorYellow.glb" id="1_6a2nd"]
+[ext_resource type="ArrayMesh" uid="uid://rtbov14lekmt" path="res://3d/meshes/Mesh_YellowDoor.tres" id="2_tfjx2"]
 
 [node name="doorYellow" instance=ExtResource("1_6a2nd")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="door" parent="." index="0"]
+mesh = ExtResource("2_tfjx2")

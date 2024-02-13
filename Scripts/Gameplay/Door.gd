@@ -6,9 +6,16 @@ extends Node3D
 
 @export var  bCanEnterDoor = true
 @export var SceneDirectory = "res://Scenes/Levels/"
-
+@export var DoorType = 0
 
 var bHasEnteredDoor = false
+
+func _enter_tree():
+	if DoorType == 1:
+		$doorStandard/door.mesh = load("res://3d/meshes/Mesh_BlueDoor.tres")
+	elif DoorType == 2:
+		$doorStandard/door.mesh = load("res://3d/meshes/Mesh_YellowDoor.tres")
+
 
 func UnlockDoor():
 	bCanEnterDoor = true

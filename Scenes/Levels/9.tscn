@@ -873,6 +873,7 @@ SpawnPoint = "8"
 [node name="SmDoor2" parent="." instance=ExtResource("4_huuy4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.2107, 0.0312469, -5.63055)
 RoomToGoTo = "10.tscn"
+DoorType = 1
 
 [node name="PlayerStartOrientation3" parent="." instance=ExtResource("5_e61yw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.4578, 1, -6.33377)
@@ -881,6 +882,7 @@ SpawnPoint = "10"
 [node name="SmDoor3" parent="." instance=ExtResource("4_huuy4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 29.1859, 0.0312469, -22.2873)
 RoomToGoTo = "11.tscn"
+DoorType = 2
 
 [node name="PlayerStartOrientation4" parent="." instance=ExtResource("5_e61yw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.4826, 1, -21.5344)

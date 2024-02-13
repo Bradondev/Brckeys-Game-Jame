@@ -50,6 +50,7 @@ SpawnPoint = "1"
 [node name="SmDoor2" parent="." instance=ExtResource("3_r42ed")]
 transform = Transform3D(-4.25644e-08, -0.000108384, 1, 0.000176159, 1, 0.000108384, -1, 0.000176159, -2.34904e-08, 16.2165, 0.0396208, 5.1516)
 RoomToGoTo = "3.tscn"
+DoorType = 2
 
 [node name="PlayerStartOrientation2" parent="." instance=ExtResource("4_j65cm")]
 transform = Transform3D(-4.25644e-08, -0.000108384, 1, 0.000176159, 1, 0.000108384, -1, 0.000176159, -2.35013e-08, 15.47, 1.00838, 4.68253)
