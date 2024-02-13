@@ -22,10 +22,10 @@ func  _physics_process(delta):
 		visible = true
 	else:
 		visible =false
-		
-		
-		
-		
+
+
+
+
 
 
 

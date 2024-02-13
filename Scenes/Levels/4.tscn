@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://p4gl8rcioafm"]
+[gd_scene load_steps=12 format=3 uid="uid://p4gl8rcioafm"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_rqllj"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_i1jut"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_rhsxb"]
 [ext_resource type="PackedScene" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="8_4m7il"]
 [ext_resource type="PackedScene" path="res://3d/prefabs/SM_lamp.tscn" id="9_d7577"]
+[ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="10_0ndm0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
 
@@ -100,3 +101,9 @@ transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, 8.66362,
 
 [node name="lamp2" parent="." instance=ExtResource("9_d7577")]
 transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 7.66362, 1.47569, -22.202)
+
+[node name="Light" parent="." instance=ExtResource("10_0ndm0")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.54268, 3.98041, 7.56268)
+
+[node name="Light2" parent="." instance=ExtResource("10_0ndm0")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.54268, 3.98041, -1.43732)

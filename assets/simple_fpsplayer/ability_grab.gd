@@ -13,7 +13,7 @@ func _process(delta):
 	#print_debug(ColliderObject)
 	if   ColliderObject == null  and Temp != null or  ColliderObject != null and !ColliderObject.is_in_group("InterActiveObject") and Temp != null :
 		Temp.PopUp.IsbeingLookedAt = false
-	
+
 	if ColliderObject != null and ColliderObject.is_in_group("InterActiveObject"):
 		ColliderObject.PopUp.IsbeingLookedAt = true
 		Temp = ColliderObject
