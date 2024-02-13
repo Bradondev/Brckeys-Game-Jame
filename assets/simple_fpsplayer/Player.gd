@@ -35,13 +35,14 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("Player")
 	PlayFade(false)
-	flashlight.show()
 
 	var data = LevelLoader.LoadPlayer()
 	if data != null:
 		if len(data["Batteries"]) != 0:
 			Batteries = data["Batteries"]
 			emit_signal("AddBatteryUi")
+		if data["FlashlightActivated"]:
+			flashlight.show()
 
 
 
@@ -74,6 +75,7 @@ func _input(event):
 				flashlight.hide()
 			elif not event.echo:
 				flashlight.show()
+			SavePlayer()
 
 func _physics_process(delta):
 	var moving = false
@@ -129,9 +131,14 @@ func PickUpItem(Item):
 func AddBattery():
 	Batteries.append("Battery")
 	emit_signal("AddBatteryUi")
-	LevelLoader.SavePlayer({"Batteries" : Batteries})
+	SavePlayer()
 
 func DelBattery():
 	Batteries.pop_back()
 	emit_signal("DelBatteryUi")
-	LevelLoader.SavePlayer({"Batteries" : Batteries})
+	SavePlayer()
+
+func SavePlayer():
+	LevelLoader.SavePlayer({
+		"Batteries" : Batteries,
+		"FlashlightActivated" : flashlight.visible})
