@@ -322,5 +322,3 @@ On = false
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.42724, 3.99637, 4.19419)
 SwitchToConnectTo = "1"
 On = false
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

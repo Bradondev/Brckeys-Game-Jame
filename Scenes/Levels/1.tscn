@@ -206,5 +206,3 @@ DoorToUnlock = NodePath("../SmDoor2")
 
 [node name="Battery" parent="." instance=ExtResource("14_120y1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 11)
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
