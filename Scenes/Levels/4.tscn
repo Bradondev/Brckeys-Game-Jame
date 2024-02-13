@@ -23,6 +23,8 @@ mesh = SubResource("PlaneMesh_pep2u")
 [node name="Player" parent="." instance=ExtResource("2_i1jut")]
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
 
+[node name="NormalLighting" parent="." instance=ExtResource("7_rhsxb")]
+
 [node name="BasePaintedWall" parent="." instance=ExtResource("3_gcs1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
 
@@ -77,8 +79,6 @@ transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.0133
 SpawnPoint = "8"
 
 [node name="SM_Ground" parent="." instance=ExtResource("6_6ob3q")]
-
-[node name="NormalLighting" parent="." instance=ExtResource("7_rhsxb")]
 
 [node name="deskWoodGreen" parent="." instance=ExtResource("8_4m7il")]
 transform = Transform3D(1.697e-08, -5.96046e-08, -1.5, -6.33329e-08, -1.5, 1.78814e-07, -1.5, 6.33329e-08, -1.697e-08, 9.19596, 1.50041, -1.97982)
