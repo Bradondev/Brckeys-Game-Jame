@@ -106,3 +106,4 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qb4av")
 libraries = {
 "": SubResource("AnimationLibrary_5wof4")
 }
+speed_scale = 4.0
