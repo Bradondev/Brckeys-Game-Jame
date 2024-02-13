@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://vgvgt32il5cr"]
+[gd_scene load_steps=2 format=3 uid="uid://vgvgt32il5cr"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/PopUp.gd" id="1_m3jtf"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tdlap"]
-size = Vector3(1.16553, 1, 1.37488)
 
 [node name="PopUp" type="Node3D"]
 script = ExtResource("1_m3jtf")
@@ -22,13 +19,3 @@ billboard = 1
 text = "Press E"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="HitBox" type="Area3D" parent="."]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
-shape = SubResource("BoxShape3D_tdlap")
-
-[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
-[connection signal="area_exited" from="HitBox" to="." method="_on_hit_box_area_exited"]

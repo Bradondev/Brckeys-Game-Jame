@@ -1,14 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=10 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
 [ext_resource type="PackedScene" uid="uid://b4ek6k08equiw" path="res://Scenes/PauseMenu.tscn" id="3_m2tr7"]
-[ext_resource type="PackedScene" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
+[ext_resource type="PackedScene" uid="uid://bhbbhfa0e2ny3" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pn1pn"]
-size = Vector3(0.107635, 0.147949, 1.49646)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4av"]
 bg_color = Color(0, 0, 0, 1)
@@ -70,16 +67,7 @@ light_energy = 3.0
 light_bake_mode = 0
 shadow_enabled = true
 spot_range = 10.0
-spot_angle = 31.7
-spot_angle_attenuation = 1.56917
-
-[node name="flashlight_player2" type="SpotLight3D" parent="rotation_helper/Camera3D"]
-layers = 17
-light_energy = 0.05
-light_bake_mode = 0
-shadow_enabled = true
-spot_range = 52.22
-spot_angle = 118.24
+spot_angle = 20.0
 spot_angle_attenuation = 1.56917
 
 [node name="ability_grab" type="RayCast3D" parent="rotation_helper/Camera3D"]
@@ -89,15 +77,6 @@ script = ExtResource("2_gwqkd")
 
 [node name="GrabPosition3D" type="Marker3D" parent="rotation_helper/Camera3D/ability_grab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-
-[node name="PopRayCast" type="Area3D" parent="rotation_helper/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0578568, -0.00630146, -1.21557)
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rotation_helper/Camera3D/PopRayCast"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0237908, 0.230587, 0.0204729)
-shape = SubResource("BoxShape3D_pn1pn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
