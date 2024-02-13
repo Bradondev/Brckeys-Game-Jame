@@ -2,7 +2,6 @@ extends Node3D
 
 @export var  DescriptionTextValue :String
 @export var InputTextLabelValue :String
-@export var PopHitBox : Node3D
 
 @onready var DescriptionText = $Description
 @onready var InputTextLabel = $InputLabel
