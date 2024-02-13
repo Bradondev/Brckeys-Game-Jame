@@ -121,7 +121,8 @@ func TakeDamage():
 		emit_signal("JustDied")
 
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+		$AnimationPlayer.play("Death")
+
 
 
 
@@ -142,3 +143,9 @@ func SavePlayer():
 	LevelLoader.SavePlayer({
 		"Batteries" : Batteries,
 		"FlashlightActivated" : flashlight.visible})
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Death":
+
+		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
