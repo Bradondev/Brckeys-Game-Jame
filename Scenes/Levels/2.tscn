@@ -186,5 +186,3 @@ SwitchToConnectTo = "1"
 MaxPowerOfLight = 4
 FlickeringLoop = 0.8
 Flickering = true
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

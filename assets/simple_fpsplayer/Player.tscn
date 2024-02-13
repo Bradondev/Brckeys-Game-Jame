@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=10 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
@@ -6,9 +6,6 @@
 [ext_resource type="PackedScene" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pn1pn"]
-size = Vector3(0.107635, 0.147949, 1.49646)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4av"]
 bg_color = Color(0, 0, 0, 1)
@@ -89,15 +86,6 @@ script = ExtResource("2_gwqkd")
 
 [node name="GrabPosition3D" type="Marker3D" parent="rotation_helper/Camera3D/ability_grab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-
-[node name="PopRayCast" type="Area3D" parent="rotation_helper/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0578568, -0.00630146, -1.21557)
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rotation_helper/Camera3D/PopRayCast"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0237908, 0.230587, 0.0204729)
-shape = SubResource("BoxShape3D_pn1pn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

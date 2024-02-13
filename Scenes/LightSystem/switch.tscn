@@ -21,9 +21,6 @@ PopUp = NodePath("PopUp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.30289)
 PopHitBox = NodePath("../Area3D/CollisionShape3D")
 
-[node name="CollisionShape3D" parent="PopUp/HitBox" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00122628, 0.29842, 0.0587051)
-
 [node name="Area3D" type="Area3D" parent="."]
 visible = false
 

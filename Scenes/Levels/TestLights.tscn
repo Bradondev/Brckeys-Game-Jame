@@ -89,10 +89,9 @@ spot_range = 10.0
 spot_angle = 80.0
 SwitchToConnectTo = "1"
 On = false
+Flickering = true
 
 [node name="LightHolder" type="Node3D" parent="."]
 
 [node name="SpikeTrap" parent="." instance=ExtResource("10_rt5rj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85278, -0.00670403, 1.01792)
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
