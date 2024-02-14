@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Brckeys-game-jame"
-run/main_scene="res://Scenes/Levels/1.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 LevelLoader="*res://Scripts/AutoLoad/LevelLoader.gd"
+SoundManager="*res://Scripts/AutoLoad/SoundManager.gd"
 
 [display]
 

@@ -1,15 +1,61 @@
-[gd_scene load_steps=10 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=16 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
+[ext_resource type="Script" path="res://Scripts/LightSystem/BaseLight.gd" id="2_tdune"]
 [ext_resource type="PackedScene" uid="uid://b4ek6k08equiw" path="res://Scenes/PauseMenu.tscn" id="3_m2tr7"]
-[ext_resource type="PackedScene" uid="uid://bhbbhfa0e2ny3" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
+[ext_resource type="PackedScene" uid="uid://d0b3q2x3m57kb" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
+[ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="5_kd1m4"]
+[ext_resource type="Texture2D" uid="uid://de6bwftfdl3ua" path="res://Art/Cursor.png" id="5_xv4ls"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 resource_local_to_scene = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4av"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8ypq"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_ce031"]
+resource_name = "Death"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rotation_helper/Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.5708, 1.58825, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("rotation_helper/Camera3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.860379, 0), Vector3(0, -1.413, 1.04)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/DeathPanel:theme_override_styles/panel:bg_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.4, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 0, 0, 0.498039), Color(0, 0, 0, 0.509804)]
+}
 
 [sub_resource type="Animation" id="Animation_7dvah"]
 resource_name = "Fade"
@@ -40,12 +86,52 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("rotation_helper/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("rotation_helper/Camera3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.860379, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/DeathPanel:theme_override_styles/panel:bg_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5wof4"]
 _data = {
+"Death": SubResource("Animation_ce031"),
 "Fade": SubResource("Animation_7dvah"),
 "RESET": SubResource("Animation_tw47o")
 }
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd4hr"]
+albedo_color = Color(0, 1, 1, 1)
 
 [node name="Player" type="CharacterBody3D"]
 disable_mode = 2
@@ -63,15 +149,40 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860379, 0)
 current = true
 
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="rotation_helper/Camera3D"]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.41317, 0)
+
 [node name="flashlight_player" type="SpotLight3D" parent="rotation_helper/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.402896, -0.197945)
 visible = false
 layers = 17
 light_energy = 3.0
-light_bake_mode = 0
 shadow_enabled = true
 spot_range = 10.0
 spot_angle = 31.7
 spot_angle_attenuation = 1.56917
+
+[node name="Light" type="SpotLight3D" parent="rotation_helper/Camera3D/flashlight_player"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -1.06581e-14, 1, 0, 0.0192063, -0.0264253)
+light_color = Color(1, 1, 0.215686, 1)
+spot_range = 0.45
+spot_attenuation = 1.86607
+spot_angle = 86.81
+script = ExtResource("2_tdune")
+
+[node name="Timer" type="Timer" parent="rotation_helper/Camera3D/flashlight_player/Light"]
+autostart = true
+
+[node name="Light2" type="SpotLight3D" parent="rotation_helper/Camera3D/flashlight_player"]
+transform = Transform3D(1, 0, 0, 0, -1, -0.0001048, 0, 0.0001048, -1, 0, 0.0192063, -0.0264253)
+light_color = Color(1, 1, 0.215686, 1)
+spot_range = 0.064
+spot_attenuation = 1.86607
+spot_angle = 66.86
+script = ExtResource("2_tdune")
+
+[node name="Timer" type="Timer" parent="rotation_helper/Camera3D/flashlight_player/Light2"]
+autostart = true
 
 [node name="flashlight_player2" type="SpotLight3D" parent="rotation_helper/Camera3D"]
 layers = 17
@@ -94,6 +205,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_m2tr7")]
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+texture = ExtResource("5_xv4ls")
+
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
@@ -104,6 +231,15 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qb4av")
 
+[node name="DeathPanel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o8ypq")
+
 [node name="PlayerUi" parent="." instance=ExtResource("4_rnsln")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -112,5 +248,23 @@ libraries = {
 }
 speed_scale = 4.0
 
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+material = SubResource("StandardMaterial3D_bd4hr")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25748, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCylinder3D"]
+transform = Transform3D(-0.847293, -6.97979e-09, -0.246167, -1.65012, 0.0706562, 0.114896, 0.52215, 0.223291, -0.0363566, -0.644292, 0, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCylinder3D"]
+transform = Transform3D(0.171192, -0.0744735, 0.258713, 0.956316, 0.195747, 0.0643702, -1.66421, 0.104822, 0.0636024, 0.456949, -0.0320655, -0.225942)
+
+[node name="SM_scanner" parent="." instance=ExtResource("5_kd1m4")]
+transform = Transform3D(0.973819, -0.226857, 0.0145763, 0.201055, 0.829587, -0.520925, 0.106083, 0.510217, 0.853478, 0.490955, 0.567255, -1.07754)
+
 [connection signal="AddBatteryUi" from="." to="PlayerUi" method="AddBatteryToUi"]
 [connection signal="DelBatteryUi" from="." to="PlayerUi" method="DelBatteryUi"]
+[connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light/Timer" to="rotation_helper/Camera3D/flashlight_player/Light" method="_on_timer_timeout"]
+[connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light2/Timer" to="rotation_helper/Camera3D/flashlight_player/Light2" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

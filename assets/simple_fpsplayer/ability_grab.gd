@@ -3,7 +3,6 @@ extends RayCast3D
 var object_grabbed = null
 var mass_limit = 50
 var throw_force = 10
-@onready var Player = $"../../.."
 var can_use = true
 var Temp
 # This entire script is dedicated to the ability_grab node and it's child node GradPosition3D. It's allows players to pick up and throw Rigid Bodies in a similar fashion to Source games.
@@ -18,7 +17,6 @@ func _process(delta):
 		ColliderObject.PopUp.IsbeingLookedAt = true
 		Temp = ColliderObject
 		if Input.is_action_just_pressed("Inter_Act"):
-			ColliderObject.Player = Player
 			ColliderObject.InterAct()
 
 	if Input.is_key_pressed(KEY_E):

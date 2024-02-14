@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3abwpntq0386"]
+[gd_scene load_steps=14 format=3 uid="uid://d3abwpntq0386"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_4qra7"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_f1m5m"]
@@ -8,7 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_e61yw"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="6_bb7hh"]
 [ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="9_rmjif"]
+[ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="9_rmjif"]
+[ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="10_73cm1"]
+[ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="11_w1lj4"]
+[ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="12_no24f"]
+[ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="13_kgbx5"]
 
 [node name="9" type="Node3D"]
 script = ExtResource("1_4qra7")
@@ -180,7 +184,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.99235, 3.862, -0.758039)
 
 [node name="ceilingTile52" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.99236, 3.862, -6.75804)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.99236, 3.80954, -6.75804)
 
 [node name="ceilingTile53" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99236, 3.862, -2.75804)
@@ -306,7 +310,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -2.00764, 3.862, -10.758)
 
 [node name="ceilingTile94" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -2.00764, 3.862, -12.758)
+transform = Transform3D(0.999113, 0.0421198, 3.68244e-09, 0.0421198, -0.999113, -8.73503e-08, 0, 8.74279e-08, -1, -2.00764, 3.862, -12.758)
 
 [node name="ceilingTile95" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -2.00765, 3.862, -8.75804)
@@ -321,7 +325,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764465, 3.862, -12.758)
 
 [node name="ceilingTile99" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764656, 3.862, -8.75804)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764656, 3.81332, -8.75804)
 
 [node name="ceilingTile100" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764465, 3.862, -14.758)
@@ -375,7 +379,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.99236, 3.862, -14.758)
 
 [node name="ceilingTile117" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99236, 3.862, -10.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99236, 3.81737, -10.758)
 
 [node name="ceilingTile118" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99236, 3.862, -12.758)
@@ -414,7 +418,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.9924, 3.862, -10.758)
 
 [node name="ceilingTile130" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.9924, 3.862, -12.758)
+transform = Transform3D(0.995152, -0.0983471, -8.59828e-09, -0.0983471, -0.995152, -8.70041e-08, 0, 8.74279e-08, -1, 15.9924, 3.862, -12.758)
 
 [node name="ceilingTile131" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.9924, 3.862, -8.75804)
@@ -495,7 +499,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -4.00764, 3.862, -22.758)
 
 [node name="ceilingTile157" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -2.00764, 3.862, -18.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -2.00764, 3.81616, -18.758)
 
 [node name="ceilingTile158" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -2.00764, 3.862, -20.758)
@@ -564,7 +568,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.99235, 3.862, -16.758)
 
 [node name="ceilingTile180" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.99236, 3.862, -22.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.99236, 3.91868, -22.758)
 
 [node name="ceilingTile181" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99236, 3.862, -18.758)
@@ -573,7 +577,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99236, 3.862, -20.758)
 
 [node name="ceilingTile183" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99235, 3.862, -16.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99235, 3.77758, -16.758)
 
 [node name="ceilingTile184" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.99236, 3.862, -22.758)
@@ -603,7 +607,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.9924, 3.862, -22.758)
 
 [node name="ceilingTile193" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.9924, 3.862, -18.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.35687e-13, -0.998569, -0.0534863, 5.01181e-14, 0.0534863, -0.998569, 15.9924, 3.862, -18.758)
 
 [node name="ceilingTile194" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.9924, 3.862, -20.758)
@@ -630,7 +634,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.9924, 3.862, -18.758)
 
 [node name="ceilingTile202" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.9924, 3.862, -20.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.31972e-13, -0.994604, 0.103747, -9.72142e-14, -0.103747, -0.994604, 19.9924, 3.862, -20.758)
 
 [node name="ceilingTile203" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.9924, 3.862, -16.758)
@@ -705,7 +709,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764465, 3.862, -28.758)
 
 [node name="ceilingTile227" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764656, 3.862, -24.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764656, 3.76867, -24.758)
 
 [node name="ceilingTile228" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, -0.00764465, 3.862, -30.758)
@@ -807,7 +811,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.9924, 3.862, -30.758)
 
 [node name="ceilingTile261" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.9924, 3.862, -26.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.9924, 3.76869, -26.758)
 
 [node name="ceilingTile262" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.9924, 3.862, -28.758)
@@ -819,7 +823,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.9924, 3.862, -30.758)
 
 [node name="ceilingTile265" parent="SmDoor" instance=ExtResource("5_35tk4")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.9924, 3.862, -26.758)
+transform = Transform3D(1, 1.51257e-12, 0, -9.35828e-13, -0.998719, -0.050593, 4.7407e-14, 0.050593, -0.998719, 19.9924, 3.862, -26.758)
 
 [node name="ceilingTile266" parent="SmDoor" instance=ExtResource("5_35tk4")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.9924, 3.862, -28.758)
@@ -873,6 +877,8 @@ SpawnPoint = "8"
 [node name="SmDoor2" parent="." instance=ExtResource("4_huuy4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.2107, 0.0312469, -5.63055)
 RoomToGoTo = "10.tscn"
+bCanEnterDoor = false
+DoorType = 1
 
 [node name="PlayerStartOrientation3" parent="." instance=ExtResource("5_e61yw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.4578, 1, -6.33377)
@@ -881,6 +887,8 @@ SpawnPoint = "10"
 [node name="SmDoor3" parent="." instance=ExtResource("4_huuy4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 29.1859, 0.0312469, -22.2873)
 RoomToGoTo = "11.tscn"
+bCanEnterDoor = false
+DoorType = 2
 
 [node name="PlayerStartOrientation4" parent="." instance=ExtResource("5_e61yw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.4826, 1, -21.5344)
@@ -917,8 +925,14 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 20.3215, 0, -4.4885)
 [node name="deskWoodGreen9" parent="." instance=ExtResource("9_rmjif")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.3215, 0, -4.4885)
 
+[node name="deskWoodGreen19" parent="." instance=ExtResource("9_rmjif")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.3215, 1.51472, -4.4885)
+
 [node name="deskWoodGreen10" parent="." instance=ExtResource("9_rmjif")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 25.3215, 0, -13.5484)
+
+[node name="deskWoodGreen20" parent="." instance=ExtResource("9_rmjif")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 25.3215, 1.47874, -13.5484)
 
 [node name="deskWoodGreen13" parent="." instance=ExtResource("9_rmjif")]
 transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, 10.7066, 0, 1.98405)
@@ -937,3 +951,44 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 20.3215, 0, -13.5484)
 
 [node name="deskWoodGreen12" parent="." instance=ExtResource("9_rmjif")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.3215, 0, -13.5484)
+
+[node name="trashCan" parent="." instance=ExtResource("10_73cm1")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 8.45699, 0.0932453, 1.43318)
+
+[node name="trashCan2" parent="." instance=ExtResource("10_73cm1")]
+transform = Transform3D(0.29138, 0, -0.193901, 0, 0.35, 0, 0.193901, 0, 0.29138, 8.45699, 0.0932453, 2.27791)
+
+[node name="lamp" parent="." instance=ExtResource("11_w1lj4")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 22.1167, 1.5249, -5.36051)
+
+[node name="ceilingTile" parent="." instance=ExtResource("5_35tk4")]
+transform = Transform3D(-1, -6.21176e-22, 7.10543e-15, 0, 1, 8.74228e-08, 0, 8.74228e-08, -1, 33.1736, 0.424884, -3.97333)
+
+[node name="ceilingTile2" parent="." instance=ExtResource("5_35tk4")]
+transform = Transform3D(-0.992215, -1.08873e-08, 0.124537, -5.29396e-23, 1, 8.74228e-08, -0.124537, 8.67422e-08, -0.992215, 33.1736, 0.704673, -3.97333)
+
+[node name="ceilingTile3" parent="." instance=ExtResource("5_35tk4")]
+transform = Transform3D(-0.921552, 3.39424e-08, -0.388256, -5.29396e-23, 1, 8.74228e-08, 0.388256, 8.05646e-08, -0.921552, 33.1736, 0.947312, -3.97333)
+
+[node name="ceilingTile4" parent="." instance=ExtResource("5_35tk4")]
+transform = Transform3D(-0.921552, 3.39424e-08, -0.388256, -5.29396e-23, 1, 8.74228e-08, 0.388256, 8.05646e-08, -0.921552, 33.1736, 0.373183, -0.973329)
+
+[node name="ceilingTile5" parent="." instance=ExtResource("5_35tk4")]
+transform = Transform3D(-0.965659, -0.258819, -0.0227064, -0.258748, 0.965926, -0.00608408, 0.0235074, 8.78484e-08, -0.999724, 33.496, 0.373183, 2.18209)
+
+[node name="deskWoodGreen17" parent="." instance=ExtResource("9_rmjif")]
+transform = Transform3D(-1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, -1.06066, 31.4355, 0, 6.64447)
+
+[node name="deskWoodGreen18" parent="." instance=ExtResource("9_rmjif")]
+transform = Transform3D(-1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, -1.06066, 31.4355, 1.54479, 6.64447)
+
+[node name="Battery" parent="." instance=ExtResource("12_no24f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0634, 0, 4.81276)
+
+[node name="BatteryInject" parent="." instance=ExtResource("13_kgbx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1504, 1.93775, -22.5806)
+DoorToUnlock = NodePath("../SmDoor3")
+
+[node name="BatteryInject2" parent="." instance=ExtResource("13_kgbx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4883, 1.83017, -8.45352)
+DoorToUnlock = NodePath("../SmDoor2")

@@ -1,10 +1,12 @@
 extends Control
 
-
 func _input(event):
 	if event.is_action_pressed("Escape"):
 		if visible == false:
 			visible = true
+		else:
+			await get_tree().process_frame
+			_on_resume_button_button_up()
 
 func _on_visibility_changed():
 	if is_visible_in_tree():
