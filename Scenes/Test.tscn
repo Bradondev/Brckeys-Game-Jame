@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="3_0f543"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="4_fli53"]
 [ext_resource type="PackedScene" uid="uid://cohjvtye714vv" path="res://Scenes/scanner.tscn" id="5_0fg8a"]
-[ext_resource type="PackedScene" uid="uid://dsfne8fop4cpq" path="res://Scenes/battery_inject.tscn" id="6_x38oh"]
+[ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="6_x38oh"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="7_2kvav"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p7vjo"]
