@@ -11,6 +11,5 @@ script = ExtResource("1_gd3l3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_xnquk")
 
-[node name="PopUp" parent="." node_paths=PackedStringArray("PopHitBox") instance=ExtResource("2_y3y4u")]
+[node name="PopUp" parent="." instance=ExtResource("2_y3y4u")]
 DescriptionTextValue = "Pick Up"
-PopHitBox = NodePath("../CollisionShape3D")

@@ -22,6 +22,11 @@ func GetPlayer():
 	if player:
 		return player[0]
 
+func GetLevel():
+	var level = get_tree().get_nodes_in_group("Level")
+	if level:
+		return level[0]
+
 func GetObjectName(object):
 	return get_tree().current_scene.name + object.name
 

@@ -5,11 +5,16 @@ extends Node3D
 @export var PointsToPassBeforeDeath = 3
 
 var MonsterRef = null
+
+signal SpawnEnemy
+
 func _ready():
 	add_to_group("Level")
 	LevelLoader.MovePlayerToPosition()
 	print("room loaded: " + name)
 
+
+	await get_tree().process_frame
 	await get_tree().process_frame
 	if MonsterSpawnChance > 0:
 		var result = randi() % 100
@@ -17,6 +22,7 @@ func _ready():
 			MonsterRef = load("res://monster.tscn").instantiate()
 			add_child(MonsterRef)
 			SetRandomPatrolPoint(MonsterRef)
+			emit_signal("SpawnEnemy")
 
 
 
