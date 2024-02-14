@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cu47xf7exw0yn"]
+[gd_scene load_steps=15 format=3 uid="uid://cu47xf7exw0yn"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_50ity"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_jqw0h"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dgcmqwhdlibhu" path="res://Scenes/RoomLightingBase.tscn" id="8_xab3c"]
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="9_y4pai"]
 [ext_resource type="PackedScene" uid="uid://ceeli8xrcrgjx" path="res://spike_trap.tscn" id="10_rt5rj"]
+[ext_resource type="PackedScene" uid="uid://0g5pab5rvwum" path="res://3d/prefabs/SM_battery.tscn" id="12_vnodx"]
+[ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="13_ruq18"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
 
@@ -95,4 +97,8 @@ On = false
 [node name="SpikeTrap" parent="." instance=ExtResource("10_rt5rj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85278, -0.00670403, 1.01792)
 
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
+[node name="battery" parent="." instance=ExtResource("12_vnodx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1925, 1.42214, 0.215184)
+
+[node name="SM_scanner" parent="." instance=ExtResource("13_ruq18")]
+transform = Transform3D(1, 0, 0, 0, 0.521963, -0.852968, 0, 0.852968, 0.521963, 16.4883, 1.11723, 0.412298)

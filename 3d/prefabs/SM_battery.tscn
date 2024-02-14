@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://0g5pab5rvwum"]
+
+[ext_resource type="PackedScene" uid="uid://b8xdr5eotwoue" path="res://3d/imports/battery/battery.glb" id="1_mo2fe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2im5"]
+albedo_color = Color(1, 1, 1, 0.431373)
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.145098, 0.180392, 0.152941, 1)
+refraction_enabled = true
+refraction_scale = 0.04
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fvjw1"]
+material = SubResource("StandardMaterial3D_s2im5")
+radius = 0.15
+height = 0.9
+
+[node name="battery" instance=ExtResource("1_mo2fe")]
+
+[node name="Cube" parent="." index="0"]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
+mesh = SubResource("CapsuleMesh_fvjw1")
