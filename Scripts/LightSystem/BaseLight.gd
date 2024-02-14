@@ -15,6 +15,7 @@ var NoStopingFlicking = true
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	visible = false
 	if FlickeringLoop > 0.0:
 		FlickerTimer.wait_time = FlickeringLoop
 	ConnectToSwitch()
@@ -23,12 +24,19 @@ func _ready():
 	else:
 		TurnOffLight()
 
+	add_to_group("Lights")
+	visible = true
+
 
 
 func  TurnOnLight():
+	if get_node_or_null("ceilingLight"):
+		$ceilingLight.TurnOn()
 	light_energy = MaxPowerOfLight
 	On = true
 func  TurnOffLight():
+	if get_node_or_null("ceilingLight"):
+		$ceilingLight.TurnOff()
 	light_energy = 0
 	On = false
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d3abwpntq0386"]
+[gd_scene load_steps=16 format=3 uid="uid://d3abwpntq0386"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_4qra7"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_f1m5m"]
@@ -14,10 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="12_no24f"]
 [ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="13_kgbx5"]
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="14_gsxrt"]
+[ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="15_2lcii"]
 
 [node name="9" type="Node3D"]
 script = ExtResource("1_4qra7")
-MonsterSpawnChance = 25
+MonsterSpawnChance = 100
 PointsToPassBeforeDeath = 15
 
 [node name="Player" parent="." instance=ExtResource("2_f1m5m")]
@@ -1076,3 +1077,27 @@ transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 
 
 [node name="MonsterPath27" parent="." instance=ExtResource("14_gsxrt")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 31.3846, 0.706002, -7.53916)
+
+[node name="Light" parent="." instance=ExtResource("15_2lcii")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 25.7178, 3.97381, -10.0578)
+On = false
+
+[node name="Light2" parent="." instance=ExtResource("15_2lcii")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 25.7178, 3.97381, -0.0578318)
+On = false
+
+[node name="Light3" parent="." instance=ExtResource("15_2lcii")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 17.7178, 3.97381, -10.0578)
+On = false
+
+[node name="Light4" parent="." instance=ExtResource("15_2lcii")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 17.7178, 3.97381, -0.0578318)
+On = false
+
+[node name="Light5" parent="." instance=ExtResource("15_2lcii")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.71781, 3.97381, -10.0578)
+On = false
+
+[node name="Light6" parent="." instance=ExtResource("15_2lcii")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.71781, 3.97381, -0.0578318)
+On = false

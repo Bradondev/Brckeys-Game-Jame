@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://hf8ven2syv21"]
+[gd_scene load_steps=3 format=3 uid="uid://hf8ven2syv21"]
 
 [ext_resource type="Script" path="res://Scripts/LightSystem/BaseLight.gd" id="1_32yh0"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_ceiling_light.tscn" id="2_fc7xb"]
 
 [node name="Light" type="SpotLight3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.54822, 0)
 light_color = Color(1, 1, 0.215686, 1)
 spot_range = 7.0
 spot_attenuation = 1.86607
@@ -16,5 +17,8 @@ autostart = true
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.227129, 0, 0, 0)
 size = Vector3(2, 2, 1)
+
+[node name="ceilingLight" parent="." instance=ExtResource("2_fc7xb")]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, 9.64685e-09, -0.220694)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
