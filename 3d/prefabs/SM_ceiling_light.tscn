@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvpjxcgpopli8"]
+
+[ext_resource type="PackedScene" uid="uid://dfg2sb6d6e2ha" path="res://3d/imports/ceilingTile/ceilingLight.glb" id="1_7xmr6"]
+
+[node name="ceilingLight" instance=ExtResource("1_7xmr6")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)

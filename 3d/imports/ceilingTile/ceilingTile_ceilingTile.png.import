@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1dx3dl4j3bau"
+uid="uid://co6jbmf8wq3cu"
 path.s3tc="res://.godot/imported/ceilingTile_ceilingTile.png-b3884ff428cd3b316cadcdd947750890.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

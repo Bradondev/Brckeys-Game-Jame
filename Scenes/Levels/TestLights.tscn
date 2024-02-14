@@ -11,8 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://dgcmqwhdlibhu" path="res://Scenes/RoomLightingBase.tscn" id="8_xab3c"]
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="9_y4pai"]
 [ext_resource type="PackedScene" uid="uid://ceeli8xrcrgjx" path="res://spike_trap.tscn" id="10_rt5rj"]
+
+
+[ext_resource type="PackedScene" uid="uid://0g5pab5rvwum" path="res://3d/prefabs/SM_battery.tscn" id="12_vnodx"]
+[ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="13_ruq18"]
+
 [ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="12_ca1c1"]
 [ext_resource type="Resource" uid="uid://csf444oel8uy2" path="res://Scripts/Notes/1.tres" id="13_ed0t3"]
+
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
 
@@ -97,6 +103,13 @@ Flickering = true
 
 [node name="SpikeTrap" parent="." instance=ExtResource("10_rt5rj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85278, -0.00670403, 1.01792)
+
+
+[node name="battery" parent="." instance=ExtResource("12_vnodx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1925, 1.42214, 0.215184)
+
+[node name="SM_scanner" parent="." instance=ExtResource("13_ruq18")]
+transform = Transform3D(1, 0, 0, 0, 0.521963, -0.852968, 0, 0.852968, 0.521963, 16.4883, 1.11723, 0.412298)
 
 [node name="Note" parent="." instance=ExtResource("12_ca1c1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.41063, -0.452845, 3.07704)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d33pauu53r8qa"]
+[gd_scene load_steps=23 format=3 uid="uid://d33pauu53r8qa"]
 
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="1_icibq"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="2_qlyy3"]
@@ -18,6 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="16_n8xgu"]
 [ext_resource type="PackedScene" uid="uid://bipwf0fxdoaou" path="res://3d/prefabs/SM_door_blue.tscn" id="17_ogm3t"]
 [ext_resource type="PackedScene" uid="uid://cwl14jl47b053" path="res://3d/prefabs/SM_door_yellow.tscn" id="18_8oj4h"]
+[ext_resource type="PackedScene" uid="uid://dvpjxcgpopli8" path="res://3d/prefabs/SM_ceiling_light.tscn" id="19_ldwvw"]
+[ext_resource type="PackedScene" uid="uid://bkteh8ye242xu" path="res://3d/prefabs/SM_chair_office.tscn" id="20_rl4ol"]
+[ext_resource type="PackedScene" uid="uid://0g5pab5rvwum" path="res://3d/prefabs/SM_battery.tscn" id="21_bccep"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ilf4c"]
 material = ExtResource("8_bw3vv")
@@ -26,7 +29,7 @@ size = Vector2(10, 3)
 [node name="debugWorld" type="Node3D"]
 
 [node name="ceilingTile" parent="." instance=ExtResource("1_icibq")]
-transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0.158432, 3.93297, -0.0108635)
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0.158432, 5.14671, -0.0108635)
 
 [node name="deskWoodGreen" parent="." instance=ExtResource("2_qlyy3")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00518328, 0, 0.121486)
@@ -81,5 +84,14 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.07822, 0, -1.2773)
 
 [node name="door" parent="doorYellow" index="0"]
 transform = Transform3D(0.78226, 0, -0.622952, 0, 1, 0, 0.622952, 0, 0.78226, 0.900001, 0, -0.1)
+
+[node name="ceilingLight" parent="." instance=ExtResource("19_ldwvw")]
+transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, -1.96491, 5.13661, -0.0477699)
+
+[node name="chairOffice" parent="." instance=ExtResource("20_rl4ol")]
+transform = Transform3D(1.05724, 0, 0.512707, 0, 1.175, 0, -0.512707, 0, 1.05724, -0.196602, 0, 1.89416)
+
+[node name="battery" parent="." instance=ExtResource("21_bccep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32746, 1.90291, 0.751558)
 
 [editable path="doorYellow"]

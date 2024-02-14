@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkteh8ye242xu"]
+
+[ext_resource type="PackedScene" uid="uid://bblfrhmehr5te" path="res://3d/imports/chairOffice/chairOffice.glb" id="1_veff0"]
+
+[node name="chairOffice" instance=ExtResource("1_veff0")]
+transform = Transform3D(1.175, 0, 0, 0, 1.175, 0, 0, 0, 1.175, 0, 0, 0)
