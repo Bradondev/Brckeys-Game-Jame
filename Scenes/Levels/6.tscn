@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://baduotbprcqa6"]
+[gd_scene load_steps=12 format=3 uid="uid://baduotbprcqa6"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_pqify"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_h2ys6"]
@@ -10,12 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://uvo2cn81cd22" path="res://3d/prefabs/SM_toilet.tscn" id="8_xrj3q"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="9_wxfeb"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="10_5ro66"]
+[ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="11_0v8yw"]
 
 [node name="6" type="Node3D"]
 script = ExtResource("1_pqify")
+MonsterSpawnChance = 30
+PointsToPassBeforeDeath = 4
 
 [node name="Player" parent="." instance=ExtResource("2_h2ys6")]
-transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
+transform = Transform3D(1, 0, 7.45058e-08, 0, 1, 0, -7.45058e-08, 0, 1, 8.42734, 2.06986, 3.24567)
 
 [node name="BasePaintedWall" parent="." instance=ExtResource("3_r356c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
@@ -321,4 +324,14 @@ light_color = Color(0.858824, 1, 0.92549, 1)
 FlickeringLoop = 1.2
 Flickering = true
 
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
+[node name="MonsterPath" parent="." instance=ExtResource("11_0v8yw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7257, 1, -1.93198)
+
+[node name="MonsterPath2" parent="." instance=ExtResource("11_0v8yw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7257, 1, -1.93198)
+
+[node name="MonsterPath3" parent="." instance=ExtResource("11_0v8yw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.72573, 1, -1.93198)
+
+[node name="MonsterPath4" parent="." instance=ExtResource("11_0v8yw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.72573, 1, -1.93198)
