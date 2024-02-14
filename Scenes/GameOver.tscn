@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Menus/BackButton.gd" id="2_bj85q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwkbw"]
-bg_color = Color(1, 0.352941, 0.137255, 0.631373)
+bg_color = Color(0, 0, 0, 0.631373)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53ura"]
 bg_color = Color(0, 0, 0, 1)

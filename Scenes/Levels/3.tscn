@@ -269,15 +269,21 @@ Switchlocation = "1"
 [node name="Light" parent="." instance=ExtResource("11_my1i0")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.48503, 4, 6.19018)
 SwitchToConnectTo = "1"
+On = false
 
 [node name="Light2" parent="." instance=ExtResource("11_my1i0")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.48503, 4, -3.80982)
 SwitchToConnectTo = "1"
+On = false
 
 [node name="Light3" parent="." instance=ExtResource("11_my1i0")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.51497, 4, -3.80982)
 SwitchToConnectTo = "1"
+On = false
 
 [node name="Light4" parent="." instance=ExtResource("11_my1i0")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.51497, 4, 6.19018)
 SwitchToConnectTo = "1"
+On = false
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
