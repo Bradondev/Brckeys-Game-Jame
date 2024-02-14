@@ -18,7 +18,7 @@ bg_color = Color(1, 1, 1, 0)
 
 [sub_resource type="Animation" id="Animation_ce031"]
 resource_name = "Death"
-length = 5.0
+length = 8.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -50,10 +50,10 @@ tracks/2/path = NodePath("CanvasLayer/DeathPanel:theme_override_styles/panel:bg_
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2.4, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 0, 0, 0.498039)]
+"values": [Color(1, 1, 1, 0), Color(1, 0, 0, 0.498039), Color(0, 0, 0, 0.509804)]
 }
 
 [sub_resource type="Animation" id="Animation_7dvah"]

@@ -70,7 +70,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.4683, 3.862, 8.24196)
 
 [node name="ceilingTile28" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.4683, 3.862, 2.24196)
+transform = Transform3D(0.997978, -0.0635569, -5.55665e-09, -0.0635569, -0.997978, -8.72511e-08, 0, 8.74279e-08, -1, 17.4683, 3.862, 2.24196)
 
 [node name="ceilingTile29" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.4683, 3.862, 6.24196)
@@ -85,7 +85,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.4683, 3.862, 2.24196)
 
 [node name="ceilingTile33" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.4683, 3.862, 6.24196)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.4683, 3.89789, 6.24196)
 
 [node name="ceilingTile34" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.4683, 3.862, 4.24196)
@@ -109,7 +109,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 11.4683, 3.862, 2.24196)
 
 [node name="ceilingTile41" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.46833, 3.862, 6.24196)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.46833, 3.84477, 6.24196)
 
 [node name="ceilingTile42" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.46833, 3.862, 4.24196)
@@ -127,7 +127,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.46833, 3.862, 4.24196)
 
 [node name="ceilingTile47" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.46833, 3.862, 8.24196)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.46833, 3.94236, 8.24196)
 
 [node name="ceilingTile48" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.46833, 3.862, 2.24196)
@@ -148,7 +148,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 3.46833, 3.862, 6.24196)
 
 [node name="ceilingTile54" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 3.46833, 3.862, 4.24196)
+transform = Transform3D(1, 1.51257e-12, 0, -9.34553e-13, -0.997359, -0.072629, 6.80554e-14, 0.072629, -0.997359, 3.46833, 3.862, 4.24196)
 
 [node name="ceilingTile55" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 3.46833, 3.862, 8.24196)
@@ -181,7 +181,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.4683, 3.862, -5.75804)
 
 [node name="ceilingTile65" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.4683, 3.862, -1.75804)
+transform = Transform3D(0.996222, 0.0868428, 7.59248e-09, 0.0868428, -0.996222, -8.70976e-08, 0, 8.74279e-08, -1, 13.4683, 3.862, -1.75804)
 
 [node name="ceilingTile66" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.4683, 3.862, -3.75804)
@@ -208,7 +208,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.46833, 3.862, -1.75804)
 
 [node name="ceilingTile74" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.46833, 3.862, -3.75804)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.46833, 3.92806, -3.75804)
 
 [node name="ceilingTile75" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.46833, 3.862, 0.241961)
@@ -229,7 +229,7 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.46833, 3.862, -5.75804)
 
 [node name="ceilingTile81" parent="." instance=ExtResource("8_f070b")]
-transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 5.46833, 3.862, -1.75804)
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 5.46833, 3.85393, -1.75804)
 
 [node name="ceilingTile82" parent="." instance=ExtResource("8_f070b")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 5.46833, 3.862, -3.75804)
@@ -291,3 +291,5 @@ On = false
 
 [node name="Battery" parent="." instance=ExtResource("13_fqud3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4426, 1.93508, -1.90233)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
