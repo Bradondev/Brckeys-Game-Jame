@@ -36,6 +36,16 @@ func _ready():
 	add_to_group("Player")
 	PlayFade(false)
 
+	var data = LevelLoader.LoadPlayer()
+	if data != null:
+		if len(data["Batteries"]) != 0:
+			Batteries = data["Batteries"]
+			emit_signal("AddBatteryUi")
+		if data["FlashlightActivated"]:
+			flashlight.show()
+
+
+
 func PlayFade(bForwards):
 	if bForwards:
 		$AnimationPlayer.play("Fade")
@@ -65,6 +75,7 @@ func _input(event):
 				flashlight.hide()
 			elif not event.echo:
 				flashlight.show()
+			SavePlayer()
 
 func _physics_process(delta):
 	var moving = false
@@ -73,8 +84,8 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
 
 	# This just controls acceleration. Don't touch it.
 	var accel
@@ -103,22 +114,38 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-	
 
-func TakeDamage(Amount):
-	Health -= Amount
-	if Health <= 0:
+
+func TakeDamage():
 		print_debug("Dead")
 		emit_signal("JustDied")
-	
+
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		$AnimationPlayer.play("Death")
+
 
 
 
 func PickUpItem(Item):
 	emit_signal("PickUpItemSignal",Item)
+
 func AddBattery():
 	Batteries.append("Battery")
 	emit_signal("AddBatteryUi")
+	SavePlayer()
+
 func DelBattery():
 	Batteries.pop_back()
 	emit_signal("DelBatteryUi")
+	SavePlayer()
+
+func SavePlayer():
+	LevelLoader.SavePlayer({
+		"Batteries" : Batteries,
+		"FlashlightActivated" : flashlight.visible})
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Death":
+
+		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")

@@ -15,7 +15,8 @@ var NoStopingFlicking = true
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	FlickerTimer.wait_time = FlickeringLoop
+	if FlickeringLoop > 0.0:
+		FlickerTimer.wait_time = FlickeringLoop
 	ConnectToSwitch()
 	if On:
 		TurnOnLight()
@@ -61,4 +62,4 @@ func _on_timer_timeout():
 func  StopFlickingLights():
 	$Timer.Stop()
 	Flickering = false
-	
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckf1gv3eife6x"]
+[gd_scene load_steps=16 format=3 uid="uid://ckf1gv3eife6x"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8qvpq"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ga15u"]
@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="7_v0avw"]
 [ext_resource type="PackedScene" uid="uid://bfitwpu5j2gb7" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="10_k17vp"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="11_0ikxu"]
+[ext_resource type="PackedScene" uid="uid://cbcnrv0nududa" path="res://Scenes/RoomLightingBase.tscn" id="11_ynlkv"]
+[ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="12_2rr1i"]
+[ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="13_mpic7"]
+[ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="14_120y1"]
+[ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="15_p2u16"]
 
 [node name="1" type="Node3D"]
 script = ExtResource("1_ga15u")
@@ -54,6 +59,7 @@ SpawnPoint = "2"
 [node name="SmDoor2" parent="." instance=ExtResource("3_g2ci5")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.22849, 0.0312469, 1.7052)
 RoomToGoTo = "4.tscn"
+bCanEnterDoor = false
 
 [node name="PlayerStartOrientation3" parent="." instance=ExtResource("4_uv33d")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.55728, 1, 2.28176)
@@ -163,3 +169,40 @@ transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 9.9883
 
 [node name="ceilingTile32" parent="." instance=ExtResource("11_0ikxu")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 9.9883, 4.04172, 10.2425)
+
+[node name="DirectionalLight3D" parent="." instance=ExtResource("11_ynlkv")]
+
+[node name="Switch" parent="." instance=ExtResource("13_mpic7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.86064, 1.72064, 1.2817)
+Switchlocation = "1"
+
+[node name="Light" parent="." instance=ExtResource("12_2rr1i")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.92896, 4.04672, 12.3053)
+SwitchToConnectTo = "1"
+FlickeringLoop = 0.8
+Flickering = true
+
+[node name="Light2" parent="." instance=ExtResource("12_2rr1i")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.92896, 4.04672, 6.30531)
+SwitchToConnectTo = "1"
+FlickeringLoop = 0.8
+Flickering = true
+
+[node name="Light3" parent="." instance=ExtResource("12_2rr1i")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.92896, 4.04672, 12.3053)
+SwitchToConnectTo = "1"
+FlickeringLoop = 0.8
+Flickering = true
+
+[node name="Light4" parent="." instance=ExtResource("12_2rr1i")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.92896, 4.04672, 6.30531)
+SwitchToConnectTo = "1"
+FlickeringLoop = 0.8
+Flickering = true
+
+[node name="BatteryInject" parent="." instance=ExtResource("15_p2u16")]
+transform = Transform3D(-0.999999, 0.00139626, 8.9407e-08, 0.00139626, 0.999999, 0, -5.96046e-08, 8.73115e-11, -1, 4.58645, 1.92241, 1.21051)
+DoorToUnlock = NodePath("../SmDoor2")
+
+[node name="Battery" parent="." instance=ExtResource("14_120y1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 11)
