@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://tv1mgg8twwv5"]
+[gd_scene load_steps=16 format=3 uid="uid://tv1mgg8twwv5"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_tberq"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_y8pl0"]
@@ -14,10 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="12_r2wut"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="13_cjdoh"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="14_d33e2"]
+[ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="15_b0hee"]
 
 [node name="2" type="Node3D"]
 transform = Transform3D(1, -3.38875e-05, -5.73095e-05, 3.38875e-05, 1, 0.000142272, 5.73095e-05, -0.000142272, 1, 0, 0, 0)
 script = ExtResource("1_tberq")
+MonsterSpawnChance = 10
+PointsToPassBeforeDeath = 8
 
 [node name="Player" parent="." instance=ExtResource("1_y8pl0")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.74949, 2.11224, 3.54527)
@@ -293,4 +296,26 @@ MaxPowerOfLight = 4
 FlickeringLoop = 0.8
 Flickering = true
 
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
+[node name="MonsterPath" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 1.81899e-11, -9.37028e-13, 1, 0, 0, 0, 1, 5.31796, 0.999937, 4.43065)
+
+[node name="MonsterPath2" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 2.54659e-11, -9.37028e-13, 1, 0, 0, 0, 1, 2.31796, 1.00004, 4.43083)
+
+[node name="MonsterPath3" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 3.27418e-11, -9.37028e-13, 1, 0, 0, 0, 1, -0.682036, 1.00014, 4.431)
+
+[node name="MonsterPath4" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 4.00178e-11, -9.37028e-13, 1, 0, 0, 0, 1, -0.681921, 0.999855, 6.431)
+
+[node name="MonsterPath5" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 4.72937e-11, -9.37028e-13, 1, 0, 0, 0, 1, 2.31808, 0.999754, 6.43083)
+
+[node name="MonsterPath6" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 5.45697e-11, -9.37028e-13, 1, 0, 0, 0, 1, 5.31808, 0.999652, 6.43066)
+
+[node name="MonsterPath7" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 6.18456e-11, -9.37028e-13, 1, 0, 0, 0, 1, 8.31808, 0.999551, 6.43048)
+
+[node name="MonsterPath8" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 6.91216e-11, -9.37028e-13, 1, 0, 0, 0, 1, 11.3181, 0.999449, 6.43031)

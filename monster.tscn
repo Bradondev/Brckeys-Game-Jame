@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b884uknjsec3j"]
+[gd_scene load_steps=11 format=3 uid="uid://br2sxu33b7bvk"]
 
 [ext_resource type="Script" path="res://Scripts/Ai/Monster.gd" id="1_d7srs"]
 [ext_resource type="Script" path="res://Scripts/Ai/StateMachine.gd" id="2_smmno"]

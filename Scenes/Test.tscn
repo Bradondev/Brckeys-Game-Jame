@@ -47,9 +47,8 @@ Switchlocation = "1"
 [node name="PopUp" parent="Switch" index="0"]
 transform = Transform3D(1, -2.79397e-09, 1.39698e-09, -2.79397e-09, 1, 2.78851e-09, 4.65661e-10, 6.23895e-08, 1, -0.621931, 0.516217, -0.237565)
 
-[node name="Battery2" parent="." node_paths=PackedStringArray("PopUp") instance=ExtResource("7_2kvav")]
+[node name="Battery2" parent="." instance=ExtResource("7_2kvav")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.894941, 0.554175, 4.4201)
-PopUp = NodePath("../Battery/PopUp")
 
 [node name="SpotLight3D" parent="." instance=ExtResource("4_fli53")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.2822, 1.87197, -2.29078)
@@ -66,9 +65,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51633, 0.430494, 3.71557)
 [node name="Battery" parent="." instance=ExtResource("7_2kvav")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997816, 0.430494, 0.862443)
 
-[node name="BatteryInject2" parent="." node_paths=PackedStringArray("PopUp") instance=ExtResource("6_x38oh")]
+[node name="BatteryInject2" parent="." instance=ExtResource("6_x38oh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51633, 0.430494, -0.947269)
-PopUp = NodePath("../BatteryInject/PopUp")
 
 [editable path="Switch"]
 [editable path="Switch/PopUp"]
