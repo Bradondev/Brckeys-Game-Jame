@@ -71,7 +71,57 @@ transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 3.2605
 RoomToGoTo = "8.tscn"
 DoorType = 1
 
+[node name="SmDoor4" parent="." instance=ExtResource("4_s4s2u")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 3.2605, 0.0312469, -6.83268)
+RoomToGoTo = "4.tscn"
+DoorType = 1
+
+[node name="SmDoor5" parent="." instance=ExtResource("4_s4s2u")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 3.2605, 0.0312469, -6.83268)
+RoomToGoTo = "4.tscn"
+DoorType = 1
+
 [node name="PlayerStartOrientation4" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation10" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation11" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation8" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation7" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation6" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation5" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation9" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation13" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
+SpawnPoint = "8"
+
+[node name="PlayerStartOrientation14" parent="." instance=ExtResource("5_701hd")]
+transform = Transform3D(1, 0, -1.58932e-08, 0, 1, 0, 1.58932e-08, 0, 1, 6.66174, 1, 7.88024)
+SpawnPoint = "4"
+
+[node name="PlayerStartOrientation12" parent="." instance=ExtResource("5_701hd")]
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 4.01337, 1, -2.30884)
 SpawnPoint = "8"
 

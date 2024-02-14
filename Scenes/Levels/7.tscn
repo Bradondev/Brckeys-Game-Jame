@@ -291,5 +291,3 @@ On = false
 
 [node name="Battery" parent="." instance=ExtResource("13_fqud3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4426, 1.93508, -1.90233)
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

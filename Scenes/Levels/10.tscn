@@ -57,6 +57,14 @@ DoorType = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9146, 1, 7.94144)
 SpawnPoint = "9"
 
+[node name="SmDoor2" parent="." instance=ExtResource("4_culb3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.3853, 0.0312469, -6.33582)
+RoomToGoTo = "8.tscn"
+
+[node name="PlayerStartOrientation3" parent="." instance=ExtResource("5_ouvcp")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.6821, 1, -5.58294)
+SpawnPoint = "8"
+
 [node name="SM_Ground" parent="." instance=ExtResource("6_ikytb")]
 
 [node name="NormalLighting" parent="." instance=ExtResource("7_67dlt")]
@@ -267,3 +275,5 @@ transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 
 
 [node name="deskWoodGreen2" parent="." instance=ExtResource("11_uf31s")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 13.8814, 0, -2.70769)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
