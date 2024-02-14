@@ -8,5 +8,5 @@ func Exit():
 	pass
 func  Update(_delta:float):
 	pass
-func _physics_process(delta:float):
+func Physics_Update(delta:float):
 	pass
