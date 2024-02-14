@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b48oyyiq3em16"]
+
+[ext_resource type="Script" path="res://Scripts/Ai/MonsterPath.gd" id="1_psvpu"]
+
+[node name="MonsterPath" type="Node3D" groups=["MonsterPath"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.06401, 2, 1.76864)
+script = ExtResource("1_psvpu")

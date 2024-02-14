@@ -24,7 +24,7 @@ var HasScanner =false
 var HasBattery = false
 var ScannerCharge = 0
 var Batteries =[]
-
+var bIsDead = false
 
 func _ready():
 	camera = $rotation_helper/Camera3D
@@ -117,11 +117,13 @@ func _physics_process(delta):
 
 
 func TakeDamage():
-		print_debug("Dead")
-		emit_signal("JustDied")
-
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		$AnimationPlayer.play("Death")
+	if bIsDead:
+		return
+	print_debug("Dead")
+	emit_signal("JustDied")
+	bIsDead = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	$AnimationPlayer.play("Death")
 
 
 

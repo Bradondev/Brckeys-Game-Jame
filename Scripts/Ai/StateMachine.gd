@@ -1,8 +1,9 @@
 extends Node
 
 
-
+@export var rotationSpeed = 5
 @export var initial_state :State
+@export var enemy: CharacterBody3D
 
 var current_state :State
 var states :Dictionary = {}
@@ -25,6 +26,7 @@ func _physics_process(delta):
 		current_state.Physics_Update(delta)
 
 func  on_child_transition(state, new_state_name):
+	enemy.enableKillBox(false)
 	if state != current_state:
 		return
 	var new_state = states.get(new_state_name.to_lower())
