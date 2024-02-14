@@ -30,12 +30,12 @@ func _ready():
 
 
 func  TurnOnLight():
-	if $ceilingLight:
+	if get_node_or_null("ceilingLight"):
 		$ceilingLight.TurnOn()
 	light_energy = MaxPowerOfLight
 	On = true
 func  TurnOffLight():
-	if $ceilingLight:
+	if get_node_or_null("ceilingLight"):
 		$ceilingLight.TurnOff()
 	light_energy = 0
 	On = false
