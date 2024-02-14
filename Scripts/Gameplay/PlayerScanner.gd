@@ -8,6 +8,14 @@ func _ready():
 	$Timer.wait_time = randf_range(1, 40)
 	$Timer.start()
 
+	await get_tree().process_frame
+	LevelLoader.GetLevel().connect("SpawnEnemy", Callable(self, "OnEnemySpawned"))
+
+
+func OnEnemySpawned():
+	_on_timer_timeout()
+	$Timer.start()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
