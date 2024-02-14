@@ -23,12 +23,18 @@ func _ready():
 	else:
 		TurnOffLight()
 
+	add_to_group("Lights")
+
 
 
 func  TurnOnLight():
+	if $ceilingLight:
+		$ceilingLight.TurnOn()
 	light_energy = MaxPowerOfLight
 	On = true
 func  TurnOffLight():
+	if $ceilingLight:
+		$ceilingLight.TurnOff()
 	light_energy = 0
 	On = false
 

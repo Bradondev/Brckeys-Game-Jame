@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvpjxcgpopli8"]
+[gd_scene load_steps=3 format=3 uid="uid://dmfpuvd26amt4"]
 
 [ext_resource type="PackedScene" uid="uid://dfg2sb6d6e2ha" path="res://3d/imports/ceilingTile/ceilingLight.glb" id="1_7xmr6"]
+[ext_resource type="Script" path="res://Scripts/LightSystem/CeilingLight.gd" id="2_igv4w"]
 
 [node name="ceilingLight" instance=ExtResource("1_7xmr6")]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("2_igv4w")
+
+[node name="Plane_002" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.101352, 0)
+
+[node name="AnimationPlayer" parent="." index="3"]
+deterministic = true
