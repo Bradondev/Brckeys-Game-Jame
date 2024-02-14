@@ -1,4 +1,4 @@
-extends Button
+extends ButtonBase
 
 
 func _on_button_up():

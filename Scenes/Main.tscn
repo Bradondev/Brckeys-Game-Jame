@@ -99,6 +99,7 @@ transform = Transform3D(40, 0, 0, 0, 29.738, 0, 0, 0, 29.738, 8.33564, -4.43131e
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92843, 8.02829)
+fov = 40.7
 
 [node name="NormalLighting" parent="." instance=ExtResource("5_0lr8l")]
 
