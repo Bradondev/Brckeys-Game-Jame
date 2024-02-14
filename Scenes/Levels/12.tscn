@@ -348,5 +348,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 1.76007)
 
 [node name="MonsterPath11" parent="." instance=ExtResource("13_5s5vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 4.76007)
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
