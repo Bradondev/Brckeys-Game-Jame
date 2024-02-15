@@ -13,7 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_vwguf")
 Battery = ExtResource("2_ae2do")
 
-[node name="batteryDisplayer" type="VBoxContainer" parent="."]
+[node name="batteryDisplayer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
