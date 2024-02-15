@@ -283,8 +283,34 @@ transform = Transform3D(8.9407e-08, -1.74623e-10, 1, 0.00139626, 0.999999, 5.820
 DoorToUnlock = NodePath("../SmDoor4")
 
 [node name="Battery" parent="." instance=ExtResource("14_120y1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.172109, 12.2091)
 
 [node name="Note" parent="." instance=ExtResource("16_3mis4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7153, -2.21565e-07, 11.2102)
 Messeage = ExtResource("17_1g2br")
+
+[node name="ColorRect2" type="ColorRect" parent="Note/CanvasLayer/Control/StickyNote" index="0"]
+layout_mode = 0
+offset_left = 311.667
+offset_top = 385.0
+offset_right = 1463.67
+offset_bottom = 400.0
+color = Color(0, 0, 0, 1)
+
+[node name="NoteMessage" parent="Note/CanvasLayer/Control/StickyNote" index="1"]
+text = "TO DO
+-Clean the bathrooms.
+-Make weekly report
+-Replace batteries.
+-Run away from Jerry.
+-Go Home"
+
+[node name="ColorRect3" type="ColorRect" parent="Note/CanvasLayer/Control/StickyNote" index="2"]
+layout_mode = 0
+offset_left = 311.667
+offset_top = 541.667
+offset_right = 1463.67
+offset_bottom = 556.667
+color = Color(0, 0, 0, 1)
+
+[editable path="Note"]

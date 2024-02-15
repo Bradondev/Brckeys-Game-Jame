@@ -94,10 +94,11 @@ text = "I need to get out off "
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 556.0
-offset_top = 172.0
-offset_right = 1403.0
-offset_bottom = 1024.0
+offset_left = 581.0
+offset_top = 170.0
+offset_right = 1431.0
+offset_bottom = 1022.0
+stretch_mode = 3
 
 [connection signal="visibility_changed" from="CanvasLayer" to="." method="_on_canvas_layer_visibility_changed"]
 [connection signal="pressed" from="CanvasLayer/Control/ResumeButton" to="." method="_on_resume_button_pressed"]
