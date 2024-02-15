@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://df1pels3jnkkw"]
+[gd_scene load_steps=2 format=3 uid="uid://ccni7a0r6xlwb"]
 
 [ext_resource type="PackedScene" uid="uid://djhs7s5i5lwmp" path="res://3d/imports/batteryReciever/BatteryHolder.glb" id="1_y4tph"]
 
@@ -6,7 +6,10 @@
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/rotation = Quaternion(0.669481, 2.50636e-06, 2.25277e-06, 0.742829)
 bones/1/position = Vector3(-1.27466e-06, 0.0256129, 0.18908)
-bones/2/rotation = Quaternion(0.192504, 6.77574e-11, 8.26068e-07, 0.981296)
+bones/1/rotation = Quaternion(0.103588, -1.2172e-06, 5.75885e-07, 0.99462)
+bones/2/rotation = Quaternion(0.170755, 2.77396e-11, 7.32746e-07, 0.985314)
+bones/2/scale = Vector3(1, 1, 1)
 bones/3/position = Vector3(1.27596e-06, 0.0650314, -0.189394)
-bones/4/rotation = Quaternion(-0.168317, -8.00921e-07, -8.46539e-07, 0.985733)
+bones/4/rotation = Quaternion(-0.145409, -8.13931e-07, -7.31286e-07, 0.989372)

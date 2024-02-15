@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://p4gl8rcioafm"]
+[gd_scene load_steps=14 format=3 uid="uid://p4gl8rcioafm"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_rqllj"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_i1jut"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="10_0ndm0"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="11_y0307"]
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="12_16ob0"]
+[ext_resource type="PackedScene" uid="uid://dfw0hbia8oggq" path="res://3d/prefabs/SM_chair_office.tscn" id="13_h0jj2"]
 
 [node name="4" type="Node3D"]
 script = ExtResource("1_rqllj")
@@ -489,3 +490,6 @@ transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 9.37527, 1
 
 [node name="MonsterPath13" parent="." instance=ExtResource("12_16ob0")]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 7.37527, 1, 3.9173)
+
+[node name="chairOffice" parent="." instance=ExtResource("13_h0jj2")]
+transform = Transform3D(-5.13609e-08, 0, -1.175, 0, 1.175, 0, 1.175, 0, -5.13609e-08, 9.70969, 0, -21.4155)

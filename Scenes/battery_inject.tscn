@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://yxmj3r4fwpqt"]
+[gd_scene load_steps=8 format=3 uid="uid://yxmj3r4fwpqt"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/BatteryInject.gd" id="1_ifppj"]
 [ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="2_mhj8t"]
+[ext_resource type="PackedScene" uid="uid://ccni7a0r6xlwb" path="res://3d/prefabs/SM_battery_holder.tscn" id="3_rn86s"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_battery.tscn" id="4_flosj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3m0r"]
 
@@ -19,6 +21,7 @@ OpenColor = Color(0, 0.572549, 0, 1)
 shape = SubResource("BoxShape3D_n3m0r")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 material_override = SubResource("StandardMaterial3D_rsgt8")
 mesh = SubResource("BoxMesh_mrt5k")
 
@@ -32,6 +35,13 @@ text = "Insert Battery to Open Door"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="BatteryHolder" parent="." instance=ExtResource("3_rn86s")]
+transform = Transform3D(-1.25, 0, -1.09278e-07, 0, 1.25, 0, 1.09278e-07, 0, -1.25, -0.0774159, -0.0767201, -0.548668)
+
+[node name="battery" parent="." instance=ExtResource("4_flosj")]
+transform = Transform3D(-5.24537e-08, -1.2, 0, 1.2, -5.24537e-08, 0, 0, 0, 1.2, -0.0935673, -0.109917, -0.539307)
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 

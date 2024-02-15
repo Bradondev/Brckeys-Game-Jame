@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d3abwpntq0386"]
+[gd_scene load_steps=20 format=3 uid="uid://d3abwpntq0386"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_4qra7"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_f1m5m"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="16_1aqqn"]
 [ext_resource type="Resource" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
 [ext_resource type="Texture2D" uid="uid://bbuxcrifi748s" path="res://Art/drawing.png" id="18_vyi8g"]
+[ext_resource type="PackedScene" uid="uid://dfw0hbia8oggq" path="res://3d/prefabs/SM_chair_office.tscn" id="19_u43oe"]
 
 [node name="9" type="Node3D"]
 script = ExtResource("1_4qra7")
@@ -1109,3 +1110,39 @@ On = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0482, 1.5249, -6.01919)
 Messeage = ExtResource("17_le3s3")
 ImagePart = ExtResource("18_vyi8g")
+
+[node name="chairOffice" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(-0.304112, 0, 1.13496, 0, 1.175, 0, -1.13496, 0, -0.304112, 13.5774, -0.0452782, 8.24704)
+
+[node name="chairOffice2" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(0.5875, 0, 1.01758, 0, 1.175, 0, -1.01758, 0, 0.5875, 18.5774, -0.0452782, 8.24704)
+
+[node name="chairOffice3" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(-5.96046e-08, 0, 1.175, 0, 1.175, 0, -1.175, 0, -5.96046e-08, 16.5774, -0.0452782, 8.24704)
+
+[node name="chairOffice4" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(-4.31171e-08, 0, -1.175, 0, 1.175, 0, 1.175, 0, -4.31171e-08, 15.3928, -0.0452782, 0.247043)
+
+[node name="chairOffice5" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(8.9407e-08, 0, 1.175, 0, 1.175, 0, -1.175, 0, 8.9407e-08, 15.2652, -0.0452782, -11.9749)
+
+[node name="chairOffice6" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(0.097504, 0, -1.17095, 0, 1.175, 0, 1.17095, 0, 0.097504, 25.3953, -0.0452782, -8.46866)
+
+[node name="chairOffice7" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(4.11802e-09, -1.175, -2.96145e-08, 0.097504, 5.96046e-08, -1.17095, 1.17095, -2.11403e-09, 0.097504, 25.79, 1.85421, -7.27742)
+
+[node name="chairOffice11" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(-0.097504, -8.24377e-09, 1.17095, -1.44013e-10, -1.175, 2.15692e-08, 1.17095, -2.11403e-09, 0.097504, 19.79, 2.64518, -14.6294)
+
+[node name="chairOffice12" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(-0.097504, -8.24377e-09, 1.17095, -1.44013e-10, -1.175, 2.15692e-08, 1.17095, -2.11403e-09, 0.097504, 18.79, 2.64518, -14.6294)
+
+[node name="chairOffice8" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(0.734771, -0.914873, 0.0611839, 0.097504, 5.56445e-08, -1.17095, 0.911718, 0.737314, 0.0759182, 25.79, 1.85421, -5.27742)
+
+[node name="chairOffice9" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0, 1.175, 1.02722e-07, -5.13609e-08, 25.79, 2.62957, 1.24382)
+
+[node name="chairOffice10" parent="." instance=ExtResource("19_u43oe")]
+transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0, 1.175, 1.02722e-07, -5.13609e-08, 20.4457, 2.62957, 1.24382)

@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="13_cjdoh"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="14_d33e2"]
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="15_b0hee"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_chair_office.tscn" id="16_fcpdy"]
+[ext_resource type="PackedScene" uid="uid://dfw0hbia8oggq" path="res://3d/prefabs/SM_chair_office.tscn" id="16_fcpdy"]
 
 [node name="2" type="Node3D"]
 transform = Transform3D(1, -3.38875e-05, -5.73095e-05, 3.38875e-05, 1, 0.000142272, 5.73095e-05, -0.000142272, 1, 0, 0, 0)

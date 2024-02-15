@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkteh8ye242xu"]
+[gd_scene load_steps=3 format=3 uid="uid://dfw0hbia8oggq"]
 
 [ext_resource type="PackedScene" uid="uid://bblfrhmehr5te" path="res://3d/imports/chairOffice/chairOffice.glb" id="1_veff0"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kxby6"]
+height = 1.44767
+
 [node name="chairOffice" instance=ExtResource("1_veff0")]
 transform = Transform3D(1.175, 0, 0, 0, 1.175, 0, 0, 0, 1.175, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.22612, 0, 0, 0, 1, 0, 0.846078, 0)
+shape = SubResource("CylinderShape3D_kxby6")
