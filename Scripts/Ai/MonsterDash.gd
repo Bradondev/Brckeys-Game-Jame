@@ -69,6 +69,7 @@ func _on_scan_timer_timeout():
 		print_debug(DashRayCast.get_collider() , enemy.transform.origin.distance_to(colliderPoint))
 		colliderPoint = DashRayCast.get_collider().global_transform.origin
 		bIsScanning = false
+		FlickerLights()
 		enemy.enableKillBox(true)
 	else:
 		Transitioned.emit(self,"Idle")
@@ -76,6 +77,12 @@ func _on_scan_timer_timeout():
 func ResetCounter():
 	DashCounter = rng.randi_range(1, 3)
 	
+
+func FlickerLights():
+	var lights = get_tree().get_nodes_in_group("Lights")
+	for light in lights:
+		await get_tree().create_timer(randf_range(.01, .3)).timeout
+		light.UpdateLight()
 
 
 func _on_dash_timer_timeout():
