@@ -11,7 +11,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func InterAct():
 	$CanvasLayer.visible = true
-	$CanvasLayer/Control/StickyNote/NoteMessage.text = Messeage.Messeage 
+	$CanvasLayer/Control/StickyNote/NoteMessage.text = Messeage.Messeage
 	$CanvasLayer/TextureRect.texture = ImagePart
 
 

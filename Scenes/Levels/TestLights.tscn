@@ -1,144 +1,107 @@
-[gd_scene load_steps=20 format=3 uid="uid://cu47xf7exw0yn"]
+[gd_scene load_steps=24 format=3 uid="uid://cu47xf7exw0yn"]
 
-[ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_50ity"]
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_jqw0h"]
-[ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_l50h0"]
-[ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_bfcbt"]
-[ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_vx4qk"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_t6mpw"]
-[ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_f6lvh"]
-[ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="8_pn4ve"]
-[ext_resource type="PackedScene" uid="uid://dgcmqwhdlibhu" path="res://Scenes/RoomLightingBase.tscn" id="8_xab3c"]
-[ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="9_y4pai"]
-[ext_resource type="PackedScene" uid="uid://ceeli8xrcrgjx" path="res://spike_trap.tscn" id="10_rt5rj"]
-[ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="12_ca1c1"]
-[ext_resource type="PackedScene" uid="uid://0g5pab5rvwum" path="res://3d/prefabs/SM_battery.tscn" id="12_vnodx"]
-[ext_resource type="Resource" uid="uid://csf444oel8uy2" path="res://Scripts/Notes/1.tres" id="13_ed0t3"]
-[ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="13_ruq18"]
-[ext_resource type="PackedScene" uid="uid://b884uknjsec3j" path="res://monster.tscn" id="14_85hhl"]
-[ext_resource type="Script" path="res://Scripts/Ai/MonsterPath.gd" id="15_iybse"]
-[ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="15_wkhik"]
+[ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="1_icibq"]
+[ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="2_qlyy3"]
+[ext_resource type="PackedScene" uid="uid://cuf7mugub7ny0" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="3_06rsb"]
+[ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="4_drg80"]
+[ext_resource type="PackedScene" uid="uid://bfitwpu5j2gb7" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="5_kyaic"]
+[ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="6_cvdwp"]
+[ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="7_htf8h"]
+[ext_resource type="Material" uid="uid://dl3cas0pqhkty" path="res://3d/materials/carpet.tres" id="8_bw3vv"]
+[ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="9_dx2yn"]
+[ext_resource type="PackedScene" uid="uid://bpta4pggsmi5b" path="res://3d/prefabs/SM_bathroom_sink_green.tscn" id="10_tx0mg"]
+[ext_resource type="PackedScene" uid="uid://uvo2cn81cd22" path="res://3d/prefabs/SM_toilet.tscn" id="11_3ses1"]
+[ext_resource type="PackedScene" uid="uid://bhwjpx5125jea" path="res://3d/prefabs/SM_flame_thrower.tscn" id="12_86ffj"]
+[ext_resource type="PackedScene" uid="uid://bhpil5cd6b3ee" path="res://3d/prefabs/SM_spikes.tscn" id="13_jxswk"]
+[ext_resource type="PackedScene" uid="uid://dx736rc536uq3" path="res://3d/prefabs/SM_base_textured_wall.tscn" id="14_t8kmh"]
+[ext_resource type="PackedScene" uid="uid://c0ql66sivy4a6" path="res://3d/prefabs/SM_base_textured_wall_with_doorframe.tscn" id="15_2d80t"]
+[ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="16_n8xgu"]
+[ext_resource type="PackedScene" uid="uid://bipwf0fxdoaou" path="res://3d/prefabs/SM_door_blue.tscn" id="17_ogm3t"]
+[ext_resource type="PackedScene" uid="uid://cwl14jl47b053" path="res://3d/prefabs/SM_door_yellow.tscn" id="18_8oj4h"]
+[ext_resource type="PackedScene" uid="uid://dmfpuvd26amt4" path="res://3d/prefabs/SM_ceiling_light.tscn" id="19_ldwvw"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_chair_office.tscn" id="20_rl4ol"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_battery.tscn" id="21_bccep"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_battery_holder.tscn" id="22_hekxe"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_pep2u"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_ilf4c"]
+material = ExtResource("8_bw3vv")
+size = Vector2(10, 3)
 
-[node name="7" type="Node3D"]
-script = ExtResource("1_50ity")
+[node name="debugWorld" type="Node3D"]
 
-[node name="Ground2" type="CSGMesh3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 14.869, 0, 0, 0, 14.869, 0, 4.06433, 0)
-use_collision = true
-mesh = SubResource("PlaneMesh_pep2u")
+[node name="ceilingTile" parent="." instance=ExtResource("1_icibq")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0.158432, 5.14671, -0.0108635)
 
-[node name="Player" parent="." instance=ExtResource("2_jqw0h")]
-transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
+[node name="deskWoodGreen" parent="." instance=ExtResource("2_qlyy3")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00518328, 0, 0.121486)
 
-[node name="BasePaintedWall" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
+[node name="doorStandard" parent="." instance=ExtResource("3_06rsb")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.64124, 0, 0.0336294)
 
-[node name="BasePaintedWall2" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, -6.81448)
+[node name="BasePaintedWall" parent="." instance=ExtResource("4_drg80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58703, 0.0739508, -1.43394)
 
-[node name="BasePaintedWall7" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7544, -1.49012e-07, 9.18552)
+[node name="bathroomMirror" parent="." instance=ExtResource("5_kyaic")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.749869, 2.57617, -1.20006)
 
-[node name="BasePaintedWall8" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7544, -1.49012e-07, -6.81448)
+[node name="trashCan" parent="." instance=ExtResource("6_cvdwp")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 3.47152, 0, 0.148873)
 
-[node name="BasePaintedWall9" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(0.748701, 0, 0, 0, 1, 0, 0, 0, 3.33706, 9.73825, -1.49012e-07, 0.425915)
+[node name="lamp" parent="." instance=ExtResource("7_htf8h")]
+transform = Transform3D(-0.695424, 0, 0.7186, 0, 1, 0, -0.7186, 0, -0.695424, 1.69955, 1.52352, -0.572418)
 
-[node name="BasePaintedWall3" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.7544, -1.49012e-07, 5.18552)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ilf4c")
 
-[node name="BasePaintedWall6" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.7544, -1.49012e-07, -2.81448)
+[node name="bathroomLights" parent="." instance=ExtResource("9_dx2yn")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.441352, 3.59671, -1.20961)
 
-[node name="BasePaintedWall4" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, 5.18552)
+[node name="bathroomSinkGreen" parent="." instance=ExtResource("10_tx0mg")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -5.95625, 0, 0.381305)
 
-[node name="BasePaintedWall5" parent="." instance=ExtResource("3_l50h0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, -2.81448)
+[node name="toilet" parent="." instance=ExtResource("11_3ses1")]
+transform = Transform3D(-0.232179, 0, 0.660373, 0, 0.7, 0, -0.660373, 0, -0.232179, -7.79731, 2.38419e-07, 0.975054)
 
-[node name="SmDoor" parent="." instance=ExtResource("4_bfcbt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86576, 0.0312469, 8.69431)
-RoomToGoTo = "6.tscn"
+[node name="flameThrower" parent="." instance=ExtResource("12_86ffj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.12591, 2.07611, -0.996094)
 
-[node name="PlayerStartOrientation2" parent="." instance=ExtResource("5_vx4qk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56897, 1, 7.94144)
-SpawnPoint = "6"
+[node name="spikes" parent="." instance=ExtResource("13_jxswk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80904, 0, 0.33063)
 
-[node name="SM_Ground" parent="." instance=ExtResource("6_t6mpw")]
+[node name="BaseTexturedWall" parent="." instance=ExtResource("14_t8kmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.47292, 0, -2.15023)
 
-[node name="NormalLighting" parent="." instance=ExtResource("7_f6lvh")]
+[node name="BaseTexturedWallWithDoorframe" parent="." instance=ExtResource("15_2d80t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99932, 0, -1.45123)
 
-[node name="DirectionalLight3D" parent="." instance=ExtResource("8_xab3c")]
+[node name="SM_scanner" parent="." instance=ExtResource("16_n8xgu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.157348, 1.5249, 0.726888)
 
-[node name="Switch" parent="." instance=ExtResource("9_y4pai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2162, 1.45575, 0.966895)
-Switchlocation = "1"
+[node name="doorBlue" parent="." instance=ExtResource("17_ogm3t")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.5462, 0, -0.123779)
 
-[node name="Light" parent="." instance=ExtResource("8_pn4ve")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.06871, 3.96738, 0)
-light_color = Color(1, 1, 0, 1)
-light_energy = 5.0
-shadow_enabled = true
-spot_range = 10.0
-spot_angle = 80.0
-SwitchToConnectTo = "1"
-FlickeringLoop = 1.0
+[node name="doorYellow" parent="." instance=ExtResource("18_8oj4h")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.07822, 0, -1.2773)
 
-[node name="Light2" parent="." instance=ExtResource("8_pn4ve")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.2134, 3.96738, 0)
-light_color = Color(1, 1, 0, 1)
-light_energy = 5.0
-shadow_enabled = true
-spot_range = 10.0
-spot_angle = 80.0
-SwitchToConnectTo = "1"
-On = false
-Flickering = true
+[node name="door" parent="doorYellow" index="0"]
+transform = Transform3D(0.78226, 0, -0.622952, 0, 1, 0, 0.622952, 0, 0.78226, 0.900001, 0, -0.1)
 
-[node name="LightHolder" type="Node3D" parent="."]
+[node name="ceilingLight" parent="." instance=ExtResource("19_ldwvw")]
+transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, -1.96491, 5.13661, -0.0477699)
 
-[node name="SpikeTrap" parent="." instance=ExtResource("10_rt5rj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85278, -2.0067, 1.01792)
+[node name="chairOffice" parent="." instance=ExtResource("20_rl4ol")]
+transform = Transform3D(1.05724, 0, 0.512707, 0, 1.175, 0, -0.512707, 0, 1.05724, -0.196602, 0, 1.89416)
 
-[node name="battery" parent="." instance=ExtResource("12_vnodx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1925, 1.42214, 0.215184)
+[node name="battery" parent="." instance=ExtResource("21_bccep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32746, 1.90291, 0.751558)
 
-[node name="SM_scanner" parent="." instance=ExtResource("13_ruq18")]
-transform = Transform3D(1, 0, 0, 0, 0.521963, -0.852968, 0, 0.852968, 0.521963, 16.4883, 1.11723, 0.412298)
+[node name="battery2" parent="." instance=ExtResource("21_bccep")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.89957, 2.99885, -1.04075)
 
-[node name="Note" parent="." instance=ExtResource("12_ca1c1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.41063, 1.64268, 0.716164)
-Messeage = ExtResource("13_ed0t3")
+[node name="BatteryHolder" parent="." instance=ExtResource("22_hekxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89777, 3.00272, -1.11647)
 
-[node name="Monster" parent="." instance=ExtResource("14_85hhl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76854, 1.53151, 1.21488)
+[node name="BatteryHolder2" parent="." instance=ExtResource("22_hekxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.655819, 2.65899, -1.11647)
 
-[node name="MonsterPath" parent="." instance=ExtResource("15_wkhik")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06401, 2, 1.76864)
-
-[node name="MonsterPath2" type="Node3D" parent="." groups=["MonsterPath"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04521, 2.29983, 4.87123)
-script = ExtResource("15_iybse")
-
-[node name="MonsterPath3" type="Node3D" parent="." groups=["MonsterPath"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04521, 2, 4.87123)
-script = ExtResource("15_iybse")
-
-[node name="MonsterPath4" type="Node3D" parent="." groups=["MonsterPath"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7885, 2, 4.02108)
-script = ExtResource("15_iybse")
-
-[node name="MonsterPath5" type="Node3D" parent="." groups=["MonsterPath"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9661, 2, 0.99082)
-script = ExtResource("15_iybse")
-
-[node name="MonsterPath6" type="Node3D" parent="." groups=["MonsterPath"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12211, 2, -3.62618)
-script = ExtResource("15_iybse")
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
-
-[editable path="Monster"]
+[editable path="doorYellow"]

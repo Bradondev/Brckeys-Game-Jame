@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d33pauu53r8qa"]
+[gd_scene load_steps=24 format=3 uid="uid://d33pauu53r8qa"]
 
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="1_icibq"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="2_qlyy3"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dvpjxcgpopli8" path="res://3d/prefabs/SM_ceiling_light.tscn" id="19_ldwvw"]
 [ext_resource type="PackedScene" uid="uid://bkteh8ye242xu" path="res://3d/prefabs/SM_chair_office.tscn" id="20_rl4ol"]
 [ext_resource type="PackedScene" uid="uid://0g5pab5rvwum" path="res://3d/prefabs/SM_battery.tscn" id="21_bccep"]
+[ext_resource type="PackedScene" uid="uid://df1pels3jnkkw" path="res://3d/prefabs/SM_battery_holder.tscn" id="22_hekxe"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ilf4c"]
 material = ExtResource("8_bw3vv")
@@ -93,5 +94,14 @@ transform = Transform3D(1.05724, 0, 0.512707, 0, 1.175, 0, -0.512707, 0, 1.05724
 
 [node name="battery" parent="." instance=ExtResource("21_bccep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32746, 1.90291, 0.751558)
+
+[node name="battery2" parent="." instance=ExtResource("21_bccep")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.89957, 2.99885, -1.04075)
+
+[node name="BatteryHolder" parent="." instance=ExtResource("22_hekxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89777, 3.00272, -1.11647)
+
+[node name="BatteryHolder2" parent="." instance=ExtResource("22_hekxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.655819, 2.65899, -1.11647)
 
 [editable path="doorYellow"]
