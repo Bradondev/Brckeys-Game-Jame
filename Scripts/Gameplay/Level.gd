@@ -16,23 +16,34 @@ func _ready():
 
 	await get_tree().process_frame
 	await get_tree().process_frame
-
-	if MonsterSpawnChance > 0:
-		var result = randi() % 100
-		if LevelLoader.Rumbles >= LevelLoader.RumblesToSpawnEnemy + randi() % 5:
-			result = 0
-			LevelLoader.Rumbles = 0
-			LevelLoader.RumblesToSpawnEnemy -= 1
-
-		if result <= MonsterSpawnChance:
-			MonsterRef = load("res://monster.tscn").instantiate()
-			add_child(MonsterRef)
-			SetRandomPatrolPoint(MonsterRef)
-			emit_signal("SpawnEnemy")
-			SetDoorsEnabled(false)
+	AttemptSpawnEnemy()
 
 
+func CanSpawnEnemy():
+	return MonsterSpawnChance > 0 and is_instance_valid(MonsterRef) == false
 
+
+func RandomRumbleCheck():
+	return LevelLoader.Rumbles >= LevelLoader.RumblesToSpawnEnemy + randi() % 5
+
+func AttemptSpawnEnemy(bUseClosestPoint = false):
+		if CanSpawnEnemy():
+			var result = randi() % 100
+			if RandomRumbleCheck():
+				result = 0
+				LevelLoader.Rumbles = 0
+				LevelLoader.RumblesToSpawnEnemy -= 1
+
+			if result <= MonsterSpawnChance:
+				MonsterRef = load("res://monster.tscn").instantiate()
+				add_child(MonsterRef)
+				if bUseClosestPoint == false:
+					SetRandomPatrolPoint(MonsterRef)
+				else:
+					# MT: Find closest patrol point to player
+					pass
+				emit_signal("SpawnEnemy")
+				SetDoorsEnabled(false)
 
 
 func SetRandomPatrolPoint(monster):

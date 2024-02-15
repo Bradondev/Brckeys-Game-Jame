@@ -6,6 +6,7 @@ var Data = {}
 
 var Rumbles = 0
 var RumblesToSpawnEnemy = 12
+
 func _ready():
 	Reset()
 
@@ -28,6 +29,7 @@ func GetLevel():
 	var level = get_tree().get_nodes_in_group("Level")
 	if level:
 		return level[0]
+
 
 func GetObjectName(object):
 	return get_tree().current_scene.name + object.name

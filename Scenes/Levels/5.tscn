@@ -397,5 +397,3 @@ On = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74738, 1.10783e-07, 1.01726)
 Messeage = ExtResource("13_x0ej6")
 ImagePart = ExtResource("13_ov8wi")
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

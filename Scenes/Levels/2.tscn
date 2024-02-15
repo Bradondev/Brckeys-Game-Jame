@@ -619,5 +619,3 @@ transform = Transform3D(8.1207e-08, -0.000127352, 1.175, 0.000206987, 1.175, 0.0
 
 [node name="chairOffice6" parent="." instance=ExtResource("16_fcpdy")]
 transform = Transform3D(8.1207e-08, -0.000127352, 1.175, 0.000206987, 1.175, 0.000127352, -1.175, 0.000206987, 6.25951e-08, 5.79089, -3.36578e-05, 14.487)
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
