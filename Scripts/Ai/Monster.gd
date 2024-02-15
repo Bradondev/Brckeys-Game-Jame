@@ -14,7 +14,8 @@ func _physics_process(delta):
 
 	#make Monster look where its moving
 
-
+func _exit_tree():
+	SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
 func GetStateMachine():
 	return $"State Machine"
 
@@ -24,3 +25,5 @@ func _on_kill_box_body_entered(body):
 
 func enableKillBox(bEnable):
 	$KillBOX.monitoring = bEnable
+func ChangeState(StateName):
+	$"State Machine".ChangeState(StateName)

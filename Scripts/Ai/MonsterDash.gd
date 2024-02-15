@@ -7,6 +7,7 @@ class_name  MonsterDash
 @export var move_speed := 1
 @onready var DashRayCast = $"../../DashRayCast"
 @onready var DashTimer = $"../../DashTimer"
+@onready var AliveTimer = $"../../AliveTimer"
 var Player :CharacterBody3D
 var bIsScanning = false
 var rng
@@ -18,7 +19,8 @@ func _ready():
 	pass
 
 func Enter():
-	DashCounter -= 1
+	if AliveTimer.time_left == 0:
+		AliveTimer.start()
 	bIsScanning = true
 	Player = LevelLoader.GetPlayer()
 	print_debug("Dash")
@@ -66,7 +68,7 @@ func ScanArea(delta):
 	#enemy.look_at(LevelLoader.GetPlayer().transform.origin, Vector3.UP)
 	#var target_position = colliderPoint
 	var new_transform = enemy.transform.looking_at(LevelLoader.GetPlayer().transform.origin, Vector3.UP)
-	enemy.transform  =enemy.transform.interpolate_with(new_transform, 5 * delta)
+	enemy.transform  =enemy.transform.interpolate_with(new_transform, 10 * delta)
 
 func _on_scan_timer_timeout():
 	if  DashRayCast.get_collider() !=null and  DashRayCast.get_collider().name =="Player" :
@@ -74,6 +76,7 @@ func _on_scan_timer_timeout():
 		colliderPoint = DashRayCast.get_collider().global_transform.origin
 		bIsScanning = false
 		FlickerLights()
+		DashCounter -= 1
 		enemy.enableKillBox(true)
 	else:
 		Transitioned.emit(self,"Idle")
@@ -92,3 +95,6 @@ func FlickerLights():
 func _on_dash_timer_timeout():
 	Transitioned.emit(self,"Idle")
 
+
+func _on_alive_timer_timeout():
+	LevelLoader.GetMonster().queue_free()

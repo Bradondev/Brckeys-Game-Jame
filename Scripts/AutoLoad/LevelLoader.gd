@@ -21,6 +21,11 @@ func GetPlayer():
 	var player = get_tree().get_nodes_in_group("Player")
 	if player:
 		return player[0]
+func GetMonster():
+	var monster = get_tree().get_nodes_in_group("monster")
+	if monster:
+		return monster[0]
+
 
 func GetLevel():
 	var level = get_tree().get_nodes_in_group("Level")

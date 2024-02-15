@@ -40,3 +40,11 @@ func  on_child_transition(state, new_state_name):
 
 func GetIdleState():
 	return $Idle
+func ChangeState(StateName):
+	if 	StateName == "dash":
+		current_state = states.dash
+	elif  StateName == "idle":
+		current_state = states.idle
+	elif  StateName == "chase":
+		current_state = states.chase
+	current_state.Enter()

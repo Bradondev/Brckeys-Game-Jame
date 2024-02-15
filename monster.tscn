@@ -20,7 +20,7 @@ size = Vector3(0.5, 0.5, 0.5)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_18r84"]
 radius = 0.6
 
-[node name="Monster" type="CharacterBody3D"]
+[node name="Monster" type="CharacterBody3D" groups=["monster"]]
 collision_layer = 8
 collision_mask = 0
 axis_lock_angular_x = true
@@ -46,6 +46,7 @@ move_speed = 2
 [node name="Chase" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("4_1g41x")
 enemy = NodePath("../..")
+move_speed = 4
 
 [node name="Dash" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("5_qtln4")
@@ -158,8 +159,13 @@ shape = SubResource("CapsuleShape3D_18r84")
 [node name="DashTimer" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="AliveTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
 [connection signal="timeout" from="ChaseTimer" to="State Machine/Chase" method="_on_timer_timeout"]
 [connection signal="timeout" from="ScanTimer" to="State Machine/Dash" method="_on_scan_timer_timeout"]
 [connection signal="timeout" from="ChaseToDashTimer" to="State Machine/Chase" method="_on_chase_to_dash_timer_timeout"]
 [connection signal="body_entered" from="KillBOX" to="." method="_on_kill_box_body_entered"]
 [connection signal="timeout" from="DashTimer" to="State Machine/Dash" method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="AliveTimer" to="State Machine/Dash" method="_on_alive_timer_timeout"]

@@ -36,10 +36,11 @@ func UnlockDoor():
 func InterAct():
 	if bDisabled:
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
+		LevelLoader.GetMonster().ChangeState("dash")
 		return
-
 	if bCanEnterDoor == false:
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
+		
 		return
 
 	if bHasEnteredDoor:
