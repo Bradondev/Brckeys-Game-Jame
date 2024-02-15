@@ -50,4 +50,5 @@ func Load(object):
 
 func Reset():
 	SetPlayerMoveToPosition("-1")
+	RumblesToSpawnEnemy = 12
 	Data.clear()

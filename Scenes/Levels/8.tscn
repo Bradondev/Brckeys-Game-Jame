@@ -574,5 +574,3 @@ On = false
 [node name="Light4" parent="." instance=ExtResource("12_8hhwj")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0139456, 4, 2.23292)
 On = false
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
