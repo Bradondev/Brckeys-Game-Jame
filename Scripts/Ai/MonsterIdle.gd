@@ -21,6 +21,8 @@ func _ready():
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
 	RayCasts = $"../../RaycastHolder".get_children()
 func randomize_wander():
+	
+	
 	if Temp > PathPoints.size() - 1:
 		Temp = 0
 	target =PathPoints[Temp].transform.origin
@@ -33,6 +35,8 @@ func SetTemp(index):
 	target =PathPoints[Temp].transform.origin
 
 func Enter():
+	enemy.enableKillBox(false)
+	FindClosesIdlePath()
 	randomize_wander()
 	print_debug("idle")
 
@@ -61,9 +65,20 @@ func Physics_Update(delta:float):
 
 func ChangeToRandomState():
 	var rng = RandomNumberGenerator.new()
-	var StateNumber = rng.randi_range(1, 1)
+	var StateNumber = rng.randi_range(1, 4)
 	if StateNumber == 1:
 		Transitioned.emit(self,"Chase")
 	else:
 		Transitioned.emit(self,"Dash")
-
+func FindClosesIdlePath():
+	var Distance = PathPoints[0].global_position - enemy.global_position
+	var ClosestPath
+	var ClosetDistance  = 9000
+	for PathPoint in PathPoints:
+		var DistanceToPathPoint = PathPoint.global_position.distance_to(enemy.global_position)  
+		print_debug(DistanceToPathPoint , PathPoint.name )
+		if ClosetDistance > DistanceToPathPoint :
+			ClosestPath = PathPoint
+			ClosetDistance =DistanceToPathPoint
+	Temp = PathPoints.find(ClosestPath) + 1
+	print_debug(Temp)

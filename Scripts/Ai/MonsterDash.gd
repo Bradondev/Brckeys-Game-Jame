@@ -6,7 +6,7 @@ class_name  MonsterDash
 @export var enemy: CharacterBody3D
 @export var move_speed := 1
 @onready var DashRayCast = $"../../DashRayCast"
-
+@onready var DashTimer = $"../../DashTimer"
 var Player :CharacterBody3D
 var bIsScanning = false
 var rng 
@@ -22,7 +22,7 @@ func Enter():
 	Player = LevelLoader.GetPlayer()
 	print_debug("Dash")
 	rng = RandomNumberGenerator.new()
-	my_random_number = rng.randf_range(.5, 2)
+	my_random_number = rng.randf_range(.2, 1)
 	enemy.enableKillBox(false)
 	
 
@@ -37,21 +37,25 @@ func Physics_Update(delta:float):
 			$"../../ScanTimer".wait_time = my_random_number
 			$"../../ScanTimer".start()
 	else:
-		if enemy.transform.origin.distance_to(colliderPoint) < 1:
+		if enemy.transform.origin.distance_to(colliderPoint) < .5:
 			if DashCounter <= 0:
 				ResetCounter()
-				Transitioned.emit(self,"Idle")
-				enemy.enableKillBox(false)
+				var rng = RandomNumberGenerator.new()
+				var StateNumber = rng.randi_range(1, 2)
+				if StateNumber == 1:
+					Transitioned.emit(self,"Chase")
+				else:
+					Transitioned.emit(self,"Idle")
+				DashTimer.stop()
 			else:
 				Enter()
+				DashTimer.stop()
 			return
-		var target_position = colliderPoint
-		var new_transform = enemy.transform.looking_at(target_position, Vector3.UP)
-		enemy.transform  =enemy.transform.interpolate_with(new_transform, 5 * delta)
-		#enemy.look_at(colliderPoint, Vector3.UP)
+		enemy.look_at(colliderPoint, Vector3.UP)
 		enemy.velocity = -enemy.transform.basis.z * move_speed * delta
 		DashRayCast.enabled = false
-	
+		if DashTimer.time_left == 0:
+			DashTimer.start()
 
 func ScanArea(delta):
 
@@ -61,14 +65,18 @@ func ScanArea(delta):
 	#enemy.transform  =enemy.transform.interpolate_with(new_transform, 5 * delta)
 
 func _on_scan_timer_timeout():
-	if  DashRayCast.get_collider() !=null:
-		colliderPoint = DashRayCast.get_collider().transform.origin
+	if  DashRayCast.get_collider() !=null and  DashRayCast.get_collider().name =="Player" :
+		print_debug(DashRayCast.get_collider() , enemy.transform.origin.distance_to(colliderPoint))
+		colliderPoint = DashRayCast.get_collider().global_transform.origin
 		bIsScanning = false
 		enemy.enableKillBox(true)
-		new_transform = enemy.transform.looking_at(colliderPoint, Vector3.UP)
 	else:
 		Transitioned.emit(self,"Idle")
 	
 func ResetCounter():
 	DashCounter = rng.randi_range(1, 3)
 	
+
+
+func _on_dash_timer_timeout():
+	Transitioned.emit(self,"Idle")

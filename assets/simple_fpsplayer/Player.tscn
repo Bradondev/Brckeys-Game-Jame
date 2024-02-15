@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
 [ext_resource type="Script" path="res://Scripts/LightSystem/BaseLight.gd" id="2_tdune"]
 [ext_resource type="PackedScene" uid="uid://b4ek6k08equiw" path="res://Scenes/PauseMenu.tscn" id="3_m2tr7"]
-[ext_resource type="PackedScene" uid="uid://d0b3q2x3m57kb" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
+[ext_resource type="PackedScene" uid="uid://bhbbhfa0e2ny3" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
 [ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="5_kd1m4"]
 [ext_resource type="Texture2D" uid="uid://de6bwftfdl3ua" path="res://Art/Cursor.png" id="5_xv4ls"]
 

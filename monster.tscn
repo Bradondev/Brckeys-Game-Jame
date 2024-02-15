@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://br2sxu33b7bvk"]
+[gd_scene load_steps=12 format=3 uid="uid://b884uknjsec3j"]
 
 [ext_resource type="Script" path="res://Scripts/Ai/Monster.gd" id="1_d7srs"]
 [ext_resource type="Script" path="res://Scripts/Ai/StateMachine.gd" id="2_smmno"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterIdle.gd" id="3_5vln3"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterChase.gd" id="4_1g41x"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterDash.gd" id="5_qtln4"]
+[ext_resource type="Script" path="res://Scripts/Ai/MonsterConfuse.gd" id="6_al6yw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b2vdr"]
 
@@ -51,36 +52,51 @@ script = ExtResource("5_qtln4")
 enemy = NodePath("../..")
 move_speed = 600
 
+[node name="Confuse" type="Node" parent="State Machine"]
+script = ExtResource("6_al6yw")
+
 [node name="RaycastHolder" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.367453, 0.236867)
 
 [node name="Scanner" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21152, 0.471398, -9.24583e-09)
-target_position = Vector3(5, 0, 0)
+target_position = Vector3(8, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner2" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(5, 0, 0.5)
+target_position = Vector3(8, 0, 0.5)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner3" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(5, 0, -0.5)
+target_position = Vector3(8, 0, -0.5)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner4" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(5, 0, -0.75)
+target_position = Vector3(8, 0, -0.75)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner5" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(5, 0, 0.75)
+target_position = Vector3(8, 0, 0.75)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Scanner6" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
+target_position = Vector3(8, 0, 1.2)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Scanner7" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
+target_position = Vector3(8, 0, -1.2)
 hit_from_inside = true
 collide_with_areas = true
 
@@ -102,7 +118,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="DashRayCast" type="RayCast3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.236213, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.0571786, 0)
 enabled = false
 target_position = Vector3(40, 0, 0)
 debug_shape_custom_color = Color(0.72549, 0.521569, 1, 1)
@@ -120,7 +136,11 @@ monitoring = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.409097, -0.995112)
 shape = SubResource("CapsuleShape3D_18r84")
 
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="timeout" from="ChaseTimer" to="State Machine/Chase" method="_on_timer_timeout"]
 [connection signal="timeout" from="ScanTimer" to="State Machine/Dash" method="_on_scan_timer_timeout"]
 [connection signal="timeout" from="ChaseToDashTimer" to="State Machine/Chase" method="_on_chase_to_dash_timer_timeout"]
 [connection signal="body_entered" from="KillBOX" to="." method="_on_kill_box_body_entered"]
+[connection signal="timeout" from="DashTimer" to="State Machine/Dash" method="_on_dash_timer_timeout"]

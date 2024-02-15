@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="5_35tk4"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_e61yw"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="6_bb7hh"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="9_rmjif"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="10_73cm1"]
 [ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="11_w1lj4"]
@@ -17,8 +17,8 @@
 
 [node name="9" type="Node3D"]
 script = ExtResource("1_4qra7")
-MonsterSpawnChance = 25
-PointsToPassBeforeDeath = 15
+MonsterSpawnChance = 100
+PointsToPassBeforeDeath = 100
 
 [node name="Player" parent="." instance=ExtResource("2_f1m5m")]
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
@@ -1076,3 +1076,5 @@ transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 
 
 [node name="MonsterPath27" parent="." instance=ExtResource("14_gsxrt")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 31.3846, 0.706002, -7.53916)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
