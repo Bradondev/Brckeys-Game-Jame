@@ -139,6 +139,4 @@ script = ExtResource("15_iybse")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12211, 2, -3.62618)
 script = ExtResource("15_iybse")
 
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
-
 [editable path="Monster"]
