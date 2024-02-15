@@ -33,7 +33,7 @@ func _on_animation_player_animation_finished(anim_name):
 
 	var level = LevelLoader.GetLevel()
 	if level.CanSpawnEnemy():
-		level.AttemptSpawnEnemy()
+		level.AttemptSpawnEnemy(true)
 
 	if pulseAmount <= 0:
 		$Timer.wait_time = randf_range(10, 40)

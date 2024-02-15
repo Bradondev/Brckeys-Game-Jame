@@ -33,6 +33,7 @@ func SetTemp(index):
 	Temp = index
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
 	target =PathPoints[Temp].transform.origin
+	randomize_wander()
 
 func Enter():
 	enemy.enableKillBox(false)
@@ -51,8 +52,11 @@ func Update(delte:float):
 		target = Vector3.ZERO
 		enemy.velocity = Vector3.ZERO
 		randomize_wander()
+
 func Physics_Update(delta:float):
 
+	if enemy.transform.origin.distance_to(target) < 2:
+		return
 
 	if enemy:
 		var new_transform = enemy.transform.looking_at(target, Vector3.UP)

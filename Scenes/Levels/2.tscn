@@ -581,6 +581,15 @@ transform = Transform3D(1, -1.40332e-13, 6.18456e-11, -9.37028e-13, 1, 0, 0, 0, 
 [node name="MonsterPath8" parent="." instance=ExtResource("15_b0hee")]
 transform = Transform3D(1, -1.40332e-13, 6.91216e-11, -9.37028e-13, 1, 0, 0, 0, 1, 11.3181, 0.999449, 6.43031)
 
+[node name="MonsterPath16" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 7.63976e-11, -9.37028e-13, 1, 0, 0, 0, 1, 16.3181, 0.99928, 6.43002)
+
+[node name="MonsterPath17" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 8.36735e-11, -9.37028e-13, 1, 0, 0, 0, 1, 19.3181, 0.999178, 6.42985)
+
+[node name="MonsterPath18" parent="." instance=ExtResource("15_b0hee")]
+transform = Transform3D(1, -1.40332e-13, 9.09495e-11, -9.37028e-13, 1, 0, 0, 0, 1, 19.3179, 0.999747, 2.42985)
+
 [node name="MonsterPath9" parent="." instance=ExtResource("15_b0hee")]
 transform = Transform3D(1, -1.40332e-13, 7.63976e-11, -9.37028e-13, 1, 0, 0, 0, 1, 6.3181, 0.999619, 6.4306)
 

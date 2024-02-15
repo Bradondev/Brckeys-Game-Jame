@@ -23,7 +23,7 @@ func Physics_Update(delta:float):
 		if Raycast.is_colliding():
 			$"../../ChaseTimer".start()
 			break
-	
+
 	var direction = Player.global_position - enemy.global_position
 	var new_transform = enemy.transform.looking_at(LevelLoader.GetPlayer().transform.origin, Vector3.UP)
 	enemy.transform  = enemy.transform.interpolate_with(new_transform,rotationSpeed * delta)

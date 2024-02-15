@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="5_35tk4"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_e61yw"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="6_bb7hh"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
+[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="9_rmjif"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="10_73cm1"]
 [ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="11_w1lj4"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="14_gsxrt"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="15_2lcii"]
 [ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="16_1aqqn"]
-[ext_resource type="Resource" uid="uid://mvbrofcd5ube" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
+[ext_resource type="Resource" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
 [ext_resource type="Texture2D" uid="uid://bbuxcrifi748s" path="res://Art/drawing.png" id="18_vyi8g"]
 
 [node name="9" type="Node3D"]
@@ -1109,5 +1109,3 @@ On = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0482, 1.5249, -6.01919)
 Messeage = ExtResource("17_le3s3")
 ImagePart = ExtResource("18_vyi8g")
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

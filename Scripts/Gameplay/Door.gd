@@ -40,7 +40,7 @@ func InterAct():
 		return
 	if bCanEnterDoor == false:
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
-		
+
 		return
 
 	if bHasEnteredDoor:
