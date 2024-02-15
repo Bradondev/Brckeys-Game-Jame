@@ -9,11 +9,12 @@ class_name  MonsterDash
 @onready var DashTimer = $"../../DashTimer"
 var Player :CharacterBody3D
 var bIsScanning = false
-var rng 
+var rng
 var my_random_number
 var colliderPoint : Vector3
-var new_transform 
+var new_transform
 func _ready():
+	DashCounter = 3
 	pass
 
 func Enter():
@@ -24,11 +25,12 @@ func Enter():
 	rng = RandomNumberGenerator.new()
 	my_random_number = rng.randf_range(.2, 1)
 	enemy.enableKillBox(false)
-	
+	SoundManager.SwitchToMusic("res://Audio/Monster_Chase_Music_-_Final.mp3", .01, .01, 2)
+
 
 func Physics_Update(delta:float):
 
-	
+
 	if bIsScanning:
 		DashRayCast.enabled = true
 		enemy.velocity = Vector3.ZERO
@@ -73,10 +75,10 @@ func _on_scan_timer_timeout():
 		enemy.enableKillBox(true)
 	else:
 		Transitioned.emit(self,"Idle")
-	
+
 func ResetCounter():
 	DashCounter = rng.randi_range(1, 3)
-	
+
 
 func FlickerLights():
 	var lights = get_tree().get_nodes_in_group("Lights")

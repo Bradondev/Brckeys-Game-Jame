@@ -14,4 +14,5 @@ func InterAct():
 	LevelLoader.GetPlayer().HasBattery = true
 	LevelLoader.GetPlayer().AddBattery()
 	LevelLoader.Save(self, {"bUsed" : true})
+	SoundManager.PlaySFX("res://Audio/Pick Up Battery Sound.mp3", global_position)
 	queue_free()

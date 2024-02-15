@@ -35,14 +35,17 @@ func UnlockDoor():
 
 func InterAct():
 	if bDisabled:
+		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
 		return
 
 	if bCanEnterDoor == false:
+		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
 		return
 
 	if bHasEnteredDoor:
 		return
 
+	SoundManager.PlaySFX("res://Audio/Door Opening.mp3", global_position)
 	bHasEnteredDoor = true
 	$AnimationPlayer.play("DoorOpen")
 	LevelLoader.GetPlayer().PlayFade(true)
