@@ -33,3 +33,8 @@ func ChangeState(StateName):
 	$"State Machine".ChangeState(StateName)
 func GetFarestPointFromPlayer():
 	return $"State Machine/Idle".FindFarestPointFromPlayer()
+
+
+func _on_kill_box_body_exited(body):
+	if body.name == "Player":
+		body.TakeDamage()

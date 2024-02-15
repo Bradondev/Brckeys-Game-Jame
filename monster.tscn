@@ -109,13 +109,37 @@ collide_with_areas = true
 
 [node name="BackScanner9" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(1.053e-07, 0, -1, 0, 1, 0, 1, 0, 1.053e-07, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 2)
+target_position = Vector3(0, 0, 4)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner10" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 2)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="BackScanner11" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(-0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, 0, 0.471398, 0)
+target_position = Vector3(0, 0, 3)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="BackScanner12" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, 0.5, 0, 0.471398, 0)
+target_position = Vector3(0, 0, 3)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="BackScanner13" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0, 0.471398, 0)
+target_position = Vector3(0, 0, 4)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="BackScanner14" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 0, 0.471398, 0)
+target_position = Vector3(0, 0, 4)
 hit_from_inside = true
 collide_with_areas = true
 
@@ -167,5 +191,6 @@ one_shot = true
 [connection signal="timeout" from="ScanTimer" to="State Machine/Dash" method="_on_scan_timer_timeout"]
 [connection signal="timeout" from="ChaseToDashTimer" to="State Machine/Chase" method="_on_chase_to_dash_timer_timeout"]
 [connection signal="body_entered" from="KillBOX" to="." method="_on_kill_box_body_entered"]
+[connection signal="body_exited" from="KillBOX" to="." method="_on_kill_box_body_exited"]
 [connection signal="timeout" from="DashTimer" to="State Machine/Dash" method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="AliveTimer" to="State Machine/Dash" method="_on_alive_timer_timeout"]
