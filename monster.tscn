@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b884uknjsec3j"]
+[gd_scene load_steps=13 format=3 uid="uid://b884uknjsec3j"]
 
 [ext_resource type="Script" path="res://Scripts/Ai/Monster.gd" id="1_d7srs"]
 [ext_resource type="Script" path="res://Scripts/Ai/StateMachine.gd" id="2_smmno"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterChase.gd" id="4_1g41x"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterDash.gd" id="5_qtln4"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterConfuse.gd" id="6_al6yw"]
+[ext_resource type="PackedScene" uid="uid://diwxtsmubiuji" path="res://3d/prefabs/SM_jerry_placeholder.tscn" id="7_u57tn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b2vdr"]
 
@@ -31,6 +32,7 @@ script = ExtResource("1_d7srs")
 shape = SubResource("CapsuleShape3D_b2vdr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_plwrc")
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "enemy")]
@@ -153,6 +155,7 @@ spot_angle = 30.0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00811391, 0.375351, -0.807962)
+visible = false
 material_override = SubResource("StandardMaterial3D_clt3k")
 mesh = SubResource("BoxMesh_r3jsi")
 
@@ -186,6 +189,9 @@ wait_time = 3.0
 [node name="AliveTimer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[node name="Jerry" parent="." instance=ExtResource("7_u57tn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1.00138, 0.98001)
 
 [connection signal="timeout" from="ChaseTimer" to="State Machine/Chase" method="_on_timer_timeout"]
 [connection signal="timeout" from="ScanTimer" to="State Machine/Dash" method="_on_scan_timer_timeout"]

@@ -10,7 +10,7 @@ signal  UnlockDoor
 func _ready():
 	super._ready()
 	var data = LevelLoader.Load(self)
-	$BatteryHolder/AnimationPlayer.play("open")
+	$BatteryHolder/AnimationPlayer.play("open", )
 	if data != null:
 		Open()
 
