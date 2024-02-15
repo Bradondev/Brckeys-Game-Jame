@@ -33,8 +33,7 @@ func AttemptSpawnEnemy(bUseFurthestPoint = false):
 			var result = randi() % 100
 			if RandomRumbleCheck():
 				result = 0
-				LevelLoader.Rumbles = 0
-				LevelLoader.RumblesToSpawnEnemy -= 1
+				LevelLoader.ResetRumbles()
 
 			if result <= MonsterSpawnChance:
 				MonsterRef = load("res://monster.tscn").instantiate()
@@ -44,7 +43,6 @@ func AttemptSpawnEnemy(bUseFurthestPoint = false):
 				else:
 					SetToFurthestPointFromPlayer()
 				emit_signal("SpawnEnemy")
-				SetDoorsEnabled(false)
 
 
 func SetRandomPatrolPoint():

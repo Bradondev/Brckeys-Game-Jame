@@ -59,3 +59,8 @@ func Reset():
 	SetPlayerMoveToPosition("-1")
 	RumblesToSpawnEnemy = 12
 	Data.clear()
+
+func ResetRumbles():
+	if RumblesToSpawnEnemy <= 2:
+		RumblesToSpawnEnemy = 5
+	Rumbles = 0

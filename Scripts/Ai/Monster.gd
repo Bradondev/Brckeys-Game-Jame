@@ -2,6 +2,8 @@ extends CharacterBody3D
 class_name  Monster
 
 
+func _enter_tree():
+	LevelLoader.GetLevel().SetDoorsEnabled(false)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -16,6 +18,8 @@ func _physics_process(delta):
 
 func _exit_tree():
 	SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
+	LevelLoader.GetLevel().SetDoorsEnabled(true)
+
 func GetStateMachine():
 	return $"State Machine"
 
