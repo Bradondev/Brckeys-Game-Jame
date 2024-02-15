@@ -61,71 +61,71 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.
 
 [node name="Scanner" type="RayCast3D" parent="RaycastHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21152, 0.471398, -9.24583e-09)
-target_position = Vector3(8, 0, 0)
+target_position = Vector3(15, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner2" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(8, 0, 0.5)
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0, 0.471398, 0)
+target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner3" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(8, 0, -0.5)
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 0, 0.471398, 0)
+target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner4" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(8, 0, -0.75)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0.471398, 0)
+target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner5" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(8, 0, 0.75)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0, 0.471398, 0)
+target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner6" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(8, 0, 2)
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0, 0.471398, 0)
+target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="Scanner7" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471398, 0)
-target_position = Vector3(8, 0, -2)
+transform = Transform3D(0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 0, 0.471398, 0)
+target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner8" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.471398, 0)
-target_position = Vector3(1, 0, -0.8)
+[node name="BackScanner8" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0.471398, 0)
+target_position = Vector3(0, 0, 2)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner9" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.471398, 0)
-target_position = Vector3(1, 0, 0.8)
+[node name="BackScanner9" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(1.053e-07, 0, -1, 0, 1, 0, 1, 0, 1.053e-07, 0, 0.471398, 0)
+target_position = Vector3(0, 0, 2)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner10" type="RayCast3D" parent="RaycastHolder"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.471398, 0)
-target_position = Vector3(1, 0, 0)
+[node name="BackScanner10" type="RayCast3D" parent="RaycastHolder"]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0.471398, 0)
+target_position = Vector3(0, 0, 2)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.731718)
-light_color = Color(0.678431, 0, 0.0705882, 1)
-light_energy = 10.0
+light_color = Color(1, 0.145098, 0.152941, 1)
+light_energy = 3.316
 shadow_enabled = true
-spot_range = 5.745
-spot_angle = 70.02
+spot_range = 12.0
+spot_angle = 30.0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00811391, 0.375351, -0.807962)
