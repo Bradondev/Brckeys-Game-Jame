@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co4ufake85j6w"
+path="res://.godot/imported/Flamethrower turn on.mp3-e2bcaff33ed6c017b6e45ee1f78a0074.mp3str"
+
+[deps]
+
+source_file="res://Audio/Flamethrower turn on.mp3"
+dest_files=["res://.godot/imported/Flamethrower turn on.mp3-e2bcaff33ed6c017b6e45ee1f78a0074.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

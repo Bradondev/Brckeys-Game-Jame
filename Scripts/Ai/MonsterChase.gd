@@ -17,15 +17,16 @@ func Enter():
 	Player = LevelLoader.GetPlayer()
 	print_debug("chase")
 	$"../../ChaseToDashTimer".start()
+	SoundManager.SwitchToMusic("res://Audio/Monster_Chase_Music_-_Final.mp3", .01, .01, 2)
 func Physics_Update(delta:float):
 	for Raycast in RayCasts:
 		if Raycast.is_colliding():
 			$"../../ChaseTimer".start()
 			break
-	
-	
-	
-	
+
+
+
+
 	var direction = Player.global_position - enemy.global_position
 	var new_transform = enemy.transform.looking_at(LevelLoader.GetPlayer().transform.origin, Vector3.UP)
 	enemy.transform  = enemy.transform.interpolate_with(new_transform,rotationSpeed * delta)
@@ -34,8 +35,8 @@ func Physics_Update(delta:float):
 		enemy.velocity = direction.normalized() * move_speed
 	else:
 		enemy.velocity = Vector3()
-	
-	
+
+
 
 
 func _on_timer_timeout():

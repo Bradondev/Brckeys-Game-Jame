@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwq522hsbp4ck"
+path="res://.godot/imported/Incandescent Lightbulb.mp3-57c00a007d63fe9f36dde8fe71cc4f24.mp3str"
+
+[deps]
+
+source_file="res://Audio/Incandescent Lightbulb.mp3"
+dest_files=["res://.godot/imported/Incandescent Lightbulb.mp3-57c00a007d63fe9f36dde8fe71cc4f24.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

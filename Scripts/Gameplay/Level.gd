@@ -53,6 +53,7 @@ func OnPassPoint():
 		FlickerLights()
 		await get_tree().create_timer(.1).timeout
 		FlickerLights()
+		SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
 
 func SetDoorsEnabled(bEnable):
 	var doors = get_tree().get_nodes_in_group("Doors")

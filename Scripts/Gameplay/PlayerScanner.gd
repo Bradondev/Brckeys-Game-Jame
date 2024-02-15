@@ -25,7 +25,7 @@ func _on_timer_timeout():
 	$AnimationPlayer.speed_scale = randi_range(2, 3)
 	pulseAmount = randi_range(1, 8)
 	$AnimationPlayer.play("rumble")
-
+	SoundManager.PlaySFX("res://Audio/Light bulb.mp3", global_position, 8)
 
 
 func _on_animation_player_animation_finished(anim_name):
@@ -35,4 +35,5 @@ func _on_animation_player_animation_finished(anim_name):
 	else:
 		pulseAmount -= 1
 		$AnimationPlayer.play("rumble")
+		SoundManager.PlaySFX("res://Audio/Light bulb.mp3", global_position, 8)
 	pass # Replace with function body.

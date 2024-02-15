@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cp5iypoq8uly5"
+path="res://.godot/imported/Pick Up Battery Sound.mp3-e64d80ac64185df286a210cf86ad761a.mp3str"
+
+[deps]
+
+source_file="res://Audio/Pick Up Battery Sound.mp3"
+dest_files=["res://.godot/imported/Pick Up Battery Sound.mp3-e64d80ac64185df286a210cf86ad761a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

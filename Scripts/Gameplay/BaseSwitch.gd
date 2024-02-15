@@ -41,7 +41,10 @@ func InterAct():
 		emit_signal("Fliped")
 		bHasFlipped = !bHasFlipped
 		LevelLoader.Save(self, {"bHasFlipped" : bHasFlipped})
-
+		if bHasFlipped:
+			SoundManager.PlaySFX("res://Audio/Light Switch - On.mp3", global_position)
+		else:
+			SoundManager.PlaySFX("res://Audio/Light Switch - Off.mp3", global_position)
 
 
 

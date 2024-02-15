@@ -21,8 +21,8 @@ func _ready():
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
 	RayCasts = $"../../RaycastHolder".get_children()
 func randomize_wander():
-	
-	
+
+
 	if Temp > PathPoints.size() - 1:
 		Temp = 0
 	target =PathPoints[Temp].transform.origin
@@ -75,7 +75,7 @@ func FindClosesIdlePath():
 	var ClosestPath
 	var ClosetDistance  = 9000
 	for PathPoint in PathPoints:
-		var DistanceToPathPoint = PathPoint.global_position.distance_to(enemy.global_position)  
+		var DistanceToPathPoint = PathPoint.global_position.distance_to(enemy.global_position)
 		print_debug(DistanceToPathPoint , PathPoint.name )
 		if ClosetDistance > DistanceToPathPoint :
 			ClosestPath = PathPoint

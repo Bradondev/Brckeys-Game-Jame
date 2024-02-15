@@ -44,13 +44,15 @@ func _ready():
 		if data["FlashlightActivated"]:
 			flashlight.show()
 
-
+	SoundManager.PlaySFX("res://Audio/Door Closing.mp3", global_position, 8, .4)
+	SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
 
 func PlayFade(bForwards):
 	if bForwards:
 		$AnimationPlayer.play("Fade")
 	else:
 		$AnimationPlayer.play_backwards("Fade")
+
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -73,8 +75,10 @@ func _input(event):
 		if event.pressed and event.keycode == KEY_F:
 			if flashlight.is_visible_in_tree() and not event.echo:
 				flashlight.hide()
+				SoundManager.PlaySFX("res://Audio/Flashlight Off.mp3", global_position)
 			elif not event.echo:
 				flashlight.show()
+				SoundManager.PlaySFX("res://Audio/Flashlight On.mp3", global_position)
 			SavePlayer()
 
 func _physics_process(delta):
@@ -124,6 +128,8 @@ func TakeDamage():
 	bIsDead = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$AnimationPlayer.play("Death")
+	SoundManager.PlaySFX("res://Audio/Death Sound.mp3", global_position)
+
 
 
 
@@ -149,5 +155,5 @@ func SavePlayer():
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Death":
-
+		SoundManager.SwitchToMusic("res://Audio/Death_Music.mp3", .1, .1)
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
