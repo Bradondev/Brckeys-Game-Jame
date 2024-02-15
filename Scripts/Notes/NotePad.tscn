@@ -48,13 +48,9 @@ visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -63,18 +59,11 @@ offset_bottom = 1082.0
 color = Color(0.152941, 0.152941, 0.152941, 1)
 
 [node name="ResumeButton" type="Button" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -276.0
-offset_top = -111.0
-offset_right = -14.0
-offset_bottom = -12.0
-grow_horizontal = 0
-grow_vertical = 0
+layout_mode = 0
+offset_left = 1632.0
+offset_top = 956.0
+offset_right = 1894.0
+offset_bottom = 1055.0
 theme = SubResource("Theme_wmttl")
 action_mode = 0
 text = "Resume"

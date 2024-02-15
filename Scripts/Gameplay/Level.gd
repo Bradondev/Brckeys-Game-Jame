@@ -38,17 +38,18 @@ func AttemptSpawnEnemy(bUseClosestPoint = false):
 				MonsterRef = load("res://monster.tscn").instantiate()
 				add_child(MonsterRef)
 				if bUseClosestPoint == false:
-					SetRandomPatrolPoint(MonsterRef)
+					SetRandomPatrolPoint(MonsterRef,false)
 				else:
-					# MT: Find closest patrol point to player
-					pass
+					SetRandomPatrolPoint(MonsterRef,true)
 				emit_signal("SpawnEnemy")
 				SetDoorsEnabled(false)
 
 
-func SetRandomPatrolPoint(monster):
+func SetRandomPatrolPoint(monster,bSpawnFarestAway:bool):
 	var monsterPaths =  get_tree().get_nodes_in_group("MonsterPath")
 	var chosenPath = randi() % (len(monsterPaths) / 2)
+	if bSpawnFarestAway:
+		chosenPath =FindFarestPointFromPlayer()
 	monster.global_position = monsterPaths[chosenPath].global_position
 	var idleState = monster.GetStateMachine().GetIdleState()
 	idleState.SetTemp(chosenPath)
@@ -83,3 +84,17 @@ func FlickerLights():
 	for light in lights:
 		await get_tree().create_timer(randf_range(.01, .3)).timeout
 		light.UpdateLight()
+func FindFarestPointFromPlayer():
+	var PathPoints = get_tree().get_nodes_in_group("MonsterPath")
+
+	var FarestPath
+	var FarestDistance  = 0
+	for PathPoint in PathPoints:
+		var DistanceToPathPoint = PathPoint.global_position.distance_to(LevelLoader.GetPlayer().global_position)
+		print_debug(DistanceToPathPoint , PathPoint.name )
+		if FarestDistance < DistanceToPathPoint :
+			FarestPath = PathPoint
+			FarestDistance =DistanceToPathPoint
+	#Temp = PathPoints.find(FarestPath) + 1
+	return FarestPath
+	#print_debug(Temp)

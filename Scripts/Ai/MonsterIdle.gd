@@ -82,3 +82,4 @@ func FindClosesIdlePath():
 			ClosetDistance =DistanceToPathPoint
 	Temp = PathPoints.find(ClosestPath) + 1
 	print_debug(Temp)
+

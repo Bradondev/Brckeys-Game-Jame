@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_cn816"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_tlew4"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_l7jft"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_lmiyi"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_lmiyi"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_hevad"]
 [ext_resource type="PackedScene" uid="uid://ceeli8xrcrgjx" path="res://spike_trap.tscn" id="8_thqfi"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="9_6frtd"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="11_qjj48"]
 [ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="12_3g2mf"]
 [ext_resource type="Texture2D" uid="uid://c6dcdiax4tmud" path="res://Art/head.png" id="13_ov8wi"]
-[ext_resource type="Resource" path="res://Scripts/Notes/5.tres" id="13_x0ej6"]
+[ext_resource type="Resource" uid="uid://crkejo1yupryg" path="res://Scripts/Notes/5.tres" id="13_x0ej6"]
 
 [node name="5" type="Node3D"]
 script = ExtResource("1_m3pqj")
