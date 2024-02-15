@@ -10,6 +10,7 @@ signal  UnlockDoor
 func _ready():
 	super._ready()
 	var data = LevelLoader.Load(self)
+	$BatteryHolder/AnimationPlayer.play("open")
 	if data != null:
 		Open()
 
@@ -34,6 +35,8 @@ func Open():
 	$PopUp/Description.text = "Door is opened!"
 	$PopUp/Description.outline_modulate = OpenColor
 	get_node(DoorToUnlock).UnlockDoor()
+	$BatteryHolder/AnimationPlayer.play("close")
+	$battery.visible = true
 
 func _on_timer_timeout():
 	$PopUp.SetLabels()
