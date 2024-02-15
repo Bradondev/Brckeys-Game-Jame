@@ -4,6 +4,8 @@ var PlayerMoveToPosition = "-1"
 
 var Data = {}
 
+var Rumbles = 0
+var RumblesToSpawnEnemy = 12
 func _ready():
 	Reset()
 

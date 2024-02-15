@@ -29,6 +29,7 @@ func _on_timer_timeout():
 
 
 func _on_animation_player_animation_finished(anim_name):
+	LevelLoader.Rumbles += 1
 	if pulseAmount <= 0:
 		$Timer.wait_time = randf_range(10, 40)
 		$Timer.start()

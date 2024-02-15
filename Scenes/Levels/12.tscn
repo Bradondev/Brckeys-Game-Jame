@@ -38,7 +38,16 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.754
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, -10.8145)
 
 [node name="BasePaintedWall8" parent="." instance=ExtResource("3_5f1y8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, -18.8145)
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 13.4382, -1.49012e-07, -20.0655)
+
+[node name="BasePaintedWall11" parent="." instance=ExtResource("3_5f1y8")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 13.4382, -1.49012e-07, -12.0655)
+
+[node name="BasePaintedWall13" parent="." instance=ExtResource("3_5f1y8")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 18.329, -1.49012e-07, -12.1215)
+
+[node name="BasePaintedWall12" parent="." instance=ExtResource("3_5f1y8")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 18.4382, -1.49012e-07, -15.0655)
 
 [node name="BasePaintedWall4" parent="." instance=ExtResource("3_5f1y8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, 5.18552)
@@ -105,6 +114,9 @@ transform = Transform3D(1.697e-08, -5.96046e-08, -1.5, -0.388229, -1.44889, 1.68
 [node name="deskWoodGreen4" parent="." instance=ExtResource("8_eauvt")]
 transform = Transform3D(1.697e-08, -5.96046e-08, -1.5, -5.96046e-08, -1.5, 1.78814e-07, -1.5, 2.68221e-07, -1.697e-08, 4.19734, 1.50824, -9.29202)
 
+[node name="deskWoodGreen10" parent="." instance=ExtResource("8_eauvt")]
+transform = Transform3D(1.023, 0.0325447, 1.09655, -2.88182e-08, -1.49934, 0.0444992, 1.09703, -0.0303484, -1.02255, 14.8629, 1.64725, -16.7672)
+
 [node name="deskWoodGreen5" parent="." instance=ExtResource("8_eauvt")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.81744, -0.0492154, -21.9196)
 
@@ -156,6 +168,81 @@ transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.
 
 [node name="ceilingTile63" parent="." instance=ExtResource("11_kiua8")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 9.76442, 3.78891, -15.758)
+
+[node name="ceilingTile77" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 11.7644, 3.75867, -21.758)
+
+[node name="ceilingTile124" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 11.7644, 3.78891, -19.758)
+
+[node name="ceilingTile125" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 11.7644, 3.78891, -17.758)
+
+[node name="ceilingTile126" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 11.7644, 3.78891, -15.758)
+
+[node name="ceilingTile127" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.7644, 3.75867, -21.758)
+
+[node name="ceilingTile128" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.7644, 3.78891, -19.758)
+
+[node name="ceilingTile129" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.7644, 3.78891, -17.758)
+
+[node name="ceilingTile130" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.7644, 3.78891, -15.758)
+
+[node name="ceilingTile131" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.7644, 3.75867, -17.758)
+
+[node name="ceilingTile132" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.7644, 3.78891, -15.758)
+
+[node name="ceilingTile133" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.7644, 3.78891, -13.758)
+
+[node name="ceilingTile134" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.7644, 3.78891, -11.758)
+
+[node name="ceilingTile135" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.7644, 3.75867, -17.758)
+
+[node name="ceilingTile136" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.7644, 3.78891, -15.758)
+
+[node name="ceilingTile137" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.7644, 3.78891, -13.758)
+
+[node name="ceilingTile138" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.7644, 3.78891, -11.758)
+
+[node name="ceilingTile139" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.7644, 3.75867, -15.758)
+
+[node name="ceilingTile140" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.7644, 3.78891, -13.758)
+
+[node name="ceilingTile141" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.7644, 3.78891, -11.758)
+
+[node name="ceilingTile142" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 19.7644, 3.78891, -9.758)
+
+[node name="ceilingTile143" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 17.7644, 3.78891, -9.758)
+
+[node name="ceilingTile144" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 15.7644, 3.78891, -9.758)
+
+[node name="ceilingTile145" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.7644, 3.78891, -11.758)
+
+[node name="ceilingTile146" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 13.7644, 3.78891, -13.758)
+
+[node name="ceilingTile147" parent="." instance=ExtResource("11_kiua8")]
+transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 11.7644, 3.78891, -13.758)
 
 [node name="ceilingTile67" parent="." instance=ExtResource("11_kiua8")]
 transform = Transform3D(1, 1.51257e-12, 0, -9.37028e-13, -1, -8.74279e-08, 0, 8.74279e-08, -1, 7.77631, 3.79604, -15.7609)
@@ -319,6 +406,15 @@ transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941
 [node name="MonsterPath" parent="." instance=ExtResource("13_5s5vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, -17.2399)
 
+[node name="MonsterPath12" parent="." instance=ExtResource("13_5s5vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.47, 1, -17.2399)
+
+[node name="MonsterPath13" parent="." instance=ExtResource("13_5s5vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.47, 1, -15.2399)
+
+[node name="MonsterPath14" parent="." instance=ExtResource("13_5s5vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, -17.2399)
+
 [node name="MonsterPath2" parent="." instance=ExtResource("13_5s5vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, -15.2399)
 
@@ -348,3 +444,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 1.76007)
 
 [node name="MonsterPath11" parent="." instance=ExtResource("13_5s5vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 4.76007)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
