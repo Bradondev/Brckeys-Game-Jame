@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckf1gv3eife6x"]
+[gd_scene load_steps=18 format=3 uid="uid://ckf1gv3eife6x"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8qvpq"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ga15u"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="13_mpic7"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="14_120y1"]
 [ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="15_p2u16"]
+[ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="16_3mis4"]
+[ext_resource type="Resource" uid="uid://csf444oel8uy2" path="res://Scripts/Notes/1.tres" id="17_1g2br"]
 
 [node name="1" type="Node3D"]
 script = ExtResource("1_ga15u")
@@ -281,6 +283,34 @@ transform = Transform3D(8.9407e-08, -1.74623e-10, 1, 0.00139626, 0.999999, 5.820
 DoorToUnlock = NodePath("../SmDoor4")
 
 [node name="Battery" parent="." instance=ExtResource("14_120y1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.172109, 12.2091)
 
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
+[node name="Note" parent="." instance=ExtResource("16_3mis4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7153, -2.21565e-07, 11.2102)
+Messeage = ExtResource("17_1g2br")
+
+[node name="ColorRect2" type="ColorRect" parent="Note/CanvasLayer/Control/StickyNote" index="0"]
+layout_mode = 0
+offset_left = 311.667
+offset_top = 385.0
+offset_right = 1463.67
+offset_bottom = 400.0
+color = Color(0, 0, 0, 1)
+
+[node name="NoteMessage" parent="Note/CanvasLayer/Control/StickyNote" index="1"]
+text = "TO DO
+-Clean the bathrooms.
+-Make weekly report
+-Replace batteries.
+-Run away from Jerry.
+-Go Home"
+
+[node name="ColorRect3" type="ColorRect" parent="Note/CanvasLayer/Control/StickyNote" index="2"]
+layout_mode = 0
+offset_left = 311.667
+offset_top = 541.667
+offset_right = 1463.67
+offset_bottom = 556.667
+color = Color(0, 0, 0, 1)
+
+[editable path="Note"]

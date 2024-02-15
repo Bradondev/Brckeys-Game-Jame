@@ -53,7 +53,9 @@ func Physics_Update(delta:float):
 				Enter()
 				DashTimer.stop()
 			return
-		enemy.look_at(colliderPoint, Vector3.UP)
+		#enemy.look_at(colliderPoint, Vector3.UP)
+		var new_transform = enemy.transform.looking_at(colliderPoint, Vector3.UP)
+		enemy.transform  =enemy.transform.interpolate_with(new_transform, 10 * delta)
 		enemy.velocity = -enemy.transform.basis.z * move_speed * delta
 		DashRayCast.enabled = false
 		if DashTimer.time_left == 0:
@@ -61,10 +63,10 @@ func Physics_Update(delta:float):
 
 func ScanArea(delta):
 
-	enemy.look_at(LevelLoader.GetPlayer().transform.origin, Vector3.UP)
+	#enemy.look_at(LevelLoader.GetPlayer().transform.origin, Vector3.UP)
 	#var target_position = colliderPoint
-	#var new_transform = enemy.transform.looking_at(LevelLoader.GetPlayer().transform.origin., Vector3.UP)
-	#enemy.transform  =enemy.transform.interpolate_with(new_transform, 5 * delta)
+	var new_transform = enemy.transform.looking_at(LevelLoader.GetPlayer().transform.origin, Vector3.UP)
+	enemy.transform  =enemy.transform.interpolate_with(new_transform, 5 * delta)
 
 func _on_scan_timer_timeout():
 	if  DashRayCast.get_collider() !=null and  DashRayCast.get_collider().name =="Player" :
@@ -89,3 +91,4 @@ func FlickerLights():
 
 func _on_dash_timer_timeout():
 	Transitioned.emit(self,"Idle")
+

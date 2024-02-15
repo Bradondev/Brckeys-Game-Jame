@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_n2yg8"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_culb3"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_ouvcp"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_ikytb"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_ikytb"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_67dlt"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="8_dx8he"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="10_aesog"]
@@ -268,12 +268,10 @@ transform = Transform3D(0.247487, 0, 0.247487, 0, 0.35, 0, -0.247487, 0, 0.24748
 transform = Transform3D(-0.000177927, 0, 0.242838, 0, 0.242838, 0, -0.242838, 0, -0.000177927, 12.6389, 0.0278666, -0.54734)
 
 [node name="Battery" parent="." instance=ExtResource("10_aesog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4915, 0, -1.7675)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02719, 1.68748, -1.43196)
 
 [node name="deskWoodGreen" parent="." instance=ExtResource("11_uf31s")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 7.2507, 0, -2.70769)
 
 [node name="deskWoodGreen2" parent="." instance=ExtResource("11_uf31s")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 13.8814, 0, -2.70769)
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://crkejo1yupryg"]
+
+[ext_resource type="Script" path="res://Scripts/Notes/NoteBase.gd" id="1_iyytx"]
+
+[resource]
+script = ExtResource("1_iyytx")
+Messeage = "	
+	
+		
+			Jerry"

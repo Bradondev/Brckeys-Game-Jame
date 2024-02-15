@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://dulrrh4cwt1qf"]
+
+[ext_resource type="Script" path="res://Scripts/Notes/NoteBase.gd" id="1_10trb"]
+
+[resource]
+script = ExtResource("1_10trb")
+Messeage = "Find the room with lights to go home."

@@ -30,9 +30,8 @@ default_font_size = 80
 Button/styles/hover = SubResource("StyleBoxFlat_53ura")
 Button/styles/normal = SubResource("StyleBoxFlat_4prpr")
 
-[node name="Note" type="StaticBody3D" node_paths=PackedStringArray("PopUp")]
+[node name="Note" type="StaticBody3D"]
 script = ExtResource("1_wwuip")
-PopUp = NodePath("PopUp")
 
 [node name="PopUp" parent="." instance=ExtResource("5_vgb4l")]
 DescriptionTextValue = "Pick Up Note"
@@ -92,6 +91,14 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_ckeml")
 theme_override_font_sizes/normal_font_size = 60
 text = "I need to get out off "
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 581.0
+offset_top = 170.0
+offset_right = 1431.0
+offset_bottom = 1022.0
+stretch_mode = 3
 
 [connection signal="visibility_changed" from="CanvasLayer" to="." method="_on_canvas_layer_visibility_changed"]
 [connection signal="pressed" from="CanvasLayer/Control/ResumeButton" to="." method="_on_resume_button_pressed"]

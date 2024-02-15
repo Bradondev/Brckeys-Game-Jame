@@ -135,7 +135,9 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Mission:
-- Find the right door to escape!"
+-Replace batteries.
+-Run away from Jerry.
+-Go Home"
 
 [connection signal="visibility_changed" from="PauseMenu" to="PauseMenu" method="_on_visibility_changed"]
 [connection signal="button_up" from="PauseMenu/Panel/VBoxContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_button_up"]
