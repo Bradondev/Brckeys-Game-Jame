@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Incandescent Lightbulb.mp3-57c00a007d63fe9f36
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -12,6 +12,7 @@ var MusicTweenIn : Tween
 var MusicToChangeTo = null
 var StartPosition = 0
 
+
 func _ready():
 
 
@@ -32,6 +33,7 @@ func _ready():
 		var instance = AudioStreamPlayer3D.new()
 		add_child(instance)
 		SFXChannels.append(instance)
+
 
 func SwitchToMusic(audioPath, tweenOutLength, tweenInLength, startloc = 0):
 	if MusicToChangeTo == audioPath:

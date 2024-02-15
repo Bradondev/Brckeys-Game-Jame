@@ -13,8 +13,13 @@ class_name BaseLight
 var SwitchConnect
 var NoStopingFlicking = true
 var rng = RandomNumberGenerator.new()
+
+var RandomPitchScale
+var RandomVolume
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	RandomPitchScale = randf_range(.8, 1.2)
+	RandomVolume = randf_range(-20.0, -10.0)
 	visible = false
 	if FlickeringLoop > 0.0:
 		FlickerTimer.wait_time = FlickeringLoop
@@ -32,13 +37,19 @@ func _ready():
 func  TurnOnLight():
 	if get_node_or_null("ceilingLight"):
 		$ceilingLight.TurnOn()
+		$AudioStreamPlayer3D.volume_db = RandomVolume
+		$AudioStreamPlayer3D.pitch_scale = RandomPitchScale
+		$AudioStreamPlayer3D.play()
 	light_energy = MaxPowerOfLight
 	On = true
+
 func  TurnOffLight():
 	if get_node_or_null("ceilingLight"):
 		$ceilingLight.TurnOff()
+		$AudioStreamPlayer3D.stop()
 	light_energy = 0
 	On = false
+
 
 
 func  UpdateLight():
