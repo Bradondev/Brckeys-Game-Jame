@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ydv4yxa30dm"]
+
+[ext_resource type="PackedScene" uid="uid://bb8suhthlep70" path="res://3d/imports/jerryPlaceHolder/Jerry.glb" id="1_ptmm3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1tb3"]
+albedo_color = Color(1, 1, 1, 0.494118)
+roughness = 0.0
+refraction_enabled = true
+
+[node name="Jerry" instance=ExtResource("1_ptmm3")]
+
+[node name="batteryGlass" parent="metarig/Skeleton3D" index="6"]
+surface_material_override/0 = SubResource("StandardMaterial3D_i1tb3")
