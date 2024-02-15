@@ -19,12 +19,18 @@ func _ready():
 
 	if MonsterSpawnChance > 0:
 		var result = randi() % 100
+		if LevelLoader.Rumbles >= LevelLoader.RumblesToSpawnEnemy + randi() % 5:
+			result = 0
+			LevelLoader.Rumbles = 0
+			LevelLoader.RumblesToSpawnEnemy -= 1
+
 		if result <= MonsterSpawnChance:
 			MonsterRef = load("res://monster.tscn").instantiate()
 			add_child(MonsterRef)
 			SetRandomPatrolPoint(MonsterRef)
 			emit_signal("SpawnEnemy")
 			SetDoorsEnabled(false)
+
 
 
 
@@ -42,6 +48,7 @@ func OnPassPoint():
 	if PointsToPassBeforeDeath <= 0:
 		MonsterRef.queue_free()
 		SetDoorsEnabled(true)
+		SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .5, .5)
 		FlickerLights()
 		await get_tree().create_timer(.4).timeout
 		FlickerLights()
@@ -53,7 +60,7 @@ func OnPassPoint():
 		FlickerLights()
 		await get_tree().create_timer(.1).timeout
 		FlickerLights()
-		SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
+
 
 func SetDoorsEnabled(bEnable):
 	var doors = get_tree().get_nodes_in_group("Doors")

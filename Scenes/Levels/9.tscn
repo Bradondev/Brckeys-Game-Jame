@@ -16,13 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="14_gsxrt"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="15_2lcii"]
 [ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="16_1aqqn"]
-[ext_resource type="Resource" uid="uid://mvbrofcd5ube" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
+[ext_resource type="Resource" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
 [ext_resource type="Texture2D" uid="uid://bbuxcrifi748s" path="res://Art/drawing.png" id="18_vyi8g"]
 
 [node name="9" type="Node3D"]
 script = ExtResource("1_4qra7")
-MonsterSpawnChance = 100
-PointsToPassBeforeDeath = 100
+MonsterSpawnChance = 56
+PointsToPassBeforeDeath = 16
 
 [node name="Player" parent="." instance=ExtResource("2_f1m5m")]
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
