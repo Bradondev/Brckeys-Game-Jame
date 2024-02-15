@@ -4,6 +4,9 @@ var PlayerMoveToPosition = "-1"
 
 var Data = {}
 
+var Rumbles = 0
+var RumblesToSpawnEnemy = 12
+
 func _ready():
 	Reset()
 
@@ -21,6 +24,12 @@ func GetPlayer():
 	var player = get_tree().get_nodes_in_group("Player")
 	if player:
 		return player[0]
+
+func GetLevel():
+	var level = get_tree().get_nodes_in_group("Level")
+	if level:
+		return level[0]
+
 
 func GetObjectName(object):
 	return get_tree().current_scene.name + object.name
@@ -43,4 +52,5 @@ func Load(object):
 
 func Reset():
 	SetPlayerMoveToPosition("-1")
+	RumblesToSpawnEnemy = 12
 	Data.clear()

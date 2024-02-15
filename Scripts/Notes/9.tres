@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://mvbrofcd5ube"]
+
+[ext_resource type="Script" path="res://Scripts/Notes/NoteBase.gd" id="1_g25m6"]
+
+[resource]
+script = ExtResource("1_g25m6")
+Messeage = "Beware of Jerry"

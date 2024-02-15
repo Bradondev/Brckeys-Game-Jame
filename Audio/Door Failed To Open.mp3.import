@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgybdsfxf8ulq"
+path="res://.godot/imported/Door Failed To Open.mp3-156d548b54fe6adffe620d4da74409f8.mp3str"
+
+[deps]
+
+source_file="res://Audio/Door Failed To Open.mp3"
+dest_files=["res://.godot/imported/Door Failed To Open.mp3-156d548b54fe6adffe620d4da74409f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

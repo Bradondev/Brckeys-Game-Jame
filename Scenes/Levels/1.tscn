@@ -1,20 +1,22 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckf1gv3eife6x"]
+[gd_scene load_steps=18 format=3 uid="uid://ckf1gv3eife6x"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8qvpq"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ga15u"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="2_nxvfb"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="2_t5e0c"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="2_t5e0c"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="3_g2ci5"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="4_bjv7o"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="4_uv33d"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="7_v0avw"]
 [ext_resource type="PackedScene" uid="uid://bfitwpu5j2gb7" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="10_k17vp"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="11_0ikxu"]
-[ext_resource type="PackedScene" uid="uid://cbcnrv0nududa" path="res://Scenes/RoomLightingBase.tscn" id="11_ynlkv"]
+[ext_resource type="PackedScene" uid="uid://dgcmqwhdlibhu" path="res://Scenes/RoomLightingBase.tscn" id="11_ynlkv"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="12_2rr1i"]
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="13_mpic7"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="14_120y1"]
 [ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="15_p2u16"]
+[ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="16_3mis4"]
+[ext_resource type="Resource" uid="uid://csf444oel8uy2" path="res://Scripts/Notes/1.tres" id="17_1g2br"]
 
 [node name="1" type="Node3D"]
 script = ExtResource("1_ga15u")
@@ -36,7 +38,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 1.1855
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, 5.18552)
 
 [node name="BasePaintedWall6" parent="." instance=ExtResource("2_nxvfb")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.7544, -1.49012e-07, 13.1855)
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 14.7544, -1.49012e-07, 9.1253)
+
+[node name="BasePaintedWall7" parent="." instance=ExtResource("2_nxvfb")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 14.7544, -1.49012e-07, 17.1253)
+
+[node name="BasePaintedWall8" parent="." instance=ExtResource("2_nxvfb")]
+transform = Transform3D(-4.56956e-08, 0, 1, 0, 1, 0, -1, 0, -4.56956e-08, 18.7544, -1.49012e-07, 13.1253)
 
 [node name="BasePaintedWall4" parent="." instance=ExtResource("2_nxvfb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.75441, -1.49012e-07, 5.18552)
@@ -55,6 +63,24 @@ SpawnPoint = "-1"
 [node name="PlayerStartOrientation2" parent="." instance=ExtResource("4_uv33d")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.77092, 1, 15.2492)
 SpawnPoint = "2"
+
+[node name="SmDoor3" parent="." instance=ExtResource("3_g2ci5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.1666, 0.0312469, 15.2492)
+RoomToGoTo = "5.tscn"
+DoorType = 1
+
+[node name="PlayerStartOrientation4" parent="." instance=ExtResource("4_uv33d")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.6448, 1, 14.224)
+SpawnPoint = "5"
+
+[node name="SmDoor4" parent="." instance=ExtResource("3_g2ci5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.236, 0.0312469, 8.87188)
+RoomToGoTo = "12.tscn"
+bCanEnterDoor = false
+
+[node name="PlayerStartOrientation5" parent="." instance=ExtResource("4_uv33d")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.71417, 1, 7.84668)
+SpawnPoint = "12"
 
 [node name="SmDoor2" parent="." instance=ExtResource("3_g2ci5")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.22849, 0.0312469, 1.7052)
@@ -158,6 +184,54 @@ transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 7.9883
 [node name="ceilingTile28" parent="." instance=ExtResource("11_0ikxu")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 7.9883, 3.86155, 10.2425)
 
+[node name="ceilingTile33" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 11.9883, 3.86155, 14.2425)
+
+[node name="ceilingTile34" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 11.9883, 3.86155, 12.2425)
+
+[node name="ceilingTile35" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 11.9883, 3.86155, 16.2425)
+
+[node name="ceilingTile36" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 11.9883, 3.86155, 10.2425)
+
+[node name="ceilingTile37" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 13.9883, 3.86155, 14.2425)
+
+[node name="ceilingTile38" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 13.9883, 3.86155, 12.2425)
+
+[node name="ceilingTile39" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 13.9883, 3.86155, 16.2425)
+
+[node name="ceilingTile40" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 13.9883, 3.86155, 10.2425)
+
+[node name="ceilingTile41" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 15.9883, 3.86155, 14.2425)
+
+[node name="ceilingTile42" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 15.9883, 3.86155, 12.2425)
+
+[node name="ceilingTile43" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 15.9883, 3.86155, 16.2425)
+
+[node name="ceilingTile44" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 15.9883, 3.86155, 10.2425)
+
+[node name="ceilingTile45" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 17.9883, 3.86155, 14.2425)
+
+[node name="ceilingTile46" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 17.9883, 3.86155, 12.2425)
+
+[node name="ceilingTile47" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 17.9883, 3.86155, 16.2425)
+
+[node name="ceilingTile48" parent="." instance=ExtResource("11_0ikxu")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 17.9883, 3.86155, 10.2425)
+
 [node name="ceilingTile29" parent="." instance=ExtResource("11_0ikxu")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 9.9883, 3.86155, 14.2425)
 
@@ -204,5 +278,39 @@ Flickering = true
 transform = Transform3D(-0.999999, 0.00139626, 8.9407e-08, 0.00139626, 0.999999, 0, -5.96046e-08, 8.73115e-11, -1, 4.58645, 1.92241, 1.21051)
 DoorToUnlock = NodePath("../SmDoor2")
 
+[node name="BatteryInject2" parent="." instance=ExtResource("15_p2u16")]
+transform = Transform3D(8.9407e-08, -1.74623e-10, 1, 0.00139626, 0.999999, 5.82076e-11, -0.999999, 0.00139626, 1.49012e-07, 10.761, 1.82285, 6.36623)
+DoorToUnlock = NodePath("../SmDoor4")
+
 [node name="Battery" parent="." instance=ExtResource("14_120y1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.172109, 12.2091)
+
+[node name="Note" parent="." instance=ExtResource("16_3mis4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7153, -2.21565e-07, 11.2102)
+Messeage = ExtResource("17_1g2br")
+
+[node name="ColorRect2" type="ColorRect" parent="Note/CanvasLayer/Control/StickyNote" index="0"]
+layout_mode = 0
+offset_left = 311.667
+offset_top = 385.0
+offset_right = 1463.67
+offset_bottom = 400.0
+color = Color(0, 0, 0, 1)
+
+[node name="NoteMessage" parent="Note/CanvasLayer/Control/StickyNote" index="1"]
+text = "TO DO
+-Clean the bathrooms.
+-Make weekly report
+-Replace batteries.
+-Run away from Jerry.
+-Go Home"
+
+[node name="ColorRect3" type="ColorRect" parent="Note/CanvasLayer/Control/StickyNote" index="2"]
+layout_mode = 0
+offset_left = 311.667
+offset_top = 541.667
+offset_right = 1463.67
+offset_bottom = 556.667
+color = Color(0, 0, 0, 1)
+
+[editable path="Note"]

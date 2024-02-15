@@ -99,6 +99,7 @@ transform = Transform3D(40, 0, 0, 0, 29.738, 0, 0, 0, 29.738, 8.33564, -4.43131e
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92843, 8.02829)
+fov = 40.7
 
 [node name="NormalLighting" parent="." instance=ExtResource("5_0lr8l")]
 
@@ -239,7 +240,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0003
 light_color = Color(1, 0.756863, 0.215686, 1)
 spot_range = 1.0
 MaxPowerOfLight = 1
-FlickeringLoop = 2.0
 
 [node name="Light2" parent="." instance=ExtResource("8_ph5nw")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.00032, 3.86598, -0.0743387)

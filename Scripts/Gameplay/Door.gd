@@ -9,10 +9,18 @@ extends InterActiveObject
 @export var DoorType = 0
 
 var bHasEnteredDoor = false
+var bDisabled = false
+
+func EnableDoor(bEnable):
+	bDisabled = !bEnable
+	$PopUp.bIsLocked = bCanEnterDoor == false and bEnable
+
 
 func _ready():
 	super._ready()
 	$PopUp.bIsLocked = bCanEnterDoor == false
+	add_to_group("Doors")
+
 
 func _enter_tree():
 	if DoorType == 1:
@@ -26,12 +34,18 @@ func UnlockDoor():
 	$PopUp.bIsLocked = false
 
 func InterAct():
+	if bDisabled:
+		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
+		return
+
 	if bCanEnterDoor == false:
+		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
 		return
 
 	if bHasEnteredDoor:
 		return
 
+	SoundManager.PlaySFX("res://Audio/Door Opening.mp3", global_position)
 	bHasEnteredDoor = true
 	$AnimationPlayer.play("DoorOpen")
 	LevelLoader.GetPlayer().PlayFade(true)
