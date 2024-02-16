@@ -144,8 +144,6 @@ func TakeDamage():
 	SoundManager.PlaySFX("res://Audio/Death Sound.mp3", global_position)
 
 
-
-
 func PickUpItem(Item):
 	emit_signal("PickUpItemSignal",Item)
 
@@ -187,3 +185,9 @@ func _on_area_3d_body_exited(body):
 	if is_instance_valid(LevelLoader.GetMonster()):
 		LevelLoader.GetMonster().ChangeState("dash")
 
+
+
+func _on_check_paused_timer_timeout():
+	if get_tree().paused and bIsDead == false:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pass # Replace with function body.

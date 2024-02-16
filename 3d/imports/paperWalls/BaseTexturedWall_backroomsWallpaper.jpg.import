@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvi6aklgd8k8q"
 path.s3tc="res://.godot/imported/BaseTexturedWall_backroomsWallpaper.jpg-df62f2354129cf4a636e847eeef17909.s3tc.ctex"
+path.etc2="res://.godot/imported/BaseTexturedWall_backroomsWallpaper.jpg-df62f2354129cf4a636e847eeef17909.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/paperWalls/BaseTexturedWall_backroomsWallpaper.jpg"
-dest_files=["res://.godot/imported/BaseTexturedWall_backroomsWallpaper.jpg-df62f2354129cf4a636e847eeef17909.s3tc.ctex"]
+dest_files=["res://.godot/imported/BaseTexturedWall_backroomsWallpaper.jpg-df62f2354129cf4a636e847eeef17909.s3tc.ctex", "res://.godot/imported/BaseTexturedWall_backroomsWallpaper.jpg-df62f2354129cf4a636e847eeef17909.etc2.ctex"]
 
 [params]
 

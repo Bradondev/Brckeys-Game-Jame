@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1ignt4lbv7bt"
 path.s3tc="res://.godot/imported/chairOffice_chairDiffuse.png-9298b76840b17839b270884e0fceabd9.s3tc.ctex"
+path.etc2="res://.godot/imported/chairOffice_chairDiffuse.png-9298b76840b17839b270884e0fceabd9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/chairOffice/chairOffice_chairDiffuse.png"
-dest_files=["res://.godot/imported/chairOffice_chairDiffuse.png-9298b76840b17839b270884e0fceabd9.s3tc.ctex"]
+dest_files=["res://.godot/imported/chairOffice_chairDiffuse.png-9298b76840b17839b270884e0fceabd9.s3tc.ctex", "res://.godot/imported/chairOffice_chairDiffuse.png-9298b76840b17839b270884e0fceabd9.etc2.ctex"]
 
 [params]
 

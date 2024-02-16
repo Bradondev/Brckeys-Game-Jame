@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cspbgbtn5j57a"
 path.s3tc="res://.godot/imported/chairOffice_Fabric018_2K_Roughness.png-eb44632ec183bf063f748bb5f0f2c474.s3tc.ctex"
+path.etc2="res://.godot/imported/chairOffice_Fabric018_2K_Roughness.png-eb44632ec183bf063f748bb5f0f2c474.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/chairOffice/chairOffice_Fabric018_2K_Roughness.png"
-dest_files=["res://.godot/imported/chairOffice_Fabric018_2K_Roughness.png-eb44632ec183bf063f748bb5f0f2c474.s3tc.ctex"]
+dest_files=["res://.godot/imported/chairOffice_Fabric018_2K_Roughness.png-eb44632ec183bf063f748bb5f0f2c474.s3tc.ctex", "res://.godot/imported/chairOffice_Fabric018_2K_Roughness.png-eb44632ec183bf063f748bb5f0f2c474.etc2.ctex"]
 
 [params]
 

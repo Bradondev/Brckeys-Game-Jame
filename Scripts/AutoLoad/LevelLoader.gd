@@ -56,8 +56,8 @@ func Load(object):
 	if Data.has(GetObjectName(object)):
 		return Data[GetObjectName(object)]
 	return null
-	
-	
+
+
 func SaveSettings():
 	Master =get_tree().get_nodes_in_group("MasterSetting")[0].value
 	Music =get_tree().get_nodes_in_group("MusicSetting")[0].value

@@ -1,10 +1,11 @@
 extends Node3D
 
-func _ready():
+func _enter_tree():
 	TurnOff()
 
 func TurnOn():
-	$AnimationPlayer.play("on")
+	$Plane_002.position.y = -0.101
 
 func TurnOff():
-	$AnimationPlayer.play("off")
+	$Plane_002.position.y = -0.198
+

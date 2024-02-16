@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbus6u7fvjq8l"
 path.s3tc="res://.godot/imported/BatteryHolder_ColorScheme.png-7fa8cdb18da92fb7e5d1679dee7f1863.s3tc.ctex"
+path.etc2="res://.godot/imported/BatteryHolder_ColorScheme.png-7fa8cdb18da92fb7e5d1679dee7f1863.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/batteryReciever/BatteryHolder_ColorScheme.png"
-dest_files=["res://.godot/imported/BatteryHolder_ColorScheme.png-7fa8cdb18da92fb7e5d1679dee7f1863.s3tc.ctex"]
+dest_files=["res://.godot/imported/BatteryHolder_ColorScheme.png-7fa8cdb18da92fb7e5d1679dee7f1863.s3tc.ctex", "res://.godot/imported/BatteryHolder_ColorScheme.png-7fa8cdb18da92fb7e5d1679dee7f1863.etc2.ctex"]
 
 [params]
 

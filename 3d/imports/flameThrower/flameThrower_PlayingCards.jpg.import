@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://difj6i5sdc2c4"
 path.s3tc="res://.godot/imported/flameThrower_PlayingCards.jpg-a7e332bbe574e47a99cf97ab111f5451.s3tc.ctex"
+path.etc2="res://.godot/imported/flameThrower_PlayingCards.jpg-a7e332bbe574e47a99cf97ab111f5451.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/flameThrower/flameThrower_PlayingCards.jpg"
-dest_files=["res://.godot/imported/flameThrower_PlayingCards.jpg-a7e332bbe574e47a99cf97ab111f5451.s3tc.ctex"]
+dest_files=["res://.godot/imported/flameThrower_PlayingCards.jpg-a7e332bbe574e47a99cf97ab111f5451.s3tc.ctex", "res://.godot/imported/flameThrower_PlayingCards.jpg-a7e332bbe574e47a99cf97ab111f5451.etc2.ctex"]
 
 [params]
 

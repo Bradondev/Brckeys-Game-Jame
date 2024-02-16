@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://co6jbmf8wq3cu"
 path.s3tc="res://.godot/imported/ceilingTile_ceilingTile.png-b3884ff428cd3b316cadcdd947750890.s3tc.ctex"
+path.etc2="res://.godot/imported/ceilingTile_ceilingTile.png-b3884ff428cd3b316cadcdd947750890.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://3d/imports/ceilingTile/ceilingTile_ceilingTile.png"
-dest_files=["res://.godot/imported/ceilingTile_ceilingTile.png-b3884ff428cd3b316cadcdd947750890.s3tc.ctex"]
+dest_files=["res://.godot/imported/ceilingTile_ceilingTile.png-b3884ff428cd3b316cadcdd947750890.s3tc.ctex", "res://.godot/imported/ceilingTile_ceilingTile.png-b3884ff428cd3b316cadcdd947750890.etc2.ctex"]
 
 [params]
 

@@ -20,7 +20,6 @@ var RandomVolume
 func _ready():
 	RandomPitchScale = randf_range(.8, 1.2)
 	RandomVolume = randf_range(-20.0, -10.0)
-	visible = false
 	if FlickeringLoop > 0.0:
 		FlickerTimer.wait_time = FlickeringLoop
 	ConnectToSwitch()
@@ -57,6 +56,7 @@ func  UpdateLight():
 		TurnOffLight()
 	elif  !On:
 		TurnOnLight()
+
 func ConnectToSwitch():
 	SwitchConnect = get_tree().get_nodes_in_group(SwitchToConnectTo)
 	for Switchs in SwitchConnect:

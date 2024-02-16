@@ -9,12 +9,12 @@ var sfx_Bus = AudioServer.get_bus_index("SFX")
 
 
 func _ready():
-	$CanvasLayer/Panel/VBoxContainer2/Music2.value = LevelLoader.Music 
+	$CanvasLayer/Panel/VBoxContainer2/Music2.value = LevelLoader.Music
 	$CanvasLayer/Panel/VBoxContainer2/Master2.value = LevelLoader.Master
 	$CanvasLayer/Panel/VBoxContainer2/SFX2.value = LevelLoader.SFX
 func _on_master_2_value_changed(value):
 	AudioServer.set_bus_volume_db(master_Bus,value)
-	
+
 	if value == -30:
 		AudioServer.set_bus_mute(master_Bus,true)
 	else:

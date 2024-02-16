@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4a264vdvpo1r"
 path.s3tc="res://.godot/imported/flameThrower_temperatureGauge.jpg-99fb985d6fd8a0f03df267a8a8170762.s3tc.ctex"
+path.etc2="res://.godot/imported/flameThrower_temperatureGauge.jpg-99fb985d6fd8a0f03df267a8a8170762.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/flameThrower/flameThrower_temperatureGauge.jpg"
-dest_files=["res://.godot/imported/flameThrower_temperatureGauge.jpg-99fb985d6fd8a0f03df267a8a8170762.s3tc.ctex"]
+dest_files=["res://.godot/imported/flameThrower_temperatureGauge.jpg-99fb985d6fd8a0f03df267a8a8170762.s3tc.ctex", "res://.godot/imported/flameThrower_temperatureGauge.jpg-99fb985d6fd8a0f03df267a8a8170762.etc2.ctex"]
 
 [params]
 

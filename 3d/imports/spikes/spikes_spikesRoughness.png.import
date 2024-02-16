@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drqwv36gs13yg"
 path.s3tc="res://.godot/imported/spikes_spikesRoughness.png-aa2d778464444f21bdf10e8947c93e0d.s3tc.ctex"
+path.etc2="res://.godot/imported/spikes_spikesRoughness.png-aa2d778464444f21bdf10e8947c93e0d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/spikes/spikes_spikesRoughness.png"
-dest_files=["res://.godot/imported/spikes_spikesRoughness.png-aa2d778464444f21bdf10e8947c93e0d.s3tc.ctex"]
+dest_files=["res://.godot/imported/spikes_spikesRoughness.png-aa2d778464444f21bdf10e8947c93e0d.s3tc.ctex", "res://.godot/imported/spikes_spikesRoughness.png-aa2d778464444f21bdf10e8947c93e0d.etc2.ctex"]
 
 [params]
 

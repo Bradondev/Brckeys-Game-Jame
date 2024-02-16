@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://u410fr37ff74"
 path.s3tc="res://.godot/imported/doorBlue_Image_2.jpg-b8195e130598e5aea2d26fac9fa958a6.s3tc.ctex"
+path.etc2="res://.godot/imported/doorBlue_Image_2.jpg-b8195e130598e5aea2d26fac9fa958a6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/doorsColor/doorBlue_Image_2.jpg"
-dest_files=["res://.godot/imported/doorBlue_Image_2.jpg-b8195e130598e5aea2d26fac9fa958a6.s3tc.ctex"]
+dest_files=["res://.godot/imported/doorBlue_Image_2.jpg-b8195e130598e5aea2d26fac9fa958a6.s3tc.ctex", "res://.godot/imported/doorBlue_Image_2.jpg-b8195e130598e5aea2d26fac9fa958a6.etc2.ctex"]
 
 [params]
 

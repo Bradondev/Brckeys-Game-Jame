@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckjkxr4v3me4t"
 path.s3tc="res://.godot/imported/Scanner_istockphoto-591891954-640x640.png-d941681284d868a6fb11054b502fdab4.s3tc.ctex"
+path.etc2="res://.godot/imported/Scanner_istockphoto-591891954-640x640.png-d941681284d868a6fb11054b502fdab4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/scanner/Scanner_istockphoto-591891954-640x640.png"
-dest_files=["res://.godot/imported/Scanner_istockphoto-591891954-640x640.png-d941681284d868a6fb11054b502fdab4.s3tc.ctex"]
+dest_files=["res://.godot/imported/Scanner_istockphoto-591891954-640x640.png-d941681284d868a6fb11054b502fdab4.s3tc.ctex", "res://.godot/imported/Scanner_istockphoto-591891954-640x640.png-d941681284d868a6fb11054b502fdab4.etc2.ctex"]
 
 [params]
 

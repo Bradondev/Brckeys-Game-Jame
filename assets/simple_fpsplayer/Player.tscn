@@ -291,6 +291,9 @@ transform = Transform3D(0.171192, -0.0744735, 0.258713, 0.956316, 0.195747, 0.06
 [node name="SM_scanner" parent="." instance=ExtResource("5_kd1m4")]
 transform = Transform3D(0.973819, -0.226857, 0.0145763, 0.201055, 0.829587, -0.520925, 0.106083, 0.510217, 0.853478, 0.490955, 0.567255, -1.07754)
 
+[node name="CheckPausedTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="AddBatteryUi" from="." to="PlayerUi" method="AddBatteryToUi"]
 [connection signal="DelBatteryUi" from="." to="PlayerUi" method="DelBatteryUi"]
 [connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light/Timer" to="rotation_helper/Camera3D/flashlight_player/Light" method="_on_timer_timeout"]
@@ -299,3 +302,4 @@ transform = Transform3D(0.973819, -0.226857, 0.0145763, 0.201055, 0.829587, -0.5
 [connection signal="body_exited" from="rotation_helper/Camera3D/flashlight_player2/Area3D" to="." method="_on_area_3d_body_exited"]
 [connection signal="timeout" from="CanvasLayer/GlitchTimer" to="." method="_on_glitch_timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="CheckPausedTimer" to="." method="_on_check_paused_timer_timeout"]

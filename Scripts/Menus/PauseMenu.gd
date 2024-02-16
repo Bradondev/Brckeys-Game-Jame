@@ -16,6 +16,12 @@ func _on_visibility_changed():
 		get_tree().paused = false
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT:
+		if visible == false:
+			visible = true
+
+
 
 
 func _on_resume_button_button_up():

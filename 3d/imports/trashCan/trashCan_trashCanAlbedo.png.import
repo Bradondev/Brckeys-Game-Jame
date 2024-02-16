@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxyqsranpjar8"
 path.s3tc="res://.godot/imported/trashCan_trashCanAlbedo.png-a1bd7e37e2bb9b17dd99f88fe35df897.s3tc.ctex"
+path.etc2="res://.godot/imported/trashCan_trashCanAlbedo.png-a1bd7e37e2bb9b17dd99f88fe35df897.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://3d/imports/trashCan/trashCan_trashCanAlbedo.png"
-dest_files=["res://.godot/imported/trashCan_trashCanAlbedo.png-a1bd7e37e2bb9b17dd99f88fe35df897.s3tc.ctex"]
+dest_files=["res://.godot/imported/trashCan_trashCanAlbedo.png-a1bd7e37e2bb9b17dd99f88fe35df897.s3tc.ctex", "res://.godot/imported/trashCan_trashCanAlbedo.png-a1bd7e37e2bb9b17dd99f88fe35df897.etc2.ctex"]
 
 [params]
 
