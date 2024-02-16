@@ -23,10 +23,12 @@ func _ready():
 
 
 func _enter_tree():
-	if DoorType == 1:
-		$doorStandard/door.mesh = load("res://3d/meshes/Mesh_BlueDoor.tres")
-	elif DoorType == 2:
-		$doorStandard/door.mesh = load("res://3d/meshes/Mesh_YellowDoor.tres")
+	#if DoorType == 1:
+	#	$doorStandard/door.mesh = load("res://3d/meshes/Mesh_BlueDoor.tres")
+	#elif DoorType == 2:
+	#	$doorStandard/door.mesh = load("res://3d/meshes/Mesh_YellowDoor.tres")
+	pass
+
 
 
 func UnlockDoor():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=19 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
@@ -8,14 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="5_kd1m4"]
 [ext_resource type="Texture2D" uid="uid://de6bwftfdl3ua" path="res://Art/Cursor.png" id="5_xv4ls"]
 [ext_resource type="Material" uid="uid://y2v8leqe2qw6" path="res://Shaders/GlitchShader.tres" id="6_so11v"]
-[ext_resource type="AudioStream" uid="uid://bw3c0bmcintp8" path="res://Audio/Running_On_Carpet.mp3" id="9_l61e1"]
 [ext_resource type="AudioStream" uid="uid://c1abkrug71rqd" path="res://Audio/Walking_On_Carpet.mp3" id="10_2yrky"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 resource_local_to_scene = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6bcqj"]
-size = Vector3(2, 3.062, 13.307)
+size = Vector3(2, 3.062, 8.45233)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4av"]
 bg_color = Color(0, 0, 0, 1)
@@ -208,7 +207,7 @@ collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="rotation_helper/Camera3D/flashlight_player2/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.03101, 6.15326)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.03101, 8.5806)
 shape = SubResource("BoxShape3D_6bcqj")
 
 [node name="ability_grab" type="RayCast3D" parent="rotation_helper/Camera3D"]
@@ -299,7 +298,8 @@ autostart = true
 
 [node name="RunSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.844284, 0)
-stream = ExtResource("9_l61e1")
+stream = ExtResource("10_2yrky")
+volume_db = -10.0
 
 [node name="WalkSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.844284, 0)

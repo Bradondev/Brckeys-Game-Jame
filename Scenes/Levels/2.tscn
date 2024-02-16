@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://tv1mgg8twwv5"]
+[gd_scene load_steps=18 format=3 uid="uid://tv1mgg8twwv5"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_tberq"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_y8pl0"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="2_6kr1i"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="3_r42ed"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="4_j65cm"]
+[ext_resource type="ArrayMesh" uid="uid://rtbov14lekmt" path="res://3d/meshes/Mesh_YellowDoor.tres" id="6_chvv4"]
 [ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_cvk8i"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_3idr8"]
 [ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="8_1b2e5"]
@@ -85,6 +86,9 @@ SpawnPoint = "1"
 transform = Transform3D(-4.25644e-08, -0.000108384, 1, 0.000176159, 1, 0.000108384, -1, 0.000176159, -2.34904e-08, 24.2165, 0.0392279, 6.00797)
 RoomToGoTo = "3.tscn"
 DoorType = 2
+
+[node name="door" parent="SmDoor2/doorStandard" index="0"]
+mesh = ExtResource("6_chvv4")
 
 [node name="PlayerStartOrientation2" parent="." instance=ExtResource("4_j65cm")]
 transform = Transform3D(-4.25644e-08, -0.000108384, 1, 0.000176159, 1, 0.000108384, -1, 0.000176159, -2.35013e-08, 23.47, 1.00799, 5.5389)
@@ -628,3 +632,6 @@ transform = Transform3D(8.1207e-08, -0.000127352, 1.175, 0.000206987, 1.175, 0.0
 
 [node name="chairOffice6" parent="." instance=ExtResource("16_fcpdy")]
 transform = Transform3D(8.1207e-08, -0.000127352, 1.175, 0.000206987, 1.175, 0.000127352, -1.175, 0.000206987, 6.25951e-08, 5.79089, -3.36578e-05, 14.487)
+
+[editable path="SmDoor2"]
+[editable path="SmDoor2/doorStandard"]

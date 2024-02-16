@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://gruq7i6w3oow"]
+[gd_scene load_steps=15 format=3 uid="uid://gruq7i6w3oow"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_w6rjm"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_ahoel"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_5f1y8"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_kita0"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_n8c48"]
+[ext_resource type="ArrayMesh" uid="uid://rtbov14lekmt" path="res://3d/meshes/Mesh_YellowDoor.tres" id="6_g8uia"]
 [ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_y48we"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_ovaim"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="8_eauvt"]
@@ -80,6 +81,9 @@ SpawnPoint = "13"
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -4.73223, 0.0312469, -16.8327)
 RoomToGoTo = "11.tscn"
 DoorType = 2
+
+[node name="door" parent="SmDoor3/doorStandard" index="0"]
+mesh = ExtResource("6_g8uia")
 
 [node name="PlayerStartOrientation4" parent="." instance=ExtResource("5_n8c48")]
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -3.97936, 1, -16.3088)
@@ -507,3 +511,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 1.76007)
 
 [node name="MonsterPath11" parent="." instance=ExtResource("13_5s5vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 4.76007)
+
+[editable path="SmDoor3"]
+[editable path="SmDoor3/doorStandard"]
