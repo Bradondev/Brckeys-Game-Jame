@@ -14,7 +14,7 @@
 resource_local_to_scene = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6bcqj"]
-size = Vector3(2, 3.062, 13.307)
+size = Vector3(2, 3.062, 8.45233)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4av"]
 bg_color = Color(0, 0, 0, 1)
@@ -207,7 +207,7 @@ collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="rotation_helper/Camera3D/flashlight_player2/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.03101, 6.15326)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.03101, 8.5806)
 shape = SubResource("BoxShape3D_6bcqj")
 
 [node name="ability_grab" type="RayCast3D" parent="rotation_helper/Camera3D"]
