@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ckf1gv3eife6x"]
+[gd_scene load_steps=18 format=3 uid="uid://ckf1gv3eife6x"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8qvpq"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ga15u"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="4_bjv7o"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="4_uv33d"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="7_v0avw"]
+[ext_resource type="ArrayMesh" uid="uid://rec45571l5cm" path="res://3d/meshes/Mesh_BlueDoor.tres" id="8_pajtq"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="11_0ikxu"]
 [ext_resource type="PackedScene" uid="uid://cbcnrv0nududa" path="res://Scenes/RoomLightingBase.tscn" id="11_ynlkv"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="12_2rr1i"]
@@ -67,6 +68,9 @@ SpawnPoint = "2"
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.1666, 0.0312469, 15.2492)
 RoomToGoTo = "5.tscn"
 DoorType = 1
+
+[node name="door" parent="SmDoor3/doorStandard" index="0"]
+mesh = ExtResource("8_pajtq")
 
 [node name="PlayerStartOrientation4" parent="." instance=ExtResource("4_uv33d")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.6448, 1, 14.224)
@@ -306,4 +310,8 @@ offset_right = 1463.67
 offset_bottom = 556.667
 color = Color(0, 0, 0, 1)
 
+[editable path="SmDoor"]
+[editable path="SmDoor/doorStandard"]
+[editable path="SmDoor3"]
+[editable path="SmDoor3/doorStandard"]
 [editable path="Note"]

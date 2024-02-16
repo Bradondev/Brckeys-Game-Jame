@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d3abwpntq0386"]
+[gd_scene load_steps=32 format=3 uid="uid://d3abwpntq0386"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_4qra7"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_f1m5m"]
@@ -8,8 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_e61yw"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="6_bb7hh"]
 [ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
+[ext_resource type="ArrayMesh" uid="uid://rec45571l5cm" path="res://3d/meshes/Mesh_BlueDoor.tres" id="7_vgsxy"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Door.gd" id="8_qceql"]
+[ext_resource type="PackedScene" uid="uid://cuf7mugub7ny0" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="9_dgu8g"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="9_rmjif"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="10_73cm1"]
+[ext_resource type="ArrayMesh" uid="uid://rtbov14lekmt" path="res://3d/meshes/Mesh_YellowDoor.tres" id="10_noh11"]
+[ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="11_rx8wr"]
 [ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="11_w1lj4"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="12_no24f"]
 [ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="13_kgbx5"]
@@ -19,6 +24,56 @@
 [ext_resource type="Resource" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
 [ext_resource type="Texture2D" uid="uid://bbuxcrifi748s" path="res://Art/drawing.png" id="18_vyi8g"]
 [ext_resource type="PackedScene" uid="uid://dfw0hbia8oggq" path="res://3d/prefabs/SM_chair_office.tscn" id="19_u43oe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4mfb"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.431373, 0.329412, 0.0627451, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4dk6u"]
+size = Vector3(1.875, 3, 0.45)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg5u1"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.952941)
+
+[sub_resource type="Animation" id="Animation_d5y2p"]
+resource_name = "DoorOpen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("doorStandard/door:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -2.01586, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mbwr2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("doorStandard/door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3s1u1"]
+_data = {
+"DoorOpen": SubResource("Animation_d5y2p"),
+"RESET": SubResource("Animation_mbwr2")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2p5br"]
+size = Vector3(2, 1, 1)
 
 [node name="9" type="Node3D"]
 script = ExtResource("1_4qra7")
@@ -888,15 +943,57 @@ RoomToGoTo = "10.tscn"
 bCanEnterDoor = false
 DoorType = 1
 
+[node name="door" parent="SmDoor2/doorStandard" index="0"]
+mesh = ExtResource("7_vgsxy")
+
 [node name="PlayerStartOrientation3" parent="." instance=ExtResource("5_e61yw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.4578, 1, -6.33377)
 SpawnPoint = "10"
 
-[node name="SmDoor3" parent="." instance=ExtResource("4_huuy4")]
+[node name="SmDoor3" type="StaticBody3D" parent="." groups=["InterActiveObject"]]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 29.1859, 0.0312469, -22.2873)
+script = ExtResource("8_qceql")
 RoomToGoTo = "11.tscn"
 bCanEnterDoor = false
 DoorType = 2
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SmDoor3"]
+transform = Transform3D(1.10578, 0, 0, 0, 1.10578, 0, 0, 0, 1.10578, 0.622314, 1.23969, 0.265916)
+visible = false
+size = Vector3(2.24463, 3.47937, 0.519043)
+material = SubResource("StandardMaterial3D_k4mfb")
+
+[node name="Area3D" type="Area3D" parent="SmDoor3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SmDoor3/Area3D"]
+transform = Transform3D(1.47675, 0, 0, 0, 1.47675, 0, 0, 0, 1.47675, 0.646, 1, 0.329441)
+shape = SubResource("BoxShape3D_4dk6u")
+
+[node name="doorStandard" parent="SmDoor3" instance=ExtResource("9_dgu8g")]
+transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, 0.950681, -0.424269, 0.264757)
+
+[node name="door" parent="SmDoor3/doorStandard" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -0.1)
+mesh = ExtResource("10_noh11")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="SmDoor3"]
+transform = Transform3D(2.50884, 0, 0, 0, 1.71805, 0, 0, 0, 1.71805, 0.959605, 1.30931, 0.267909)
+material_override = SubResource("StandardMaterial3D_rg5u1")
+size = Vector3(0.657288, 2.10468, 0.00982285)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SmDoor3"]
+libraries = {
+"": SubResource("AnimationLibrary_3s1u1")
+}
+
+[node name="PopUp" parent="SmDoor3" instance=ExtResource("11_rx8wr")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0.836992, 1.60302, -0.26245)
+DescriptionTextValue = "Enter"
+OutLinecolor = Color(0, 0.686275, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SmDoor3"]
+transform = Transform3D(1, 0, 0, 0, 3.42742, 0, 0, 0, 0.257254, 0.901399, 1.31885, 0.146492)
+shape = SubResource("BoxShape3D_2p5br")
 
 [node name="PlayerStartOrientation4" parent="." instance=ExtResource("5_e61yw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.4826, 1, -21.5344)
@@ -1146,3 +1243,9 @@ transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0,
 
 [node name="chairOffice10" parent="." instance=ExtResource("19_u43oe")]
 transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0, 1.175, 1.02722e-07, -5.13609e-08, 20.4457, 2.62957, 1.24382)
+
+[connection signal="animation_finished" from="SmDoor3/AnimationPlayer" to="SmDoor3" method="_on_animation_player_animation_finished"]
+
+[editable path="SmDoor2"]
+[editable path="SmDoor2/doorStandard"]
+[editable path="SmDoor3/doorStandard"]
