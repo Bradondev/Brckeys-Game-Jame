@@ -1,0 +1,12 @@
+1. 
+Author: aarroz
+Simple FPS
+Link:https://github.com/aarroz/simplefps
+License: MIT
+
+2. 
+Author: Yui Kinomoto
+Glitch Effect Shader:
+Link:https://godotshaders.com/shader/glitch-effect-shader/
+License: MIT
+
