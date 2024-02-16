@@ -34,12 +34,14 @@ Button/styles/normal = SubResource("StyleBoxFlat_4prpr")
 script = ExtResource("1_wwuip")
 
 [node name="PopUp" parent="." instance=ExtResource("5_vgb4l")]
-DescriptionTextValue = "Pick Up Note"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.624098, 0)
+DescriptionTextValue = "Read note"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_bm5bl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_34wct")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -59,11 +61,12 @@ offset_bottom = 1082.0
 color = Color(0.152941, 0.152941, 0.152941, 1)
 
 [node name="ResumeButton" type="Button" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(280, 105)
 layout_mode = 0
-offset_left = 1632.0
-offset_top = 956.0
-offset_right = 1894.0
-offset_bottom = 1055.0
+offset_left = 1628.0
+offset_top = 952.0
+offset_right = 1908.0
+offset_bottom = 1057.0
 theme = SubResource("Theme_wmttl")
 action_mode = 0
 text = "Resume"

@@ -461,7 +461,7 @@ transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -8.25679, 1, -5.18253)
 
 [node name="Note" parent="." instance=ExtResource("13_hyigc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12271, 1.53728, 0.973181)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12271, 1.49788, 0.973181)
 Messeage = ExtResource("14_tidxf")
 
 [node name="BatteryInject" parent="." instance=ExtResource("15_lru5j")]
@@ -470,3 +470,5 @@ DoorToUnlock = NodePath("../SmDoor")
 
 [node name="Battery" parent="." instance=ExtResource("16_0l3ry")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4652, 2.21565e-07, 0.303625)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

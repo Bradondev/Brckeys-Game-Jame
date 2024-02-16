@@ -1107,7 +1107,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.7178
 On = false
 
 [node name="Note" parent="." instance=ExtResource("16_1aqqn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0482, 1.5249, -6.01919)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0482, 1.48236, -3.98523)
 Messeage = ExtResource("17_le3s3")
 ImagePart = ExtResource("18_vyi8g")
 

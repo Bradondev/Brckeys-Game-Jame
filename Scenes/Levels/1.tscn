@@ -3,14 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8qvpq"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ga15u"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="2_nxvfb"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="2_t5e0c"]
+[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="2_t5e0c"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="3_g2ci5"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="4_bjv7o"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="4_uv33d"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="7_v0avw"]
 [ext_resource type="PackedScene" uid="uid://bfitwpu5j2gb7" path="res://3d/prefabs/SM_bathroom_mirror.tscn" id="10_k17vp"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="11_0ikxu"]
-[ext_resource type="PackedScene" uid="uid://dgcmqwhdlibhu" path="res://Scenes/RoomLightingBase.tscn" id="11_ynlkv"]
+[ext_resource type="PackedScene" uid="uid://cbcnrv0nududa" path="res://Scenes/RoomLightingBase.tscn" id="11_ynlkv"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="12_2rr1i"]
 [ext_resource type="PackedScene" uid="uid://cjjdifoh2hu0f" path="res://Scenes/LightSystem/switch.tscn" id="13_mpic7"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="14_120y1"]
@@ -286,7 +286,7 @@ DoorToUnlock = NodePath("../SmDoor4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.172109, 12.2091)
 
 [node name="Note" parent="." instance=ExtResource("16_3mis4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7153, -2.21565e-07, 11.2102)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7153, 1.30644, 9.30048)
 Messeage = ExtResource("17_1g2br")
 
 [node name="ColorRect2" type="ColorRect" parent="Note/CanvasLayer/Control/StickyNote" index="0"]
@@ -312,5 +312,7 @@ offset_top = 541.667
 offset_right = 1463.67
 offset_bottom = 556.667
 color = Color(0, 0, 0, 1)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
 
 [editable path="Note"]

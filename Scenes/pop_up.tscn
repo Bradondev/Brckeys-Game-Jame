@@ -15,6 +15,7 @@ text = "Turn on lights"
 
 [node name="InputLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.845202, 0)
+visible = false
 billboard = 1
 text = "Press E"
 

@@ -16,8 +16,14 @@ var rng = RandomNumberGenerator.new()
 
 var RandomPitchScale
 var RandomVolume
+var Colors = [
+	"ffff37",
+	"fff1f3",
+	"ecffba"
+	]
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	light_color = Colors[randi() % len(Colors)]
 	RandomPitchScale = randf_range(.8, 1.2)
 	RandomVolume = randf_range(-20.0, -10.0)
 	if FlickeringLoop > 0.0:

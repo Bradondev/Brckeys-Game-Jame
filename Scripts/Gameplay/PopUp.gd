@@ -40,7 +40,7 @@ func  _physics_process(delta):
 
 
 func SetLabels():
-	DescriptionText.text = DescriptionTextValue
+	DescriptionText.text = DescriptionTextValue + "\n" + InputTextLabelValue
 	InputTextLabel.text = InputTextLabelValue
 	DescriptionText.outline_modulate =OutLinecolor
 
