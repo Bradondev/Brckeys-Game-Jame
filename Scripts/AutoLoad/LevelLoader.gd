@@ -3,7 +3,9 @@ extends Node
 var PlayerMoveToPosition = "-1"
 
 var Data = {}
-
+var Master =0
+var Music=0
+var SFX=0
 var Rumbles = 0
 var RumblesToSpawnEnemy = 12
 
@@ -54,6 +56,15 @@ func Load(object):
 	if Data.has(GetObjectName(object)):
 		return Data[GetObjectName(object)]
 	return null
+	
+	
+func SaveSettings():
+	Master =get_tree().get_nodes_in_group("MasterSetting")[0].value
+	Music =get_tree().get_nodes_in_group("MusicSetting")[0].value
+	SFX = get_tree().get_nodes_in_group("SFXSetting")[0].value
+	print_debug(Master,Music,SFX)
+
+
 
 func Reset():
 	SetPlayerMoveToPosition("-1")

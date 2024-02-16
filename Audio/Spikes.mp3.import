@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Spikes.mp3-b6f074aca4703e5fe0164dc524f98598.m
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=20.0
 beat_count=0
-bar_beats=4
+bar_beats=20

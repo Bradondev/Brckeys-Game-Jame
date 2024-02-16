@@ -7,19 +7,19 @@ func _on_inter_hit_box_body_entered(body):
 	if body.name == "Player":
 		$AnimationPlayer.play("Kill")
 		Moving =true
-
+		$AudioStreamPlayer3D.play()
 
 
 func _on_outer_hit_box_body_entered(body):
 	if body.name == "Player":
 		$AnimationPlayer.play("Warning")
 		Moving =true
-
+		$AudioStreamPlayer3D.play()
 
 
 func _on_inter_hit_box_body_exited(body):
 	$AnimationPlayer.play("Reset")
-
+	
 
 func _on_outer_hit_box_body_exited(body):
 	$AnimationPlayer.play("Reset2")
