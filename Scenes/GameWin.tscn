@@ -76,6 +76,7 @@ alignment = 2
 metadata/_edit_group_ = true
 
 [node name="BackButton" type="Button" parent="GameOver/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(700, 110)
 layout_mode = 2
 theme = SubResource("Theme_bupt1")
 text = "Back To Main Menu"
