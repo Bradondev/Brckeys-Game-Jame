@@ -4,7 +4,7 @@ var MusicPlayer : AudioStreamPlayer2D
 var CompleteSoundTimer : Timer
 
 var SFXChannels =[]
-var SFXChannelAmount = 10
+var SFXChannelAmount = 13
 
 var MusicTweenOut : Tween
 var MusicTweenIn : Tween
@@ -79,6 +79,9 @@ func PlaySFX(audioPath, position, forceChannel = -1, startPosition = 0.0):
 		channel.stream = load(audioPath)
 		channel.global_position = position
 		channel.play(startPosition)
+
+func StopSFX(channel):
+	SFXChannels[channel].stop()
 
 func CheckSFXRunning(channel):
 	return SFXChannels[channel].playing

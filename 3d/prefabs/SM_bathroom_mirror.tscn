@@ -12,8 +12,3 @@ script = ExtResource("2_pr3mo")
 [node name="Sprite3D" type="Sprite3D" parent="." index="2"]
 transform = Transform3D(0.175, 0, 0, 0, -7.64949e-09, 0.175, 0, -0.175, -7.64949e-09, 0, 0.0422944, 0.00414109)
 texture = SubResource("ViewportTexture_huxqn")
-
-[node name="SubViewport" type="SubViewport" parent="." index="3"]
-
-[node name="MirrorCamera" type="Camera3D" parent="SubViewport" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999249, -0.0387541, 0, 0.0387541, 0.999249, 0, 0.071862, 0.0852996)

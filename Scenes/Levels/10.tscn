@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://buc3fdj2ajjf7"]
+[gd_scene load_steps=13 format=3 uid="uid://buc3fdj2ajjf7"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ln24g"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_5vehh"]
@@ -11,12 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="10_aesog"]
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="11_agfnm"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="11_uf31s"]
+[ext_resource type="PackedScene" uid="uid://bhwjpx5125jea" path="res://3d/prefabs/SM_flame_thrower.tscn" id="12_ym1du"]
 
 [node name="10" type="Node3D"]
 script = ExtResource("1_ln24g")
 
 [node name="Player" parent="." instance=ExtResource("2_5vehh")]
-transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 11.3243, 2.06986, 6.70488)
 
 [node name="BasePaintedWall" parent="." instance=ExtResource("3_n2yg8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
@@ -268,10 +269,23 @@ transform = Transform3D(0.247487, 0, 0.247487, 0, 0.35, 0, -0.247487, 0, 0.24748
 transform = Transform3D(-0.000177927, 0, 0.242838, 0, 0.242838, 0, -0.242838, 0, -0.000177927, 12.6389, 0.0278666, -0.54734)
 
 [node name="Battery" parent="." instance=ExtResource("10_aesog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02719, 1.68748, -1.43196)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31503, 0.68748, -1.1671)
 
 [node name="deskWoodGreen" parent="." instance=ExtResource("11_uf31s")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 7.2507, 0, -2.70769)
 
 [node name="deskWoodGreen2" parent="." instance=ExtResource("11_uf31s")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 13.8814, 0, -2.70769)
+
+[node name="flameThrower" parent="." instance=ExtResource("12_ym1du")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 8.51836, 0.190566, 1.55229)
+
+[node name="flameThrower2" parent="." instance=ExtResource("12_ym1du")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 5.86607, 0.0195611, -0.745878)
+startTime = 1.5
+offTime = 5.0
+
+[node name="flameThrower3" parent="." instance=ExtResource("12_ym1du")]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 3.37733, 0.0195611, -0.745878)
+startTime = 1.5
+offTime = 5.0
