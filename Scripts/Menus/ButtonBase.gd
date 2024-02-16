@@ -8,6 +8,10 @@ func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	StartTween()
 	connect("visibility_changed", Callable(self, "OnVisChanged"))
+	connect("pressed", Callable(self, "OnButtonPressed"))
+
+func OnButtonPressed():
+	SoundManager.Play2DSFX("res://Audio/Flashlight On.mp3")
 
 func StartTween():
 	modulate = Color(0, 0, 0, 0)

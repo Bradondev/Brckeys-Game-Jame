@@ -4,6 +4,7 @@ class_name  Monster
 
 func _enter_tree():
 	LevelLoader.GetLevel().SetDoorsEnabled(false)
+	SoundManager.PlaySFX("res://Audio/Monster_Growl_-_2_-_Louder.mp3", global_position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):

@@ -29,6 +29,11 @@ func Enter():
 	enemy.enableKillBox(false)
 	SoundManager.SwitchToMusic("res://Audio/Monster_Chase_Music_-_Final.mp3", .01, .01, 2)
 
+	if SoundManager.CheckSFXRunning(9) == false:
+		if randi() % 2 == 0:
+			SoundManager.PlaySFX("res://Audio/Monster_Scream.mp3", enemy.global_position,9, 0)
+		else:
+			SoundManager.PlaySFX("res://Audio/Monster_Scream_-_2.mp3", enemy.global_position,9, 0)
 
 func Physics_Update(delta:float):
 
