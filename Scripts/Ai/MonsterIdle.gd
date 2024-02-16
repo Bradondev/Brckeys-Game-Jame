@@ -16,17 +16,23 @@ var Temp =0
 
 signal PassPoint
 
+var bWalkBackwards = false
 func _ready():
 
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
 	RayCasts = $"../../RaycastHolder".get_children()
 func randomize_wander():
 
-
-	if Temp > PathPoints.size() - 1:
-		Temp = 0
-	target =PathPoints[Temp].transform.origin
-	Temp+=1
+	if bWalkBackwards == false:
+		if Temp > PathPoints.size() - 1:
+			Temp = 0
+		target =PathPoints[Temp].transform.origin
+		Temp +=1
+	else:
+		if Temp < 0:
+			Temp = PathPoints.size() - 1
+		target =PathPoints[Temp].transform.origin
+		Temp -=  1
 	emit_signal("PassPoint")
 
 func SetTemp(index):
@@ -40,6 +46,12 @@ func Enter():
 	FindClosesIdlePath()
 	randomize_wander()
 	print_debug("idle")
+	var result = randi() % 2
+	if result == 0:
+		bWalkBackwards = true
+	else:
+		bWalkBackwards = false
+
 
 func Update(_delte:float):
 	for Raycast in RayCasts:
