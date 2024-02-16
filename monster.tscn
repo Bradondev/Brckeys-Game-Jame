@@ -191,7 +191,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Jerry" parent="." instance=ExtResource("7_u57tn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1.00138, 0.98001)
+transform = Transform3D(-0.75, 0, -1.13247e-07, 0, 0.75, 0, 1.13247e-07, 0, -0.75, 0, -1.00138, 0.98001)
 
 [connection signal="timeout" from="ChaseTimer" to="State Machine/Chase" method="_on_timer_timeout"]
 [connection signal="timeout" from="ScanTimer" to="State Machine/Dash" method="_on_scan_timer_timeout"]

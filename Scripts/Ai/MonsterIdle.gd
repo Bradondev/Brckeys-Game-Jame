@@ -41,7 +41,7 @@ func Enter():
 	randomize_wander()
 	print_debug("idle")
 
-func Update(delte:float):
+func Update(_delte:float):
 	for Raycast in RayCasts:
 		if Raycast.is_colliding() and Raycast.get_collider() == LevelLoader.GetPlayer() :
 			print_debug(Raycast.get_collider())
@@ -64,7 +64,6 @@ func Physics_Update(delta:float):
 
 		enemy.velocity = -enemy.transform.basis.z * move_speed
 
-	var direction = LevelLoader.GetPlayer().global_position - enemy.global_position
 
 
 func ChangeToRandomState():

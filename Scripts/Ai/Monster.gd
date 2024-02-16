@@ -6,7 +6,7 @@ func _enter_tree():
 	LevelLoader.GetLevel().SetDoorsEnabled(false)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide()
 	rotation.x = 0
 	rotation.z = 0

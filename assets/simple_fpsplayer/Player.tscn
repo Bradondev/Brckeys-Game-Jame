@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=17 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d0b3q2x3m57kb" path="res://Scenes/player_ui.tscn" id="4_rnsln"]
 [ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="5_kd1m4"]
 [ext_resource type="Texture2D" uid="uid://de6bwftfdl3ua" path="res://Art/Cursor.png" id="5_xv4ls"]
+[ext_resource type="Material" uid="uid://y2v8leqe2qw6" path="res://Shaders/GlitchShader.tres" id="6_so11v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 resource_local_to_scene = true
@@ -241,6 +242,19 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o8ypq")
 
+[node name="GlitchPanel" type="Panel" parent="CanvasLayer"]
+material = ExtResource("6_so11v")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="GlitchTimer" type="Timer" parent="CanvasLayer"]
+wait_time = 0.5
+one_shot = true
+
 [node name="PlayerUi" parent="." instance=ExtResource("4_rnsln")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -268,4 +282,5 @@ transform = Transform3D(0.973819, -0.226857, 0.0145763, 0.201055, 0.829587, -0.5
 [connection signal="DelBatteryUi" from="." to="PlayerUi" method="DelBatteryUi"]
 [connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light/Timer" to="rotation_helper/Camera3D/flashlight_player/Light" method="_on_timer_timeout"]
 [connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light2/Timer" to="rotation_helper/Camera3D/flashlight_player/Light2" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/GlitchTimer" to="." method="_on_glitch_timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

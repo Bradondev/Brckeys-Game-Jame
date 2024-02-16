@@ -47,6 +47,9 @@ func _ready():
 	SoundManager.PlaySFX("res://Audio/Door Closing.mp3", global_position, 8, .4)
 	SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
 
+	await get_tree().process_frame
+	LevelLoader.GetLevel().connect("SpawnEnemy", Callable(self, "OnEnemySpawn"))
+
 func PlayFade(bForwards):
 	if bForwards:
 		$AnimationPlayer.play("Fade")
@@ -157,3 +160,11 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Death":
 		SoundManager.SwitchToMusic("res://Audio/Death_Music.mp3", .1, .1)
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+
+func OnEnemySpawn():
+	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", .5)
+	$CanvasLayer/GlitchTimer.start()
+
+
+func _on_glitch_timer_timeout():
+	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 0.0)

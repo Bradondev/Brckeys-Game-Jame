@@ -44,7 +44,7 @@ func Physics_Update(delta:float):
 		if enemy.transform.origin.distance_to(colliderPoint) < .5:
 			if DashCounter <= 0:
 				ResetCounter()
-				var rng = RandomNumberGenerator.new()
+				rng = RandomNumberGenerator.new()
 				var StateNumber = rng.randi_range(1, 2)
 				if StateNumber == 1:
 					Transitioned.emit(self,"Chase")

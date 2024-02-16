@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://y2v8leqe2qw6"]
+
+[ext_resource type="Shader" path="res://Shaders/Glitch.gdshader" id="1_l5ui8"]
+
+[resource]
+shader = ExtResource("1_l5ui8")
+shader_parameter/shake_power = 0.08
+shader_parameter/shake_rate = 0.0
+shader_parameter/shake_speed = 1.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.04

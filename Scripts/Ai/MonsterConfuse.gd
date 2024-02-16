@@ -7,8 +7,8 @@ class_name  MonsterConfuse
 
 func Enter():
 	pass
-func Update(delte:float):
+func Update(_delte:float):
 	pass
-func Physics_Update(delta:float):
+func Physics_Update(_delta:float):
 	pass
 
