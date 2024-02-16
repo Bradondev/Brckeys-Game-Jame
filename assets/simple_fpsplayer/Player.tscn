@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=18 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
@@ -11,6 +11,9 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 resource_local_to_scene = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6bcqj"]
+size = Vector3(2, 3.062, 13.307)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4av"]
 bg_color = Color(0, 0, 0, 1)
@@ -195,6 +198,16 @@ spot_range = 52.22
 spot_angle = 118.24
 spot_angle_attenuation = 1.56917
 
+[node name="Area3D" type="Area3D" parent="rotation_helper/Camera3D/flashlight_player2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.494)
+collision_layer = 0
+collision_mask = 8
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rotation_helper/Camera3D/flashlight_player2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.03101, 6.15326)
+shape = SubResource("BoxShape3D_6bcqj")
+
 [node name="ability_grab" type="RayCast3D" parent="rotation_helper/Camera3D"]
 target_position = Vector3(0, 0, -2)
 collision_mask = 5
@@ -282,5 +295,7 @@ transform = Transform3D(0.973819, -0.226857, 0.0145763, 0.201055, 0.829587, -0.5
 [connection signal="DelBatteryUi" from="." to="PlayerUi" method="DelBatteryUi"]
 [connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light/Timer" to="rotation_helper/Camera3D/flashlight_player/Light" method="_on_timer_timeout"]
 [connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light2/Timer" to="rotation_helper/Camera3D/flashlight_player/Light2" method="_on_timer_timeout"]
+[connection signal="body_entered" from="rotation_helper/Camera3D/flashlight_player2/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="rotation_helper/Camera3D/flashlight_player2/Area3D" to="." method="_on_area_3d_body_exited"]
 [connection signal="timeout" from="CanvasLayer/GlitchTimer" to="." method="_on_glitch_timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
