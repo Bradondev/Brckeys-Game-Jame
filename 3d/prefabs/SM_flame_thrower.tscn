@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhwjpx5125jea"]
+[gd_scene load_steps=8 format=3 uid="uid://bhwjpx5125jea"]
 
 [ext_resource type="PackedScene" uid="uid://c4cj52lb21sah" path="res://3d/imports/flameThrower/flameThrower.glb" id="1_ygyqi"]
 [ext_resource type="Texture2D" uid="uid://bf0qsw48p73bd" path="res://3d/imports/flameThrower/flame_02.png" id="2_i0wgc"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Flamethrower.gd" id="2_shiys"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_xy3k6"]
 transparency = 1
@@ -25,12 +26,15 @@ max_value = 2.0
 _data = [Vector2(0, 0.0659339), 0.0, 0.0, 0, 0, Vector2(0.11236, 0.307692), 0.0, 0.0, 0, 0, Vector2(0.308989, 0.659341), 0.0, 0.0, 0, 0, Vector2(0.595506, 1.14286), 0.0, 0.0, 0, 0, Vector2(0.955056, 1.03297), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 6
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0c1nq"]
+size = Vector3(1.05289, 0.879059, 5.38956)
+
 [node name="flameThrower" instance=ExtResource("1_ygyqi")]
+script = ExtResource("2_shiys")
+fireLength = 2
+offTime = 1.5
 
 [node name="Skeleton3D" parent="Armature" index="13"]
-bones/1/rotation = Quaternion(-0.706392, 0, 0, 0.707821)
-bones/3/position = Vector3(-0.133549, 1.12805, 0.380004)
-bones/3/rotation = Quaternion(-0.0339147, -0.0349653, 0.709939, 0.702577)
 bones/4/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
 bones/5/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
 bones/6/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
@@ -50,4 +54,22 @@ scale_amount_curve = SubResource("Curve_vj7wf")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05127, 1.26874, 0)
+visible = false
 light_color = Color(0.694118, 0.313726, 0.141176, 1)
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+[node name="StartTimer" type="Timer" parent="." index="5"]
+one_shot = true
+
+[node name="Area3D" type="Area3D" parent="." index="6"]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.05112, 1.39164, 0.380355)
+shape = SubResource("BoxShape3D_0c1nq")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

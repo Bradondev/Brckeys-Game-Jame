@@ -124,7 +124,6 @@ one_shot = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_6tloq")
-bus = &"SFX"
 
 [connection signal="body_entered" from="spikes/KillZone" to="." method="_on_kill_zone_body_entered"]
 [connection signal="body_entered" from="InterHitBox" to="." method="_on_inter_hit_box_body_entered"]
