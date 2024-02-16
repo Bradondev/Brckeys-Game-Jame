@@ -13,11 +13,13 @@ var MusicToChangeTo = null
 var StartPosition = 0
 
 
+
+
 func _ready():
-
-
+	print_debug("ready")
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	MusicPlayer = AudioStreamPlayer2D.new()
+	MusicPlayer.set_bus("Music")
 	add_child(MusicPlayer)
 	MusicPlayer.stream = load("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3")
 	MusicPlayer.play()
@@ -31,6 +33,7 @@ func _ready():
 
 	for x in range(0, SFXChannelAmount):
 		var instance = AudioStreamPlayer3D.new()
+		instance.set_bus("SFX")
 		add_child(instance)
 		SFXChannels.append(instance)
 

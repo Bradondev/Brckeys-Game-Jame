@@ -313,6 +313,4 @@ offset_right = 1463.67
 offset_bottom = 556.667
 color = Color(0, 0, 0, 1)
 
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
-
 [editable path="Note"]

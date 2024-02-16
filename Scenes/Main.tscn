@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://0107nqw4t5ts"]
+[gd_scene load_steps=20 format=3 uid="uid://0107nqw4t5ts"]
 
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_jrfbq"]
 [ext_resource type="Script" path="res://Scripts/Menus/PlayButton.gd" id="2_lsq1x"]
 [ext_resource type="Script" path="res://Scripts/Menus/CreditsButton.gd" id="3_0wqss"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="4_dtk8d"]
+[ext_resource type="Script" path="res://Scripts/Menus/Setting.gd" id="4_ay1td"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="4_dtk8d"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="5_0lr8l"]
+[ext_resource type="Script" path="res://Scripts/Menus/Exit.gd" id="5_x0x0r"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="6_m0wkg"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="7_fko4n"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="8_ph5nw"]
@@ -93,6 +95,18 @@ layout_mode = 2
 theme = SubResource("Theme_bu18y")
 text = "Credits"
 script = ExtResource("3_0wqss")
+
+[node name="Setting" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_bu18y")
+text = "Settings"
+script = ExtResource("4_ay1td")
+
+[node name="Exit" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_bu18y")
+text = "Exit"
+script = ExtResource("5_x0x0r")
 
 [node name="SM_Ground" parent="." instance=ExtResource("4_dtk8d")]
 transform = Transform3D(40, 0, 0, 0, 29.738, 0, 0, 0, 29.738, 8.33564, -4.43131e-07, 10.1348)
@@ -278,3 +292,5 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.161579, -4.43131e-07
 
 [connection signal="button_up" from="CanvasLayer/Panel/VBoxContainer/PlayButton" to="CanvasLayer/Panel/VBoxContainer/PlayButton" method="_on_button_up"]
 [connection signal="button_up" from="CanvasLayer/Panel/VBoxContainer/Credits" to="CanvasLayer/Panel/VBoxContainer/Credits" method="_on_button_up"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Setting" to="CanvasLayer/Panel/VBoxContainer/Setting" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Exit" to="CanvasLayer/Panel/VBoxContainer/Exit" method="_on_pressed"]

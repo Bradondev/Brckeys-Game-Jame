@@ -24,7 +24,6 @@ func _on_inter_hit_box_body_exited(body):
 func _on_outer_hit_box_body_exited(body):
 	$AnimationPlayer.play("Reset2")
 
-
 func _on_kill_zone_body_entered(body):
 	if body.name == "Player":
 		body.TakeDamage()

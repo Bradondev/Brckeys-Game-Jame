@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqnkohdekwycq"]
+[gd_scene load_steps=9 format=3 uid="uid://bqnkohdekwycq"]
 
+[ext_resource type="Script" path="res://Scenes/GameOver.gd" id="1_6u1cc"]
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_so7fj"]
 [ext_resource type="Script" path="res://Scripts/Menus/BackButton.gd" id="2_bj85q"]
 
@@ -33,6 +34,7 @@ default_font_size = 35
 [node name="GameOver" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_6u1cc")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
