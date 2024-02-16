@@ -269,7 +269,7 @@ transform = Transform3D(0.247487, 0, 0.247487, 0, 0.35, 0, -0.247487, 0, 0.24748
 transform = Transform3D(-0.000177927, 0, 0.242838, 0, 0.242838, 0, -0.242838, 0, -0.000177927, 12.6389, 0.0278666, -0.54734)
 
 [node name="Battery" parent="." instance=ExtResource("10_aesog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31503, 0.68748, -1.1671)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31503, 0.191888, -1.1671)
 
 [node name="deskWoodGreen" parent="." instance=ExtResource("11_uf31s")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 7.2507, 0, -2.70769)
