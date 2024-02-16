@@ -23,7 +23,7 @@
 [node name="9" type="Node3D"]
 script = ExtResource("1_4qra7")
 MonsterSpawnChance = 100
-PointsToPassBeforeDeath = 100
+PointsToPassBeforeDeath = 20
 
 [node name="Player" parent="." instance=ExtResource("2_f1m5m")]
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
@@ -1146,3 +1146,5 @@ transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0,
 
 [node name="chairOffice10" parent="." instance=ExtResource("19_u43oe")]
 transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0, 1.175, 1.02722e-07, -5.13609e-08, 20.4457, 2.62957, 1.24382)
+
+[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]
