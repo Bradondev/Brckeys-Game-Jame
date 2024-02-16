@@ -26,6 +26,11 @@ func _notification(what):
 
 func _on_resume_button_button_up():
 	visible = false
-
+	$"../Settings".visible = false
 func _exit_tree():
 	get_tree().paused = false
+
+
+
+
+
