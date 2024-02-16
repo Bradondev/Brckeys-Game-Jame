@@ -18,14 +18,14 @@
 default_font = ExtResource("1_4inwh")
 default_font_size = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pepnj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1322"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spdv8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb4yo"]
 bg_color = Color(0.027451, 0, 0.0784314, 1)
 border_width_left = 1
 border_width_top = 1
@@ -35,8 +35,8 @@ border_width_bottom = 1
 [sub_resource type="Theme" id="Theme_67rjk"]
 default_font = ExtResource("1_4inwh")
 default_font_size = 80
-Button/styles/hover = SubResource("StyleBoxFlat_pepnj")
-Button/styles/normal = SubResource("StyleBoxFlat_spdv8")
+Button/styles/hover = SubResource("StyleBoxFlat_e1322")
+Button/styles/normal = SubResource("StyleBoxFlat_yb4yo")
 
 [node name="Settings" type="Node3D"]
 script = ExtResource("1_w314a")
