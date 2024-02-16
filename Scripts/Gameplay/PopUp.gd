@@ -23,7 +23,7 @@ func FlipVisible():
 	elif !visible:
 		visible = true
 
-func  _physics_process(delta):
+func  _physics_process(_delta):
 	if bIsLocked:
 		visible =false
 		return

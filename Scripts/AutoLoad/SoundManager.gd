@@ -71,7 +71,7 @@ func OnMusicOutTweenFinished():
 func OnMusicInTweenFinished():
 	pass
 
-func PlaySFX(audioPath, position, forceChannel = -1, startPosition = 0):
+func PlaySFX(audioPath, position, forceChannel = -1, startPosition = 0.0):
 	var channel = FindOpenChannel()
 	if forceChannel != -1:
 		channel = SFXChannels[forceChannel]

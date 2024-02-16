@@ -3,7 +3,6 @@ extends CharacterBody3D
 signal PickUpItemSignal(Item)
 signal JustDied
 signal AddBatteryUi
-signal DelBatteryUi
 const ACCEL = 10
 const DEACCEL = 30
 
@@ -97,7 +96,7 @@ func _input(event):
 			SavePlayer()
 
 func _physics_process(delta):
-	var moving = false
+
 	# Add the gravity. Pulls value from project settings.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -110,10 +109,8 @@ func _physics_process(delta):
 	var accel
 	if dir.dot(velocity) > 0:
 		accel = ACCEL
-		moving = true
 	else:
 		accel = DEACCEL
-		moving = false
 
 
 	var bIsRunning = false
@@ -173,7 +170,7 @@ func AddBattery():
 
 func DelBattery():
 	Batteries.pop_back()
-	emit_signal("DelBatteryUi")
+	emit_signal("AddBatteryUi")
 	SavePlayer()
 
 func SavePlayer():
@@ -196,11 +193,11 @@ func _on_glitch_timer_timeout():
 	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 0.0)
 
 
-func _on_area_3d_body_entered(body):
+func _on_area_3d_body_entered(_body):
 	if is_instance_valid(LevelLoader.GetMonster()):
 		LevelLoader.GetMonster().ChangeState("dash")
 
-func _on_area_3d_body_exited(body):
+func _on_area_3d_body_exited(_body):
 	if is_instance_valid(LevelLoader.GetMonster()):
 		LevelLoader.GetMonster().ChangeState("dash")
 

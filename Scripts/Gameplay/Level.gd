@@ -93,7 +93,7 @@ func SetToFurthestPointFromPlayer():
 	for x in range(0, len(PathPoints)):
 		var PathPoint = PathPoints[x]
 		var DistanceToPathPoint = PathPoint.global_position.distance_to(LevelLoader.GetPlayer().global_position)
-		print_debug(DistanceToPathPoint , PathPoint.name )
+		#print_debug(DistanceToPathPoint , PathPoint.name )
 		if FarthestDistance < DistanceToPathPoint :
 			FarthestPathIndex = x
 			FarthestDistance = DistanceToPathPoint

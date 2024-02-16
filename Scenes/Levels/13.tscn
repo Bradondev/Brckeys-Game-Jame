@@ -862,5 +862,3 @@ visible = false
 [node name="bathroomLights12" parent="." instance=ExtResource("10_vh6ti")]
 transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.47139, 0.469835, -59.6533)
 visible = false
-
-[connection signal="DelBatteryUi" from="Player" to="Player/PlayerUi" method="DelBatteryUi"]

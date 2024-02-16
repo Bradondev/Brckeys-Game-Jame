@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 
-func _process(delta):
+func _process(_delta):
 	camera.position = self.position
 	camera.rotation_degrees = self.rotation_degrees + Vector3(90, 0, 180)
 	pass

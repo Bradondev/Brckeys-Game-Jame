@@ -16,9 +16,6 @@ func OnEnemySpawned():
 	_on_timer_timeout()
 	$Timer.start()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 func _on_timer_timeout():
@@ -28,7 +25,7 @@ func _on_timer_timeout():
 	SoundManager.PlaySFX("res://Audio/Light bulb.mp3", global_position, 8)
 
 
-func _on_animation_player_animation_finished(anim_name):
+func _on_animation_player_animation_finished(_anim_name):
 	LevelLoader.Rumbles += 1
 
 	var level = LevelLoader.GetLevel()

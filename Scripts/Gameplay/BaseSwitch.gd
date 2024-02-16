@@ -37,7 +37,6 @@ func InterAct():
 		$PopUp/Description.outline_modulate = DeniedColor
 		$Timer.start()
 	elif !NeedBattery:
-		print_debug("hit")
 		emit_signal("Fliped")
 		bHasFlipped = !bHasFlipped
 		LevelLoader.Save(self, {"bHasFlipped" : bHasFlipped})

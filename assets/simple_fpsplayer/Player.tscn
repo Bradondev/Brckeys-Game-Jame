@@ -314,7 +314,6 @@ wait_time = 0.2
 one_shot = true
 
 [connection signal="AddBatteryUi" from="." to="PlayerUi" method="AddBatteryToUi"]
-[connection signal="DelBatteryUi" from="." to="PlayerUi" method="DelBatteryUi"]
 [connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light/Timer" to="rotation_helper/Camera3D/flashlight_player/Light" method="_on_timer_timeout"]
 [connection signal="timeout" from="rotation_helper/Camera3D/flashlight_player/Light2/Timer" to="rotation_helper/Camera3D/flashlight_player/Light2" method="_on_timer_timeout"]
 [connection signal="body_entered" from="rotation_helper/Camera3D/flashlight_player2/Area3D" to="." method="_on_area_3d_body_entered"]

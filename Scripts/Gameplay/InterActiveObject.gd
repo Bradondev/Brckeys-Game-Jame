@@ -8,6 +8,3 @@ var Player
 func _ready():
 	add_to_group("InterActiveObject")
 	PopUp = get_node("PopUp")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

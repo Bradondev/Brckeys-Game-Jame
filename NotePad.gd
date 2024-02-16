@@ -19,7 +19,6 @@ func _on_resume_button_pressed():
 	$CanvasLayer.visible = false
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	print_debug("hit")
 
 func _on_canvas_layer_visibility_changed():
 	if is_visible_in_tree():

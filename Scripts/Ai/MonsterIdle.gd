@@ -74,15 +74,14 @@ func ChangeToRandomState():
 	else:
 		Transitioned.emit(self,"Dash")
 func FindClosesIdlePath():
-	var Distance = PathPoints[0].global_position - enemy.global_position
 	var ClosestPath
 	var ClosetDistance  = 9000
 	for PathPoint in PathPoints:
 		var DistanceToPathPoint = PathPoint.global_position.distance_to(enemy.global_position)
-		print_debug(DistanceToPathPoint , PathPoint.name )
+		#print_debug(DistanceToPathPoint , PathPoint.name )
 		if ClosetDistance > DistanceToPathPoint :
 			ClosestPath = PathPoint
 			ClosetDistance =DistanceToPathPoint
 	Temp = PathPoints.find(ClosestPath) + 1
-	print_debug(Temp)
+	#print_debug(Temp)
 

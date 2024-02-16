@@ -34,6 +34,7 @@ func UnlockDoor():
 	$PopUp.bIsLocked = false
 
 func InterAct():
+	var level = LevelLoader.GetLevel()
 	if bDisabled:
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
 		if is_instance_valid(LevelLoader.GetMonster()):
@@ -45,7 +46,7 @@ func InterAct():
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
 		LevelLoader.Rumbles += 1
 
-		var level = LevelLoader.GetLevel()
+
 		if level.CanSpawnEnemy():
 			level.AttemptSpawnEnemy(true)
 
@@ -60,7 +61,6 @@ func InterAct():
 	LevelLoader.GetPlayer().PlayFade(true)
 	LevelLoader.Rumbles += 1
 
-	var level = LevelLoader.GetLevel()
 	if level.CanSpawnEnemy():
 		level.AttemptSpawnEnemy(true)
 
