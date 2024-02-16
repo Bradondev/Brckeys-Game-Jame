@@ -30,6 +30,8 @@ func _ready():
 	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Camera3D/flashlight_player
+	$RunSound.set_bus("SFX")
+	$WalkSound.set_bus("SFX")
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -114,12 +116,14 @@ func _physics_process(delta):
 		moving = false
 
 
+	var bIsRunning = false
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
 	var input_dir = Input.get_vector("Walk_Left", "Walk_Right", "Walk_ForWard", "Walk_BackWard")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
 	if Input.is_key_pressed(KEY_SHIFT):
 		direction = direction * SPRINT_MULT
+		bIsRunning = true
 	else:
 		pass
 
@@ -132,6 +136,21 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+	if velocity != Vector3.ZERO:
+		if bIsRunning:
+			if $RunSoundTimer.time_left == 0.0:
+				$RunSound.pitch_scale = randf_range(.8, 1.2)
+				$RunSound.play()
+				$RunSoundTimer.start()
+
+		else:
+			if $WalkSoundTimer.time_left == 0.0:
+				$WalkSound.pitch_scale = randf_range(.8, 1.2)
+				$WalkSound.play()
+				$WalkSoundTimer.start()
+	else:
+		$WalkSound.stop()
+		$RunSound.stop()
 
 func TakeDamage():
 	if bIsDead:
@@ -190,4 +209,8 @@ func _on_area_3d_body_exited(body):
 func _on_check_paused_timer_timeout():
 	if get_tree().paused and bIsDead == false:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pass # Replace with function body.
+
+
+func _on_run_sound_timer_timeout():
 	pass # Replace with function body.

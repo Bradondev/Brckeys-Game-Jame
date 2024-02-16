@@ -12,6 +12,8 @@ var MusicTweenIn : Tween
 var MusicToChangeTo = null
 var StartPosition = 0
 
+var SFX2DChannel
+var SFX2DAudioPath
 
 
 
@@ -37,6 +39,9 @@ func _ready():
 		add_child(instance)
 		SFXChannels.append(instance)
 
+	SFX2DChannel = AudioStreamPlayer2D.new()
+	SFX2DChannel.set_bus("SFX")
+	add_child(SFX2DChannel)
 
 func SwitchToMusic(audioPath, tweenOutLength, tweenInLength, startloc = 0):
 	if MusicToChangeTo == audioPath:
@@ -74,6 +79,15 @@ func PlaySFX(audioPath, position, forceChannel = -1, startPosition = 0):
 		channel.stream = load(audioPath)
 		channel.global_position = position
 		channel.play(startPosition)
+
+func CheckSFXRunning(channel):
+	return SFXChannels[channel].playing
+
+func Play2DSFX(audioPath):
+	if SFX2DAudioPath != audioPath:
+		SFX2DChannel.stream = load(audioPath)
+		SFX2DAudioPath = audioPath
+	SFX2DChannel.play()
 
 func FindOpenChannel():
 	for x in SFXChannels:

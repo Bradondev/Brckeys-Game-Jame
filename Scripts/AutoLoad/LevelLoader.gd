@@ -7,7 +7,7 @@ var Master =0
 var Music=0
 var SFX=0
 var Rumbles = 0
-var RumblesToSpawnEnemy = 15
+var RumblesToSpawnEnemy = 20
 
 func _ready():
 	Reset()
@@ -68,10 +68,11 @@ func SaveSettings():
 
 func Reset():
 	SetPlayerMoveToPosition("-1")
-	RumblesToSpawnEnemy = 15
+	RumblesToSpawnEnemy = 20
+	Rumbles = 0
 	Data.clear()
 
 func ResetRumbles():
-	if RumblesToSpawnEnemy <= 5:
-		RumblesToSpawnEnemy = 5
+	if RumblesToSpawnEnemy <= 10:
+		RumblesToSpawnEnemy = 10
 	Rumbles = 0

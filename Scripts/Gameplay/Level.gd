@@ -46,6 +46,7 @@ func AttemptSpawnEnemy(bUseFurthestPoint = false):
 				emit_signal("SpawnEnemy")
 
 
+
 func SetRandomPatrolPoint():
 	var monsterPaths =  get_tree().get_nodes_in_group("MonsterPath")
 	var chosenPath = randi() % (len(monsterPaths) / 2)
