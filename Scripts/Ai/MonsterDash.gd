@@ -102,4 +102,4 @@ func _on_dash_timer_timeout():
 
 
 func _on_alive_timer_timeout():
-	LevelLoader.GetMonster().queue_free()
+	LevelLoader.GetLevel().ForceEnemyDeath()

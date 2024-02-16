@@ -8,6 +8,7 @@ var CurrentPointsToPassBeforeDeath  = 0
 var MonsterRef = null
 
 signal SpawnEnemy
+signal EnemyDeath
 
 func _ready():
 	add_to_group("Level")
@@ -55,6 +56,11 @@ func SetRandomPatrolPoint():
 	idleState.SetTemp(chosenPath)
 	idleState.connect("PassPoint", Callable(self, "OnPassPoint"))
 
+func ForceEnemyDeath():
+	if is_instance_valid(MonsterRef):
+		CurrentPointsToPassBeforeDeath = 0
+		OnPassPoint()
+
 func OnPassPoint():
 	CurrentPointsToPassBeforeDeath -= 1
 	if CurrentPointsToPassBeforeDeath <= 0:
@@ -62,6 +68,7 @@ func OnPassPoint():
 		SetDoorsEnabled(true)
 		CurrentPointsToPassBeforeDeath = PointsToPassBeforeDeath
 		SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .5, .5)
+		emit_signal("EnemyDeath")
 		FlickerLights()
 		await get_tree().create_timer(.4).timeout
 		FlickerLights()
