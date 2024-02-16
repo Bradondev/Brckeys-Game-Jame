@@ -43,6 +43,11 @@ func InterAct():
 		if is_instance_valid(LevelLoader.GetMonster()):
 			LevelLoader.GetMonster().ChangeState("dash")
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
+		LevelLoader.Rumbles += 1
+
+		var level = LevelLoader.GetLevel()
+		if level.CanSpawnEnemy():
+			level.AttemptSpawnEnemy(true)
 
 		return
 
@@ -53,6 +58,11 @@ func InterAct():
 	bHasEnteredDoor = true
 	$AnimationPlayer.play("DoorOpen")
 	LevelLoader.GetPlayer().PlayFade(true)
+	LevelLoader.Rumbles += 1
+
+	var level = LevelLoader.GetLevel()
+	if level.CanSpawnEnemy():
+		level.AttemptSpawnEnemy(true)
 
 
 

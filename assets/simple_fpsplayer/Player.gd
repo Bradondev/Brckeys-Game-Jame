@@ -36,13 +36,16 @@ func _ready():
 	add_to_group("Player")
 	PlayFade(false)
 
+	ShowFlashlight(false)
 	var data = LevelLoader.LoadPlayer()
 	if data != null:
 		if len(data["Batteries"]) != 0:
 			Batteries = data["Batteries"]
 			emit_signal("AddBatteryUi")
 		if data["FlashlightActivated"]:
-			flashlight.show()
+			ShowFlashlight()
+		else:
+			ShowFlashlight(false)
 
 	SoundManager.PlaySFX("res://Audio/Door Closing.mp3", global_position, 8, .4)
 	SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
@@ -50,6 +53,13 @@ func _ready():
 	await get_tree().process_frame
 	LevelLoader.GetLevel().connect("SpawnEnemy", Callable(self, "OnEnemySpawn"))
 
+func ShowFlashlight(bShow = true):
+	if bShow:
+		flashlight.show()
+		$rotation_helper/Camera3D/flashlight_player2/Area3D.monitoring = true
+	else:
+		flashlight.hide()
+		$rotation_helper/Camera3D/flashlight_player2/Area3D.monitoring = false
 func PlayFade(bForwards):
 	if bForwards:
 		$AnimationPlayer.play("Fade")
@@ -77,10 +87,10 @@ func _input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_F:
 			if flashlight.is_visible_in_tree() and not event.echo:
-				flashlight.hide()
+				ShowFlashlight(false)
 				SoundManager.PlaySFX("res://Audio/Flashlight Off.mp3", global_position)
 			elif not event.echo:
-				flashlight.show()
+				ShowFlashlight()
 				SoundManager.PlaySFX("res://Audio/Flashlight On.mp3", global_position)
 			SavePlayer()
 
@@ -136,7 +146,6 @@ func TakeDamage():
 
 
 
-
 func PickUpItem(Item):
 	emit_signal("PickUpItemSignal",Item)
 
@@ -168,3 +177,13 @@ func OnEnemySpawn():
 
 func _on_glitch_timer_timeout():
 	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 0.0)
+
+
+func _on_area_3d_body_entered(body):
+	if is_instance_valid(LevelLoader.GetMonster()):
+		LevelLoader.GetMonster().ChangeState("dash")
+
+func _on_area_3d_body_exited(body):
+	if is_instance_valid(LevelLoader.GetMonster()):
+		LevelLoader.GetMonster().ChangeState("dash")
+

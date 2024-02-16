@@ -5,7 +5,7 @@ var PlayerMoveToPosition = "-1"
 var Data = {}
 
 var Rumbles = 0
-var RumblesToSpawnEnemy = 12
+var RumblesToSpawnEnemy = 15
 
 func _ready():
 	Reset()
@@ -57,10 +57,10 @@ func Load(object):
 
 func Reset():
 	SetPlayerMoveToPosition("-1")
-	RumblesToSpawnEnemy = 12
+	RumblesToSpawnEnemy = 15
 	Data.clear()
 
 func ResetRumbles():
-	if RumblesToSpawnEnemy <= 2:
+	if RumblesToSpawnEnemy <= 5:
 		RumblesToSpawnEnemy = 5
 	Rumbles = 0
