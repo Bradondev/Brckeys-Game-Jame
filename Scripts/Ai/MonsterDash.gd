@@ -18,6 +18,7 @@ func _ready():
 	pass
 
 func Enter():
+	enemy.Agro = true
 	enemy.velocity = Vector3.ZERO
 	bIsDashing = false
 	colliderPoint = LevelLoader.GetPlayer().global_transform.origin

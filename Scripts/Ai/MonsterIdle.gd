@@ -40,6 +40,7 @@ func SetTemp(index):
 	randomize_wander()
 
 func Enter():
+	enemy.Agro = false
 	enemy.PlayAnimation("walk")
 	enemy.enableKillBox(false)
 	FindClosesIdlePath()

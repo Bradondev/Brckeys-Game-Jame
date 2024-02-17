@@ -197,11 +197,11 @@ func _on_glitch_timer_timeout():
 	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 0.0)
 
 func _on_area_3d_body_entered(_body):
-	if is_instance_valid(LevelLoader.GetMonster()):
+	if is_instance_valid(LevelLoader.GetMonster() )and LevelLoader.GetMonster().Agro == false:
 		LevelLoader.GetMonster().ChangeState("dash")
 
 func _on_area_3d_body_exited(_body):
-	if is_instance_valid(LevelLoader.GetMonster()):
+	if is_instance_valid(LevelLoader.GetMonster()) and  LevelLoader.GetMonster().Agro == false:
 		LevelLoader.GetMonster().ChangeState("dash")
 
 

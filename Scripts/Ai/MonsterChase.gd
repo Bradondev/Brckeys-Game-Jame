@@ -12,6 +12,7 @@ var Player :CharacterBody3D
 func _ready():
 	pass
 func Enter():
+	enemy.Agro = true
 	enemy.PlayAnimation("walk")
 	Player = LevelLoader.GetPlayer()
 	print_debug("chase")
