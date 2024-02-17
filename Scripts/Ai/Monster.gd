@@ -57,7 +57,7 @@ func SetSpotLightRed():
 	GetSpotLight().light_color = redColor
 func SetSpotLightGreen():
 	GetSpotLight().light_color = greenColor
-	
-	
-	
-	   
+
+
+
+
