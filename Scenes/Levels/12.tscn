@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://gruq7i6w3oow"]
+[gd_scene load_steps=16 format=3 uid="uid://gruq7i6w3oow"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_w6rjm"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_ahoel"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="11_kiua8"]
 [ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="12_pruoo"]
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="13_5s5vc"]
+[ext_resource type="PackedScene" uid="uid://dfw0hbia8oggq" path="res://3d/prefabs/SM_chair_office.tscn" id="15_as8v2"]
 
 [node name="12" type="Node3D"]
 script = ExtResource("1_w6rjm")
@@ -21,7 +22,7 @@ MonsterSpawnChance = 100
 PointsToPassBeforeDeath = 10
 
 [node name="Player" parent="." instance=ExtResource("2_ahoel")]
-transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -1.61697, 1.29541, -16.9534)
 
 [node name="BasePaintedWall" parent="." instance=ExtResource("3_5f1y8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75441, -1.49012e-07, 9.18552)
@@ -131,7 +132,7 @@ transform = Transform3D(1.023, 0.0325447, 1.09655, -2.88182e-08, -1.49934, 0.044
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.81744, -0.0492154, -21.9196)
 
 [node name="deskWoodGreen11" parent="." instance=ExtResource("8_eauvt")]
-transform = Transform3D(0.388229, 0, -1.44889, 0, 1.5, 0, 1.44889, 0, 0.388229, 1.67543, -0.0492154, -17.42)
+transform = Transform3D(0.388229, -7.3345e-09, -1.44889, -2.98023e-08, 1.90175, -1.49012e-08, 1.44889, -5.96046e-08, 0.388229, 1.67543, -0.322637, -17.42)
 
 [node name="lamp" parent="." instance=ExtResource("9_ctegl")]
 transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, 8.66362, 1.47569, -22.202)
@@ -511,6 +512,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 1.76007)
 
 [node name="MonsterPath11" parent="." instance=ExtResource("13_5s5vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46999, 1, 4.76007)
+
+[node name="chairOffice" parent="." instance=ExtResource("15_as8v2")]
+transform = Transform3D(1.13496, 0.304112, 7.71341e-09, 0, 2.98023e-08, -1.175, -0.304112, 1.13496, 2.87868e-08, 1.49711, 1.87451, -17.4645)
+
+[node name="chairOffice2" parent="." instance=ExtResource("15_as8v2")]
+transform = Transform3D(-0.993905, -0.626719, -1.58959e-08, 0, 2.98023e-08, -1.175, 0.626719, -0.993905, -2.52091e-08, 1.99298, 1.95732, -17.6064)
 
 [editable path="SmDoor3"]
 [editable path="SmDoor3/doorStandard"]
