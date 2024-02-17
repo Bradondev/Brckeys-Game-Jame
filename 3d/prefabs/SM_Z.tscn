@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5uwoh58bf2w5"]
+
+[ext_resource type="PackedScene" uid="uid://b3dyvjmswpqp" path="res://3d/imports/letters/ZSign.glb" id="1_yggnw"]
+
+[node name="ZSign" instance=ExtResource("1_yggnw")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)

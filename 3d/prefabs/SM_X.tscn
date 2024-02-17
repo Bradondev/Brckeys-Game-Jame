@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3ovbr1a833o0"]
+
+[ext_resource type="PackedScene" uid="uid://dalegoblgchvs" path="res://3d/imports/letters/XSign.glb" id="1_a6fah"]
+
+[node name="XSign" instance=ExtResource("1_a6fah")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

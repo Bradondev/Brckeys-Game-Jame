@@ -59,14 +59,14 @@ func SetRandomPatrolPoint():
 func ForceEnemyDeath():
 	if is_instance_valid(MonsterRef):
 		LevelLoader.GetMonster().ChangeState("glitchOut")
-		
-		
+
+
 func PassPointToZero():
 	CurrentPointsToPassBeforeDeath = 0
 	OnPassPoint()
-		
 
-		
+
+
 
 func OnPassPoint():
 	CurrentPointsToPassBeforeDeath -= 1
