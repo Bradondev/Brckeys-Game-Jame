@@ -1,7 +1,7 @@
 extends State
 class_name  MonsterIdle
 
-@export var move_speed := 10
+@export var move_speed := 100
 @export var rotationSpeed = 5
 
 
@@ -66,7 +66,7 @@ func Update(_delte:float):
 		randomize_wander()
 
 func Physics_Update(delta:float):
-
+	var BeforeRotation = enemy.rotation_degrees.y
 	if enemy.transform.origin.distance_to(target) < 2:
 		return
 
@@ -74,7 +74,22 @@ func Physics_Update(delta:float):
 		var new_transform = enemy.transform.looking_at(target, Vector3.UP)
 		enemy.transform  = enemy.transform.interpolate_with(new_transform,rotationSpeed * delta)
 
-		enemy.velocity = -enemy.transform.basis.z * move_speed
+		enemy.velocity = -enemy.transform.basis.z * move_speed * delta
+	var AfterRotation = enemy.rotation_degrees.y
+	var TurnThreshHold = delta * 10
+	print_debug( "After:",AfterRotation, "Before:",BeforeRotation )
+
+
+	if AfterRotation >= BeforeRotation + TurnThreshHold:
+		print_debug("TurnLeftWalk")
+		enemy.PlayAnimation("TurnLeftWalk")
+	elif AfterRotation <= BeforeRotation -TurnThreshHold:
+		print_debug("TurnLeftright")
+		enemy.PlayAnimation("TurnRightWalk")
+	else:
+		print_debug("walk forward")
+		enemy.PlayAnimation("walk")
+
 
 func FindClosesIdlePath():
 	var ClosestPath

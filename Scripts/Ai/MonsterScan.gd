@@ -13,8 +13,8 @@ func  Enter():
 		enemy.PlayAnimation("lookAround1")
 func Exit():
 	pass
-	
-	
+
+
 func  Update(_delta:float):
 	for Raycast in enemy.GetScanRayCasts():
 		if Raycast.is_colliding() and Raycast.get_collider() == LevelLoader.GetPlayer() :
@@ -23,7 +23,7 @@ func  Update(_delta:float):
 
 func Physics_Update(_delta:float):
 	pass
-	
+
 func ChangeToRandomState():
 	var rng = RandomNumberGenerator.new()
 	var StateNumber = rng.randi_range(1, 4)
@@ -31,11 +31,11 @@ func ChangeToRandomState():
 		Transitioned.emit(self,"Chase")
 	else:
 		Transitioned.emit(self,"Dash")
-		
-		
+
+
 
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "lookAround1" or "lookAround2" == anim_name:
 			Transitioned.emit(self,"Idle")
-		
+

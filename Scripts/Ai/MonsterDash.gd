@@ -25,7 +25,7 @@ func Enter():
 	colliderPoint = LevelLoader.GetPlayer().global_transform.origin
 	FlickerLights()
 	DashCounter -= 1
-	enemy.PlayAnimation("lunge", .7)
+	enemy.PlayAnimation("lunge", .7, true)
 	if AliveTimer.time_left == 0:
 		AliveTimer.start()
 	Player = LevelLoader.GetPlayer()

@@ -6727,7 +6727,7 @@ shape = SubResource("BoxShape3D_8f00h")
 libraries = {
 "": SubResource("AnimationLibrary_11icj")
 }
-blend_times = [&"lunge", &"lunge", 0.1, &"lunge", &"TurnLeftWalk", 0.3, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"walkLookLeft", 0.2, &"lunge", &"walkLookRight", 0.2, &"lunge", &"walk", 0.2, &"TurnLeftWalk", &"lookAround1", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"TurnLeftWalk", 0.5, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnLeftWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"walk", 0.2, &"TurnRightWalk", &"lookAround1", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnRightWalk", &"walk", 0.2, &"walkLookLeft", &"lunge", 0.1, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"walkLookLeft", 0.5, &"walkLookLeft", &"walkLookRight", 0.3, &"walkLookLeft", &"walk", 0.2, &"walkLookRight", &"lunge", 0.1, &"walkLookRight", &"TurnLeftWalk", 0.3, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"walkLookLeft", 0.3, &"walkLookRight", &"walkLookRight", 0.5, &"walkLookRight", &"walk", 0.2, &"walk", &"lookAround1", 0.1, &"walk", &"lunge", 0.1, &"walk", &"exitGlitch", 0.2, &"walk", &"lookAround2", 0.1, &"walk", &"TurnRightWalk", 0.2, &"walk", &"walkLookLeft", 0.2, &"walk", &"walkLookRight", 0.2, &"walk", &"walk", 0.5]
+blend_times = [&"walk", &"walk", 0.5, &"walk", &"lookAround2", 0.1, &"walk", &"exitGlitch", 0.2, &"walk", &"walkLookLeft", 0.2, &"walk", &"TurnRightWalk", 0.2, &"walk", &"walkLookRight", 0.2, &"walk", &"lunge", 0.1, &"walk", &"lookAround1", 0.1, &"TurnLeftWalk", &"walk", 0.2, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"TurnLeftWalk", 0.5, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"lookAround1", 0.2, &"walkLookLeft", &"walk", 0.2, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookLeft", &"walkLookLeft", 0.5, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"walkLookRight", 0.3, &"walkLookLeft", &"lunge", 0.1, &"TurnRightWalk", &"walk", 0.2, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"TurnRightWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"lookAround1", 0.2, &"walkLookRight", &"walk", 0.2, &"walkLookRight", &"TurnLeftWalk", 0.3, &"walkLookRight", &"walkLookLeft", 0.3, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"walkLookRight", 0.5, &"walkLookRight", &"lunge", 0.1, &"lunge", &"walk", 0.2, &"lunge", &"TurnLeftWalk", 0.3, &"lunge", &"walkLookLeft", 0.2, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"walkLookRight", 0.2, &"lunge", &"lunge", 0.1]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.887602, 0.873154)
@@ -6741,12 +6741,11 @@ enemy = NodePath("..")
 
 [node name="Idle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("3_5vln3")
-move_speed = 2
+move_speed = 200
 enemy = NodePath("../..")
 
 [node name="Chase" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("4_1g41x")
-move_speed = 4
 enemy = NodePath("../..")
 
 [node name="Scan" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]

@@ -3,7 +3,7 @@ class_name  MonsterChase
 
 
 @export var rotationSpeed = 5
-@export var move_speed := 3
+@export var move_speed := 300
 var Player :CharacterBody3D
 
 
@@ -30,7 +30,7 @@ func Physics_Update(delta:float):
 	enemy.transform  = enemy.transform.interpolate_with(new_transform,rotationSpeed * delta)
 
 	if direction.length() > 1:
-		enemy.velocity = direction.normalized() * move_speed
+		enemy.velocity = direction.normalized() * move_speed * delta
 	else:
 		enemy.velocity = Vector3()
 

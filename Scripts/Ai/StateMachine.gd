@@ -40,6 +40,9 @@ func  on_child_transition(state, new_state_name):
 
 func GetIdleState():
 	return $Idle
+
+func DebugVelocity():
+	print_debug(enemy.velocity)
 func ChangeState(StateName):
 	if 	StateName == "dash":
 		current_state = states.dash

@@ -42,9 +42,14 @@ func GetFarestPointFromPlayer():
 func _on_kill_box_body_exited(body):
 	if body.name == "Player":
 		body.TakeDamage()
-func PlayAnimation(AnimationName, StartTime = 0.0):
-	$JerryFixed/JerryFixed/AnimationPlayer.play(AnimationName)
-	$JerryFixed/JerryFixed/AnimationPlayer.seek(StartTime)
+
+
+func GetAnimationPlayer():
+	return $JerryFixed/JerryFixed/AnimationPlayer
+func PlayAnimation(AnimationName, StartTime = 0.0, ForceAnimation = false):
+	if GetAnimationPlayer().current_animation != AnimationName or ForceAnimation:
+		$JerryFixed/JerryFixed/AnimationPlayer.play(AnimationName)
+		$JerryFixed/JerryFixed/AnimationPlayer.seek(StartTime)
 func GetScanRayCasts():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder.get_children()
 func GetKillBox():
