@@ -400,7 +400,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.49944, 2.21565e-07, 0
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 8.49944, 2.21565e-07, 0.40078)
 
 [node name="Switch" parent="." instance=ExtResource("10_7mpmk")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.52481, 1.90681, -0.371943)
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 1.52481, 1.90681, -0.371943)
 Switchlocation = "1"
 
 [node name="Light" parent="." instance=ExtResource("11_my1i0")]

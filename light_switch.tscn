@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rrtmv8541mdk"]
+
+[ext_resource type="PackedScene" uid="uid://bs3ebel8hinct" path="res://3d/imports/lightswitch/LightSwitch.glb" id="1_k1sm0"]
+
+[node name="LightSwitch" instance=ExtResource("1_k1sm0")]
+
+[node name="Cube_001" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.52661, -0.850107, 0, 0.850107, 0.52661, 0, 0.155814, 0)

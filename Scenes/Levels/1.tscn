@@ -258,7 +258,7 @@ transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 9.9883
 [node name="DirectionalLight3D" parent="." instance=ExtResource("11_ynlkv")]
 
 [node name="Switch" parent="." instance=ExtResource("13_mpic7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.86064, 1.72064, 1.2817)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.99809, 2.12879, 1.2817)
 Switchlocation = "1"
 
 [node name="Light" parent="." instance=ExtResource("12_2rr1i")]

@@ -23,6 +23,10 @@ func _ready():
 			await get_tree().process_frame
 			emit_signal("Fliped")
 		bHasFlipped = data["bHasFlipped"]
+		if bHasFlipped:
+			$LightSwitch.TurnOn()
+		else:
+			$LightSwitch.TurnOff()
 
 
 func InterAct():
@@ -40,6 +44,10 @@ func InterAct():
 		emit_signal("Fliped")
 		bHasFlipped = !bHasFlipped
 		LevelLoader.Save(self, {"bHasFlipped" : bHasFlipped})
+		if bHasFlipped:
+			$LightSwitch.TurnOn()
+		else:
+			$LightSwitch.TurnOff()
 		if bHasFlipped:
 			SoundManager.PlaySFX("res://Audio/Light Switch - On.mp3", global_position)
 		else:
