@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://gruq7i6w3oow"]
+[gd_scene load_steps=18 format=3 uid="uid://gruq7i6w3oow"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_w6rjm"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_ahoel"]
@@ -15,6 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="12_pruoo"]
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="13_5s5vc"]
 [ext_resource type="PackedScene" uid="uid://dfw0hbia8oggq" path="res://3d/prefabs/SM_chair_office.tscn" id="15_as8v2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igx3t"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_doyad"]
 
 [node name="12" type="Node3D"]
 script = ExtResource("1_w6rjm")
@@ -518,6 +523,13 @@ transform = Transform3D(1.13496, 0.304112, 7.71341e-09, 0, 2.98023e-08, -1.175, 
 
 [node name="chairOffice2" parent="." instance=ExtResource("15_as8v2")]
 transform = Transform3D(-0.993905, -0.626719, -1.58959e-08, 0, 2.98023e-08, -1.175, 0.626719, -0.993905, -2.52091e-08, 1.99298, 1.95732, -17.6064)
+
+[node name="Box" type="CSGMesh3D" parent="."]
+transform = Transform3D(61.9603, 0, 0, 0, -7.18644, -3.6165e-06, 0, 6.28259e-07, -41.368, 7.23356, 5.30997, -8.19827)
+material_override = SubResource("StandardMaterial3D_igx3t")
+use_collision = true
+flip_faces = true
+mesh = SubResource("CylinderMesh_doyad")
 
 [editable path="SmDoor3"]
 [editable path="SmDoor3/doorStandard"]

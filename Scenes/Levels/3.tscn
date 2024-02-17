@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bcgqkcpuqwfpr"]
+[gd_scene load_steps=20 format=3 uid="uid://bcgqkcpuqwfpr"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_lycxo"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_7rpxx"]
@@ -17,6 +17,11 @@
 [ext_resource type="Resource" path="res://Scripts/Notes/3.tres" id="14_tidxf"]
 [ext_resource type="PackedScene" uid="uid://yxmj3r4fwpqt" path="res://Scenes/battery_inject.tscn" id="15_lru5j"]
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="16_0l3ry"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_daoio"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kq46w"]
 
 [node name="3" type="Node3D"]
 script = ExtResource("1_lycxo")
@@ -477,6 +482,13 @@ DoorToUnlock = NodePath("../SmDoor")
 
 [node name="Battery" parent="." instance=ExtResource("16_0l3ry")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4652, 2.21565e-07, 0.303625)
+
+[node name="Box" type="CSGMesh3D" parent="."]
+transform = Transform3D(40, 0, 0, 0, -9.96931, -3.80038e-06, 0, 8.71544e-07, -43.4712, -1.68024, 8.38707, -1.39124)
+material_override = SubResource("StandardMaterial3D_daoio")
+use_collision = true
+flip_faces = true
+mesh = SubResource("CylinderMesh_kq46w")
 
 [editable path="SmDoor"]
 [editable path="SmDoor/doorStandard"]

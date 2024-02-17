@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://buc3fdj2ajjf7"]
+[gd_scene load_steps=16 format=3 uid="uid://buc3fdj2ajjf7"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_ln24g"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_5vehh"]
@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://b00757yegu1xq" path="res://3d/prefabs/SM_trash_can.tscn" id="11_agfnm"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="11_uf31s"]
 [ext_resource type="PackedScene" uid="uid://bhwjpx5125jea" path="res://3d/prefabs/SM_flame_thrower.tscn" id="12_ym1du"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yb6p3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_d1u75"]
 
 [node name="10" type="Node3D"]
 script = ExtResource("1_ln24g")
@@ -293,6 +298,13 @@ offTime = 5.0
 transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 3.37733, 0.0195611, -0.745878)
 startTime = 1.5
 offTime = 5.0
+
+[node name="Box" type="CSGMesh3D" parent="."]
+transform = Transform3D(40, 0, 0, 0, -6.6043, -2.59978e-06, 0, 5.77367e-07, -29.738, 10.2941, 6.36127, 1.64802)
+material_override = SubResource("StandardMaterial3D_yb6p3")
+use_collision = true
+flip_faces = true
+mesh = SubResource("CylinderMesh_d1u75")
 
 [editable path="SmDoor"]
 [editable path="SmDoor/doorStandard"]

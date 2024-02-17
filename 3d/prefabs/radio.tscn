@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyray2mcljaag"]
+[gd_scene load_steps=14 format=3 uid="uid://c4nm1kro2gkvi"]
 
 [ext_resource type="Script" path="res://3d/prefabs/radio.gd" id="2_rehau"]
 [ext_resource type="Texture2D" uid="uid://b1esn8gtxpysu" path="res://3d/imports/Radio_radio Base Color.png" id="2_ygkbr"]
