@@ -53,10 +53,15 @@ func GetDashRayCast():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/DashRayCast
 func GetSpotLight():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/SpotLight3D
+
+func GetInnerSpotLight():
+	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/SpotLight3D/SpotLight3D
 func SetSpotLightRed():
 	GetSpotLight().light_color = redColor
+	GetInnerSpotLight().light_color = redColor
 func SetSpotLightGreen():
 	GetSpotLight().light_color = greenColor
+	GetInnerSpotLight().light_color = greenColor
 
 
 
