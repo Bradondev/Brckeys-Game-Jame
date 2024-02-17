@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Gameplay/BatteryInject.gd" id="1_ifppj"]
 [ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="2_mhj8t"]
 [ext_resource type="PackedScene" uid="uid://ccni7a0r6xlwb" path="res://3d/prefabs/SM_battery_holder.tscn" id="3_rn86s"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_battery.tscn" id="4_flosj"]
+[ext_resource type="PackedScene" uid="uid://cvhsgvcom833v" path="res://3d/prefabs/SM_battery.tscn" id="4_flosj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3m0r"]
 

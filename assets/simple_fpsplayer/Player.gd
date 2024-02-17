@@ -53,7 +53,7 @@ func _ready():
 
 	await get_tree().process_frame
 	LevelLoader.GetLevel().connect("SpawnEnemy", Callable(self, "OnEnemySpawn"))
-	LevelLoader.GetLevel().connect("EnemyDeath", Callable(self, "OnEnemySpawn"))
+	LevelLoader.GetLevel().connect("EnemyDeath", Callable(self, "OnEnemyDeath"))
 
 func ShowFlashlight(bShow = true):
 	if bShow:
@@ -186,15 +186,15 @@ func _on_animation_player_animation_finished(anim_name):
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
 func OnEnemySpawn():
-	var result = randi() % 10
-	if result >= 6:
-		$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", .5)
-		$CanvasLayer/GlitchTimer.start()
+	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 1.0)
+	$CanvasLayer/GlitchTimer.start()
 
+func OnEnemyDeath():
+	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 1.5)
+	$CanvasLayer/GlitchTimer.start()
 
 func _on_glitch_timer_timeout():
 	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 0.0)
-
 
 func _on_area_3d_body_entered(_body):
 	if is_instance_valid(LevelLoader.GetMonster()):

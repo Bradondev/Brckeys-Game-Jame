@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://0g5pab5rvwum"]
+[gd_scene load_steps=4 format=3 uid="uid://cvhsgvcom833v"]
 
 [ext_resource type="PackedScene" uid="uid://b8xdr5eotwoue" path="res://3d/imports/battery/battery.glb" id="1_mo2fe"]
 
