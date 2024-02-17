@@ -35,7 +35,7 @@ func Enter():
 	SoundManager.SwitchToMusic("res://Audio/Monster_Chase_Music_-_Final.mp3", .01, .01, 2)
 
 
-func Physics_Update(delta:float):	
+func Physics_Update(delta:float):
 	if bIsDashing == false:
 		colliderPoint = LevelLoader.GetPlayer().global_transform.origin
 		new_transform = enemy.transform.looking_at(colliderPoint, Vector3.UP)
@@ -78,6 +78,7 @@ func _on_dash_timer_timeout():
 
 func _on_alive_timer_timeout():
 	LevelLoader.GetLevel().ForceEnemyDeath()
+
 func Exit():
 	enemy.enableKillBox(false)
 	bIsDashing = false

@@ -18,7 +18,7 @@ var bWalkBackwards = false
 func _ready():
 
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
-	
+
 func randomize_wander():
 	if bWalkBackwards == false:
 		Temp +=1
@@ -94,4 +94,4 @@ func ChangeToRandomState():
 		Transitioned.emit(self,"Chase")
 	else:
 		Transitioned.emit(self,"Dash")
-		
+

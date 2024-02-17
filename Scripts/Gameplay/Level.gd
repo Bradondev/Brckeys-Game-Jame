@@ -62,32 +62,30 @@ func ForceEnemyDeath():
 
 
 func PassPointToZero():
-	CurrentPointsToPassBeforeDeath = 0
-	OnPassPoint()
-
-
-
+	OnEnemyDead()
+	MonsterRef.queue_free()
 
 func OnPassPoint():
 	CurrentPointsToPassBeforeDeath -= 1
 	if CurrentPointsToPassBeforeDeath <= 0:
-		MonsterRef.queue_free()
-		SetDoorsEnabled(true)
-		CurrentPointsToPassBeforeDeath = PointsToPassBeforeDeath
-		SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .5, .5)
-		emit_signal("EnemyDeath")
-		FlickerLights()
-		await get_tree().create_timer(.4).timeout
-		FlickerLights()
-		await get_tree().create_timer(.3).timeout
-		FlickerLights()
-		await get_tree().create_timer(.2).timeout
-		FlickerLights()
-		await get_tree().create_timer(.1).timeout
-		FlickerLights()
-		await get_tree().create_timer(.1).timeout
-		FlickerLights()
+		ForceEnemyDeath()
 
+func OnEnemyDead():
+	SetDoorsEnabled(true)
+	SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .5, .5)
+	emit_signal("EnemyDeath")
+	CurrentPointsToPassBeforeDeath = PointsToPassBeforeDeath
+	FlickerLights()
+	await get_tree().create_timer(.4).timeout
+	FlickerLights()
+	await get_tree().create_timer(.3).timeout
+	FlickerLights()
+	await get_tree().create_timer(.2).timeout
+	FlickerLights()
+	await get_tree().create_timer(.1).timeout
+	FlickerLights()
+	await get_tree().create_timer(.1).timeout
+	FlickerLights()
 
 func SetDoorsEnabled(bEnable):
 	var doors = get_tree().get_nodes_in_group("Doors")

@@ -53,10 +53,10 @@ func GetDashRayCast():
 func GetSpotLight():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/SpotLight3D
 
-	
-	 
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
