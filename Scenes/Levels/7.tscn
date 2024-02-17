@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="4_22xm2"]
 [ext_resource type="ArrayMesh" uid="uid://rtbov14lekmt" path="res://3d/meshes/Mesh_YellowDoor.tres" id="5_27cjp"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_vkmbd"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_8vwef"]
+[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_8vwef"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_0w1hg"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="8_f070b"]
 [ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="9_lfig6"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://covj57sb1rhdv" path="res://Scenes/battery.tscn" id="13_fqud3"]
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="14_4yw04"]
 [ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="15_sfcp5"]
-[ext_resource type="Resource" uid="uid://dulrrh4cwt1qf" path="res://Scripts/Notes/7.tres" id="16_j5yxe"]
+[ext_resource type="Resource" path="res://Scripts/Notes/7.tres" id="16_j5yxe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uu6c"]
 albedo_color = Color(0, 0, 0, 1)
@@ -25,7 +25,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [node name="7" type="Node3D"]
 script = ExtResource("1_ohm7d")
-MonsterSpawnChance = 100
+MonsterSpawnChance = 80
 PointsToPassBeforeDeath = 12
 
 [node name="Player" parent="." instance=ExtResource("2_0q73a")]
