@@ -7,7 +7,7 @@ var Master =-4
 var Music=-5
 var SFX=-10
 var Rumbles = 0
-var RumblesToSpawnEnemy = 20
+var RumblesToSpawnEnemy = 15
 
 var master_Bus = AudioServer.get_bus_index("Master")
 var music_Bus = AudioServer.get_bus_index("Music")
@@ -88,7 +88,7 @@ func SetBusMute(busName, bIsMuted):
 
 func Reset():
 	SetPlayerMoveToPosition("-1")
-	RumblesToSpawnEnemy = 20
+	RumblesToSpawnEnemy = 15
 	Rumbles = 0
 	Data.clear()
 

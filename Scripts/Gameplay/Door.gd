@@ -61,7 +61,7 @@ func InterAct():
 	bHasEnteredDoor = true
 	$AnimationPlayer.play("DoorOpen")
 	LevelLoader.GetPlayer().PlayFade(true)
-	LevelLoader.Rumbles += 1
+	LevelLoader.Rumbles += 2
 
 
 
