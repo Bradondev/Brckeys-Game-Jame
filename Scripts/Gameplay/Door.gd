@@ -63,9 +63,6 @@ func InterAct():
 	LevelLoader.GetPlayer().PlayFade(true)
 	LevelLoader.Rumbles += 1
 
-	if level.CanSpawnEnemy():
-		level.AttemptSpawnEnemy(true)
-
 
 
 func _on_animation_player_animation_finished(anim_name):
