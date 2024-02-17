@@ -3,6 +3,7 @@ class_name  MonsterScan
 
 
 func  Enter():
+	enemy.SetSpotLightGreen()
 	print_debug("Scan")
 	enemy.velocity = Vector3.ZERO
 	var result = randi() % 2

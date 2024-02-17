@@ -1,14 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfh4uc1duhhua"]
+[gd_scene load_steps=16 format=3 uid="uid://cfh4uc1duhhua"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_7hvyn"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_wyqh8"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="3_livcw"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_rvceb"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_882hv"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_882hv"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_2xi08"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="8_18fes"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="9_nicoy"]
+[ext_resource type="PackedScene" uid="uid://cyray2mcljaag" path="res://3d/prefabs/radio.tscn" id="10_kgykc"]
 [ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="10_vh6ti"]
+[ext_resource type="PackedScene" uid="uid://bblfrhmehr5te" path="res://3d/imports/chairOffice/chairOffice.glb" id="11_43krj"]
+[ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="12_vcdpc"]
+[ext_resource type="PackedScene" uid="uid://c632p5c7pbinm" path="res://3d/prefabs/SM_desk_wood_green.tscn" id="13_ghyfm"]
+[ext_resource type="PackedScene" uid="uid://bf0osvw6nnlhq" path="res://3d/prefabs/SM_Mug.tscn" id="14_b1sfv"]
+[ext_resource type="FontFile" uid="uid://b024yg8oy0mbp" path="res://Font/Jennifers Hand Writing.ttf" id="15_cds11"]
 
 [node name="13" type="Node3D"]
 script = ExtResource("1_7hvyn")
@@ -862,3 +868,43 @@ visible = false
 [node name="bathroomLights12" parent="." instance=ExtResource("10_vh6ti")]
 transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.47139, 0.469835, -59.6533)
 visible = false
+
+[node name="Radio" parent="." instance=ExtResource("10_kgykc")]
+transform = Transform3D(0.244535, 0, 0.173789, 0, 0.3, 0, -0.173789, 0, 0.244535, 1.21137, 1.50743, -53.3197)
+metadata/_edit_group_ = true
+
+[node name="chairOffice" parent="." instance=ExtResource("11_43krj")]
+transform = Transform3D(0.373117, 0, -0.927784, 0, 1, 0, 0.927784, 0, 0.373117, 1.0981, 0, -55.9733)
+
+[node name="chairOffice2" parent="." instance=ExtResource("11_43krj")]
+transform = Transform3D(0.496868, 0, 0.867826, 0, 1, 0, -0.867826, 0, 0.496868, 1.67862, 0, -49.1202)
+
+[node name="lamp" parent="." instance=ExtResource("12_vcdpc")]
+transform = Transform3D(0.774017, 0, -0.633165, 0, 1, 0, 0.633165, 0, 0.774017, 0.924174, 1.56408, -52.4627)
+
+[node name="Cube" parent="lamp" index="0"]
+transform = Transform3D(0.125, 0, 0, 0, 0.109533, -0.0602294, 0, 0.0602294, 0.109533, 0, 0.478898, -0.173622)
+
+[node name="Cube_001" parent="lamp" index="1"]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
+
+[node name="Cube_008" parent="lamp" index="8"]
+transform = Transform3D(0.125, 0, 0, 0, 0.0166438, -0.123887, 0, 0.123887, 0.0166438, 0, 0.478898, -0.173622)
+
+[node name="SpotLight3D" parent="lamp" index="9"]
+light_energy = 1.473
+light_indirect_energy = 1.379
+spot_angle = 62.28
+
+[node name="deskWoodGreen" parent="." instance=ExtResource("13_ghyfm")]
+transform = Transform3D(-0.251702, 0, 1.47873, 0, 1.5, 0, -1.47873, 0, -0.251702, 0.780631, 0, -52.3527)
+
+[node name="CoffeeMug" parent="." instance=ExtResource("14_b1sfv")]
+transform = Transform3D(-0.79039, 0, -0.612604, 0, 1, 0, 0.612604, 0, -0.79039, 1.417, 1.5249, -51.5592)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-0.513347, 0, 0.858181, 0, 1, 0, -0.858181, 0, -0.513347, 1.84315, 2.39702, -51.8211)
+text = "2.99$"
+font = ExtResource("15_cds11")
+
+[editable path="lamp"]

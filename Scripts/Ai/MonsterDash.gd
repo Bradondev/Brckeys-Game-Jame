@@ -18,6 +18,7 @@ func _ready():
 	pass
 
 func Enter():
+	enemy.SetSpotLightRed()
 	enemy.Agro = true
 	enemy.velocity = Vector3.ZERO
 	bIsDashing = false

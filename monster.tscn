@@ -6536,11 +6536,14 @@ collision_mask = 0
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_d7srs")
+redColor = Color(0.917647, 0, 0, 1)
+greenColor = Color(0, 0.964706, 0, 1)
 
 [node name="JerryFixed" parent="." instance=ExtResource("2_44dm1")]
 transform = Transform3D(-0.75, 0, 6.55671e-08, 0, 0.75, 0, -6.55671e-08, 0, -0.75, 0, -0.940441, 0)
 
 [node name="Skeleton3D" parent="JerryFixed/JerryFixed/metarig" index="0"]
+<<<<<<< Updated upstream
 bones/0/position = Vector3(-3.14572e-17, 0.0192809, -1.30678)
 bones/1/position = Vector3(0.0962725, 1.63921, -0.671637)
 bones/1/rotation = Quaternion(0.674947, 0.0299396, 0.0317244, 0.736576)
@@ -6600,6 +6603,56 @@ bones/46/rotation = Quaternion(0.962259, 9.73241e-08, 3.44129e-07, -0.272137)
 bones/47/position = Vector3(0.571881, 0.28555, 1.80695)
 bones/47/rotation = Quaternion(-5.60915e-06, -0.00446565, 0.99999, 1.6643e-07)
 bones/48/rotation = Quaternion(0.490823, -6.61367e-06, 3.01134e-09, 0.871259)
+=======
+bones/1/position = Vector3(2.75237e-06, 1.45475, -0.721517)
+bones/1/rotation = Quaternion(0.675532, 0.0089843, 0.00952171, 0.737214)
+bones/2/rotation = Quaternion(0.999418, 6.50806e-08, 1.90625e-06, -0.034121)
+bones/3/rotation = Quaternion(0.000780396, -0.000282771, 0.00347384, 0.999994)
+bones/4/rotation = Quaternion(0.0385015, 1.26434e-05, -0.000291902, 0.999259)
+bones/5/rotation = Quaternion(-0.0210632, -2.39271e-06, -0.00100004, 0.999778)
+bones/6/rotation = Quaternion(-0.0240117, 7.93289e-06, -0.0014578, 0.999711)
+bones/7/rotation = Quaternion(-0.0293448, 4.91319e-05, -0.0031764, 0.999564)
+bones/8/rotation = Quaternion(-0.0566242, -6.67151e-05, -0.00680719, 0.998372)
+bones/9/rotation = Quaternion(-0.0246667, 6.62523e-05, -0.0143058, 0.999593)
+bones/10/rotation = Quaternion(0.0140386, 0.000145115, -0.0280405, 0.999508)
+bones/11/rotation = Quaternion(0.0538109, -0.000281949, -0.0401257, 0.997745)
+bones/12/rotation = Quaternion(0.122533, 0.000690247, -0.0429121, 0.991536)
+bones/13/rotation = Quaternion(0.136352, -0.000227106, -0.0160581, 0.99053)
+bones/14/rotation = Quaternion(0.197024, -0.00021374, 0.0444915, 0.979389)
+bones/15/rotation = Quaternion(0.196721, -2.33265e-05, 0.126482, 0.972267)
+bones/16/rotation = Quaternion(0.0978241, 0.00119526, 0.233434, 0.967439)
+bones/17/rotation = Quaternion(-0.0526309, 0.00163853, 0.357272, 0.932515)
+bones/18/rotation = Quaternion(-0.157547, -0.00206999, 0.413859, 0.896602)
+bones/19/rotation = Quaternion(-0.329025, 0.002325, 0.222851, 0.917646)
+bones/20/rotation = Quaternion(0.00543454, -2.03605e-19, -1.21323e-18, 0.999985)
+bones/22/rotation = Quaternion(0.238151, 0.0128351, -0.0213283, 0.970909)
+bones/23/rotation = Quaternion(0.0309852, -0.048799, -0.000997, 0.998327)
+bones/24/rotation = Quaternion(-0.00451879, 0.00634597, 0.000416564, 0.99997)
+bones/25/rotation = Quaternion(-0.00307065, 0.00616849, -0.000195477, 0.999976)
+bones/26/rotation = Quaternion(0.00825961, 0.00613929, -0.000689067, 0.999947)
+bones/27/rotation = Quaternion(-0.00843195, 0.00557461, 0.00207841, 0.999947)
+bones/28/rotation = Quaternion(-0.0439736, 0.00423806, 0.0241866, 0.998731)
+bones/29/rotation = Quaternion(0.18499, 0.94151, 0.278229, -0.0438796)
+bones/30/rotation = Quaternion(0.808488, -0.220462, -0.169859, -0.518548)
+bones/31/rotation = Quaternion(0.890197, -0.0111232, -0.11476, 0.440744)
+bones/32/rotation = Quaternion(-0.538439, -0.219697, 0.0201621, 0.813271)
+bones/33/rotation = Quaternion(-0.182499, 0.936914, 0.296942, 0.0266793)
+bones/34/rotation = Quaternion(0.659408, 0.257738, 0.156094, -0.688758)
+bones/35/rotation = Quaternion(0.870488, 0.0639466, 0.091373, 0.479387)
+bones/36/rotation = Quaternion(-0.538439, 0.219697, -0.020162, 0.813271)
+bones/38/rotation = Quaternion(-0.250793, 0.0170877, 0.936475, -0.244594)
+bones/39/rotation = Quaternion(-0.509811, 0.0362249, -0.0923284, 0.85455)
+bones/40/rotation = Quaternion(0.659115, -0.0553463, 0.0163832, 0.749824)
+bones/42/rotation = Quaternion(0.226818, -0.0968898, 0.926534, 0.284077)
+bones/43/rotation = Quaternion(-0.573829, -0.0387338, 0.0968863, 0.812301)
+bones/44/rotation = Quaternion(0.822145, 0.0442253, -0.0191705, 0.567234)
+bones/45/position = Vector3(0.124758, 1.32436, 2.81817)
+bones/45/rotation = Quaternion(0.714954, -1.08352e-06, 1.61935e-06, 0.699172)
+bones/46/rotation = Quaternion(0.962259, 9.7324e-08, 3.44129e-07, -0.272137)
+bones/47/position = Vector3(0.752086, 0.274903, 1.70269)
+bones/47/rotation = Quaternion(-5.60914e-06, -0.00446565, 0.99999, 1.6643e-07)
+bones/48/rotation = Quaternion(0.490823, -6.61367e-06, 3.0114e-09, 0.871259)
+>>>>>>> Stashed changes
 bones/49/rotation = Quaternion(0.276316, 0.0810758, -0.286882, 0.91366)
 bones/50/rotation = Quaternion(-0.0856952, 0.992808, -0.061981, 0.0561014)
 bones/51/rotation = Quaternion(0.0348339, 0.00584704, -0.0126979, 0.999295)
@@ -6608,9 +6661,15 @@ bones/53/rotation = Quaternion(0.249781, 0.0132504, 0.00341968, 0.968206)
 bones/54/rotation = Quaternion(-0.0228618, 0.00477434, -0.000735081, 0.999727)
 bones/56/rotation = Quaternion(0.0185081, 0.96591, -0.240301, -0.0945045)
 bones/57/rotation = Quaternion(-0.0197151, 0.0352909, -0.00484276, 0.999171)
+<<<<<<< Updated upstream
 bones/58/position = Vector3(-0.18523, 0.288334, 1.99587)
 bones/58/rotation = Quaternion(0.0956158, -0.00444521, 0.995407, 0.00183646)
 bones/58/scale = Vector3(1, 1, 1)
+=======
+bones/58/position = Vector3(-0.730039, 0.41457, 2.1495)
+bones/58/rotation = Quaternion(0.0230226, 0.196981, 0.979871, 0.0228176)
+bones/58/scale = Vector3(0.979867, 0.979867, 0.979867)
+>>>>>>> Stashed changes
 bones/59/rotation = Quaternion(0.490823, 6.75687e-06, 2.79966e-07, 0.871259)
 bones/60/rotation = Quaternion(0.276316, -0.0810758, 0.286882, 0.91366)
 bones/61/rotation = Quaternion(0.0856952, 0.992808, -0.061981, -0.0561014)
@@ -6621,6 +6680,7 @@ bones/65/rotation = Quaternion(-0.0228618, -0.00477434, 0.000735081, 0.999727)
 bones/66/rotation = Quaternion(0.368775, 0.0405879, -0.256569, 0.892485)
 bones/67/rotation = Quaternion(-0.0185081, 0.96591, -0.240301, 0.0945045)
 bones/68/rotation = Quaternion(-0.0197151, -0.0352909, 0.00484276, 0.999171)
+<<<<<<< Updated upstream
 bones/69/position = Vector3(0.434609, 0.353809, -1.64886)
 bones/69/rotation = Quaternion(0.000572499, 0.170822, 0.985296, -0.00333458)
 bones/70/rotation = Quaternion(0.826898, 0.102168, -0.120943, 0.539605)
@@ -6634,6 +6694,21 @@ bones/86/rotation = Quaternion(0.672341, 0.117545, -0.201903, 0.702408)
 
 [node name="HeadAttachment" parent="JerryFixed/JerryFixed/metarig/Skeleton3D" index="24"]
 transform = Transform3D(0.891573, 0.233805, 0.387856, 0.3626, 0.144567, -0.920664, -0.271327, 0.961476, 0.0441147, 0.145814, 1.51003, 1.29837)
+=======
+bones/69/position = Vector3(0.593759, 0.348066, -2.03853)
+bones/69/rotation = Quaternion(0.000572499, 0.170822, 0.985296, -0.00333458)
+bones/70/rotation = Quaternion(0.826898, 0.102168, -0.120943, 0.539605)
+bones/73/rotation = Quaternion(0.736101, -0.0447229, 0.0947145, 0.668718)
+bones/76/rotation = Quaternion(0.761677, -0.0855082, 0.203326, 0.609257)
+bones/79/position = Vector3(-0.593744, 0.523086, -1.76213)
+bones/79/rotation = Quaternion(-0.000770622, 0.228257, 0.973595, 0.00329599)
+bones/80/rotation = Quaternion(0.801878, -0.105595, 0.106934, 0.578278)
+bones/83/rotation = Quaternion(0.726191, 0.0432577, -0.0952887, 0.679482)
+bones/86/rotation = Quaternion(0.730478, 0.071836, -0.233981, 0.637569)
+
+[node name="HeadAttachment" parent="JerryFixed/JerryFixed/metarig/Skeleton3D" index="24"]
+transform = Transform3D(1, 1.3415e-11, 7.15252e-07, 7.14761e-07, -0.0370484, -0.999313, 2.64854e-08, 0.999313, -0.0370484, 0.124769, 1.30197, 1.5306)
+>>>>>>> Stashed changes
 
 [node name="DashRayCast" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="0"]
 transform = Transform3D(-0.345534, -9.45829e-07, -0.938407, 0.937764, -0.0370494, -0.345297, -0.0347671, -0.999314, 0.0128028, 0.498638, -1.31588, 1.10717)
@@ -6688,54 +6763,54 @@ hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner8" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 2)
+transform = Transform3D(0.707107, 0, -0.707107, -1.86265e-09, 1, -1.86265e-09, 0.707107, -4.04121e-14, 0.707107, 0, 0.471398, -2.32831e-10)
+target_position = Vector3(0, 0, 6)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner9" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(1.053e-07, 0, -1, 0, 1, 0, 1, 0, 1.053e-07, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 4)
+target_position = Vector3(0, 0, 12)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner10" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 2)
+target_position = Vector3(0, 0, 6)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner11" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(-0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 3)
+target_position = Vector3(0, 0, 6)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner12" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
-transform = Transform3D(0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, 0.5, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 3)
+transform = Transform3D(0.5, -3.72529e-09, -0.866026, 0, 1, -7.45058e-09, 0.866026, -9.76996e-14, 0.5, 1.19209e-07, 0.471398, -4.65661e-10)
+target_position = Vector3(0, 0, 6)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner13" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 4)
+transform = Transform3D(0.258819, 0, -0.965926, -9.31323e-10, 1, 0, 0.965926, -4.04121e-14, 0.258819, 0, 0.471398, -2.32831e-10)
+target_position = Vector3(0, 0, 8)
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="BackScanner14" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 0, 0.471398, 0)
-target_position = Vector3(0, 0, 4)
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, -4.04121e-14, -0.258819, 1.19209e-07, 0.471398, 0)
+target_position = Vector3(0, 0, 8)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="SpotLight3D" type="SpotLight3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="2"]
-transform = Transform3D(-1.25121, -1.36691e-06, 0.460712, -0.460396, -0.0493991, -1.25035, 0.0170704, -1.33242, 0.046356, -0.196378, 0.516743, -0.408935)
+[node name="SpotLight3D" type="OmniLight3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="2"]
+transform = Transform3D(-1.25121, -1.42382e-06, 0.460712, -0.460396, -0.0493991, -1.25035, 0.0170704, -1.33242, 0.0463559, 0.00823132, 0.530883, -0.0275215)
 light_color = Color(0.258824, 0.65098, 0, 1)
-light_energy = 3.316
+light_energy = 5.872
+light_indirect_energy = 2.799
 shadow_enabled = true
-spot_range = 12.0
-spot_angle = 30.0
+omni_range = 8.47556
 
 [node name="KillBOX" type="Area3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="3"]
 transform = Transform3D(1, 1.03917e-13, -4.37115e-08, -4.37115e-08, 0, -1, -1.08802e-14, 1, 3.72529e-09, 0.000473008, -0.185109, -0.0100487)
@@ -6747,10 +6822,14 @@ transform = Transform3D(1, 1.00586e-13, 1.35003e-13, 2.67009e-12, 1, 1.2666e-07,
 shape = SubResource("BoxShape3D_8f00h")
 
 [node name="AnimationPlayer" parent="JerryFixed/JerryFixed" index="1"]
+<<<<<<< Updated upstream
 libraries = {
 "": SubResource("AnimationLibrary_utv68")
 }
 blend_times = [&"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"TurnRightWalk", &"lookAround1", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"walk", 0.2, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"TurnLeftWalk", 0.5, &"TurnLeftWalk", &"lookAround1", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnLeftWalk", &"walk", 0.2, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"walkLookRight", 0.2, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"TurnLeftWalk", 0.3, &"lunge", &"lunge", 0.1, &"lunge", &"walkLookLeft", 0.2, &"lunge", &"walk", 0.2, &"lunge", &"walkLookRight", 0.2, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookLeft", &"lunge", 0.1, &"walkLookLeft", &"walkLookLeft", 0.5, &"walkLookLeft", &"walk", 0.2, &"walkLookLeft", &"walkLookRight", 0.3, &"walk", &"exitGlitch", 0.2, &"walk", &"TurnRightWalk", 0.2, &"walk", &"lookAround1", 0.1, &"walk", &"lunge", 0.1, &"walk", &"walkLookLeft", 0.2, &"walk", &"walk", 0.5, &"walk", &"lookAround2", 0.1, &"walk", &"walkLookRight", 0.2, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"TurnLeftWalk", 0.3, &"walkLookRight", &"lunge", 0.1, &"walkLookRight", &"walkLookLeft", 0.3, &"walkLookRight", &"walk", 0.2, &"walkLookRight", &"walkLookRight", 0.5]
+=======
+blend_times = [&"walkLookRight", &"walkLookRight", 0.5, &"walkLookRight", &"TurnLeftWalk", 0.3, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"walk", 0.2, &"walkLookRight", &"lunge", 0.1, &"walkLookRight", &"walkLookLeft", 0.3, &"TurnLeftWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"TurnLeftWalk", 0.5, &"TurnLeftWalk", &"lookAround1", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"walk", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"TurnRightWalk", &"lookAround1", 0.2, &"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"walk", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"walkLookLeft", 0.2, &"walk", &"walkLookRight", 0.2, &"walk", &"lookAround1", 0.1, &"walk", &"TurnRightWalk", 0.2, &"walk", &"lookAround2", 0.1, &"walk", &"walk", 0.5, &"walk", &"lunge", 0.1, &"walk", &"exitGlitch", 0.2, &"walk", &"walkLookLeft", 0.2, &"lunge", &"walkLookRight", 0.2, &"lunge", &"TurnLeftWalk", 0.3, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"walk", 0.2, &"lunge", &"lunge", 0.1, &"lunge", &"walkLookLeft", 0.2, &"walkLookLeft", &"walkLookRight", 0.3, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"walk", 0.2, &"walkLookLeft", &"lunge", 0.1, &"walkLookLeft", &"walkLookLeft", 0.5]
+>>>>>>> Stashed changes
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.887602, 0.873154)

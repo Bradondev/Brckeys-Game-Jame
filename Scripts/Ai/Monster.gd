@@ -1,7 +1,8 @@
 extends CharacterBody3D
 class_name  Monster
 var Agro = false
-
+@export_color_no_alpha var redColor: Color
+@export_color_no_alpha var greenColor: Color
 func _enter_tree():
 	LevelLoader.GetLevel().SetDoorsEnabled(false)
 	SoundManager.PlaySFX("res://Audio/Monster_Growl_-_2_-_Louder.mp3", global_position)
@@ -52,6 +53,7 @@ func GetDashRayCast():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/DashRayCast
 func GetSpotLight():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/SpotLight3D
+<<<<<<< Updated upstream
 
 
 
@@ -60,3 +62,13 @@ func GetSpotLight():
 
 
 
+=======
+func SetSpotLightRed():
+	GetSpotLight().light_color = redColor
+func SetSpotLightGreen():
+	GetSpotLight().light_color = greenColor
+	
+	
+	
+	
+>>>>>>> Stashed changes

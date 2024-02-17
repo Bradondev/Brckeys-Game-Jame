@@ -41,6 +41,7 @@ func SetTemp(index):
 
 func Enter():
 	enemy.Agro = false
+	enemy.SetSpotLightGreen()
 	enemy.PlayAnimation("walk")
 	enemy.enableKillBox(false)
 	FindClosesIdlePath()

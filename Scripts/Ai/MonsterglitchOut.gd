@@ -8,6 +8,7 @@ class_name  MonsterGlitchOut
 
 func  Enter():
 	print_debug("Glitch Out")
+	enemy.SetSpotLightRed()
 	enemy.velocity = Vector3.ZERO
 	var result = randi() % 3
 
