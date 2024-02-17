@@ -25,7 +25,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [node name="3" type="Node3D"]
 script = ExtResource("1_lycxo")
-MonsterSpawnChance = 40
+MonsterSpawnChance = 10
 PointsToPassBeforeDeath = 10
 
 [node name="Player" parent="." instance=ExtResource("2_7rpxx")]
@@ -473,7 +473,7 @@ transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -8.25679, 1, -5.18253)
 
 [node name="Note" parent="." instance=ExtResource("13_hyigc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12271, 1.49788, 0.973181)
+transform = Transform3D(1, 0, 0, 0, 0.998808, -0.0488149, 0, 0.0488149, 0.998808, 3.12271, 1.42587, 0.973181)
 Messeage = ExtResource("14_tidxf")
 
 [node name="BatteryInject" parent="." instance=ExtResource("15_lru5j")]

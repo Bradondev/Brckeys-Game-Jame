@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_2xi08"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="8_18fes"]
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="9_nicoy"]
-[ext_resource type="PackedScene" uid="uid://c4nm1kro2gkvi" path="res://3d/prefabs/radio.tscn" id="10_kgykc"]
+[ext_resource type="PackedScene" uid="uid://cyray2mcljaag" path="res://3d/prefabs/radio.tscn" id="10_kgykc"]
 [ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="10_vh6ti"]
 [ext_resource type="PackedScene" uid="uid://bblfrhmehr5te" path="res://3d/imports/chairOffice/chairOffice.glb" id="11_43krj"]
 [ext_resource type="PackedScene" uid="uid://cqpn0qclvo5gl" path="res://3d/prefabs/SM_lamp.tscn" id="12_vcdpc"]
