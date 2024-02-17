@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterglitchOut.gd" id="9_en0ku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8f00h"]
-size = Vector3(1.54095, 1.54785, 3.00058)
+size = Vector3(1.13579, 0.811767, 2.6624)
 
 [sub_resource type="Animation" id="Animation_sigop"]
 resource_name = "TurnLeftWalk"
@@ -6537,7 +6537,7 @@ axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_d7srs")
 redColor = Color(0.917647, 0, 0, 1)
-greenColor = Color(0, 0.964706, 0, 1)
+greenColor = Color(0.772549, 1, 0.678431, 1)
 
 [node name="JerryFixed" parent="." instance=ExtResource("2_44dm1")]
 transform = Transform3D(-0.75, 0, 6.55671e-08, 0, 0.75, 0, -6.55671e-08, 0, -0.75, 0, -0.940441, 0)
@@ -6720,14 +6720,14 @@ collision_layer = 0
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/KillBOX"]
-transform = Transform3D(1, 1.00586e-13, 1.35003e-13, 2.67009e-12, 1, 1.2666e-07, 8.52651e-14, 3.72529e-09, 1, -0.0155943, 0.135171, 0.00517917)
+transform = Transform3D(1, -9.31323e-08, 5.96046e-08, -3.72529e-09, 1, 1.04308e-07, 2.98023e-08, 3.12924e-07, 1, 0.0572596, 0.00394514, 0.174269)
 shape = SubResource("BoxShape3D_8f00h")
 
 [node name="AnimationPlayer" parent="JerryFixed/JerryFixed" index="1"]
 libraries = {
 "": SubResource("AnimationLibrary_11icj")
 }
-blend_times = [&"walk", &"walk", 0.5, &"walk", &"lookAround2", 0.1, &"walk", &"exitGlitch", 0.2, &"walk", &"walkLookLeft", 0.2, &"walk", &"TurnRightWalk", 0.2, &"walk", &"walkLookRight", 0.2, &"walk", &"lunge", 0.1, &"walk", &"lookAround1", 0.1, &"TurnLeftWalk", &"walk", 0.2, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"TurnLeftWalk", 0.5, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"lookAround1", 0.2, &"walkLookLeft", &"walk", 0.2, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookLeft", &"walkLookLeft", 0.5, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"walkLookRight", 0.3, &"walkLookLeft", &"lunge", 0.1, &"TurnRightWalk", &"walk", 0.2, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"TurnRightWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"lookAround1", 0.2, &"walkLookRight", &"walk", 0.2, &"walkLookRight", &"TurnLeftWalk", 0.3, &"walkLookRight", &"walkLookLeft", 0.3, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"walkLookRight", 0.5, &"walkLookRight", &"lunge", 0.1, &"lunge", &"walk", 0.2, &"lunge", &"TurnLeftWalk", 0.3, &"lunge", &"walkLookLeft", 0.2, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"walkLookRight", 0.2, &"lunge", &"lunge", 0.1]
+blend_times = [&"lunge", &"lunge", 0.1, &"lunge", &"TurnLeftWalk", 0.3, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"walkLookLeft", 0.2, &"lunge", &"walkLookRight", 0.2, &"lunge", &"walk", 0.2, &"TurnLeftWalk", &"lookAround1", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"TurnLeftWalk", 0.5, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnLeftWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"walk", 0.2, &"TurnRightWalk", &"lookAround1", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnRightWalk", &"walk", 0.2, &"walkLookLeft", &"lunge", 0.1, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"walkLookLeft", 0.5, &"walkLookLeft", &"walkLookRight", 0.3, &"walkLookLeft", &"walk", 0.2, &"walkLookRight", &"lunge", 0.1, &"walkLookRight", &"TurnLeftWalk", 0.3, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"walkLookLeft", 0.3, &"walkLookRight", &"walkLookRight", 0.5, &"walkLookRight", &"walk", 0.2, &"walk", &"lookAround1", 0.1, &"walk", &"lunge", 0.1, &"walk", &"exitGlitch", 0.2, &"walk", &"lookAround2", 0.1, &"walk", &"TurnRightWalk", 0.2, &"walk", &"walkLookLeft", 0.2, &"walk", &"walkLookRight", 0.2, &"walk", &"walk", 0.5]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.887602, 0.873154)

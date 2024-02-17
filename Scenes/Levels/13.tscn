@@ -901,7 +901,7 @@ spot_angle = 62.28
 transform = Transform3D(-0.251702, 0, 1.47873, 0, 1.5, 0, -1.47873, 0, -0.251702, 0.780631, 0, -52.3527)
 
 [node name="CoffeeMug" parent="." instance=ExtResource("14_b1sfv")]
-transform = Transform3D(-0.925726, 0, 0.378196, 0, 1, 0, -0.378196, 0, -0.925726, 0.84293, 1.5249, -50.9207)
+transform = Transform3D(-0.37029, 0, 0.151278, 0, 0.4, 0, -0.151278, 0, -0.37029, 1.88509, 1.5249, -50.5859)
 
 [node name="Label3D" type="Label3D" parent="CoffeeMug"]
 transform = Transform3D(-0.119981, 0, -0.992776, 0, 1, 0, 0.992776, 0, -0.119981, -0.497265, 0.87212, -0.0540543)
