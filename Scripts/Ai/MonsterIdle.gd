@@ -22,17 +22,16 @@ func _ready():
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
 	RayCasts = $"../../RaycastHolder".get_children()
 func randomize_wander():
-
 	if bWalkBackwards == false:
+		Temp +=1
 		if Temp > PathPoints.size() - 1:
 			Temp = 0
-		target =PathPoints[Temp].transform.origin
-		Temp +=1
 	else:
+		Temp -=  1
 		if Temp < 0:
 			Temp = PathPoints.size() - 1
-		target =PathPoints[Temp].transform.origin
-		Temp -=  1
+	target =PathPoints[Temp].transform.origin
+
 	emit_signal("PassPoint")
 
 func SetTemp(index):
