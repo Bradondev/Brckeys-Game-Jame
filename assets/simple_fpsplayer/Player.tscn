@@ -272,6 +272,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="GlitchTimer" type="Timer" parent="CanvasLayer"]
+process_mode = 3
 wait_time = 0.5
 one_shot = true
 

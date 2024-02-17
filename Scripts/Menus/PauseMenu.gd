@@ -3,7 +3,8 @@ extends Control
 func _input(event):
 	if event.is_action_pressed("Escape"):
 		if visible == false:
-			visible = true
+			if get_tree().paused == false:
+				visible = true
 		else:
 			await get_tree().process_frame
 			_on_resume_button_button_up()
