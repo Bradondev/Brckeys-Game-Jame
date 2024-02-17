@@ -1,5 +1,6 @@
 extends Node
 class_name State
+@export var enemy: CharacterBody3D
 signal  Transitioned
 
 func  Enter():

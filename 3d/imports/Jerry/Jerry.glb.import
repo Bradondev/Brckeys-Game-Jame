@@ -5431,7 +5431,7 @@ _subresources={
 "lookAround1": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "",
+"save_to_file/path": "res://3d/jerry/LookAround1.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -7230,7 +7230,7 @@ _subresources={
 "lookAround2": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "",
+"save_to_file/path": "res://3d/jerry/LookAround2.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -9029,7 +9029,7 @@ _subresources={
 "lunge": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "",
+"save_to_file/path": "res://3d/jerry/lunge.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
