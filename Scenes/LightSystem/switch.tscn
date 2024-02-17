@@ -25,7 +25,7 @@ shape = SubResource("BoxShape3D_ueqw8")
 one_shot = true
 
 [node name="LightSwitch" parent="." instance=ExtResource("3_5fkpf")]
-transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -0.0243355, 0.220343, 0.194463)
+transform = Transform3D(-0.3, 0, -4.52987e-08, 0, 0.3, 0, 4.52987e-08, 0, -0.3, -0.0243355, 0.220343, 0.194463)
 script = ExtResource("4_rxffr")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
