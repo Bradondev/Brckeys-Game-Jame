@@ -3,13 +3,18 @@ extends Node
 var PlayerMoveToPosition = "-1"
 
 var Data = {}
-var Master =0
-var Music=0
-var SFX=0
+var Master =-4
+var Music=-5
+var SFX=-10
 var Rumbles = 0
 var RumblesToSpawnEnemy = 20
 
+var master_Bus = AudioServer.get_bus_index("Master")
+var music_Bus = AudioServer.get_bus_index("Music")
+var sfx_Bus = AudioServer.get_bus_index("SFX")
+
 func _ready():
+	LoadSettings()
 	Reset()
 
 func SetPlayerMoveToPosition(newPosition):
@@ -59,11 +64,25 @@ func Load(object):
 
 
 func SaveSettings():
-	Master =get_tree().get_nodes_in_group("MasterSetting")[0].value
-	Music =get_tree().get_nodes_in_group("MusicSetting")[0].value
+	Master = get_tree().get_nodes_in_group("MasterSetting")[0].value
+	Music = get_tree().get_nodes_in_group("MusicSetting")[0].value
 	SFX = get_tree().get_nodes_in_group("SFXSetting")[0].value
 
+func LoadSettings():
+	SetBusVolume(sfx_Bus, SFX)
+	SetBusVolume(music_Bus, Music)
+	SetBusVolume(master_Bus, Master)
 
+func SetBusVolume(busName, volume):
+
+	AudioServer.set_bus_volume_db(busName, volume)
+	if volume == -30:
+		SetBusMute(busName, true)
+	else:
+		SetBusMute(busName, false)
+
+func SetBusMute(busName, bIsMuted):
+	AudioServer.set_bus_mute(busName, bIsMuted)
 
 func Reset():
 	SetPlayerMoveToPosition("-1")

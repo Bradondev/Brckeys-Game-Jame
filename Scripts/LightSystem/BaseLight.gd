@@ -26,6 +26,7 @@ func _ready():
 	light_color = Colors[randi() % len(Colors)]
 	RandomPitchScale = randf_range(.8, 1.2)
 	RandomVolume = randf_range(-20.0, -10.0)
+
 	if FlickeringLoop > 0.0:
 		FlickerTimer.wait_time = FlickeringLoop
 	ConnectToSwitch()
@@ -39,8 +40,10 @@ func _ready():
 
 
 
+
 func  TurnOnLight():
 	if get_node_or_null("ceilingLight"):
+		$AudioStreamPlayer3D.set_bus("SFX")
 		$ceilingLight.TurnOn()
 		$AudioStreamPlayer3D.volume_db = RandomVolume
 		$AudioStreamPlayer3D.pitch_scale = RandomPitchScale
