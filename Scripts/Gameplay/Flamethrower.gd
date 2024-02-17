@@ -35,7 +35,8 @@ func _on_timer_timeout():
 	else:
 		TurnOn()
 
-
+func _exit_tree():
+	SoundManager.StopSFX(12)
 
 func _on_start_timer_timeout():
 	$Timer.start()
