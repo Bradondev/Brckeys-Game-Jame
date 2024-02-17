@@ -121,7 +121,8 @@ offset_bottom = 143.0
 grow_vertical = 2
 theme = SubResource("Theme_ml7vv")
 text = "- Glitch Effect Shader by Yui Kinomoto @arlez80 (MIT License)
--  simplefps by aarroz (MIT License)"
+-  simplefps by aarroz (MIT License)
+- \"In Your Arms\" by Kevin Mcleod (CC BY 3.0 DEED)"
 
 [node name="SM_Ground" parent="." instance=ExtResource("3_0l0l7")]
 transform = Transform3D(40, 0, 0, 0, 29.738, 0, 0, 0, 29.738, 8.33564, -4.43131e-07, 10.1348)
