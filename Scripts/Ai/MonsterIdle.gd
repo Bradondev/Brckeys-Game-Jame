@@ -1,26 +1,24 @@
 extends State
 class_name  MonsterIdle
 
-@export var enemy: CharacterBody3D
 @export var move_speed := 10
 @export var rotationSpeed = 5
 
 
 var PathPoints : Array[Node]
 
-var RayCasts :Array[Node]
+
 var  Move_direction :Vector3
 var wander_time:float
 var target
 var Temp =0
-
 signal PassPoint
 
 var bWalkBackwards = false
 func _ready():
 
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
-	RayCasts = $"../../RaycastHolder".get_children()
+	
 func randomize_wander():
 	if bWalkBackwards == false:
 		Temp +=1
@@ -33,7 +31,8 @@ func randomize_wander():
 	target =PathPoints[Temp].transform.origin
 
 	emit_signal("PassPoint")
-
+	if Temp % 4 == 0:
+		Transitioned.emit(self,"Scan")
 func SetTemp(index):
 	Temp = index
 	PathPoints = get_tree().get_nodes_in_group("MonsterPath")
@@ -41,6 +40,7 @@ func SetTemp(index):
 	randomize_wander()
 
 func Enter():
+	enemy.PlayAnimation("walk")
 	enemy.enableKillBox(false)
 	FindClosesIdlePath()
 	randomize_wander()
@@ -53,9 +53,8 @@ func Enter():
 
 
 func Update(_delte:float):
-	for Raycast in RayCasts:
+	for Raycast in enemy.GetScanRayCasts():
 		if Raycast.is_colliding() and Raycast.get_collider() == LevelLoader.GetPlayer() :
-			print_debug(Raycast.get_collider())
 			ChangeToRandomState()
 			break
 
@@ -75,15 +74,6 @@ func Physics_Update(delta:float):
 
 		enemy.velocity = -enemy.transform.basis.z * move_speed
 
-
-
-func ChangeToRandomState():
-	var rng = RandomNumberGenerator.new()
-	var StateNumber = rng.randi_range(1, 4)
-	if StateNumber == 1:
-		Transitioned.emit(self,"Chase")
-	else:
-		Transitioned.emit(self,"Dash")
 func FindClosesIdlePath():
 	var ClosestPath
 	var ClosetDistance  = 9000
@@ -96,3 +86,11 @@ func FindClosesIdlePath():
 	Temp = PathPoints.find(ClosestPath) + 1
 	#print_debug(Temp)
 
+func ChangeToRandomState():
+	var rng = RandomNumberGenerator.new()
+	var StateNumber = rng.randi_range(1, 4)
+	if StateNumber == 1:
+		Transitioned.emit(self,"Chase")
+	else:
+		Transitioned.emit(self,"Dash")
+		

@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_4inwh"]
 [ext_resource type="Script" path="res://Scenes/Settings.gd" id="1_w314a"]
 [ext_resource type="Script" path="res://Scripts/Menus/BackButton.gd" id="2_lan22"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="3_2i48y"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="3_2i48y"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="4_nndf6"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="5_781pv"]
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="6_x57xo"]

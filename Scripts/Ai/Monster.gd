@@ -29,7 +29,7 @@ func _on_kill_box_body_entered(body):
 		body.TakeDamage()
 
 func enableKillBox(bEnable):
-	$KillBOX.monitoring = bEnable
+	GetKillBox().monitoring = bEnable
 func ChangeState(StateName):
 	$"State Machine".ChangeState(StateName)
 func GetFarestPointFromPlayer():
@@ -39,3 +39,21 @@ func GetFarestPointFromPlayer():
 func _on_kill_box_body_exited(body):
 	if body.name == "Player":
 		body.TakeDamage()
+func PlayAnimation(AnimationName, StartTime = 0.0):
+	$Jerry/Jerry/AnimationPlayer.play(AnimationName)
+	$Jerry/Jerry/AnimationPlayer.seek(StartTime)
+func GetScanRayCasts():
+	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder.get_children()
+func GetKillBox():
+	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/KillBOX
+func GetDashRayCast():
+	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/DashRayCast
+func GetSpotLight():
+	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/SpotLight3D
+	
+	 
+	
+	
+	
+	
+	
