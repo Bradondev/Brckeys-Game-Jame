@@ -53,16 +53,6 @@ func GetDashRayCast():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/DashRayCast
 func GetSpotLight():
 	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/SpotLight3D
-<<<<<<< Updated upstream
-
-
-
-
-
-
-
-
-=======
 func SetSpotLightRed():
 	GetSpotLight().light_color = redColor
 func SetSpotLightGreen():
@@ -70,5 +60,4 @@ func SetSpotLightGreen():
 	
 	
 	
-	
->>>>>>> Stashed changes
+	   
