@@ -156,6 +156,7 @@ func TakeDamage():
 	print_debug("Dead")
 	emit_signal("JustDied")
 	bIsDead = true
+	$rotation_helper/Camera3D/SM_scanner/Scanner.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$AnimationPlayer.play("Death")
 	SoundManager.PlaySFX("res://Audio/Death Sound.mp3", global_position)

@@ -220,6 +220,9 @@ script = ExtResource("2_gwqkd")
 [node name="GrabPosition3D" type="Marker3D" parent="rotation_helper/Camera3D/ability_grab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
+[node name="SM_scanner" parent="rotation_helper/Camera3D" instance=ExtResource("5_kd1m4")]
+transform = Transform3D(0.973819, -0.226857, 0.0145763, 0.201055, 0.829587, -0.520925, 0.106083, 0.510217, 0.853478, 0.490955, -0.692156, -1.35134)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_m2tr7")]
@@ -281,19 +284,12 @@ libraries = {
 speed_scale = 4.0
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+visible = false
 material = SubResource("StandardMaterial3D_bd4hr")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="CSGCylinder3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25748, 0)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCylinder3D"]
-transform = Transform3D(-0.847293, -6.97979e-09, -0.246167, -1.65012, 0.0706562, 0.114896, 0.52215, 0.223291, -0.0363566, -0.644292, 0, 0)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCylinder3D"]
-transform = Transform3D(0.171192, -0.0744735, 0.258713, 0.956316, 0.195747, 0.0643702, -1.66421, 0.104822, 0.0636024, 0.456949, -0.0320655, -0.225942)
-
-[node name="SM_scanner" parent="." instance=ExtResource("5_kd1m4")]
-transform = Transform3D(0.973819, -0.226857, 0.0145763, 0.201055, 0.829587, -0.520925, 0.106083, 0.510217, 0.853478, 0.490955, 0.567255, -1.07754)
+visible = false
 
 [node name="CheckPausedTimer" type="Timer" parent="."]
 autostart = true
