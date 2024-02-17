@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=20 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dd70c2freuchv" path="res://3d/prefabs/SM_scanner.tscn" id="5_kd1m4"]
 [ext_resource type="Texture2D" uid="uid://de6bwftfdl3ua" path="res://Art/Cursor.png" id="5_xv4ls"]
 [ext_resource type="Material" uid="uid://y2v8leqe2qw6" path="res://Shaders/GlitchShader.tres" id="6_so11v"]
+[ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="8_gjxo1"]
 [ext_resource type="AudioStream" uid="uid://c1abkrug71rqd" path="res://Audio/Walking_On_Carpet.mp3" id="10_2yrky"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
@@ -277,6 +278,27 @@ process_mode = 3
 wait_time = 0.5
 one_shot = true
 
+[node name="FlashlightHint" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -236.0
+offset_top = -127.0
+offset_right = 236.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("8_gjxo1")
+theme_override_font_sizes/font_size = 39
+text = "Press 'F' to Toggle Flashlight
+"
+
+[node name="FlashLightHintTimer" type="Timer" parent="CanvasLayer"]
+wait_time = 5.0
+one_shot = true
+
 [node name="PlayerUi" parent="." instance=ExtResource("4_rnsln")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -319,5 +341,6 @@ one_shot = true
 [connection signal="body_entered" from="rotation_helper/Camera3D/flashlight_player2/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="rotation_helper/Camera3D/flashlight_player2/Area3D" to="." method="_on_area_3d_body_exited"]
 [connection signal="timeout" from="CanvasLayer/GlitchTimer" to="." method="_on_glitch_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/FlashLightHintTimer" to="." method="_on_flash_light_hint_timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="CheckPausedTimer" to="." method="_on_check_paused_timer_timeout"]

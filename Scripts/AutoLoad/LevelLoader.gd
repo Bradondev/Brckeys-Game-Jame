@@ -15,6 +15,8 @@ var sfx_Bus = AudioServer.get_bus_index("SFX")
 
 var bHasWon = false
 
+var bHasTutorialDone = false
+
 func _ready():
 	LoadSettings()
 	Reset()
