@@ -55,3 +55,6 @@ func ChangeState(StateName):
 	elif  StateName == "scan":
 		current_state = states.scan
 	current_state.Enter()
+
+func IsDashing():
+	return current_state == states.dash

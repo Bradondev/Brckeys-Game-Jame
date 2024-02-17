@@ -11,6 +11,8 @@ extends InterActiveObject
 var bHasEnteredDoor = false
 var bDisabled = false
 
+var Knocks = 0
+
 func EnableDoor(bEnable):
 	bDisabled = !bEnable
 	$PopUp.bIsLocked = bCanEnterDoor == false and bEnable
@@ -35,16 +37,24 @@ func UnlockDoor():
 	bCanEnterDoor = true
 	$PopUp.bIsLocked = false
 
+func KnockCheck():
+	if Knocks >= 3:
+		Knocks = 0
+		if is_instance_valid(LevelLoader.GetMonster()):
+			if LevelLoader.GetMonster().GetStateMachine().IsDashing() == false:
+				LevelLoader.GetMonster().ChangeState("dash")
+
 func InterAct():
+	Knocks += 1
+	$Timer.start()
+
 	var level = LevelLoader.GetLevel()
 	if bDisabled:
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
-		if is_instance_valid(LevelLoader.GetMonster()):
-			LevelLoader.GetMonster().ChangeState("dash")
+		KnockCheck()
 		return
 	if bCanEnterDoor == false:
-		if is_instance_valid(LevelLoader.GetMonster()):
-			LevelLoader.GetMonster().ChangeState("dash")
+		KnockCheck()
 		SoundManager.PlaySFX("res://Audio/Door Failed To Open.mp3", global_position)
 		LevelLoader.Rumbles += 1
 
@@ -61,7 +71,7 @@ func InterAct():
 	bHasEnteredDoor = true
 	$AnimationPlayer.play("DoorOpen")
 	LevelLoader.GetPlayer().PlayFade(true)
-	LevelLoader.Rumbles += 2
+	LevelLoader.Rumbles += 1
 
 
 
@@ -74,3 +84,9 @@ func _on_animation_player_animation_finished(anim_name):
 			if SceneDirectory != "res://Scenes/Levels/":
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			get_tree().change_scene_to_file(SceneDirectory + RoomToGoTo)
+
+
+func _on_timer_timeout():
+	if Knocks > 0:
+		Knocks -= 1
+	pass # Replace with function body.

@@ -33,8 +33,11 @@ func enableKillBox(bEnable):
 	GetKillBox().monitoring = bEnable
 func ChangeState(StateName):
 	$"State Machine".ChangeState(StateName)
+
+
 func GetCurrentState():
-	return$"State Machine". current_state
+	return$"State Machine".current_state
+
 func GetFarestPointFromPlayer():
 	return $"State Machine/Idle".FindFarestPointFromPlayer()
 

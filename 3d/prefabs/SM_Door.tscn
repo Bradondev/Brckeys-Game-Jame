@@ -94,6 +94,11 @@ OutLinecolor = Color(0, 0.686275, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 3.42742, 0, 0, 0, 0.257254, 0.901399, 1.31885, 0.146492)
 shape = SubResource("BoxShape3D_2p5br")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="doorStandard"]
