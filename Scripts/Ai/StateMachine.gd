@@ -47,4 +47,8 @@ func ChangeState(StateName):
 		current_state = states.idle
 	elif  StateName == "chase":
 		current_state = states.chase
+	elif  StateName == "glitchOut":
+		current_state = states.glitchout
+	elif  StateName == "scan":
+		current_state = states.scan
 	current_state.Enter()

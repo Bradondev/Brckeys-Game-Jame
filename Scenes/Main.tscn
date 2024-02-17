@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Menus/PlayButton.gd" id="2_lsq1x"]
 [ext_resource type="Script" path="res://Scripts/Menus/CreditsButton.gd" id="3_0wqss"]
 [ext_resource type="Script" path="res://Scripts/Menus/SettingButton.gd" id="4_ay1td"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="4_dtk8d"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="4_dtk8d"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="5_0lr8l"]
 [ext_resource type="Script" path="res://Scripts/Menus/Exit.gd" id="5_x0x0r"]
 [ext_resource type="PackedScene" uid="uid://dgl1q1hbqt5cc" path="res://3d/prefabs/SM_Wall.tscn" id="6_m0wkg"]

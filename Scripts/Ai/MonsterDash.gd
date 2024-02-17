@@ -81,7 +81,10 @@ func Exit():
 	enemy.enableKillBox(false)
 	bIsDashing = false
 
-func _on_jerry_start_dash():
+
+
+
+func _on_jerry_fixed_start_dash():
 	colliderPoint = LevelLoader.GetPlayer().global_transform.origin
 	if SoundManager.CheckSFXRunning(9) == false:
 		if randi() % 2 == 0:

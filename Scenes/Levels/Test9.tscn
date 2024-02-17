@@ -78,7 +78,7 @@ size = Vector3(2, 1, 1)
 [node name="9" type="Node3D"]
 script = ExtResource("1_ise2g")
 MonsterSpawnChance = 100
-PointsToPassBeforeDeath = 100
+PointsToPassBeforeDeath = 10
 
 [node name="Player" parent="." instance=ExtResource("2_pq1ae")]
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 8.42734, 2.06986, 3.24567)
