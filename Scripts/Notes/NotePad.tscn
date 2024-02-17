@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6tm7igauwg5q"]
+[gd_scene load_steps=12 format=3 uid="uid://b6tm7igauwg5q"]
 
 [ext_resource type="Script" path="res://NotePad.gd" id="1_wwuip"]
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="2_e2r4t"]
 [ext_resource type="Texture2D" uid="uid://c2lnyf1bj3ycf" path="res://Art/8915934.png" id="4_yohkh"]
 [ext_resource type="FontFile" uid="uid://b024yg8oy0mbp" path="res://Font/Jennifers Hand Writing.ttf" id="5_ckeml"]
 [ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="5_vgb4l"]
+[ext_resource type="PackedScene" uid="uid://bkwlyu8eydl86" path="res://3d/imports/stickynote/StickyNote.glb" id="6_elefc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bm5bl"]
 
@@ -42,6 +43,7 @@ shape = SubResource("BoxShape3D_bm5bl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_34wct")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -102,6 +104,9 @@ offset_top = 170.0
 offset_right = 1431.0
 offset_bottom = 1022.0
 stretch_mode = 3
+
+[node name="StickyNote" parent="." instance=ExtResource("6_elefc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00601447, 0.0983335, -0.0288911)
 
 [connection signal="visibility_changed" from="CanvasLayer" to="." method="_on_canvas_layer_visibility_changed"]
 [connection signal="pressed" from="CanvasLayer/Control/ResumeButton" to="." method="_on_resume_button_pressed"]

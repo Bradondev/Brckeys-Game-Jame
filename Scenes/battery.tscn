@@ -31,4 +31,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.251448, 0)
 DescriptionTextValue = "Pick Up battery"
 OutLinecolor = Color(0, 0.686275, 0, 1)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0338218, 0)
+light_color = Color(0.258824, 1, 0.156863, 1)
+light_energy = 0.5
+light_size = 0.274
+omni_range = 4.0
+
 [editable path="battery"]

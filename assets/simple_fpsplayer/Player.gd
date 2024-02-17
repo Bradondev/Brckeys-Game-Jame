@@ -51,9 +51,15 @@ func _ready():
 	SoundManager.PlaySFX("res://Audio/Door Closing.mp3", global_position, 8, .4)
 
 
+	$CanvasLayer/FlashlightHint.visible = false
 	await get_tree().process_frame
 	LevelLoader.GetLevel().connect("SpawnEnemy", Callable(self, "OnEnemySpawn"))
 	LevelLoader.GetLevel().connect("EnemyDeath", Callable(self, "OnEnemyDeath"))
+
+
+	if LevelLoader.bHasTutorialDone == false:
+		$CanvasLayer/FlashlightHint.visible = true
+		$CanvasLayer/FlashLightHintTimer.start()
 
 func ShowFlashlight(bShow = true):
 	if bShow:
@@ -88,6 +94,10 @@ func _input(event):
 	# Flashlight toggle. Defaults to F on Keyboard.
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_F:
+			if LevelLoader.bHasTutorialDone == false:
+				LevelLoader.bHasTutorialDone = true
+				$CanvasLayer/FlashLightHintTimer.stop()
+				$CanvasLayer/FlashlightHint.visible = false
 			if flashlight.is_visible_in_tree() and not event.echo:
 				ShowFlashlight(false)
 				SoundManager.PlaySFX("res://Audio/Flashlight Off.mp3", global_position)
@@ -214,4 +224,10 @@ func _on_check_paused_timer_timeout():
 
 
 func _on_run_sound_timer_timeout():
+	pass # Replace with function body.
+
+
+func _on_flash_light_hint_timer_timeout():
+	$CanvasLayer/FlashlightHint.visible = false
+	LevelLoader.bHasTutorialDone = true
 	pass # Replace with function body.

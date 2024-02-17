@@ -324,6 +324,9 @@ offset_right = 1463.67
 offset_bottom = 556.667
 color = Color(0, 0, 0, 1)
 
+[node name="StickyNote" parent="Note" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00601482, 0.0418358, -0.0288911)
+
 [node name="ZSign" parent="." instance=ExtResource("18_x1p6x")]
 transform = Transform3D(-1.09278e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.09278e-08, 10.4883, 3.56437, 7.98274)
 
