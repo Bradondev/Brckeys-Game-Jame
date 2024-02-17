@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_ifyox"]
 [ext_resource type="PackedScene" uid="uid://cuf7mugub7ny0" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="5_nmu8k"]
 [ext_resource type="ArrayMesh" uid="uid://rtbov14lekmt" path="res://3d/meshes/Mesh_YellowDoor.tres" id="6_wg8c1"]
-[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_yps3k"]
+[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_yps3k"]
 [ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="7_g6i8q"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_rmmeu"]
 [ext_resource type="PackedScene" uid="uid://uvo2cn81cd22" path="res://3d/prefabs/SM_toilet.tscn" id="8_xrj3q"]
@@ -75,7 +75,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [node name="6" type="Node3D"]
 script = ExtResource("1_pqify")
-MonsterSpawnChance = 20
+MonsterSpawnChance = 10
 PointsToPassBeforeDeath = 4
 
 [node name="Player" parent="." instance=ExtResource("2_h2ys6")]
