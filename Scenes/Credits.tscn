@@ -64,7 +64,7 @@ offset_right = -24.0
 offset_bottom = 240.0
 grow_horizontal = 0
 theme = SubResource("Theme_udhoj")
-text = "Escape The Space"
+text = "NightShift"
 horizontal_alignment = 1
 vertical_alignment = 1
 
