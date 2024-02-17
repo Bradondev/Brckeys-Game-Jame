@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cfh4uc1duhhua"]
+[gd_scene load_steps=18 format=3 uid="uid://cfh4uc1duhhua"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_7hvyn"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_wyqh8"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bf0osvw6nnlhq" path="res://3d/prefabs/SM_Mug.tscn" id="14_b1sfv"]
 [ext_resource type="FontFile" uid="uid://b024yg8oy0mbp" path="res://Font/Jennifers Hand Writing.ttf" id="15_cds11"]
 [ext_resource type="PackedScene" uid="uid://drhnknxf0r616" path="res://3d/imports/endingsign/EndingSign.glb" id="16_tuxa8"]
+[ext_resource type="PackedScene" uid="uid://hpq6xaircw3m" path="res://3d/imports/balooon/Balloons.glb" id="17_uneh8"]
 
 [node name="13" type="Node3D"]
 script = ExtResource("1_7hvyn")
@@ -909,5 +910,8 @@ font = ExtResource("15_cds11")
 
 [node name="EndingSign" parent="." instance=ExtResource("16_tuxa8")]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 1.45033, 1.50837, -51.3669)
+
+[node name="Balloons" parent="." instance=ExtResource("17_uneh8")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.63141, 1.0654, -49.0711)
 
 [editable path="lamp"]

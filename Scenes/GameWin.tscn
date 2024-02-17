@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://d24v41lqw7ljm"]
+[gd_scene load_steps=21 format=3 uid="uid://d24v41lqw7ljm"]
 
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_3pvs7"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/GameWin.gd" id="1_uxtva"]
 [ext_resource type="Script" path="res://Scripts/Menus/BackButton.gd" id="2_s2t8j"]
 [ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="3_qh7n3"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="4_3wfcy"]
@@ -43,6 +44,7 @@ default_font = ExtResource("1_3pvs7")
 default_font_size = 35
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_uxtva")
 
 [node name="GameOver" type="Control" parent="."]
 layout_mode = 3

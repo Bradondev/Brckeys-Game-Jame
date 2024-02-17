@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://0107nqw4t5ts"]
+[gd_scene load_steps=24 format=3 uid="uid://0107nqw4t5ts"]
 
 [ext_resource type="FontFile" uid="uid://bq1l0b67iwc20" path="res://Font/ProtestStrike-Regular.ttf" id="1_jrfbq"]
 [ext_resource type="Script" path="res://Scripts/Menus/PlayButton.gd" id="2_lsq1x"]
@@ -15,6 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://dgr5nicxcu3d5" path="res://3d/prefabs/SM_Door.tscn" id="11_26e2g"]
 [ext_resource type="PackedScene" uid="uid://bhpil5cd6b3ee" path="res://3d/prefabs/SM_spikes.tscn" id="12_w70ut"]
 [ext_resource type="PackedScene" uid="uid://lik474u4akqy" path="res://3d/prefabs/SM_bathroom_lights.tscn" id="13_4bmvr"]
+[ext_resource type="PackedScene" uid="uid://bk254p3f34t2k" path="res://3d/imports/Radio.glb" id="16_2uq2e"]
+[ext_resource type="Script" path="res://Scripts/Environment/WinStuff.gd" id="16_p5msk"]
+[ext_resource type="PackedScene" uid="uid://hpq6xaircw3m" path="res://3d/imports/balooon/Balloons.glb" id="16_qj8xo"]
+[ext_resource type="PackedScene" uid="uid://drhnknxf0r616" path="res://3d/imports/endingsign/EndingSign.glb" id="18_wbvuy"]
 
 [sub_resource type="Theme" id="Theme_oxkcl"]
 default_font = ExtResource("1_jrfbq")
@@ -69,16 +73,13 @@ vertical_alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
 custom_minimum_size = Vector2(350, 750)
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -175.0
-offset_top = -834.0
-offset_right = 175.0
-offset_bottom = -34.0
-grow_horizontal = 2
+offset_left = 33.0
+offset_top = -839.0
+offset_right = 383.0
+offset_bottom = -39.0
 grow_vertical = 0
 theme_override_constants/separation = 20
 alignment = 2
@@ -273,7 +274,7 @@ Flickering = true
 transform = Transform3D(1.09784, 0, -0.560994, 0, 1.23287, 0, 0.560994, 0, 1.09784, 1.1662, -0.214955, -3.20793)
 
 [node name="lamp" parent="." instance=ExtResource("10_0i0xr")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.61696, 1.03838, -3.16043)
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 2.40776, 1.03838, -2.2678)
 
 [node name="SmDoor" parent="." instance=ExtResource("11_26e2g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.71182, 0.22387, -1.86766)
@@ -289,6 +290,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0075, -0.490912, 0.875542)
 
 [node name="bathroomLights" parent="." instance=ExtResource("13_4bmvr")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.161579, -4.43131e-07, 9.11127)
+
+[node name="WinStuff" type="Node3D" parent="."]
+script = ExtResource("16_p5msk")
+
+[node name="Radio" parent="WinStuff" instance=ExtResource("16_2uq2e")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.01549, 1.03838, -3.01825)
+
+[node name="Balloons2" parent="WinStuff" instance=ExtResource("16_qj8xo")]
+transform = Transform3D(0.155291, 0, 0.579555, 0, 0.6, 0, -0.579555, 0, 0.155291, 2.44595, 0, -4.45718)
+
+[node name="EndingSign" parent="WinStuff" instance=ExtResource("18_wbvuy")]
+transform = Transform3D(0.34641, 0, -0.2, 0, 0.4, 0, 0.2, 0, 0.34641, 1.97589, 1.03838, -2.47028)
 
 [connection signal="button_up" from="CanvasLayer/Panel/VBoxContainer/PlayButton" to="CanvasLayer/Panel/VBoxContainer/PlayButton" method="_on_button_up"]
 [connection signal="button_up" from="CanvasLayer/Panel/VBoxContainer/Credits" to="CanvasLayer/Panel/VBoxContainer/Credits" method="_on_button_up"]

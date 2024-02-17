@@ -13,6 +13,8 @@ var master_Bus = AudioServer.get_bus_index("Master")
 var music_Bus = AudioServer.get_bus_index("Music")
 var sfx_Bus = AudioServer.get_bus_index("SFX")
 
+var bHasWon = false
+
 func _ready():
 	LoadSettings()
 	Reset()
