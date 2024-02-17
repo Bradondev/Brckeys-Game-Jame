@@ -47,6 +47,7 @@ func SwitchToMusic(audioPath, tweenOutLength, tweenInLength, startloc = 0):
 	if MusicToChangeTo == audioPath:
 		return
 
+	MusicToChangeTo = audioPath
 	StartPosition = startloc
 
 	if is_instance_valid(MusicTweenIn):
@@ -58,7 +59,6 @@ func SwitchToMusic(audioPath, tweenOutLength, tweenInLength, startloc = 0):
 
 	MusicTweenIn = create_tween()
 	MusicTweenIn.connect("finished", Callable(self, "OnMusicInTweenFinished"))
-	MusicToChangeTo = audioPath
 	MusicTweenOut.tween_property(MusicPlayer, "volume_db", -200, tweenOutLength)
 	MusicTweenIn.tween_property(MusicPlayer, "volume_db", 0, tweenInLength)
 	MusicTweenOut.play()
@@ -67,6 +67,14 @@ func OnMusicOutTweenFinished():
 	MusicPlayer.stream = load(MusicToChangeTo)
 	MusicPlayer.play(StartPosition)
 	MusicTweenIn.play()
+
+func StopMusic():
+	MusicPlayer.stop()
+	CompleteSoundTimer.stop()
+	if is_instance_valid(MusicTweenIn):
+		MusicTweenIn.stop()
+		MusicTweenOut.stop()
+
 
 func OnMusicInTweenFinished():
 	pass

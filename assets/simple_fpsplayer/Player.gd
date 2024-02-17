@@ -49,7 +49,7 @@ func _ready():
 			ShowFlashlight(false)
 
 	SoundManager.PlaySFX("res://Audio/Door Closing.mp3", global_position, 8, .4)
-	SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
+
 
 	await get_tree().process_frame
 	LevelLoader.GetLevel().connect("SpawnEnemy", Callable(self, "OnEnemySpawn"))

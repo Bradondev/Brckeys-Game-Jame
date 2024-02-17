@@ -10,6 +10,8 @@ var MonsterRef = null
 signal SpawnEnemy
 signal EnemyDeath
 
+@export var bTurnOffMusic = false
+
 func _ready():
 	add_to_group("Level")
 	LevelLoader.MovePlayerToPosition()
@@ -22,6 +24,10 @@ func _ready():
 	await get_tree().process_frame
 	AttemptSpawnEnemy()
 
+	if bTurnOffMusic:
+		SoundManager.StopMusic()
+	else:
+		SoundManager.SwitchToMusic("res://Audio/Brandon_x4_-_Brackey_Jam_-_Ambient_Background_Music_-_Optimized.mp3", .1, .1)
 
 func CanSpawnEnemy():
 	return MonsterSpawnChance > 0 and is_instance_valid(MonsterRef) == false
