@@ -23,7 +23,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [node name="4" type="Node3D"]
 script = ExtResource("1_rqllj")
-MonsterSpawnChance = 45
+MonsterSpawnChance = 35
 PointsToPassBeforeDeath = 8
 
 [node name="Player" parent="." instance=ExtResource("2_i1jut")]
