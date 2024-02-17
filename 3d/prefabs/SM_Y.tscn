@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0jjtmewvo52d"]
+
+[ext_resource type="PackedScene" uid="uid://d21abhqwn5gu3" path="res://3d/imports/letters/YSign.glb" id="1_hmsm7"]
+
+[node name="YSign" instance=ExtResource("1_hmsm7")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)

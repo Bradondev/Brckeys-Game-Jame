@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d3abwpntq0386"]
+[gd_scene load_steps=34 format=3 uid="uid://d3abwpntq0386"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Level.gd" id="1_4qra7"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_f1m5m"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5mopr7v88li7" path="res://3d/prefabs/SM_ceiling_tile.tscn" id="5_35tk4"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_e61yw"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="6_bb7hh"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
+[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="7_senwv"]
 [ext_resource type="ArrayMesh" uid="uid://rec45571l5cm" path="res://3d/meshes/Mesh_BlueDoor.tres" id="7_vgsxy"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Door.gd" id="8_qceql"]
 [ext_resource type="PackedScene" uid="uid://cuf7mugub7ny0" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="9_dgu8g"]
@@ -21,9 +21,11 @@
 [ext_resource type="PackedScene" uid="uid://b48oyyiq3em16" path="res://Scripts/Ai/monster_path.tscn" id="14_gsxrt"]
 [ext_resource type="PackedScene" uid="uid://hf8ven2syv21" path="res://Scenes/LightSystem/BaseLight.tscn" id="15_2lcii"]
 [ext_resource type="PackedScene" uid="uid://b6tm7igauwg5q" path="res://Scripts/Notes/NotePad.tscn" id="16_1aqqn"]
-[ext_resource type="Resource" uid="uid://mvbrofcd5ube" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
+[ext_resource type="Resource" path="res://Scripts/Notes/9.tres" id="17_le3s3"]
 [ext_resource type="Texture2D" uid="uid://bbuxcrifi748s" path="res://Art/drawing.png" id="18_vyi8g"]
 [ext_resource type="PackedScene" uid="uid://dfw0hbia8oggq" path="res://3d/prefabs/SM_chair_office.tscn" id="19_u43oe"]
+[ext_resource type="PackedScene" uid="uid://d0jjtmewvo52d" path="res://3d/prefabs/SM_Y.tscn" id="25_ovej0"]
+[ext_resource type="PackedScene" uid="uid://b5uwoh58bf2w5" path="res://3d/prefabs/SM_Z.tscn" id="26_m210j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4mfb"]
 vertex_color_use_as_albedo = true
@@ -1243,6 +1245,12 @@ transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0,
 
 [node name="chairOffice10" parent="." instance=ExtResource("19_u43oe")]
 transform = Transform3D(5.13609e-08, 4.49011e-15, 1.175, 1.02722e-07, -1.175, 0, 1.175, 1.02722e-07, -5.13609e-08, 20.4457, 2.62957, 1.24382)
+
+[node name="YSign" parent="." instance=ExtResource("25_ovej0")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 8.78582, 3.52757, 8.91941)
+
+[node name="ZSign" parent="." instance=ExtResource("26_m210j")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 28.2101, 3.61236, -22.5027)
 
 [connection signal="animation_finished" from="SmDoor3/AnimationPlayer" to="SmDoor3" method="_on_animation_player_animation_finished"]
 

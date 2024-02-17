@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf0osvw6nnlhq"]
+
+[ext_resource type="PackedScene" uid="uid://bssacupfc7xtq" path="res://3d/imports/coffeemug/CoffeeMug.glb" id="1_erekw"]
+
+[node name="CoffeeMug" instance=ExtResource("1_erekw")]
