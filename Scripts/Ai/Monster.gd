@@ -40,16 +40,17 @@ func _on_kill_box_body_exited(body):
 	if body.name == "Player":
 		body.TakeDamage()
 func PlayAnimation(AnimationName, StartTime = 0.0):
-	$Jerry/Jerry/AnimationPlayer.play(AnimationName)
-	$Jerry/Jerry/AnimationPlayer.seek(StartTime)
+	$JerryFixed/JerryFixed/AnimationPlayer.play(AnimationName)
+	$JerryFixed/JerryFixed/AnimationPlayer.seek(StartTime)
 func GetScanRayCasts():
-	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder.get_children()
+	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder.get_children()
 func GetKillBox():
-	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/KillBOX
+	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/KillBOX
 func GetDashRayCast():
-	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/DashRayCast
+	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/DashRayCast
 func GetSpotLight():
-	return $Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/SpotLight3D
+	return $JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/SpotLight3D
+
 	
 	 
 	

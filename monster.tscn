@@ -1,26 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://b884uknjsec3j"]
+[gd_scene load_steps=12 format=3 uid="uid://b884uknjsec3j"]
 
 [ext_resource type="Script" path="res://Scripts/Ai/Monster.gd" id="1_d7srs"]
-[ext_resource type="PackedScene" uid="uid://br0n0kpbt5ltn" path="res://3d/jerry/SM_jerry.tscn" id="2_008yr"]
+[ext_resource type="PackedScene" uid="uid://cxehjjkyq2ld1" path="res://3d/jerry/jerry_fixed.tscn" id="2_44dm1"]
 [ext_resource type="Script" path="res://Scripts/Ai/StateMachine.gd" id="2_smmno"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterIdle.gd" id="3_5vln3"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterChase.gd" id="4_1g41x"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterDash.gd" id="5_qtln4"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterScan.gd" id="6_8q1jc"]
 [ext_resource type="Script" path="res://Scripts/Ai/MonsterConfuse.gd" id="6_al6yw"]
+[ext_resource type="Script" path="res://Scripts/Ai/MonsterglitchOut.gd" id="9_en0ku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8f00h"]
-size = Vector3(1.49107, 1.54785, 2.90179)
+size = Vector3(1.54095, 1.54785, 3.00058)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b2vdr"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_plwrc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_clt3k"]
-albedo_color = Color(0.980392, 0.184314, 0.290196, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_r3jsi"]
-size = Vector3(0.5, 0.5, 0.5)
+[sub_resource type="BoxShape3D" id="BoxShape3D_ibafn"]
+size = Vector3(1, 1, 2.81448)
 
 [node name="Monster" type="CharacterBody3D" groups=["monster"]]
 collision_layer = 8
@@ -29,178 +23,191 @@ axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_d7srs")
 
-[node name="Jerry" parent="." instance=ExtResource("2_008yr")]
-transform = Transform3D(-0.75, 0, -1.13247e-07, 0, 0.75, 0, 1.13247e-07, 0, -0.75, 0, -0.36, 0)
+[node name="JerryFixed" parent="." instance=ExtResource("2_44dm1")]
+transform = Transform3D(-0.75, 0, 6.55671e-08, 0, 0.75, 0, -6.55671e-08, 0, -0.75, 0, -0.257098, 0)
 
-[node name="Jerry" parent="Jerry" index="0"]
-transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+[node name="Skeleton3D" parent="JerryFixed/JerryFixed/metarig" index="0"]
+bones/1/position = Vector3(-0.279015, 1.20538, -1.07481)
+bones/2/rotation = Quaternion(0.404212, -0.844875, 0.174222, -0.304049)
+bones/3/rotation = Quaternion(-0.060493, 0.00140943, -0.026044, 0.997828)
+bones/4/rotation = Quaternion(0.0791497, 0.000715327, -0.0165326, 0.996725)
+bones/5/rotation = Quaternion(0.0810826, -8.394e-05, -0.0349511, 0.996094)
+bones/6/rotation = Quaternion(0.107712, 0.000318054, -0.0585758, 0.992455)
+bones/7/rotation = Quaternion(0.132538, 0.00216541, -0.14, 0.981238)
+bones/8/rotation = Quaternion(0.0998188, -0.00179515, -0.183153, 0.978002)
+bones/9/rotation = Quaternion(0.105183, 0.000823963, -0.177913, 0.978408)
+bones/10/rotation = Quaternion(0.0918335, 0.000817548, -0.157996, 0.98316)
+bones/11/rotation = Quaternion(0.0643388, -0.000875247, -0.124583, 0.990121)
+bones/12/rotation = Quaternion(0.061005, 0.00136102, -0.0846047, 0.994544)
+bones/13/rotation = Quaternion(0.0327826, -0.000529226, -0.0374191, 0.998762)
+bones/14/rotation = Quaternion(0.0608054, -3.9157e-05, 0.00811696, 0.998117)
+bones/15/rotation = Quaternion(0.0848691, -6.31516e-06, 0.033908, 0.995815)
+bones/16/rotation = Quaternion(0.122532, 0.000203494, 0.0397637, 0.991668)
+bones/17/rotation = Quaternion(0.150611, 0.00016661, 0.0363606, 0.987924)
+bones/17/scale = Vector3(0.999989, 1, 0.999989)
+bones/18/rotation = Quaternion(0.152544, -0.000292967, 0.0585453, 0.986561)
+bones/18/scale = Vector3(0.999998, 1, 0.999998)
+bones/19/rotation = Quaternion(0.182226, 0.000854794, 0.0819455, 0.979836)
+bones/22/rotation = Quaternion(0.0835045, 0.0111215, -0.0699655, 0.993986)
+bones/23/rotation = Quaternion(0.0342371, -0.00640875, -0.00627276, 0.999374)
+bones/24/rotation = Quaternion(-0.00501413, 0.00149737, 0.000776617, 0.999986)
+bones/25/rotation = Quaternion(-0.00537943, 0.000396202, 0.00122891, 0.999985)
+bones/25/scale = Vector3(0.871178, 0.871179, 0.871178)
+bones/26/rotation = Quaternion(0.00912875, 0.000914754, 0.000923247, 0.999958)
+bones/27/rotation = Quaternion(-0.00184945, 0.00334871, -0.00625681, 0.999973)
+bones/28/rotation = Quaternion(0.0124011, 0.0083608, -0.0449177, 0.998879)
+bones/29/rotation = Quaternion(0.162761, 0.940875, 0.296598, 0.0171216)
+bones/30/rotation = Quaternion(0.752943, -0.229627, -0.110964, -0.606659)
+bones/31/rotation = Quaternion(0.782471, 0.00897911, -0.114579, 0.611988)
+bones/33/rotation = Quaternion(-0.216903, 0.92483, 0.292626, 0.109605)
+bones/34/rotation = Quaternion(0.414597, 0.247551, 0.0297524, -0.875182)
+bones/35/rotation = Quaternion(0.430774, 0.0670251, 0.0373616, 0.899192)
+bones/38/rotation = Quaternion(-0.295905, 0.118465, 0.881082, -0.349429)
+bones/39/rotation = Quaternion(-0.261283, 0.0138983, -0.0267906, 0.96479)
+bones/40/rotation = Quaternion(0.147863, -0.146559, 0.00299001, 0.978084)
+bones/42/rotation = Quaternion(0.276704, 0.0528252, 0.813825, 0.508266)
+bones/43/rotation = Quaternion(-0.302391, 0.02531, 0.0092476, 0.952803)
+bones/44/rotation = Quaternion(0.525083, 0.286484, -0.0431306, 0.800222)
+bones/45/position = Vector3(0.114835, 1.9425, 2.52814)
+bones/45/rotation = Quaternion(0.639464, 0.114514, -0.0599736, 0.757875)
+bones/47/position = Vector3(0.573391, 0.282242, 1.58252)
+bones/47/rotation = Quaternion(-5.60914e-06, -0.00446565, 0.99999, 1.6643e-07)
+bones/48/rotation = Quaternion(0.490823, -6.61367e-06, 3.0114e-09, 0.871259)
+bones/51/rotation = Quaternion(0.0348339, 0.00584704, -0.0126979, 0.999295)
+bones/52/rotation = Quaternion(-0.0360596, 0.920578, 0.388842, 0.00613613)
+bones/54/rotation = Quaternion(-0.0228618, 0.00477434, -0.000735081, 0.999727)
+bones/57/rotation = Quaternion(-0.0197151, 0.0352909, -0.00484276, 0.999171)
+bones/58/position = Vector3(-1.03248, 0.295539, 2.4847)
+bones/58/rotation = Quaternion(0.0956158, -0.00444521, 0.995407, 0.00183646)
+bones/62/rotation = Quaternion(0.0348339, -0.00584704, 0.0126979, 0.999295)
+bones/63/rotation = Quaternion(0.0360596, 0.920578, 0.388842, -0.00613613)
+bones/65/rotation = Quaternion(-0.0228618, -0.00477434, 0.000735081, 0.999727)
+bones/68/rotation = Quaternion(-0.0197151, -0.0352909, 0.00484276, 0.999171)
+bones/69/position = Vector3(1.34534, 0.339233, -2.63784)
+bones/79/position = Vector3(-2.29717, 0.358397, -1.33759)
+bones/79/rotation = Quaternion(-0.352969, 0.158384, 0.92025, 0.0588803)
+bones/80/rotation = Quaternion(0.745069, -0.130738, 0.130489, 0.6409)
+bones/83/rotation = Quaternion(0.628142, 0.0294104, -0.0995841, 0.771139)
+bones/86/rotation = Quaternion(0.672341, 0.117545, -0.201903, 0.702408)
 
-[node name="Skeleton3D" parent="Jerry/Jerry/metarig" index="0"]
-bones/1/position = Vector3(2.2311e-06, 1.37817, -0.58487)
-bones/1/rotation = Quaternion(0.678984, 0.0341541, 0.0398448, 0.732275)
-bones/3/rotation = Quaternion(-0.0353456, -0.00172274, 0.0478377, 0.998228)
-bones/4/rotation = Quaternion(0.0419974, 5.59305e-07, -6.59262e-06, 0.999118)
-bones/5/rotation = Quaternion(-0.00621903, -2.72483e-07, -0.000114895, 0.999981)
-bones/6/rotation = Quaternion(0.000332309, 1.39007e-06, -0.000256649, 1)
-bones/7/rotation = Quaternion(0.00828496, 7.54055e-06, -0.000487296, 0.999966)
-bones/8/rotation = Quaternion(-0.0174635, -6.13155e-06, -0.000625393, 0.999847)
-bones/9/rotation = Quaternion(-0.00165948, 3.38779e-06, -0.000662252, 0.999998)
-bones/10/rotation = Quaternion(0.00199914, 4.07199e-06, -0.000647075, 0.999998)
-bones/11/rotation = Quaternion(-0.00230773, -2.3545e-06, -0.00050829, 0.999997)
-bones/12/rotation = Quaternion(0.0415635, 1.89887e-05, -0.00118069, 0.999135)
-bones/13/rotation = Quaternion(0.069326, -5.87512e-05, -0.00415423, 0.997585)
-bones/14/rotation = Quaternion(0.190944, 4.94155e-05, -0.0102796, 0.981547)
-bones/15/rotation = Quaternion(0.259612, 2.98785e-06, -0.0159899, 0.965581)
-bones/16/rotation = Quaternion(0.194645, -9.6257e-05, -0.0188034, 0.980694)
-bones/17/rotation = Quaternion(-0.0713419, -0.000114805, -0.0250321, 0.997138)
-bones/18/rotation = Quaternion(-0.549555, 0.000194321, -0.03886, 0.834553)
-bones/19/rotation = Quaternion(-0.451079, -8.74367e-05, -0.00837012, 0.892445)
-bones/22/rotation = Quaternion(0.0239704, -0.00597995, -0.00386466, 0.999687)
-bones/23/rotation = Quaternion(0.457765, -0.00947141, 0.0129206, 0.888929)
-bones/24/rotation = Quaternion(0.00773431, -0.00724845, 0.00129812, 0.999943)
-bones/25/rotation = Quaternion(-0.042204, -0.00718206, 0.00107232, 0.999083)
-bones/26/rotation = Quaternion(-0.0429554, -0.00725669, 0.000817775, 0.99905)
-bones/27/rotation = Quaternion(-0.106459, -0.00738451, 0.000285017, 0.99429)
-bones/28/rotation = Quaternion(-0.103052, -0.00752866, -0.000598834, 0.994647)
-bones/30/rotation = Quaternion(0.856097, -0.197778, -0.222237, -0.422602)
-bones/31/rotation = Quaternion(0.964229, -0.0247724, -0.109154, 0.24028)
-bones/34/rotation = Quaternion(0.306583, 0.598294, 0.393181, -0.627264)
-bones/35/rotation = Quaternion(0.807627, 0.462345, 0.0441845, 0.363351)
-bones/38/rotation = Quaternion(-0.242718, -0.0364871, 0.935739, -0.253277)
-bones/39/rotation = Quaternion(-0.542249, 0.0451176, -0.100114, 0.833011)
-bones/40/rotation = Quaternion(0.767113, -0.0383568, 0.0131517, 0.640229)
-bones/42/rotation = Quaternion(0.185447, -0.201984, 0.905271, 0.324495)
-bones/43/rotation = Quaternion(-0.58198, -0.0280329, 0.0944155, 0.807217)
-bones/44/rotation = Quaternion(0.962712, 0.0316974, -0.0284125, 0.267157)
-bones/45/position = Vector3(-9.67749e-06, 0.555672, 2.5369)
-bones/47/position = Vector3(0.752086, 0.279816, 1.40841)
-bones/47/rotation = Quaternion(-5.60912e-06, -0.00460218, 0.999989, 1.66675e-07)
-bones/58/position = Vector3(-0.7521, 0.293913, 2.37437)
-bones/58/rotation = Quaternion(1.78176e-06, -0.00446565, 0.99999, 1.33424e-07)
-bones/69/position = Vector3(0.593757, 0.353156, -1.69377)
-bones/69/rotation = Quaternion(0.000572028, 0.170683, 0.98532, -0.00333466)
-bones/79/position = Vector3(-0.593748, 0.365719, -0.84075)
+[node name="HeadAttachment" parent="JerryFixed/JerryFixed/metarig/Skeleton3D" index="24"]
+transform = Transform3D(0.966578, 0.237364, 0.0968734, 0.0592325, 0.160877, -0.985196, -0.249435, 0.958007, 0.14144, 0.114845, 1.92431, 1.24971)
 
-[node name="HeadAttachment" parent="Jerry/Jerry/metarig/Skeleton3D" index="24"]
-transform = Transform3D(1, 1.3415e-11, 7.15252e-07, 7.14761e-07, -0.0370484, -0.999313, 2.64854e-08, 0.999313, -0.0370484, 1.1369e-11, 0.537506, 1.23803)
-
-[node name="DashRayCast" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment" index="0"]
-transform = Transform3D(-1.72258e-08, 7.14761e-07, -1, 0.999314, -0.0370485, -4.3695e-08, -0.0370485, -0.999314, -7.13632e-07, -1.058e-06, -1.47681, 1.47928)
+[node name="DashRayCast" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="0"]
+transform = Transform3D(-0.345534, -9.45829e-07, -0.938407, 0.937764, -0.0370494, -0.345297, -0.0347671, -0.999314, 0.0128028, 0.498638, -1.31588, 1.10717)
 enabled = false
 target_position = Vector3(40, 0, 0)
 collision_mask = 4
 debug_shape_custom_color = Color(0.72549, 0.521569, 1, 1)
 
-[node name="RaycastHolder" type="Node3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment" index="1"]
-transform = Transform3D(-1.72258e-08, 7.14761e-07, -1, 0.999314, -0.0370485, -4.3695e-08, -0.0370485, -0.999314, -7.13632e-07, -4.78065e-07, 0.366161, 0.438622)
+[node name="RaycastHolder" type="Node3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="1"]
+transform = Transform3D(2.13163e-14, 4.37116e-08, 1, 1, -4.47035e-08, 0, 3.72529e-08, 1, -4.37114e-08, -0.00255176, 0.390168, -0.500868)
 
-[node name="Scanner" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="Scanner" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21152, 0.471398, -9.24583e-09)
 target_position = Vector3(15, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner2" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="Scanner2" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0, 0.471398, 0)
 target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner3" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="Scanner3" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 0, 0.471398, 0)
 target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner4" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0.471398, 0)
+[node name="Scanner4" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+transform = Transform3D(0.965926, 7.45058e-09, 0.258819, -7.45058e-09, 1, -1.86265e-09, -0.258819, -3.64153e-14, 0.965926, 0.0584368, 0.469231, 6.75209e-09)
 target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner5" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="Scanner5" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0, 0.471398, 0)
 target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner6" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="Scanner6" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0, 0.471398, 0)
 target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Scanner7" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="Scanner7" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 0, 0.471398, 0)
 target_position = Vector3(12, 0, 0)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="BackScanner8" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="BackScanner8" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 2)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="BackScanner9" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="BackScanner9" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(1.053e-07, 0, -1, 0, 1, 0, 1, 0, 1.053e-07, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 4)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="BackScanner10" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="BackScanner10" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 2)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="BackScanner11" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="BackScanner11" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(-0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 3)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="BackScanner12" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="BackScanner12" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, 0.5, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 3)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="BackScanner13" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="BackScanner13" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 4)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="BackScanner14" type="RayCast3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
+[node name="BackScanner14" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/RaycastHolder"]
 transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 0, 0.471398, 0)
 target_position = Vector3(0, 0, 4)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment" index="2"]
-transform = Transform3D(-1, 7.14761e-07, 6.09372e-08, -8.73764e-08, -0.0370485, -0.999314, -7.12013e-07, -0.999314, 0.0370485, -1.46191e-07, 0.479616, -0.0414088)
+[node name="SpotLight3D" type="SpotLight3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="2"]
+transform = Transform3D(-1.25121, -1.36691e-06, 0.460712, -0.460396, -0.0493991, -1.25035, 0.0170704, -1.33242, 0.046356, -0.196378, 0.516743, -0.408935)
 light_color = Color(0.258824, 0.65098, 0, 1)
 light_energy = 3.316
 shadow_enabled = true
 spot_range = 12.0
 spot_angle = 30.0
 
-[node name="KillBOX" type="Area3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment" index="3"]
-transform = Transform3D(-1, 7.14761e-07, 6.09372e-08, -8.73764e-08, -0.0370485, -0.999314, -7.12013e-07, -0.999314, 0.0370485, -4.23346e-07, -0.266237, 0.439377)
+[node name="KillBOX" type="Area3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="3"]
+transform = Transform3D(1, 1.03917e-13, -4.37115e-08, -4.37115e-08, 0, -1, -1.08802e-14, 1, 3.72529e-09, 0.000473008, -0.185109, -0.0100487)
 collision_layer = 0
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/KillBOX"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00934315, 0.135171, -0.0442147)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/KillBOX"]
+transform = Transform3D(1, 1.00586e-13, 1.35003e-13, 2.67009e-12, 1, 1.2666e-07, 8.52651e-14, 3.72529e-09, 1, -0.0155943, 0.135171, 0.00517917)
 shape = SubResource("BoxShape3D_8f00h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_b2vdr")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.887602, 0.873154)
 visible = false
-mesh = SubResource("CapsuleMesh_plwrc")
+shape = SubResource("BoxShape3D_ibafn")
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "enemy")]
 script = ExtResource("2_smmno")
@@ -230,11 +237,9 @@ enemy = NodePath("../..")
 script = ExtResource("6_al6yw")
 enemy = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00811391, 0.375351, -0.807962)
-visible = false
-material_override = SubResource("StandardMaterial3D_clt3k")
-mesh = SubResource("BoxMesh_r3jsi")
+[node name="GlitchOut" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("9_en0ku")
+enemy = NodePath("../..")
 
 [node name="ChaseTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -249,13 +254,14 @@ wait_time = 3.0
 wait_time = 10.0
 one_shot = true
 
-[connection signal="StartDash" from="Jerry" to="State Machine/Dash" method="_on_jerry_start_dash"]
-[connection signal="body_entered" from="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/KillBOX" to="." method="_on_kill_box_body_entered"]
-[connection signal="body_exited" from="Jerry/Jerry/metarig/Skeleton3D/HeadAttachment/KillBOX" to="." method="_on_kill_box_body_exited"]
-[connection signal="animation_finished" from="Jerry/Jerry/AnimationPlayer" to="State Machine/Scan" method="_on_animation_player_animation_finished"]
+[connection signal="StartDash" from="JerryFixed" to="State Machine/Dash" method="_on_jerry_fixed_start_dash"]
+[connection signal="body_entered" from="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/KillBOX" to="." method="_on_kill_box_body_entered"]
+[connection signal="body_exited" from="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment/KillBOX" to="." method="_on_kill_box_body_exited"]
+[connection signal="animation_finished" from="JerryFixed/JerryFixed/AnimationPlayer" to="State Machine/Scan" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="JerryFixed/JerryFixed/AnimationPlayer" to="State Machine/GlitchOut" method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="ChaseTimer" to="State Machine/Chase" method="_on_timer_timeout"]
 [connection signal="timeout" from="ChaseToDashTimer" to="State Machine/Chase" method="_on_chase_to_dash_timer_timeout"]
 [connection signal="timeout" from="DashTimer" to="State Machine/Dash" method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="AliveTimer" to="State Machine/Dash" method="_on_alive_timer_timeout"]
 
-[editable path="Jerry"]
+[editable path="JerryFixed"]
