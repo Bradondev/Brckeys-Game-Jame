@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Gameplay/Door.gd" id="4_xx6mc"]
 [ext_resource type="PackedScene" uid="uid://cuf7mugub7ny0" path="res://3d/prefabs/SM_door_wood_standard.tscn" id="5_764ql"]
 [ext_resource type="PackedScene" uid="uid://dt1qcm2hx4o83" path="res://Prefabs/PlayerStartOrientation.tscn" id="5_mfl6a"]
-[ext_resource type="PackedScene" path="res://3d/prefabs/SM_Ground.tscn" id="6_17l5e"]
+[ext_resource type="PackedScene" uid="uid://d11wl3x6w6w3n" path="res://3d/prefabs/SM_Ground.tscn" id="6_17l5e"]
 [ext_resource type="ArrayMesh" uid="uid://rtbov14lekmt" path="res://3d/meshes/Mesh_YellowDoor.tres" id="6_atygc"]
 [ext_resource type="PackedScene" uid="uid://vgvgt32il5cr" path="res://Scenes/pop_up.tscn" id="7_4cw1r"]
 [ext_resource type="PackedScene" uid="uid://dvbgue5ks3uno" path="res://Lighting/NormalLighting.tscn" id="7_v00b1"]
@@ -179,6 +179,10 @@ OutLinecolor = Color(0, 0.686275, 0, 1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SmDoor"]
 transform = Transform3D(1, 0, 0, 0, 3.42742, 0, 0, 0, 0.257254, 0.901399, 1.31885, 0.146492)
 shape = SubResource("BoxShape3D_2p5br")
+
+[node name="Timer" type="Timer" parent="SmDoor"]
+wait_time = 2.0
+autostart = true
 
 [node name="PlayerStartOrientation2" parent="." instance=ExtResource("5_mfl6a")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.01835, 1, -0.430159)
@@ -601,6 +605,7 @@ flip_faces = true
 mesh = SubResource("CylinderMesh_4hro4")
 
 [connection signal="animation_finished" from="SmDoor/AnimationPlayer" to="SmDoor" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="SmDoor/Timer" to="SmDoor2" method="_on_timer_timeout"]
 
 [editable path="SmDoor/doorStandard"]
 [editable path="SmDoor2"]
