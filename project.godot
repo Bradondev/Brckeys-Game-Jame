@@ -13,7 +13,8 @@ config_version=5
 config/name="Brckeys-game-jame"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Art/NightShiftIcon.png"
+config/windows_native_icon="res://Art/NightShiftIcon.ico"
 
 [autoload]
 
@@ -24,6 +25,7 @@ SoundManager="*res://Scripts/AutoLoad/SoundManager.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [input]

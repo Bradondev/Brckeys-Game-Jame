@@ -12,12 +12,12 @@ License: MIT
 
 3.
 Author:  Kevin MacLeod (incompetech.com)
-"In Your Arms" (radio song)
+"In Your Arms" (radio song) <edited>
 Link https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500042
 License: http://creativecommons.org/licenses/by/3.0/
 
 4.
 Author:  milton.
-radio interference.mp3 (glitch effect)
+radio interference.mp3 (glitch effect) <Pitch Shifted>
 Linkhttps://freesound.org/people/milton./sounds/103035/
 License: https://creativecommons.org/licenses/by-nc/3.0/
