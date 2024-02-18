@@ -46,7 +46,8 @@ func KnockCheck():
 
 func InterAct():
 	Knocks += 1
-	$Timer.start()
+	if get_node_or_null("Timer"):
+		$Timer.start()
 
 	var level = LevelLoader.GetLevel()
 	if bDisabled:
