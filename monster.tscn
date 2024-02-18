@@ -17,6 +17,33 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_8f00h"]
 size = Vector3(1.13579, 0.811767, 1.38843)
 
+[sub_resource type="Animation" id="Animation_8pvlh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlitchOutSound:pitch_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GlitchOutSound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_sigop"]
 resource_name = "TurnLeftWalk"
 length = 3.29167
@@ -6603,33 +6630,6 @@ tracks/92/keys = {
 }
 tracks/92/use_blend = true
 
-[sub_resource type="Animation" id="Animation_8pvlh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GlitchOutSound:pitch_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.8]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GlitchOutSound:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_11icj"]
 _data = {
 "Glitch1": ExtResource("5_xgxqu"),
@@ -6664,7 +6664,6 @@ greenColor = Color(0.772549, 1, 0.678431, 1)
 transform = Transform3D(-0.75, 0, 6.55671e-08, 0, 0.75, 0, -6.55671e-08, 0, -0.75, 0, -0.940441, 0)
 
 [node name="Skeleton3D" parent="JerryFixed/JerryFixed/metarig" index="0"]
-bones/0/position = Vector3(-3.14572e-17, 0.0192809, -1.30678)
 bones/1/position = Vector3(2.7487e-06, 1.38953, -0.720555)
 bones/1/rotation = Quaternion(0.674947, 0.0299396, 0.0317244, 0.736576)
 bones/2/rotation = Quaternion(0.948265, -0.30292, -0.0248888, -0.0917269)
@@ -6676,12 +6675,9 @@ bones/7/rotation = Quaternion(0.12898, -0.000842052, 0.0544512, 0.990151)
 bones/8/rotation = Quaternion(0.093218, -0.00149347, -0.152364, 0.983917)
 bones/9/rotation = Quaternion(0.0547964, 0.00120863, -0.261012, 0.963778)
 bones/10/rotation = Quaternion(0.056211, 0.00124233, -0.240113, 0.969115)
-bones/10/scale = Vector3(1, 1, 1)
 bones/11/rotation = Quaternion(0.0631511, -0.00125068, -0.17798, 0.982005)
-bones/11/scale = Vector3(1, 1, 1)
 bones/12/rotation = Quaternion(0.0946143, 0.00184705, -0.114831, 0.988867)
 bones/13/rotation = Quaternion(0.0621161, -0.000868767, -0.0614109, 0.996178)
-bones/13/scale = Vector3(1, 1, 1)
 bones/14/rotation = Quaternion(0.0316317, 5.44777e-05, -0.0113768, 0.999435)
 bones/15/rotation = Quaternion(-0.013544, -8.11184e-06, 0.0430674, 0.99898)
 bones/16/rotation = Quaternion(-0.00947368, 0.000520772, 0.101734, 0.994766)
@@ -6690,8 +6686,6 @@ bones/17/scale = Vector3(0.999989, 1, 0.999989)
 bones/18/rotation = Quaternion(0.143374, 0.000129294, -0.0258252, 0.989332)
 bones/18/scale = Vector3(0.999998, 1, 0.999998)
 bones/19/rotation = Quaternion(0.209011, -0.00153042, -0.146679, 0.966849)
-bones/19/scale = Vector3(1, 1, 1)
-bones/20/rotation = Quaternion(0.00543454, -2.03605e-19, -1.21323e-18, 0.999985)
 bones/22/rotation = Quaternion(-0.103464, -0.0144793, 0.0312186, 0.994038)
 bones/23/rotation = Quaternion(0.349572, -0.0280864, 0.0256831, 0.936136)
 bones/24/rotation = Quaternion(0.0628866, -0.00976414, -0.107178, 0.992201)
@@ -6702,18 +6696,13 @@ bones/27/rotation = Quaternion(-0.0954385, -0.0100211, 0.00190188, 0.995383)
 bones/28/rotation = Quaternion(-0.0499573, -0.0161649, 0.0754928, 0.995763)
 bones/29/rotation = Quaternion(0.162761, 0.940875, 0.296598, 0.0171216)
 bones/30/rotation = Quaternion(0.673192, -0.261913, -0.201733, -0.661451)
-bones/30/scale = Vector3(0.962671, 0.96267, 0.962671)
 bones/31/rotation = Quaternion(0.763382, -0.118299, -0.0648834, 0.631699)
-bones/32/rotation = Quaternion(-0.538439, -0.219697, 0.0201621, 0.813271)
 bones/33/rotation = Quaternion(-0.216903, 0.92483, 0.292626, 0.109605)
 bones/34/rotation = Quaternion(0.372981, 0.272921, 0.0324404, -0.886198)
 bones/35/rotation = Quaternion(0.620053, 0.0695221, 0.0680107, 0.778509)
-bones/36/rotation = Quaternion(-0.538439, 0.219697, -0.020162, 0.813271)
-bones/38/position = Vector3(0.156343, 0.347245, 0.136895)
 bones/38/rotation = Quaternion(-0.230315, -0.0934671, 0.92467, -0.288454)
 bones/39/rotation = Quaternion(-0.553697, 0.0442098, -0.100169, 0.825488)
 bones/40/rotation = Quaternion(0.907466, -0.031102, 0.016125, 0.418662)
-bones/42/position = Vector3(-0.156343, 0.347244, 0.136895)
 bones/42/rotation = Quaternion(0.259619, 0.0355268, 0.91746, 0.299339)
 bones/43/rotation = Quaternion(-0.496037, -0.0158573, 0.0700381, 0.865327)
 bones/44/rotation = Quaternion(0.584386, 0.100099, -0.02587, 0.804863)
@@ -6723,40 +6712,20 @@ bones/46/rotation = Quaternion(0.962259, 9.73241e-08, 3.44129e-07, -0.272137)
 bones/47/position = Vector3(0.875475, 0.288483, 2.00594)
 bones/47/rotation = Quaternion(-5.60914e-06, -0.00446565, 0.99999, 1.6643e-07)
 bones/48/rotation = Quaternion(0.490823, -6.61367e-06, 3.01134e-09, 0.871259)
-bones/49/rotation = Quaternion(0.276316, 0.0810758, -0.286882, 0.91366)
-bones/50/rotation = Quaternion(-0.0856952, 0.992808, -0.061981, 0.0561014)
-bones/51/rotation = Quaternion(0.0348339, 0.00584704, -0.0126979, 0.999295)
-bones/52/rotation = Quaternion(-0.0360596, 0.920578, 0.388842, 0.00613613)
-bones/53/rotation = Quaternion(0.249781, 0.0132504, 0.00341968, 0.968206)
-bones/54/rotation = Quaternion(-0.0228618, 0.00477434, -0.000735081, 0.999727)
-bones/56/rotation = Quaternion(0.0185081, 0.96591, -0.240301, -0.0945045)
-bones/57/rotation = Quaternion(-0.0197151, 0.0352909, -0.00484276, 0.999171)
 bones/58/position = Vector3(-1.21035, 0.294666, 2.42544)
 bones/58/rotation = Quaternion(0.0956158, -0.00444521, 0.995407, 0.00183646)
-bones/58/scale = Vector3(1, 1, 1)
-bones/59/rotation = Quaternion(0.490823, 6.75687e-06, 2.79966e-07, 0.871259)
-bones/60/rotation = Quaternion(0.276316, -0.0810758, 0.286882, 0.91366)
-bones/61/rotation = Quaternion(0.0856952, 0.992808, -0.061981, -0.0561014)
-bones/62/rotation = Quaternion(0.0348339, -0.00584704, 0.0126979, 0.999295)
-bones/63/rotation = Quaternion(0.0360596, 0.920578, 0.388842, -0.00613613)
-bones/64/rotation = Quaternion(0.249781, -0.0132504, -0.00341968, 0.968206)
-bones/65/rotation = Quaternion(-0.0228618, -0.00477434, 0.000735081, 0.999727)
-bones/66/rotation = Quaternion(0.368775, 0.0405879, -0.256569, 0.892485)
-bones/67/rotation = Quaternion(-0.0185081, 0.96591, -0.240301, 0.0945045)
-bones/68/rotation = Quaternion(-0.0197151, -0.0352909, 0.00484276, 0.999171)
 bones/69/position = Vector3(0.607056, 0.361402, -1.13368)
 bones/69/rotation = Quaternion(0.000572499, 0.170822, 0.985296, -0.00333458)
 bones/70/rotation = Quaternion(0.826898, 0.102168, -0.120943, 0.539605)
 bones/73/rotation = Quaternion(0.736101, -0.0447228, 0.0947145, 0.668718)
 bones/76/rotation = Quaternion(0.761677, -0.0855082, 0.203326, 0.609257)
 bones/79/position = Vector3(-0.977884, 0.346643, -2.13507)
-bones/79/rotation = Quaternion(-0.000576235, 0.170822, 0.985296, 0.00333526)
 bones/80/rotation = Quaternion(0.745069, -0.130738, 0.130489, 0.6409)
 bones/83/rotation = Quaternion(0.628142, 0.0294104, -0.0995841, 0.771139)
 bones/86/rotation = Quaternion(0.672341, 0.117545, -0.201903, 0.702408)
 
 [node name="HeadAttachment" parent="JerryFixed/JerryFixed/metarig/Skeleton3D" index="24"]
-transform = Transform3D(0.966578, 0.237364, 0.0968738, 0.0592329, 0.160877, -0.985195, -0.249435, 0.958007, 0.14144, 0.145814, 1.51003, 1.29837)
+transform = Transform3D(0.966578, 0.237364, 0.0968734, 0.0592325, 0.160877, -0.985196, -0.249435, 0.958007, 0.14144, 0.145814, 1.51003, 1.29837)
 
 [node name="DashRayCast" type="RayCast3D" parent="JerryFixed/JerryFixed/metarig/Skeleton3D/HeadAttachment" index="0"]
 transform = Transform3D(-0.345534, -9.45829e-07, -0.938407, 0.937764, -0.0370494, -0.345297, -0.0347671, -0.999314, 0.0128028, 0.498638, -1.31588, 1.10717)
@@ -6880,7 +6849,7 @@ shape = SubResource("BoxShape3D_8f00h")
 libraries = {
 "": SubResource("AnimationLibrary_11icj")
 }
-blend_times = [&"lunge", &"lunge", 0.1, &"lunge", &"walkLookLeft", 0.2, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"walkLookRight", 0.2, &"lunge", &"TurnLeftWalk", 0.3, &"lunge", &"walk", 0.2, &"walkLookLeft", &"lunge", 0.1, &"walkLookLeft", &"walkLookLeft", 0.5, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"walkLookRight", 0.3, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookLeft", &"walk", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnRightWalk", &"lookAround1", 0.2, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"walk", 0.2, &"walkLookRight", &"lunge", 0.1, &"walkLookRight", &"walkLookLeft", 0.3, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"walkLookRight", 0.5, &"walkLookRight", &"TurnLeftWalk", 0.3, &"walkLookRight", &"walk", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"lookAround1", 0.2, &"TurnLeftWalk", &"TurnLeftWalk", 0.5, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"walk", 0.2, &"walk", &"lunge", 0.1, &"walk", &"walkLookLeft", 0.2, &"walk", &"TurnRightWalk", 0.2, &"walk", &"walkLookRight", 0.2, &"walk", &"lookAround1", 0.1, &"walk", &"exitGlitch", 0.2, &"walk", &"lookAround2", 0.1, &"walk", &"walk", 0.5]
+blend_times = [&"walk", &"walk", 0.5, &"walk", &"TurnRightWalk", 0.2, &"walk", &"lookAround1", 0.1, &"walk", &"exitGlitch", 0.2, &"walk", &"lookAround2", 0.1, &"walk", &"lunge", 0.1, &"walk", &"walkLookLeft", 0.2, &"walk", &"walkLookRight", 0.2, &"TurnRightWalk", &"walk", 0.2, &"TurnRightWalk", &"TurnRightWalk", 0.5, &"TurnRightWalk", &"lookAround1", 0.2, &"TurnRightWalk", &"lookAround2", 0.2, &"TurnRightWalk", &"lunge", 0.2, &"TurnRightWalk", &"walkLookLeft", 0.2, &"TurnRightWalk", &"walkLookRight", 0.2, &"TurnRightWalk", &"TurnLeftWalk", 0.3, &"lunge", &"walk", 0.2, &"lunge", &"TurnRightWalk", 0.3, &"lunge", &"lunge", 0.1, &"lunge", &"walkLookLeft", 0.2, &"lunge", &"walkLookRight", 0.2, &"lunge", &"TurnLeftWalk", 0.3, &"walkLookLeft", &"walk", 0.2, &"walkLookLeft", &"TurnRightWalk", 0.3, &"walkLookLeft", &"lunge", 0.1, &"walkLookLeft", &"walkLookLeft", 0.5, &"walkLookLeft", &"walkLookRight", 0.3, &"walkLookLeft", &"TurnLeftWalk", 0.2, &"walkLookRight", &"walk", 0.2, &"walkLookRight", &"TurnRightWalk", 0.2, &"walkLookRight", &"lunge", 0.1, &"walkLookRight", &"walkLookLeft", 0.3, &"walkLookRight", &"walkLookRight", 0.5, &"walkLookRight", &"TurnLeftWalk", 0.3, &"TurnLeftWalk", &"walk", 0.2, &"TurnLeftWalk", &"TurnRightWalk", 0.3, &"TurnLeftWalk", &"lookAround1", 0.2, &"TurnLeftWalk", &"lookAround2", 0.2, &"TurnLeftWalk", &"lunge", 0.2, &"TurnLeftWalk", &"walkLookLeft", 0.2, &"TurnLeftWalk", &"walkLookRight", 0.2, &"TurnLeftWalk", &"TurnLeftWalk", 0.5]
 
 [node name="GlitchOutSound" type="AudioStreamPlayer" parent="JerryFixed/JerryFixed" index="2"]
 volume_db = -10.0

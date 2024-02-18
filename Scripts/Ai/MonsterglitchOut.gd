@@ -7,6 +7,7 @@ class_name  MonsterGlitchOut
 
 
 func  Enter():
+	enemy.Agro = true
 	print_debug("Glitch Out")
 	enemy.SetSpotLightRed()
 	enemy.velocity = Vector3.ZERO
