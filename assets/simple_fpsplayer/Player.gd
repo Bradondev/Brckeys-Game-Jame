@@ -31,6 +31,7 @@ func _ready():
 	flashlight = $rotation_helper/Camera3D/flashlight_player
 	$RunSound.set_bus("SFX")
 	$WalkSound.set_bus("SFX")
+	$CanvasLayer/GlitchPanel.material.set_shader_parameter("shake_rate", 0.0)
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
